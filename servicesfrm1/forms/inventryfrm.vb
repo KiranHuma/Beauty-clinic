@@ -92,7 +92,7 @@ Public Class inventryfrm
 
     Private Sub stockfrm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         source1.Filter = "[pid] = '" & quantity_txt.Text & "'"
-
+        Me.Label23.Text = Format(Now, "dd-MMM-yyyy")
         get_stockdata.Refresh()
         FillCombo()
         dbaccessconnection()
