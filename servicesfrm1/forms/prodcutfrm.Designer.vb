@@ -30,8 +30,13 @@ Partial Class prodcutfrm
         Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.btnupdte = New System.Windows.Forms.Button()
         Me.uploadbtn = New System.Windows.Forms.Button()
+        Me.Btndel = New System.Windows.Forms.Button()
         Me.photo = New System.Windows.Forms.PictureBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.p_dtetxt = New System.Windows.Forms.DateTimePicker()
@@ -52,6 +57,8 @@ Partial Class prodcutfrm
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.get_productdata = New System.Windows.Forms.DataGridView()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.pro_txt = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.photo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -71,8 +78,15 @@ Partial Class prodcutfrm
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Label11)
+        Me.TabPage1.Controls.Add(Me.pro_txt)
+        Me.TabPage1.Controls.Add(Me.Button1)
+        Me.TabPage1.Controls.Add(Me.Label15)
+        Me.TabPage1.Controls.Add(Me.Label10)
         Me.TabPage1.Controls.Add(Me.Label9)
+        Me.TabPage1.Controls.Add(Me.btnupdte)
         Me.TabPage1.Controls.Add(Me.uploadbtn)
+        Me.TabPage1.Controls.Add(Me.Btndel)
         Me.TabPage1.Controls.Add(Me.photo)
         Me.TabPage1.Controls.Add(Me.Label8)
         Me.TabPage1.Controls.Add(Me.p_dtetxt)
@@ -98,18 +112,72 @@ Partial Class prodcutfrm
         Me.TabPage1.Text = "Add Rates"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ForeColor = System.Drawing.Color.DimGray
+        Me.Button1.Location = New System.Drawing.Point(844, 461)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(46, 33)
+        Me.Button1.TabIndex = 324
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.BackColor = System.Drawing.Color.Transparent
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.LightCoral
+        Me.Label15.Location = New System.Drawing.Point(758, 501)
+        Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(55, 17)
+        Me.Label15.TabIndex = 323
+        Me.Label15.Text = "Delete"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.LightCoral
+        Me.Label10.Location = New System.Drawing.Point(695, 501)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(36, 17)
+        Me.Label10.TabIndex = 322
+        Me.Label10.Text = "Edit"
+        '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label9.Location = New System.Drawing.Point(704, 493)
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.LightCoral
+        Me.Label9.Location = New System.Drawing.Point(840, 501)
         Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(65, 20)
+        Me.Label9.Size = New System.Drawing.Size(65, 17)
         Me.Label9.TabIndex = 297
-        Me.Label9.Text = "Report"
+        Me.Label9.Text = "Reports"
+        '
+        'btnupdte
+        '
+        Me.btnupdte.BackColor = System.Drawing.Color.White
+        Me.btnupdte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnupdte.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnupdte.ForeColor = System.Drawing.Color.White
+        Me.btnupdte.Image = CType(resources.GetObject("btnupdte.Image"), System.Drawing.Image)
+        Me.btnupdte.Location = New System.Drawing.Point(689, 460)
+        Me.btnupdte.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnupdte.Name = "btnupdte"
+        Me.btnupdte.Size = New System.Drawing.Size(42, 34)
+        Me.btnupdte.TabIndex = 320
+        Me.btnupdte.UseVisualStyleBackColor = False
         '
         'uploadbtn
         '
@@ -119,6 +187,20 @@ Partial Class prodcutfrm
         Me.uploadbtn.TabIndex = 295
         Me.uploadbtn.Text = "Upload"
         Me.uploadbtn.UseVisualStyleBackColor = True
+        '
+        'Btndel
+        '
+        Me.Btndel.BackColor = System.Drawing.Color.White
+        Me.Btndel.BackgroundImage = CType(resources.GetObject("Btndel.BackgroundImage"), System.Drawing.Image)
+        Me.Btndel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Btndel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btndel.ForeColor = System.Drawing.Color.White
+        Me.Btndel.Location = New System.Drawing.Point(761, 460)
+        Me.Btndel.Margin = New System.Windows.Forms.Padding(4)
+        Me.Btndel.Name = "Btndel"
+        Me.Btndel.Size = New System.Drawing.Size(52, 34)
+        Me.Btndel.TabIndex = 321
+        Me.Btndel.UseVisualStyleBackColor = False
         '
         'photo
         '
@@ -185,12 +267,12 @@ Partial Class prodcutfrm
         '
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label7.Location = New System.Drawing.Point(782, 493)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.LightCoral
+        Me.Label7.Location = New System.Drawing.Point(622, 498)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(50, 20)
+        Me.Label7.Size = New System.Drawing.Size(44, 17)
         Me.Label7.TabIndex = 286
         Me.Label7.Text = "Save"
         '
@@ -201,7 +283,7 @@ Partial Class prodcutfrm
         Me.svemem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.svemem.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.svemem.ForeColor = System.Drawing.SystemColors.Control
-        Me.svemem.Location = New System.Drawing.Point(786, 456)
+        Me.svemem.Location = New System.Drawing.Point(626, 461)
         Me.svemem.Margin = New System.Windows.Forms.Padding(4)
         Me.svemem.Name = "svemem"
         Me.svemem.Size = New System.Drawing.Size(36, 33)
@@ -351,6 +433,22 @@ Partial Class prodcutfrm
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'pro_txt
+        '
+        Me.pro_txt.Location = New System.Drawing.Point(209, 89)
+        Me.pro_txt.Name = "pro_txt"
+        Me.pro_txt.Size = New System.Drawing.Size(216, 22)
+        Me.pro_txt.TabIndex = 325
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(94, 89)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(65, 17)
+        Me.Label11.TabIndex = 326
+        Me.Label11.Text = "Product#"
+        '
         'prodcutfrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -392,4 +490,11 @@ Partial Class prodcutfrm
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
     Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents btnupdte As System.Windows.Forms.Button
+    Friend WithEvents Btndel As System.Windows.Forms.Button
+    Friend WithEvents pro_txt As System.Windows.Forms.TextBox
+    Friend WithEvents Label11 As System.Windows.Forms.Label
 End Class

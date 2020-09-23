@@ -29,7 +29,6 @@ Partial Class MainFrom1
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
@@ -122,27 +121,13 @@ Partial Class MainFrom1
         Me.Button7.Text = "Exit"
         Me.Button7.UseVisualStyleBackColor = False
         '
-        'Button8
-        '
-        Me.Button8.BackColor = System.Drawing.SystemColors.Highlight
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button8.Location = New System.Drawing.Point(54, 196)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(170, 56)
-        Me.Button8.TabIndex = 7
-        Me.Button8.Text = "Sales"
-        Me.Button8.UseVisualStyleBackColor = False
-        '
         'MainFrom1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.servicesfrm1.My.Resources.Resources.mainimage
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1357, 711)
-        Me.Controls.Add(Me.Button8)
+        Me.ClientSize = New System.Drawing.Size(1843, 970)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
@@ -150,8 +135,10 @@ Partial Class MainFrom1
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
+        Me.ForeColor = System.Drawing.Color.LightCoral
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "MainFrom1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Skintimate Beauty Clinic"
         Me.ResumeLayout(False)
 
@@ -163,6 +150,5 @@ Partial Class MainFrom1
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents Button7 As System.Windows.Forms.Button
-    Friend WithEvents Button8 As System.Windows.Forms.Button
 
 End Class
