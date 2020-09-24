@@ -30,6 +30,8 @@ Partial Class regmmberfrm
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.mid_txt = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.m_dtetxt = New System.Windows.Forms.DateTimePicker()
@@ -56,8 +58,6 @@ Partial Class regmmberfrm
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.memberdata = New System.Windows.Forms.DataGridView()
-        Me.mid_txt = New System.Windows.Forms.TextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -107,6 +107,25 @@ Partial Class regmmberfrm
         Me.TabPage1.Size = New System.Drawing.Size(1039, 637)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Add new"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label13.Location = New System.Drawing.Point(91, 160)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(45, 25)
+        Me.Label13.TabIndex = 271
+        Me.Label13.Text = "MId"
+        '
+        'mid_txt
+        '
+        Me.mid_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.mid_txt.Location = New System.Drawing.Point(212, 160)
+        Me.mid_txt.Name = "mid_txt"
+        Me.mid_txt.Size = New System.Drawing.Size(183, 27)
+        Me.mid_txt.TabIndex = 270
         '
         'Label12
         '
@@ -435,25 +454,6 @@ Partial Class regmmberfrm
         Me.memberdata.Size = New System.Drawing.Size(1015, 474)
         Me.memberdata.TabIndex = 150
         '
-        'mid_txt
-        '
-        Me.mid_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.mid_txt.Location = New System.Drawing.Point(212, 160)
-        Me.mid_txt.Name = "mid_txt"
-        Me.mid_txt.Size = New System.Drawing.Size(183, 27)
-        Me.mid_txt.TabIndex = 270
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label13.Location = New System.Drawing.Point(91, 160)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(45, 25)
-        Me.Label13.TabIndex = 271
-        Me.Label13.Text = "MId"
-        '
         'regmmberfrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -461,7 +461,6 @@ Partial Class regmmberfrm
         Me.BackColor = System.Drawing.Color.Gray
         Me.ClientSize = New System.Drawing.Size(1109, 707)
         Me.Controls.Add(Me.TabControl1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "regmmberfrm"
         Me.Text = "regmmberfrm"
         Me.TabControl1.ResumeLayout(False)

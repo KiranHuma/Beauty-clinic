@@ -40,7 +40,7 @@ Public Class productreporfrm
         Dim dto As DateTime = DateTimePicker2.Value
         cn.ConnectionString = cs
         cn.Open()
-        Dim str As String = "select pro_id,P_id,p_name,p_price,p_description,p_typ,p_dte  from tbl_products  where p_dte >= '" & Format(dfrom, "MM-dd-yyyy") & "' and p_dte <='" & Format(dto, "MM-dd-yyyy") & "'"
+        Dim str As String = "select pro_id,P_id,p_name,p_price,p_description,p_typ,p_dte from tbl_products where p_dte >= '" & Format(dfrom, "MM-dd-yyyy") & "' and p_dte <='" & Format(dto, "MM-dd-yyyy") & "'"
         Dim da As SqlDataAdapter = New SqlDataAdapter(str, cn)
         da.Fill(dt)
         DataGridView1.DataSource = dt
@@ -149,7 +149,7 @@ Public Class productreporfrm
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
         'This Code is used to Convert to word document
         Dim reportWord As New productreport() ' Report Name 
-        Dim strExportFile As String = "c:\TestWord.doc"
+        Dim strExportFile As String = "e:\TestWord.doc"
         reportWord.ExportOptions.ExportDestinationType = ExportDestinationType.DiskFile
         reportWord.ExportOptions.ExportFormatType = ExportFormatType.WordForWindows
         Dim objOptions As DiskFileDestinationOptions = New DiskFileDestinationOptions()

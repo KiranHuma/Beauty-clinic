@@ -30,6 +30,17 @@ Partial Class reservationfrm
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Btnadd = New System.Windows.Forms.Button()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.btnupdte = New System.Windows.Forms.Button()
+        Me.Btndel = New System.Windows.Forms.Button()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.resid_txt = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.rid_txt = New System.Windows.Forms.TextBox()
         Me.mid_txt = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -41,8 +52,7 @@ Partial Class reservationfrm
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.get_ratedata = New System.Windows.Forms.DataGridView()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.resid_txt = New System.Windows.Forms.TextBox()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -61,6 +71,15 @@ Partial Class reservationfrm
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Label25)
+        Me.TabPage1.Controls.Add(Me.Btnadd)
+        Me.TabPage1.Controls.Add(Me.Label19)
+        Me.TabPage1.Controls.Add(Me.Label15)
+        Me.TabPage1.Controls.Add(Me.Label10)
+        Me.TabPage1.Controls.Add(Me.btnupdte)
+        Me.TabPage1.Controls.Add(Me.Btndel)
+        Me.TabPage1.Controls.Add(Me.Label7)
+        Me.TabPage1.Controls.Add(Me.Button2)
         Me.TabPage1.Controls.Add(Me.resid_txt)
         Me.TabPage1.Controls.Add(Me.Label6)
         Me.TabPage1.Controls.Add(Me.rid_txt)
@@ -79,6 +98,144 @@ Partial Class reservationfrm
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Add Rate"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.BackColor = System.Drawing.Color.LightCoral
+        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.ForeColor = System.Drawing.Color.White
+        Me.Label25.Location = New System.Drawing.Point(38, 446)
+        Me.Label25.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(73, 17)
+        Me.Label25.TabIndex = 348
+        Me.Label25.Text = "Welcome"
+        Me.Label25.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Btnadd
+        '
+        Me.Btnadd.BackColor = System.Drawing.Color.Transparent
+        Me.Btnadd.BackgroundImage = CType(resources.GetObject("Btnadd.BackgroundImage"), System.Drawing.Image)
+        Me.Btnadd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Btnadd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btnadd.ForeColor = System.Drawing.Color.White
+        Me.Btnadd.Location = New System.Drawing.Point(470, 409)
+        Me.Btnadd.Margin = New System.Windows.Forms.Padding(4)
+        Me.Btnadd.Name = "Btnadd"
+        Me.Btnadd.Size = New System.Drawing.Size(45, 35)
+        Me.Btnadd.TabIndex = 346
+        Me.Btnadd.UseVisualStyleBackColor = False
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.BackColor = System.Drawing.Color.Transparent
+        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.ForeColor = System.Drawing.Color.LightCoral
+        Me.Label19.Location = New System.Drawing.Point(444, 455)
+        Me.Label19.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(71, 17)
+        Me.Label19.TabIndex = 347
+        Me.Label19.Text = "Add New"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.BackColor = System.Drawing.Color.Transparent
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.LightCoral
+        Me.Label15.Location = New System.Drawing.Point(665, 461)
+        Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(55, 17)
+        Me.Label15.TabIndex = 345
+        Me.Label15.Text = "Delete"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.LightCoral
+        Me.Label10.Location = New System.Drawing.Point(602, 461)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(36, 17)
+        Me.Label10.TabIndex = 344
+        Me.Label10.Text = "Edit"
+        '
+        'btnupdte
+        '
+        Me.btnupdte.BackColor = System.Drawing.Color.White
+        Me.btnupdte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnupdte.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnupdte.ForeColor = System.Drawing.Color.White
+        Me.btnupdte.Image = CType(resources.GetObject("btnupdte.Image"), System.Drawing.Image)
+        Me.btnupdte.Location = New System.Drawing.Point(596, 420)
+        Me.btnupdte.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnupdte.Name = "btnupdte"
+        Me.btnupdte.Size = New System.Drawing.Size(42, 34)
+        Me.btnupdte.TabIndex = 342
+        Me.btnupdte.UseVisualStyleBackColor = False
+        '
+        'Btndel
+        '
+        Me.Btndel.BackColor = System.Drawing.Color.White
+        Me.Btndel.BackgroundImage = CType(resources.GetObject("Btndel.BackgroundImage"), System.Drawing.Image)
+        Me.Btndel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Btndel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btndel.ForeColor = System.Drawing.Color.White
+        Me.Btndel.Location = New System.Drawing.Point(668, 420)
+        Me.Btndel.Margin = New System.Windows.Forms.Padding(4)
+        Me.Btndel.Name = "Btndel"
+        Me.Btndel.Size = New System.Drawing.Size(52, 34)
+        Me.Btndel.TabIndex = 343
+        Me.Btndel.UseVisualStyleBackColor = False
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label7.Location = New System.Drawing.Point(664, 457)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(50, 20)
+        Me.Label7.TabIndex = 339
+        Me.Label7.Text = "Save"
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.SystemColors.Control
+        Me.Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"), System.Drawing.Image)
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.ForeColor = System.Drawing.SystemColors.Control
+        Me.Button2.Location = New System.Drawing.Point(668, 420)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(36, 33)
+        Me.Button2.TabIndex = 338
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'resid_txt
+        '
+        Me.resid_txt.Location = New System.Drawing.Point(347, 169)
+        Me.resid_txt.Name = "resid_txt"
+        Me.resid_txt.Size = New System.Drawing.Size(200, 22)
+        Me.resid_txt.TabIndex = 273
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(222, 169)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(101, 17)
+        Me.Label6.TabIndex = 272
+        Me.Label6.Text = "Reservation ID"
         '
         'rid_txt
         '
@@ -117,8 +274,8 @@ Partial Class reservationfrm
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label1.Location = New System.Drawing.Point(505, 392)
+        Me.Label1.ForeColor = System.Drawing.Color.LightCoral
+        Me.Label1.Location = New System.Drawing.Point(527, 457)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(50, 20)
@@ -132,7 +289,7 @@ Partial Class reservationfrm
         Me.svemem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.svemem.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.svemem.ForeColor = System.Drawing.SystemColors.Control
-        Me.svemem.Location = New System.Drawing.Point(511, 355)
+        Me.svemem.Location = New System.Drawing.Point(533, 420)
         Me.svemem.Margin = New System.Windows.Forms.Padding(4)
         Me.svemem.Name = "svemem"
         Me.svemem.Size = New System.Drawing.Size(36, 33)
@@ -168,6 +325,7 @@ Partial Class reservationfrm
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.Button6)
         Me.TabPage2.Controls.Add(Me.get_ratedata)
         Me.TabPage2.Location = New System.Drawing.Point(4, 25)
         Me.TabPage2.Name = "TabPage2"
@@ -236,21 +394,17 @@ Partial Class reservationfrm
         Me.get_ratedata.Size = New System.Drawing.Size(805, 410)
         Me.get_ratedata.TabIndex = 151
         '
-        'Label6
+        'Button6
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(222, 169)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(101, 17)
-        Me.Label6.TabIndex = 272
-        Me.Label6.Text = "Reservation ID"
-        '
-        'resid_txt
-        '
-        Me.resid_txt.Location = New System.Drawing.Point(347, 169)
-        Me.resid_txt.Name = "resid_txt"
-        Me.resid_txt.Size = New System.Drawing.Size(200, 22)
-        Me.resid_txt.TabIndex = 273
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.ForeColor = System.Drawing.Color.LightCoral
+        Me.Button6.Location = New System.Drawing.Point(587, 23)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(179, 31)
+        Me.Button6.TabIndex = 317
+        Me.Button6.Text = "&Select Rows to Remove"
+        Me.Button6.UseVisualStyleBackColor = True
         '
         'reservationfrm
         '
@@ -283,4 +437,14 @@ Partial Class reservationfrm
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents resid_txt As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Btnadd As System.Windows.Forms.Button
+    Friend WithEvents Label19 As System.Windows.Forms.Label
+    Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents btnupdte As System.Windows.Forms.Button
+    Friend WithEvents Btndel As System.Windows.Forms.Button
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Label25 As System.Windows.Forms.Label
+    Friend WithEvents Button6 As System.Windows.Forms.Button
 End Class
