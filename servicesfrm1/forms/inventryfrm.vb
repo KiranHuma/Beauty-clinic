@@ -19,7 +19,7 @@ Public Class inventryfrm
     Dim con As New SqlClient.SqlConnection                      'for sql
     Dim cmd As New SqlClient.SqlCommand                        'for sql
     Dim dt As New DataTable
-    Dim cs As String = "Data Source=ADMINRG-FFQIQKT;Initial Catalog=mainclinicdb;Integrated Security=True"  'connection string to connect with sql server
+    Dim cs As String = "Data Source=GEO;Initial Catalog=mainclinicdb;Integrated Security=True"  'connection string to connect with sql server
     'db connection 
     Private Sub dbaccessconnection()
         Try

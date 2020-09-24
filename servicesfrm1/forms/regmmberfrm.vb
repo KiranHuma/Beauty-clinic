@@ -23,11 +23,11 @@ Public Class regmmberfrm
     Dim cmd As New SqlClient.SqlCommand                        'for sql
 
     Dim dt As New DataTable
-    Dim cs As String = "Data Source=ADMINRG-FFQIQKT;Initial Catalog=mainclinicdb;Integrated Security=True"
+    Dim cs As String = "Data Source=GEO;Initial Catalog=mainclinicdb;Integrated Security=True"
     Private Sub dbaccessconnection()
 
         Try
-            con.ConnectionString = "Data Source=ADMINRG-FFQIQKT;Initial Catalog=mainclinicdb;Integrated Security=True"
+            con.ConnectionString = cs
             cmd.Connection = con
             'MessageBox.Show(con.State.ToString())
             'MsgBox("DataBase connected ")
@@ -44,7 +44,7 @@ Public Class regmmberfrm
     Private Sub insert()
         dbaccessconnection()
         con.Open()
-        cmd.CommandText = "insert into tbl_memberreg(m_id,m_name,m_contactinfo,m_age,m_location,m_address,m_dte)values('" & midtxt.Text & "','" & nametxt.Text & "','" & cntcttxt.Text & "','" & agetxt.Text & "','" & loctxt.Text & "','" & addresstxt.Text & "','" & m_dtetxt.Value & "')"
+        cmd.CommandText = "insert into tbl_memberreg(mid,M_ID,m_name,m_contactinfo,m_age,m_location,m_address,m_dte)values('" & mid_txt.Text & "','" & midtxt.Text & "','" & nametxt.Text & "','" & cntcttxt.Text & "','" & agetxt.Text & "','" & loctxt.Text & "','" & addresstxt.Text & "','" & m_dtetxt.Value & "')"
         cmd.ExecuteNonQuery()
         con.Close()
     End Sub
@@ -52,9 +52,9 @@ Public Class regmmberfrm
     
     Private Sub getdata()
 
-        Dim con As New SqlConnection("Data Source=ADMINRG-FFQIQKT;Initial Catalog=mainclinicdb;Integrated Security=True")
+        Dim con As New SqlConnection(cs)
         con.Open()
-        Dim da As New SqlDataAdapter("Select m_id,m_name,m_contactinfo,m_age,m_location,m_address,m_dte from tbl_memberreg ", con)
+        Dim da As New SqlDataAdapter("Select mid,M_ID,m_name,m_contactinfo,m_age,m_location,m_address,m_dte from tbl_memberreg ", con)
         Dim dt As New DataTable
         da.Fill(dt)
         source2.DataSource = dt

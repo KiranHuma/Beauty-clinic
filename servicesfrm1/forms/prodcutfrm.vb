@@ -30,11 +30,11 @@ Public Class prodcutfrm
     Dim cmd As New SqlClient.SqlCommand                        'for sql
 
     Dim dt As New DataTable
-    Dim cs As String = "Data Source=ADMINRG-FFQIQKT;Initial Catalog=mainclinicdb;Integrated Security=True"
+    Dim cs As String = "Data Source=GEO;Initial Catalog=mainclinicdb;Integrated Security=True"
     Private Sub dbaccessconnection()
 
         Try
-            con.ConnectionString = "Data Source=ADMINRG-FFQIQKT;Initial Catalog=mainclinicdb;Integrated Security=True"
+            con.ConnectionString = cs
             cmd.Connection = con
 
         Catch ex As Exception
@@ -97,7 +97,7 @@ Public Class prodcutfrm
 
         Dim curValue As Integer
         Dim result As String
-        Using con As SqlConnection = New SqlConnection("Data Source=ADMINRG-FFQIQKT;Initial Catalog=mainclinicdb;Integrated Security=True ")
+        Using con As SqlConnection = New SqlConnection(cs)
             con.Open()
             Dim cmd = New SqlCommand("select Max(P_id) from tbl_products", con)
             result = cmd.ExecuteScalar().ToString()
@@ -114,7 +114,7 @@ Public Class prodcutfrm
     End Sub
     Private Sub getdata()
 
-        Dim con As New SqlConnection("Data Source=ADMINRG-FFQIQKT;Initial Catalog=mainclinicdb;Integrated Security=True")
+        Dim con As New SqlConnection(cs)
         con.Open()
         Dim da As New SqlDataAdapter("Select pro_id,P_id,p_name,p_price,p_description,p_typ,p_dte,photo from tbl_products ", con)
         Dim dt As New DataTable

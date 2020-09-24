@@ -21,10 +21,11 @@ Public Class productreporfrm
     Dim da As SqlDataAdapter
     Dim tables As DataTableCollection = ds.Tables
     Dim source1 As New BindingSource()
+    Dim cs As String = "Data Source=GEO;Initial Catalog=mainclinicdb;Integrated Security=True"
     Private Sub dbaccessconnection()
         'Acces DataBase Connectivity and for MS Access 2003 PROVIDER=Microsoft.Jet.OLEDB.4.0
         Try
-            con.ConnectionString = "Data Source=ADMINRG-FFQIQKT;Initial Catalog=mainclinicdb;Integrated Security=True"
+            con.ConnectionString = cs
             cmd.Connection = con
             'MessageBox.Show(con.State.ToString())
         Catch ex As Exception
@@ -37,9 +38,9 @@ Public Class productreporfrm
         Dim dt As New DataTable
         Dim dfrom As DateTime = DateTimePicker1.Value
         Dim dto As DateTime = DateTimePicker2.Value
-        cn.ConnectionString = "Data Source=ADMINRG-FFQIQKT;Initial Catalog=mainclinicdb;Integrated Security=True"
+        cn.ConnectionString = cs
         cn.Open()
-        Dim str As String = "select p_id,p_name,p_price,p_description,p_typ,p_dte  from tbl_products  where p_dte >= '" & Format(dfrom, "MM-dd-yyyy") & "' and p_dte <='" & Format(dto, "MM-dd-yyyy") & "'"
+        Dim str As String = "select pro_id,P_id,p_name,p_price,p_description,p_typ,p_dte  from tbl_products  where p_dte >= '" & Format(dfrom, "MM-dd-yyyy") & "' and p_dte <='" & Format(dto, "MM-dd-yyyy") & "'"
         Dim da As SqlDataAdapter = New SqlDataAdapter(str, cn)
         da.Fill(dt)
         DataGridView1.DataSource = dt
@@ -54,11 +55,11 @@ Public Class productreporfrm
             Dim MyCommand As New SqlCommand()
             Dim myDA As New SqlDataAdapter()
             Dim myDS As New mainclinicdbDataSet 'The DataSet you created.
-            myConnection = New SqlConnection("Data Source=ADMINRG-FFQIQKT;Initial Catalog=mainclinicdb;Integrated Security=True")
+            myConnection = New SqlConnection(cs)
             Dim dfrom As DateTime = DateTimePicker1.Value
             Dim dto As DateTime = DateTimePicker2.Value
             MyCommand.Connection = myConnection
-            MyCommand.CommandText = "select p_id,p_name,p_price,p_description,p_typ,p_dte  from tbl_products  where p_dte  >= '" & Format(dfrom, "MM-dd-yyyy") & "' and p_dte <='" & Format(dto, "MM-dd-yyyy") & "'"
+            MyCommand.CommandText = "select pro_id,P_id,p_name,p_price,p_description,p_typ,p_dte  from tbl_products  where p_dte  >= '" & Format(dfrom, "MM-dd-yyyy") & "' and p_dte <='" & Format(dto, "MM-dd-yyyy") & "'"
             MyCommand.CommandType = CommandType.Text
             myDA.SelectCommand = MyCommand
             myDA.Fill(myDS, "tbl_products")
@@ -76,7 +77,7 @@ Public Class productreporfrm
         Dim MyCommand As New SqlCommand()
         Dim myDA As New SqlDataAdapter()
         Try
-            myConnection = New SqlConnection("Data Source=ADMINRG-FFQIQKT;Initial Catalog=mainclinicdb;Integrated Security=True;")
+            myConnection = New SqlConnection(cs)
             MyCommand.Connection = myConnection
             MyCommand.CommandText = "SELECT * FROM tbl_products"
             MyCommand.CommandType = CommandType.Text

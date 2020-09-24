@@ -26,11 +26,11 @@ Public Class ratesfrm
     Dim cmd As New SqlClient.SqlCommand                        'for sql
 
     Dim dt As New DataTable
-    Dim cs As String = "Data Source=ADMINRG-FFQIQKT;Initial Catalog=mainclinicdb;Integrated Security=True"
+    Dim cs As String = "Data Source=GEO;Initial Catalog=mainclinicdb;Integrated Security=True"
     Private Sub dbaccessconnection()
 
         Try
-            con.ConnectionString = "Data Source=ADMINRG-FFQIQKT;Initial Catalog=mainclinicdb;Integrated Security=True"
+            con.ConnectionString = cs
             cmd.Connection = con
 
         Catch ex As Exception
@@ -41,7 +41,7 @@ Public Class ratesfrm
     Private Sub insert()
         dbaccessconnection()
         con.Open()
-        cmd.CommandText = "insert into tbl_rates(ra_type,ra_price,ra_promo,ra_id,ra_des)values('" & type_txt.Text & "','" & price_txt.Text & "','" & prom_txt.Text & "','" & ratid_txt.Text & "','" & des_txt.Text & "')"
+        cmd.CommandText = "insert into tbl_rates(r_id,ra_type,ra_price,ra_promo,ra_id,ra_des)values('" & rid_txt.Text & "','" & type_txt.Text & "','" & price_txt.Text & "','" & prom_txt.Text & "','" & ratid_txt.Text & "','" & des_txt.Text & "')"
         cmd.ExecuteNonQuery()
         con.Close()
     End Sub
@@ -49,7 +49,7 @@ Public Class ratesfrm
 
     Private Sub getdata()
 
-        Dim con As New SqlConnection("Data Source=ADMINRG-FFQIQKT;Initial Catalog=mainclinicdb;Integrated Security=True")
+        Dim con As New SqlConnection(cs)
         con.Open()
         Dim da As New SqlDataAdapter("Select ra_type,ra_price,ra_promo,ra_id,ra_des from tbl_rates ", con)
         Dim dt As New DataTable
@@ -68,7 +68,7 @@ Public Class ratesfrm
             Dim da As SqlDataAdapter
             Dim tables As DataTableCollection
             ' myConnToAccess = New OleDbConnection("provider=Microsoft.ACE.Oledb.12.0;Data Source=airline.accdb")
-            myConnToAccess = New SqlConnection("Data Source=ADMINRG-FFQIQKT;Initial Catalog=mainclinicdb;Integrated Security=True")
+            myConnToAccess = New SqlConnection(cs)
             myConnToAccess.Open()
             ds = New DataSet
             tables = ds.Tables

@@ -23,11 +23,11 @@ Public Class reservationfrm
     Dim cmd As New SqlClient.SqlCommand                        'for sql
 
     Dim dt As New DataTable
-    Dim cs As String = "Data Source=ADMINRG-FFQIQKT;Initial Catalog=mainclinicdb;Integrated Security=True"
+    Dim cs As String = "Data Source=GEO;Initial Catalog=mainclinicdb;Integrated Security=True"
     Private Sub dbaccessconnection()
 
         Try
-            con.ConnectionString = "Data Source=ADMINRG-FFQIQKT;Initial Catalog=mainclinicdb;Integrated Security=True"
+            con.ConnectionString = cs
             cmd.Connection = con
            
         Catch ex As Exception
@@ -38,7 +38,7 @@ Public Class reservationfrm
     Private Sub insert()
         dbaccessconnection()
         con.Open()
-        cmd.CommandText = "insert into tbl_reservation(r_id,m_id,r_date)values('" & rid_txt.Text & "','" & mid_txt.Text & "','" & dte_txt.Value & "')"
+        cmd.CommandText = "insert into tbl_reservation(ra_id,r_id,m_id,r_date)values('" & resid_txt.Text & "','" & rid_txt.Text & "','" & mid_txt.Text & "','" & dte_txt.Value & "')"
         cmd.ExecuteNonQuery()
         con.Close()
     End Sub
@@ -46,9 +46,9 @@ Public Class reservationfrm
 
     Private Sub getdata()
 
-        Dim con As New SqlConnection("Data Source=ADMINRG-FFQIQKT;Initial Catalog=mainclinicdb;Integrated Security=True")
+        Dim con As New SqlConnection(cs)
         con.Open()
-        Dim da As New SqlDataAdapter("Select r_id,m_id,r_date from tbl_reservation ", con)
+        Dim da As New SqlDataAdapter("Select ra_id,r_id,m_id,r_date from tbl_reservation ", con)
         Dim dt As New DataTable
         da.Fill(dt)
         source2.DataSource = dt
@@ -64,7 +64,5 @@ Public Class reservationfrm
         insert()
     End Sub
 
-    Private Sub TabPage1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabPage1.Click
-
-    End Sub
+   
 End Class
