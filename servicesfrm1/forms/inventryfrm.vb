@@ -265,7 +265,7 @@ Public Class inventryfrm
         Try
             pid_txt.Text = ""
             quantity_txt.Text = ""
-            inventrydtetxt.Text = ""
+            ' inventrydtetxt.Text = ""
 
             '  photo.Image = Nothing
          

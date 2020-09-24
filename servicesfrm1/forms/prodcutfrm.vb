@@ -284,8 +284,8 @@ Public Class prodcutfrm
             price_txt.Text = ""
             des_txt.Text = ""
             salpr_txt.Text = ""
-            p_dtetxt.Value = ""
-            photo.Image = Nothing
+            ' p_dtetxt.Value = ""
+            photo.Dispose()
 
         Catch ex As Exception
             MsgBox("Error:Some thing is going wrong,Close application and try again")
