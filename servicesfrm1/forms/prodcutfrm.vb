@@ -170,7 +170,6 @@ Public Class prodcutfrm
 
             insert()
             getdata()
-
             Label25.Text = "'" & pid_txt.Text & "' products details saved successfully!"
             Label25.ForeColor = System.Drawing.Color.DarkGreen
 
@@ -286,7 +285,6 @@ Public Class prodcutfrm
             des_txt.Text = ""
             salpr_txt.Text = ""
             p_dtetxt.Value = ""
-            
             photo.Image = Nothing
 
         Catch ex As Exception
