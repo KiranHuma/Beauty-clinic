@@ -22,14 +22,16 @@ Partial Class inventryfrm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(inventryfrm))
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(inventryfrm))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.inventid_txt = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.btnupdte = New System.Windows.Forms.Button()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -61,8 +63,8 @@ Partial Class inventryfrm
         Me.RectangleShape4 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.ShapeContainer2 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.inventid_txt = New System.Windows.Forms.TextBox()
+        Me.Btnadd = New System.Windows.Forms.Button()
+        Me.Label19 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -84,6 +86,8 @@ Partial Class inventryfrm
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.White
+        Me.TabPage1.Controls.Add(Me.Btnadd)
+        Me.TabPage1.Controls.Add(Me.Label19)
         Me.TabPage1.Controls.Add(Me.inventid_txt)
         Me.TabPage1.Controls.Add(Me.Label6)
         Me.TabPage1.Controls.Add(Me.Label7)
@@ -107,6 +111,23 @@ Partial Class inventryfrm
         Me.TabPage1.Size = New System.Drawing.Size(1037, 620)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Add Rates"
+        '
+        'inventid_txt
+        '
+        Me.inventid_txt.Enabled = False
+        Me.inventid_txt.Location = New System.Drawing.Point(443, 146)
+        Me.inventid_txt.Name = "inventid_txt"
+        Me.inventid_txt.Size = New System.Drawing.Size(216, 22)
+        Me.inventid_txt.TabIndex = 321
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(342, 149)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(81, 17)
+        Me.Label6.TabIndex = 320
+        Me.Label6.Text = "Inventory Id"
         '
         'Label7
         '
@@ -238,6 +259,7 @@ Partial Class inventryfrm
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.LightCoral
         Me.Label2.Location = New System.Drawing.Point(781, 528)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(44, 17)
@@ -515,22 +537,32 @@ Partial Class inventryfrm
         Me.Label5.TabIndex = 304
         Me.Label5.Text = "&Inventory"
         '
-        'Label6
+        'Btnadd
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(342, 149)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(81, 17)
-        Me.Label6.TabIndex = 320
-        Me.Label6.Text = "Inventory Id"
+        Me.Btnadd.BackColor = System.Drawing.Color.Transparent
+        Me.Btnadd.BackgroundImage = CType(resources.GetObject("Btnadd.BackgroundImage"), System.Drawing.Image)
+        Me.Btnadd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Btnadd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btnadd.ForeColor = System.Drawing.Color.White
+        Me.Btnadd.Location = New System.Drawing.Point(717, 482)
+        Me.Btnadd.Margin = New System.Windows.Forms.Padding(4)
+        Me.Btnadd.Name = "Btnadd"
+        Me.Btnadd.Size = New System.Drawing.Size(45, 35)
+        Me.Btnadd.TabIndex = 322
+        Me.Btnadd.UseVisualStyleBackColor = False
         '
-        'inventid_txt
+        'Label19
         '
-        Me.inventid_txt.Enabled = False
-        Me.inventid_txt.Location = New System.Drawing.Point(443, 146)
-        Me.inventid_txt.Name = "inventid_txt"
-        Me.inventid_txt.Size = New System.Drawing.Size(216, 22)
-        Me.inventid_txt.TabIndex = 321
+        Me.Label19.AutoSize = True
+        Me.Label19.BackColor = System.Drawing.Color.Transparent
+        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.ForeColor = System.Drawing.Color.LightCoral
+        Me.Label19.Location = New System.Drawing.Point(691, 528)
+        Me.Label19.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(71, 17)
+        Me.Label19.TabIndex = 323
+        Me.Label19.Text = "Add New"
         '
         'inventryfrm
         '
@@ -593,4 +625,6 @@ Partial Class inventryfrm
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents inventid_txt As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Btnadd As System.Windows.Forms.Button
+    Friend WithEvents Label19 As System.Windows.Forms.Label
 End Class

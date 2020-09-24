@@ -175,7 +175,7 @@ Public Class inventryfrm
             FillCombo()
             insert()
             getdata()
-            txtboxid()
+
             Label25.Text = "'" & pid_txt.Text & "' inventry details saved successfully!"
             Label25.ForeColor = System.Drawing.Color.DarkGreen
            
@@ -260,5 +260,26 @@ Public Class inventryfrm
 
     Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
         DeleteSelecedRows()
+    End Sub
+    Private Sub clear()
+        Try
+            pid_txt.Text = ""
+            quantity_txt.Text = ""
+            inventrydtetxt.Text = ""
+
+            '  photo.Image = Nothing
+         
+        Catch ex As Exception
+            MsgBox("Error:Some thing is going wrong,Close application and try again")
+        End Try
+    End Sub
+
+    Private Sub Btnadd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btnadd.Click
+        clear()
+        txtboxid()
+    End Sub
+
+    Private Sub Label19_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label19.Click
+
     End Sub
 End Class

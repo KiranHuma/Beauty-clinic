@@ -162,10 +162,10 @@
       <DependentUpon>membrReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\pruductreport\C.Designer.vb">
-      <DependentUpon>C.vb</DependentUpon>
+    <Compile Include="Reports\pruductreport\prdctreportview.Designer.vb">
+      <DependentUpon>prdctreportview.vb</DependentUpon>
     </Compile>
-    <Compile Include="Reports\pruductreport\C.vb">
+    <Compile Include="Reports\pruductreport\prdctreportview.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reports\pruductreport\productreporfrm.Designer.vb">
@@ -219,8 +219,8 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>membrReport.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\pruductreport\C.resx">
-      <DependentUpon>C.vb</DependentUpon>
+    <EmbeddedResource Include="Reports\pruductreport\prdctreportview.resx">
+      <DependentUpon>prdctreportview.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\pruductreport\productreporfrm.resx">
       <DependentUpon>productreporfrm.vb</DependentUpon>
