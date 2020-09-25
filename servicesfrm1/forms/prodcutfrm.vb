@@ -36,7 +36,7 @@ Public Class prodcutfrm
         Try
             con.ConnectionString = cs
             cmd.Connection = con
-
+            ' MsgBox("DataBase connected ")
         Catch ex As Exception
             MsgBox("DataBase not connected due to the reason because " & ex.Message)
             Me.Dispose()

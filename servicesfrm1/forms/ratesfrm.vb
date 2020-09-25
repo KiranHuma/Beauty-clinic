@@ -119,7 +119,7 @@ Public Class ratesfrm
 
     End Sub
 
-    Private Sub svemem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles svemem.Click
+    Private Sub svemem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         insert()
     End Sub
     Private Sub clear()
