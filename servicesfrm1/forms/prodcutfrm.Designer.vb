@@ -66,18 +66,41 @@ Partial Class prodcutfrm
         Me.Label6 = New System.Windows.Forms.Label()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Button12 = New System.Windows.Forms.Button()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.eservice_txt = New System.Windows.Forms.TextBox()
+        Me.servicename_txt = New System.Windows.Forms.ComboBox()
+        Me.serprice_txt = New System.Windows.Forms.TextBox()
+        Me.serid_txt = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.photo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         CType(Me.get_productdata, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage3.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Controls.Add(Me.TabPage3)
+        Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Location = New System.Drawing.Point(229, 133)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -119,7 +142,7 @@ Partial Class prodcutfrm
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(927, 532)
         Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "Add Rates"
+        Me.TabPage1.Text = "Product Registration"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
         'Btnadd
@@ -454,7 +477,7 @@ Partial Class prodcutfrm
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(927, 532)
         Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Rates Data"
+        Me.TabPage2.Text = "View Product Data"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
         'Button6
@@ -533,11 +556,11 @@ Partial Class prodcutfrm
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label6.Location = New System.Drawing.Point(624, 55)
+        Me.Label6.Location = New System.Drawing.Point(482, 24)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(170, 44)
+        Me.Label6.Size = New System.Drawing.Size(403, 44)
         Me.Label6.TabIndex = 279
-        Me.Label6.Text = "Products"
+        Me.Label6.Text = "Products And Services"
         '
         'OpenFileDialog1
         '
@@ -551,12 +574,252 @@ Partial Class prodcutfrm
         Me.Button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button12.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Button12.Location = New System.Drawing.Point(1298, 38)
+        Me.Button12.Location = New System.Drawing.Point(1297, 24)
         Me.Button12.Margin = New System.Windows.Forms.Padding(4)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(31, 30)
         Me.Button12.TabIndex = 302
         Me.Button12.UseVisualStyleBackColor = False
+        '
+        'TabPage3
+        '
+        Me.TabPage3.Controls.Add(Me.Button2)
+        Me.TabPage3.Controls.Add(Me.Label13)
+        Me.TabPage3.Controls.Add(Me.Button3)
+        Me.TabPage3.Controls.Add(Me.Label18)
+        Me.TabPage3.Controls.Add(Me.Label20)
+        Me.TabPage3.Controls.Add(Me.Label21)
+        Me.TabPage3.Controls.Add(Me.Button4)
+        Me.TabPage3.Controls.Add(Me.Button5)
+        Me.TabPage3.Controls.Add(Me.Label22)
+        Me.TabPage3.Controls.Add(Me.Button7)
+        Me.TabPage3.Controls.Add(Me.Label12)
+        Me.TabPage3.Controls.Add(Me.eservice_txt)
+        Me.TabPage3.Controls.Add(Me.servicename_txt)
+        Me.TabPage3.Controls.Add(Me.serprice_txt)
+        Me.TabPage3.Controls.Add(Me.serid_txt)
+        Me.TabPage3.Controls.Add(Me.Label14)
+        Me.TabPage3.Controls.Add(Me.Label16)
+        Me.TabPage3.Controls.Add(Me.Label17)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(927, 532)
+        Me.TabPage3.TabIndex = 2
+        Me.TabPage3.Text = "Services"
+        Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'TabPage4
+        '
+        Me.TabPage4.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage4.Size = New System.Drawing.Size(927, 532)
+        Me.TabPage4.TabIndex = 3
+        Me.TabPage4.Text = "Services Data"
+        Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(230, 163)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(63, 17)
+        Me.Label12.TabIndex = 336
+        Me.Label12.Text = "Service#"
+        '
+        'eservice_txt
+        '
+        Me.eservice_txt.Location = New System.Drawing.Point(345, 163)
+        Me.eservice_txt.Name = "eservice_txt"
+        Me.eservice_txt.Size = New System.Drawing.Size(216, 22)
+        Me.eservice_txt.TabIndex = 335
+        '
+        'servicename_txt
+        '
+        Me.servicename_txt.FormattingEnabled = True
+        Me.servicename_txt.Items.AddRange(New Object() {"Sale", "Purchase"})
+        Me.servicename_txt.Location = New System.Drawing.Point(346, 238)
+        Me.servicename_txt.Name = "servicename_txt"
+        Me.servicename_txt.Size = New System.Drawing.Size(215, 24)
+        Me.servicename_txt.TabIndex = 334
+        Me.servicename_txt.Text = "Select Value"
+        '
+        'serprice_txt
+        '
+        Me.serprice_txt.Location = New System.Drawing.Point(346, 279)
+        Me.serprice_txt.Name = "serprice_txt"
+        Me.serprice_txt.Size = New System.Drawing.Size(215, 22)
+        Me.serprice_txt.TabIndex = 332
+        '
+        'serid_txt
+        '
+        Me.serid_txt.Location = New System.Drawing.Point(345, 201)
+        Me.serid_txt.Name = "serid_txt"
+        Me.serid_txt.Size = New System.Drawing.Size(216, 22)
+        Me.serid_txt.TabIndex = 330
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(230, 282)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(91, 17)
+        Me.Label14.TabIndex = 329
+        Me.Label14.Text = "Service Price"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(230, 238)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(96, 17)
+        Me.Label16.TabIndex = 328
+        Me.Label16.Text = "Service Name"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(230, 204)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(72, 17)
+        Me.Label17.TabIndex = 327
+        Me.Label17.Text = "Service ID"
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.Transparent
+        Me.Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"), System.Drawing.Image)
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(500, 427)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(45, 35)
+        Me.Button2.TabIndex = 345
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.BackColor = System.Drawing.Color.Transparent
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.LightCoral
+        Me.Label13.Location = New System.Drawing.Point(474, 473)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(71, 17)
+        Me.Label13.TabIndex = 346
+        Me.Label13.Text = "Add New"
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.Transparent
+        Me.Button3.BackgroundImage = CType(resources.GetObject("Button3.BackgroundImage"), System.Drawing.Image)
+        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.ForeColor = System.Drawing.Color.DimGray
+        Me.Button3.Location = New System.Drawing.Point(781, 438)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(46, 33)
+        Me.Button3.TabIndex = 344
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.BackColor = System.Drawing.Color.Transparent
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.ForeColor = System.Drawing.Color.LightCoral
+        Me.Label18.Location = New System.Drawing.Point(695, 478)
+        Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(55, 17)
+        Me.Label18.TabIndex = 343
+        Me.Label18.Text = "Delete"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.BackColor = System.Drawing.Color.Transparent
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.ForeColor = System.Drawing.Color.LightCoral
+        Me.Label20.Location = New System.Drawing.Point(632, 478)
+        Me.Label20.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(36, 17)
+        Me.Label20.TabIndex = 342
+        Me.Label20.Text = "Edit"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.BackColor = System.Drawing.Color.Transparent
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.ForeColor = System.Drawing.Color.LightCoral
+        Me.Label21.Location = New System.Drawing.Point(777, 478)
+        Me.Label21.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(65, 17)
+        Me.Label21.TabIndex = 339
+        Me.Label21.Text = "Reports"
+        '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.White
+        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.ForeColor = System.Drawing.Color.White
+        Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
+        Me.Button4.Location = New System.Drawing.Point(626, 437)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(42, 34)
+        Me.Button4.TabIndex = 340
+        Me.Button4.UseVisualStyleBackColor = False
+        '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.Color.White
+        Me.Button5.BackgroundImage = CType(resources.GetObject("Button5.BackgroundImage"), System.Drawing.Image)
+        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.ForeColor = System.Drawing.Color.White
+        Me.Button5.Location = New System.Drawing.Point(698, 437)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(52, 34)
+        Me.Button5.TabIndex = 341
+        Me.Button5.UseVisualStyleBackColor = False
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.BackColor = System.Drawing.Color.Transparent
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.ForeColor = System.Drawing.Color.LightCoral
+        Me.Label22.Location = New System.Drawing.Point(559, 475)
+        Me.Label22.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(44, 17)
+        Me.Label22.TabIndex = 338
+        Me.Label22.Text = "Save"
+        '
+        'Button7
+        '
+        Me.Button7.BackColor = System.Drawing.SystemColors.Control
+        Me.Button7.BackgroundImage = CType(resources.GetObject("Button7.BackgroundImage"), System.Drawing.Image)
+        Me.Button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button7.ForeColor = System.Drawing.SystemColors.Control
+        Me.Button7.Location = New System.Drawing.Point(563, 438)
+        Me.Button7.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(36, 33)
+        Me.Button7.TabIndex = 337
+        Me.Button7.UseVisualStyleBackColor = False
         '
         'prodcutfrm
         '
@@ -579,6 +842,8 @@ Partial Class prodcutfrm
         CType(Me.photo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         CType(Me.get_productdata, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage3.ResumeLayout(False)
+        Me.TabPage3.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -621,4 +886,24 @@ Partial Class prodcutfrm
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents Btnadd As System.Windows.Forms.Button
     Friend WithEvents Label19 As System.Windows.Forms.Label
+    Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Label18 As System.Windows.Forms.Label
+    Friend WithEvents Label20 As System.Windows.Forms.Label
+    Friend WithEvents Label21 As System.Windows.Forms.Label
+    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents Label22 As System.Windows.Forms.Label
+    Friend WithEvents Button7 As System.Windows.Forms.Button
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents eservice_txt As System.Windows.Forms.TextBox
+    Friend WithEvents servicename_txt As System.Windows.Forms.ComboBox
+    Friend WithEvents serprice_txt As System.Windows.Forms.TextBox
+    Friend WithEvents serid_txt As System.Windows.Forms.TextBox
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents TabPage4 As System.Windows.Forms.TabPage
 End Class
