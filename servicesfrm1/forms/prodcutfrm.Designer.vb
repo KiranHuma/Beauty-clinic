@@ -23,13 +23,15 @@ Partial Class prodcutfrm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(prodcutfrm))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.pquatity_txt = New System.Windows.Forms.TextBox()
+        Me.Label24 = New System.Windows.Forms.Label()
         Me.Btnadd = New System.Windows.Forms.Button()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -63,19 +65,9 @@ Partial Class prodcutfrm
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.get_productdata = New System.Windows.Forms.DataGridView()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.Button12 = New System.Windows.Forms.Button()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.eservice_txt = New System.Windows.Forms.TextBox()
-        Me.servicename_txt = New System.Windows.Forms.ComboBox()
-        Me.serprice_txt = New System.Windows.Forms.TextBox()
-        Me.serid_txt = New System.Windows.Forms.TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
+        Me.s_dte_txt = New System.Windows.Forms.DateTimePicker()
+        Me.Label26 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -85,7 +77,19 @@ Partial Class prodcutfrm
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Label22 = New System.Windows.Forms.Label()
-        Me.Button7 = New System.Windows.Forms.Button()
+        Me.ser_svbtn = New System.Windows.Forms.Button()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.eservice_txt = New System.Windows.Forms.TextBox()
+        Me.servicename_txt = New System.Windows.Forms.ComboBox()
+        Me.serprice_txt = New System.Windows.Forms.TextBox()
+        Me.serid_txt = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.Button12 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -109,6 +113,8 @@ Partial Class prodcutfrm
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.pquatity_txt)
+        Me.TabPage1.Controls.Add(Me.Label24)
         Me.TabPage1.Controls.Add(Me.Btnadd)
         Me.TabPage1.Controls.Add(Me.Label19)
         Me.TabPage1.Controls.Add(Me.Panel1)
@@ -144,6 +150,22 @@ Partial Class prodcutfrm
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Product Registration"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'pquatity_txt
+        '
+        Me.pquatity_txt.Location = New System.Drawing.Point(210, 244)
+        Me.pquatity_txt.Name = "pquatity_txt"
+        Me.pquatity_txt.Size = New System.Drawing.Size(215, 22)
+        Me.pquatity_txt.TabIndex = 331
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(99, 247)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(61, 17)
+        Me.Label24.TabIndex = 330
+        Me.Label24.Text = "Quantity"
         '
         'Btnadd
         '
@@ -217,7 +239,7 @@ Partial Class prodcutfrm
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(94, 89)
+        Me.Label11.Location = New System.Drawing.Point(95, 26)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(65, 17)
         Me.Label11.TabIndex = 326
@@ -225,7 +247,7 @@ Partial Class prodcutfrm
         '
         'pro_txt
         '
-        Me.pro_txt.Location = New System.Drawing.Point(209, 89)
+        Me.pro_txt.Location = New System.Drawing.Point(210, 26)
         Me.pro_txt.Name = "pro_txt"
         Me.pro_txt.Size = New System.Drawing.Size(216, 22)
         Me.pro_txt.TabIndex = 325
@@ -342,7 +364,7 @@ Partial Class prodcutfrm
         '
         'p_dtetxt
         '
-        Me.p_dtetxt.Location = New System.Drawing.Point(209, 295)
+        Me.p_dtetxt.Location = New System.Drawing.Point(211, 295)
         Me.p_dtetxt.Name = "p_dtetxt"
         Me.p_dtetxt.Size = New System.Drawing.Size(216, 22)
         Me.p_dtetxt.TabIndex = 292
@@ -351,7 +373,7 @@ Partial Class prodcutfrm
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(96, 300)
+        Me.Label4.Location = New System.Drawing.Point(98, 300)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(38, 17)
         Me.Label4.TabIndex = 291
@@ -360,8 +382,8 @@ Partial Class prodcutfrm
         'salpr_txt
         '
         Me.salpr_txt.FormattingEnabled = True
-        Me.salpr_txt.Items.AddRange(New Object() {"Sale", "Purchase"})
-        Me.salpr_txt.Location = New System.Drawing.Point(210, 249)
+        Me.salpr_txt.Items.AddRange(New Object() {"Purchase"})
+        Me.salpr_txt.Location = New System.Drawing.Point(211, 186)
         Me.salpr_txt.Name = "salpr_txt"
         Me.salpr_txt.Size = New System.Drawing.Size(215, 24)
         Me.salpr_txt.TabIndex = 290
@@ -370,15 +392,15 @@ Partial Class prodcutfrm
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(94, 252)
+        Me.Label2.Location = New System.Drawing.Point(95, 189)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(100, 17)
+        Me.Label2.Size = New System.Drawing.Size(68, 17)
         Me.Label2.TabIndex = 288
-        Me.Label2.Text = "Sale/Purchase"
+        Me.Label2.Text = "Purchase"
         '
         'price_txt
         '
-        Me.price_txt.Location = New System.Drawing.Point(210, 205)
+        Me.price_txt.Location = New System.Drawing.Point(211, 142)
         Me.price_txt.Name = "price_txt"
         Me.price_txt.Size = New System.Drawing.Size(215, 22)
         Me.price_txt.TabIndex = 287
@@ -412,7 +434,7 @@ Partial Class prodcutfrm
         '
         'des_txt
         '
-        Me.des_txt.Location = New System.Drawing.Point(209, 343)
+        Me.des_txt.Location = New System.Drawing.Point(211, 343)
         Me.des_txt.Name = "des_txt"
         Me.des_txt.Size = New System.Drawing.Size(216, 126)
         Me.des_txt.TabIndex = 283
@@ -420,14 +442,14 @@ Partial Class prodcutfrm
         '
         'name_txt
         '
-        Me.name_txt.Location = New System.Drawing.Point(210, 164)
+        Me.name_txt.Location = New System.Drawing.Point(211, 101)
         Me.name_txt.Name = "name_txt"
         Me.name_txt.Size = New System.Drawing.Size(215, 22)
         Me.name_txt.TabIndex = 281
         '
         'pid_txt
         '
-        Me.pid_txt.Location = New System.Drawing.Point(209, 127)
+        Me.pid_txt.Location = New System.Drawing.Point(210, 64)
         Me.pid_txt.Name = "pid_txt"
         Me.pid_txt.Size = New System.Drawing.Size(216, 22)
         Me.pid_txt.TabIndex = 280
@@ -435,7 +457,7 @@ Partial Class prodcutfrm
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(94, 343)
+        Me.Label5.Location = New System.Drawing.Point(96, 343)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(79, 17)
         Me.Label5.TabIndex = 278
@@ -444,7 +466,7 @@ Partial Class prodcutfrm
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(94, 208)
+        Me.Label3.Location = New System.Drawing.Point(95, 145)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(40, 17)
         Me.Label3.TabIndex = 276
@@ -453,7 +475,7 @@ Partial Class prodcutfrm
         'namep
         '
         Me.namep.AutoSize = True
-        Me.namep.Location = New System.Drawing.Point(94, 164)
+        Me.namep.Location = New System.Drawing.Point(95, 101)
         Me.namep.Name = "namep"
         Me.namep.Size = New System.Drawing.Size(45, 17)
         Me.namep.TabIndex = 275
@@ -462,7 +484,7 @@ Partial Class prodcutfrm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(94, 130)
+        Me.Label1.Location = New System.Drawing.Point(95, 67)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(74, 17)
         Me.Label1.TabIndex = 274
@@ -496,13 +518,13 @@ Partial Class prodcutfrm
         '
         Me.get_productdata.AllowUserToAddRows = False
         Me.get_productdata.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
-        Me.get_productdata.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White
+        Me.get_productdata.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle6
         Me.get_productdata.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -510,79 +532,51 @@ Partial Class prodcutfrm
         Me.get_productdata.BackgroundColor = System.Drawing.Color.Indigo
         Me.get_productdata.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.get_productdata.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.get_productdata.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.get_productdata.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.get_productdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.get_productdata.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.get_productdata.DefaultCellStyle = DataGridViewCellStyle8
         Me.get_productdata.EnableHeadersVisualStyles = False
         Me.get_productdata.GridColor = System.Drawing.Color.Indigo
         Me.get_productdata.Location = New System.Drawing.Point(25, 151)
         Me.get_productdata.Margin = New System.Windows.Forms.Padding(4)
         Me.get_productdata.Name = "get_productdata"
         Me.get_productdata.ReadOnly = True
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.get_productdata.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.get_productdata.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.get_productdata.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White
-        Me.get_productdata.RowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White
+        Me.get_productdata.RowsDefaultCellStyle = DataGridViewCellStyle10
         Me.get_productdata.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.get_productdata.Size = New System.Drawing.Size(877, 359)
         Me.get_productdata.TabIndex = 152
         '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label6.Location = New System.Drawing.Point(482, 24)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(403, 44)
-        Me.Label6.TabIndex = 279
-        Me.Label6.Text = "Products And Services"
-        '
-        'OpenFileDialog1
-        '
-        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
-        '
-        'Button12
-        '
-        Me.Button12.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button12.BackColor = System.Drawing.Color.RoyalBlue
-        Me.Button12.BackgroundImage = CType(resources.GetObject("Button12.BackgroundImage"), System.Drawing.Image)
-        Me.Button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button12.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Button12.Location = New System.Drawing.Point(1297, 24)
-        Me.Button12.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(31, 30)
-        Me.Button12.TabIndex = 302
-        Me.Button12.UseVisualStyleBackColor = False
-        '
         'TabPage3
         '
+        Me.TabPage3.Controls.Add(Me.s_dte_txt)
+        Me.TabPage3.Controls.Add(Me.Label26)
         Me.TabPage3.Controls.Add(Me.Button2)
         Me.TabPage3.Controls.Add(Me.Label13)
         Me.TabPage3.Controls.Add(Me.Button3)
@@ -592,7 +586,7 @@ Partial Class prodcutfrm
         Me.TabPage3.Controls.Add(Me.Button4)
         Me.TabPage3.Controls.Add(Me.Button5)
         Me.TabPage3.Controls.Add(Me.Label22)
-        Me.TabPage3.Controls.Add(Me.Button7)
+        Me.TabPage3.Controls.Add(Me.ser_svbtn)
         Me.TabPage3.Controls.Add(Me.Label12)
         Me.TabPage3.Controls.Add(Me.eservice_txt)
         Me.TabPage3.Controls.Add(Me.servicename_txt)
@@ -609,82 +603,21 @@ Partial Class prodcutfrm
         Me.TabPage3.Text = "Services"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
-        'TabPage4
+        's_dte_txt
         '
-        Me.TabPage4.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(927, 532)
-        Me.TabPage4.TabIndex = 3
-        Me.TabPage4.Text = "Services Data"
-        Me.TabPage4.UseVisualStyleBackColor = True
+        Me.s_dte_txt.Location = New System.Drawing.Point(346, 323)
+        Me.s_dte_txt.Name = "s_dte_txt"
+        Me.s_dte_txt.Size = New System.Drawing.Size(215, 22)
+        Me.s_dte_txt.TabIndex = 348
         '
-        'Label12
+        'Label26
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(230, 163)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(63, 17)
-        Me.Label12.TabIndex = 336
-        Me.Label12.Text = "Service#"
-        '
-        'eservice_txt
-        '
-        Me.eservice_txt.Location = New System.Drawing.Point(345, 163)
-        Me.eservice_txt.Name = "eservice_txt"
-        Me.eservice_txt.Size = New System.Drawing.Size(216, 22)
-        Me.eservice_txt.TabIndex = 335
-        '
-        'servicename_txt
-        '
-        Me.servicename_txt.FormattingEnabled = True
-        Me.servicename_txt.Items.AddRange(New Object() {"Sale", "Purchase"})
-        Me.servicename_txt.Location = New System.Drawing.Point(346, 238)
-        Me.servicename_txt.Name = "servicename_txt"
-        Me.servicename_txt.Size = New System.Drawing.Size(215, 24)
-        Me.servicename_txt.TabIndex = 334
-        Me.servicename_txt.Text = "Select Value"
-        '
-        'serprice_txt
-        '
-        Me.serprice_txt.Location = New System.Drawing.Point(346, 279)
-        Me.serprice_txt.Name = "serprice_txt"
-        Me.serprice_txt.Size = New System.Drawing.Size(215, 22)
-        Me.serprice_txt.TabIndex = 332
-        '
-        'serid_txt
-        '
-        Me.serid_txt.Location = New System.Drawing.Point(345, 201)
-        Me.serid_txt.Name = "serid_txt"
-        Me.serid_txt.Size = New System.Drawing.Size(216, 22)
-        Me.serid_txt.TabIndex = 330
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(230, 282)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(91, 17)
-        Me.Label14.TabIndex = 329
-        Me.Label14.Text = "Service Price"
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(230, 238)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(96, 17)
-        Me.Label16.TabIndex = 328
-        Me.Label16.Text = "Service Name"
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(230, 204)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(72, 17)
-        Me.Label17.TabIndex = 327
-        Me.Label17.Text = "Service ID"
+        Me.Label26.AutoSize = True
+        Me.Label26.Location = New System.Drawing.Point(230, 323)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(91, 17)
+        Me.Label26.TabIndex = 347
+        Me.Label26.Text = "Service Price"
         '
         'Button2
         '
@@ -807,19 +740,126 @@ Partial Class prodcutfrm
         Me.Label22.TabIndex = 338
         Me.Label22.Text = "Save"
         '
-        'Button7
+        'ser_svbtn
         '
-        Me.Button7.BackColor = System.Drawing.SystemColors.Control
-        Me.Button7.BackgroundImage = CType(resources.GetObject("Button7.BackgroundImage"), System.Drawing.Image)
-        Me.Button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.ForeColor = System.Drawing.SystemColors.Control
-        Me.Button7.Location = New System.Drawing.Point(563, 438)
-        Me.Button7.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(36, 33)
-        Me.Button7.TabIndex = 337
-        Me.Button7.UseVisualStyleBackColor = False
+        Me.ser_svbtn.BackColor = System.Drawing.SystemColors.Control
+        Me.ser_svbtn.BackgroundImage = CType(resources.GetObject("ser_svbtn.BackgroundImage"), System.Drawing.Image)
+        Me.ser_svbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ser_svbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ser_svbtn.ForeColor = System.Drawing.SystemColors.Control
+        Me.ser_svbtn.Location = New System.Drawing.Point(563, 438)
+        Me.ser_svbtn.Margin = New System.Windows.Forms.Padding(4)
+        Me.ser_svbtn.Name = "ser_svbtn"
+        Me.ser_svbtn.Size = New System.Drawing.Size(36, 33)
+        Me.ser_svbtn.TabIndex = 337
+        Me.ser_svbtn.UseVisualStyleBackColor = False
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(230, 163)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(63, 17)
+        Me.Label12.TabIndex = 336
+        Me.Label12.Text = "Service#"
+        '
+        'eservice_txt
+        '
+        Me.eservice_txt.Location = New System.Drawing.Point(345, 163)
+        Me.eservice_txt.Name = "eservice_txt"
+        Me.eservice_txt.Size = New System.Drawing.Size(216, 22)
+        Me.eservice_txt.TabIndex = 335
+        '
+        'servicename_txt
+        '
+        Me.servicename_txt.FormattingEnabled = True
+        Me.servicename_txt.Items.AddRange(New Object() {"Sale", "Purchase"})
+        Me.servicename_txt.Location = New System.Drawing.Point(346, 238)
+        Me.servicename_txt.Name = "servicename_txt"
+        Me.servicename_txt.Size = New System.Drawing.Size(215, 24)
+        Me.servicename_txt.TabIndex = 334
+        Me.servicename_txt.Text = "Select Value"
+        '
+        'serprice_txt
+        '
+        Me.serprice_txt.Location = New System.Drawing.Point(346, 279)
+        Me.serprice_txt.Name = "serprice_txt"
+        Me.serprice_txt.Size = New System.Drawing.Size(215, 22)
+        Me.serprice_txt.TabIndex = 332
+        '
+        'serid_txt
+        '
+        Me.serid_txt.Location = New System.Drawing.Point(345, 201)
+        Me.serid_txt.Name = "serid_txt"
+        Me.serid_txt.Size = New System.Drawing.Size(216, 22)
+        Me.serid_txt.TabIndex = 330
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(230, 282)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(91, 17)
+        Me.Label14.TabIndex = 329
+        Me.Label14.Text = "Service Price"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(230, 238)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(96, 17)
+        Me.Label16.TabIndex = 328
+        Me.Label16.Text = "Service Name"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(230, 204)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(72, 17)
+        Me.Label17.TabIndex = 327
+        Me.Label17.Text = "Service ID"
+        '
+        'TabPage4
+        '
+        Me.TabPage4.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage4.Size = New System.Drawing.Size(927, 532)
+        Me.TabPage4.TabIndex = 3
+        Me.TabPage4.Text = "Services Data"
+        Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.LightCoral
+        Me.Label6.Location = New System.Drawing.Point(482, 24)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(403, 44)
+        Me.Label6.TabIndex = 279
+        Me.Label6.Text = "Products And Services"
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'Button12
+        '
+        Me.Button12.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button12.BackColor = System.Drawing.Color.RoyalBlue
+        Me.Button12.BackgroundImage = CType(resources.GetObject("Button12.BackgroundImage"), System.Drawing.Image)
+        Me.Button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button12.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.Button12.Location = New System.Drawing.Point(1297, 24)
+        Me.Button12.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(31, 30)
+        Me.Button12.TabIndex = 302
+        Me.Button12.UseVisualStyleBackColor = False
         '
         'prodcutfrm
         '
@@ -896,7 +936,7 @@ Partial Class prodcutfrm
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Label22 As System.Windows.Forms.Label
-    Friend WithEvents Button7 As System.Windows.Forms.Button
+    Friend WithEvents ser_svbtn As System.Windows.Forms.Button
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents eservice_txt As System.Windows.Forms.TextBox
     Friend WithEvents servicename_txt As System.Windows.Forms.ComboBox
@@ -906,4 +946,8 @@ Partial Class prodcutfrm
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents TabPage4 As System.Windows.Forms.TabPage
+    Friend WithEvents pquatity_txt As System.Windows.Forms.TextBox
+    Friend WithEvents Label24 As System.Windows.Forms.Label
+    Friend WithEvents s_dte_txt As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Label26 As System.Windows.Forms.Label
 End Class
