@@ -3,6 +3,7 @@ Imports System.Data.OleDb
 Imports System.Data.Odbc
 Imports System.Data.DataTable
 Imports System.Data.SqlClient
+Imports System.IO
 
 Public Class inventryfrm
     Private bitmap As Bitmap 'for print of grid
@@ -31,33 +32,38 @@ Public Class inventryfrm
             Me.Dispose()
         End Try
     End Sub
-    'insert values in sqlserver
+   
     Private Sub insert()
-            Try
-                con.ConnectionString = cs
-                cmd.Connection = con
-                con.Open()
-            cmd.CommandText = "insert into tbl_inventrry(In_ID,p_id,quantity,i_dte)values('" & inventid_txt.Text & "','" & pid_txt.Text & "','" & quantity_txt.Text & "','" & inventrydtetxt.Value & "')"
-                cmd.ExecuteNonQuery()
+        Try
+            con.ConnectionString = cs
+            cmd.Connection = con
+            con.Open()
+           
+
+            cmd.CommandText = "insert into tbl_inventrry(Entryno,I_Id,Pro_id,Totalquantity,Stock_Status,Stockin_date)values('" & inventid_txt.Text & "','" & in_id_txt.Text & "','" & pid_txt.Text & "','" & quantity_txt.Text & "','" & stock_txt.Text & "','" & inventrydtetxt.Value & "')"
+            cmd.ExecuteNonQuery()
                 con.Close()
-            Catch ex As Exception
+        Catch ex As Exception
 
-                MsgBox("DataBase not connected due to the reason because " & ex.Message)
+            MsgBox("DataBase not connected due to the reason because " & ex.Message)
 
-            End Try
+        End Try
 
     End Sub
     'edit function
     Private Sub edit()
         dbaccessconnection()
-        If pid_txt.Text = "" Then
-            MessageBox.Show("Empty Id")
-            TabControl1.SelectedTab = TabPage2
+        If TextBox2.Text = "" Then
+            MessageBox.Show("Select Value from Grid")
+            TabControl1.SelectedTab = TabPage3
         Else
-            Dim command As New SqlCommand("UPDATE tbl_inventrry SET In_ID=@iid, p_id = @pid , quantity = @quantity ,i_dte = @inventrydtetxt WHERE In_ID = @iid", con)
+            Dim command As New SqlCommand("UPDATE tbl_inventrry SET Entryno=@iid, I_Id = @in_id ,Pro_id = @Pro_id ,Totalquantity = @tquantity ,Stock_Status=@Stockinfo,Stockin_date = @inventrydtetxt WHERE Entryno = @iid", con)
             command.Parameters.Add("@iid", SqlDbType.Int).Value = inventid_txt.Text
-            command.Parameters.Add("@pid", SqlDbType.NVarChar).Value = pid_txt.Text
-            command.Parameters.Add("@quantity", SqlDbType.NVarChar).Value = quantity_txt.Text
+            command.Parameters.Add("@in_id", SqlDbType.NVarChar).Value = in_id_txt.Text
+            command.Parameters.Add("@Pro_id", SqlDbType.NVarChar).Value = pid_txt.Text
+            command.Parameters.Add("@tquantity", SqlDbType.NVarChar).Value = quantity_txt.Text
+            command.Parameters.Add("@Stockinfo", SqlDbType.NVarChar).Value = stock_txt.Text
+
             command.Parameters.Add("@inventrydtetxt", SqlDbType.DateTime).Value = inventrydtetxt.Text
 
             con.Open()
@@ -72,17 +78,98 @@ Public Class inventryfrm
 
         End If
     End Sub
+
+    'Show data in data grid
+    Private Sub getdata()
+        '"Select tbl_inventrry.In_ID ,tbl_products.p_name from tbl_products full join tbl_inventrry on tbl_products.pro_id=tbl_inventrry.In_ID ", con)
+        'SELECT * FROM tbl_inventrry full join tbl_products on tbl_inventrry.In_ID= tbl_products.pro_id
+        'SELECT *  FROM tbl_products UNION  SELECT * FROM tbl_inventrry 
+        Try
+            Dim con As New SqlConnection(cs)
+            con.Open()
+            Dim da As New SqlDataAdapter("SELECT * From tbl_products where p_totalquantity!= 0 ", con)
+            Dim dt As New DataTable
+            da.Fill(dt)
+            source2.DataSource = dt
+            get_stockdata.DataSource = dt
+            get_stockdata.Refresh()
+        Catch ex As Exception
+            MessageBox.Show(" Error while retriving data" & ex.Message)
+        End Try
+    End Sub
+    Private Sub in_getdata()
+        '"Select tbl_inventrry.In_ID ,tbl_products.p_name from tbl_products full join tbl_inventrry on tbl_products.pro_id=tbl_inventrry.In_ID ", con)
+        'SELECT * FROM tbl_inventrry full join tbl_products on tbl_inventrry.In_ID= tbl_products.pro_id
+        'SELECT *  FROM tbl_products UNION  SELECT * FROM tbl_inventrry 
+        Try
+            Dim con As New SqlConnection(cs)
+            con.Open()
+            Dim da As New SqlDataAdapter("SELECT * From tbl_inventrry ", con)
+            Dim dt As New DataTable
+            da.Fill(dt)
+            source2.DataSource = dt
+            get_indata.DataSource = dt
+            get_indata.Refresh()
+        Catch ex As Exception
+            MessageBox.Show(" Error while retriving data" & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub FillCombo()
+        Try
+            Dim conn As New System.Data.SqlClient.SqlConnection(cs)
+            Dim strSQL As String = "SELECT P_id FROM tbl_products"
+            Dim da As New System.Data.SqlClient.SqlDataAdapter(strSQL, conn)
+            Dim ds As New DataSet
+            da.Fill(ds, "tbl_products")
+            With Me.pid_txt
+                .DataSource = ds.Tables("tbl_products")
+                .DisplayMember = "P_id"
+                .ValueMember = "P_id"
+                .SelectedIndex = 0
+            End With
+            checkstock()
+
+        Catch ex As Exception
+            MessageBox.Show(" Error while retriving data" & ex.Message)
+        End Try
+        
+    End Sub
+
+   
+
+    Private Sub stockfrm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        dbaccessconnection()
+        source1.Filter = "[P_id] = '" & pid_txt.Text & "'"
+        Me.Label23.Text = Format(Now, "dd-MMM-yyyy")
+        FillCombo()
+        get_stockdata.Refresh()
+        txtboxid()
+
+        autogenerated()
+        getdata()
+        in_getdata()
+
+    End Sub
+    Private Sub checkstock()
+        If Not quantity_txt.Text = 0 Then
+            stock_txt.Text = "Stock IN"
+        ElseIf quantity_txt.Text = 0 Then
+            stock_txt.Text = "Stock Out"
+        End If
+    End Sub
+   
     Private Sub txtboxid()
         Try
             dbaccessconnection()
             con.Open()
             Dim num As New Integer
-            cmd.CommandText = "SELECT MAX(In_ID) FROM tbl_inventrry "
+            cmd.CommandText = "SELECT MAX(Entryno) FROM tbl_inventrry "
             If (IsDBNull(cmd.ExecuteScalar)) Then
                 num = 1
                 inventid_txt.Text = num.ToString
             Else
-             
+
                 num = cmd.ExecuteScalar + 1
                 inventid_txt.Text = num.ToString
             End If
@@ -92,71 +179,25 @@ Public Class inventryfrm
             Me.Dispose()
         End Try
     End Sub
-    'Show data in data grid
-    Private Sub getdata()
-        Try
-            Dim con As New SqlConnection(cs)
+    Private Sub autogenerated()
+
+        Dim curValue As Integer
+        Dim result As String
+        Using con As SqlConnection = New SqlConnection(cs)
             con.Open()
-            Dim da As New SqlDataAdapter("Select In_ID, p_id as[Product ID],quantity as [Quantity],i_dte [Inventory Date] from tbl_inventrry ", con)
-            Dim dt As New DataTable
-            da.Fill(dt)
-            source2.DataSource = dt
-            get_stockdata.DataSource = dt
-            get_stockdata.Refresh()
-        Catch ex As Exception
-            MessageBox.Show(" Error while retriving data", "Close application and try again", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-        End Try
+            Dim cmd = New SqlCommand("select Max(I_Id) from tbl_inventrry", con)
+            result = cmd.ExecuteScalar().ToString()
+            If String.IsNullOrEmpty(result) Then
+                result = "IN-0000"
+            End If
+
+            result = result.Substring(3)
+            Int32.TryParse(result, curValue)
+            curValue = curValue + 1
+            result = "IN" + curValue.ToString("D4")
+            in_id_txt.Text = result
+        End Using
     End Sub
-
-    Private Sub FillCombo()
-        Dim conn As New System.Data.SqlClient.SqlConnection(cs)
-        Dim strSQL As String = "SELECT P_id FROM tbl_products"
-        Dim da As New System.Data.SqlClient.SqlDataAdapter(strSQL, conn)
-        Dim ds As New DataSet
-        da.Fill(ds, "tbl_products")
-        With Me.pid_txt
-            .DataSource = ds.Tables("tbl_products")
-            .DisplayMember = "P_id"
-            .ValueMember = "P_id"
-            .SelectedIndex = 0
-        End With
-    End Sub
-
-    Private Sub DeleteSelecedRows()
-        Dim ObjConnection As New SqlConnection()
-        Dim i As Integer
-        Dim mResult
-        mResult = MsgBox("Want you really delete the selected records?", _
-        vbYesNo + vbQuestion, "Removal confirmation")
-        If mResult = vbNo Then
-            Exit Sub
-        End If
-        ObjConnection.ConnectionString = cs
-        Dim ObjCommand As New SqlCommand()
-        ObjCommand.Connection = ObjConnection
-        For i = Me.get_stockdata.SelectedRows.Count - 1 To 0 Step -1
-            ObjCommand.CommandText = "delete from tbl_inventrry where In_ID='" & get_stockdata.SelectedRows(i).Cells("In_ID").Value & "'"
-            ObjConnection.Open()
-            ObjCommand.ExecuteNonQuery()
-            ObjConnection.Close()
-            Me.get_stockdata.Rows.Remove(Me.get_stockdata.SelectedRows(i))
-        Next
-
-    End Sub
-
-
-    Private Sub stockfrm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        dbaccessconnection()
-        source1.Filter = "[p_id] = '" & pid_txt.Text & "'"
-        Me.Label23.Text = Format(Now, "dd-MMM-yyyy")
-        FillCombo()
-        get_stockdata.Refresh()
-        txtboxid()
-
-        getdata()
-
-    End Sub
-
     Private Sub svemem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles svemem.Click
 
         If Len(Trim(pid_txt.Text)) = 0 Then
@@ -164,21 +205,23 @@ Public Class inventryfrm
             pid_txt.Focus()
             Exit Sub
         End If
-        If Len(Trim(quantity_txt.Text)) = 0 Then
+        If Len(Trim(stock_txt.Text)) = 0 Then
             MessageBox.Show("Please enter quantity", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            quantity_txt.Focus()
+            stock_txt.Focus()
             Exit Sub
         End If
-       
+
         Try
             MessageBox.Show("Are you sure to add data", "Data Adding", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-            FillCombo()
+            'TextBox1.Text = pid_txt.Text
+            ' FillCombo()
+
             insert()
             getdata()
-
+            in_getdata()
             Label25.Text = "'" & pid_txt.Text & "' inventry details saved successfully!"
             Label25.ForeColor = System.Drawing.Color.DarkGreen
-           
+
         Catch ex As Exception
             Label25.Text = "Error while saving '" & pid_txt.Text & "' inventry details"
             Label25.ForeColor = System.Drawing.Color.Red
@@ -195,8 +238,11 @@ Public Class inventryfrm
     End Sub
 
     Private Sub btnupdte_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnupdte.Click
+
         edit()
         getdata()
+        in_getdata()
+
     End Sub
 
     Private Sub get_stockdata_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles get_stockdata.CellContentClick
@@ -208,16 +254,20 @@ Public Class inventryfrm
 
     Private Sub get_stockdata_CellMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles get_stockdata.CellMouseClick
         Try
-           
+
             svemem.Enabled = False
             Btndel.Enabled = True
             btnupdte.Enabled = True
             Me.inventid_txt.Text = get_stockdata.CurrentRow.Cells(0).Value.ToString
-            Me.pid_txt.Text = get_stockdata.CurrentRow.Cells(1).Value.ToString
-            Me.quantity_txt.Text = get_stockdata.CurrentRow.Cells(2).Value.ToString
-            Me.inventrydtetxt.Value = get_stockdata.CurrentRow.Cells(3).Value.ToString
+            Me.in_id_txt.Text = get_stockdata.CurrentRow.Cells(1).Value.ToString
+            Me.pid_txt.Text = get_stockdata.CurrentRow.Cells(2).Value.ToString
+            Me.quantity_txt.Text = get_stockdata.CurrentRow.Cells(3).Value.ToString
+            Me.stock_txt.Text = get_stockdata.CurrentRow.Cells(4).Value.ToString
 
             
+
+
+           
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Me.Dispose()
@@ -228,14 +278,14 @@ Public Class inventryfrm
         TabControl1.SelectedTab = TabPage2
     End Sub
 
-    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
 
             If Not get_stockdata.CurrentRow.IsNewRow Then
                 'Query string
                 dbaccessconnection()
                 con.Open()
-                cmd.CommandText = "delete from tbl_inventrry  where In_ID='" & get_stockdata.CurrentRow.Cells(0).Value & "'"
+                cmd.CommandText = "delete from tbl_inventrry  where Entryno='" & get_stockdata.CurrentRow.Cells(0).Value & "'"
                 cmd.ExecuteNonQuery()
                 get_stockdata.Rows.Remove(get_stockdata.CurrentRow)
                 MessageBox.Show("Record Deleted")
@@ -249,26 +299,26 @@ Public Class inventryfrm
 
     Private Sub btnsearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnsearch.Click
         Try
-            source2.Filter = "[quantity] = '" & serchstock_txt.Text & "'"
+            source2.Filter = "[Stockinfo] = '" & serchstock_txt.Text & "'"
             get_stockdata.Refresh()
-            serchstock_txt.Text = ""
+
         Catch ex As Exception
-            MessageBox.Show("Error while searching,try again", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            MessageBox.Show("Error while searching,try again" & ex.Message)
             Me.Dispose()
         End Try
     End Sub
 
-    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
+    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         DeleteSelecedRows()
     End Sub
     Private Sub clear()
         Try
             pid_txt.Text = ""
-            quantity_txt.Text = ""
+            stock_txt.Text = ""
             ' inventrydtetxt.Text = ""
 
             '  photo.Image = Nothing
-         
+
         Catch ex As Exception
             MsgBox("Error:Some thing is going wrong,Close application and try again")
         End Try
@@ -277,9 +327,95 @@ Public Class inventryfrm
     Private Sub Btnadd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btnadd.Click
         clear()
         txtboxid()
+        autogenerated()
+        svemem.Enabled = True
     End Sub
 
     Private Sub Label19_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label19.Click
 
+    End Sub
+
+    Private Sub pid_txt_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pid_txt.SelectedIndexChanged
+
+        'SELECT m_name from tbl_memberreg
+        Dim str As String = cs
+        Dim con As SqlConnection = New SqlConnection(str)
+        Dim query As String = "select * from tbl_products where P_id = '" & pid_txt.Text & "' "
+        Dim cmd As SqlCommand = New SqlCommand(query, con)
+        Dim dbr As SqlDataReader
+        Try
+
+            con.Open()
+            dbr = cmd.ExecuteReader()
+            If dbr.Read() Then
+
+                quantity_txt.Text = dbr.GetValue(6)
+                'pid_txt.Text = dbr.GetValue(7)
+                inventrydtetxt.Value = dbr.GetValue(7)
+
+            End If
+            checkstock()
+        Catch ex As Exception
+            MessageBox.Show("At least one entry", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        End Try
+
+    End Sub
+
+   
+
+   
+    Private Sub get_productdata_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles get_indata.CellContentClick
+        TabControl1.SelectedTab = TabPage1
+        svemem.Enabled = False
+        Btndel.Enabled = True
+        btnupdte.Enabled = True
+    End Sub
+
+    Private Sub get_productdata_CellMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles get_indata.CellMouseClick
+        Try
+
+            Me.inventid_txt.Text = get_indata.CurrentRow.Cells(0).Value.ToString
+            Me.in_id_txt.Text = get_indata.CurrentRow.Cells(1).Value.ToString
+
+            Me.pid_txt.Text = get_indata.CurrentRow.Cells(2).Value.ToString
+            Me.quantity_txt.Text = get_indata.CurrentRow.Cells(3).Value.ToString
+            Me.stock_txt.Text = get_indata.CurrentRow.Cells(4).Value.ToString
+            Me.inventrydtetxt.Value = get_indata.CurrentRow.Cells(5).Value.ToString
+
+
+
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub DeleteSelecedRows()
+        Dim ObjConnection As New SqlConnection()
+        Dim i As Integer
+        Dim mResult
+        mResult = MsgBox("Want you really delete the selected records?", _
+        vbYesNo + vbQuestion, "Removal confirmation")
+        If mResult = vbNo Then
+            Exit Sub
+        End If
+        ObjConnection.ConnectionString = cs
+        Dim ObjCommand As New SqlCommand()
+        ObjCommand.Connection = ObjConnection
+        For i = Me.get_indata.SelectedRows.Count - 1 To 0 Step -1
+            ObjCommand.CommandText = "delete from tbl_inventrry where Entryno='" & get_indata.SelectedRows(i).Cells("Entryno").Value & "'"
+            ObjConnection.Open()
+            ObjCommand.ExecuteNonQuery()
+            ObjConnection.Close()
+            Me.get_indata.Rows.Remove(Me.get_indata.SelectedRows(i))
+        Next
+
+    End Sub
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        DeleteSelecedRows()
+    End Sub
+
+    Private Sub TabPage3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabPage3.Click
+        in_getdata()
     End Sub
 End Class

@@ -2,7 +2,6 @@ F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\bin\Debug\servicesfrm1.exe.co
 F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\bin\Debug\servicesfrm1.exe
 F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\bin\Debug\servicesfrm1.pdb
 F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\bin\Debug\servicesfrm1.xml
-F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\obj\x86\Debug\Skintimate Beauty Clinic.vbprojResolveAssemblyReference.cache
 F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\obj\x86\Debug\servicesfrm1.MainFrom1.resources
 F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\obj\x86\Debug\servicesfrm1.prodcutfrm.resources
 F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\obj\x86\Debug\servicesfrm1.ratesfrm.resources

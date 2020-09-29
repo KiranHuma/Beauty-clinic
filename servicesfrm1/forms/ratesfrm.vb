@@ -586,5 +586,7 @@ Public Class ratesfrm
             MessageBox.Show("At least one entry", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End Try
     End Sub
+
+   
 End Class
 '
