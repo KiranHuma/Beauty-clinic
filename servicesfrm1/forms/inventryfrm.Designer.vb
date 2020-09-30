@@ -43,6 +43,7 @@ Partial Class inventryfrm
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.get_stockdata = New System.Windows.Forms.DataGridView()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.in_id_txt = New System.Windows.Forms.TextBox()
         Me.stock_txt = New System.Windows.Forms.TextBox()
@@ -76,7 +77,6 @@ Partial Class inventryfrm
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.get_indata = New System.Windows.Forms.DataGridView()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TabPage2.SuspendLayout()
         CType(Me.get_stockdata, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage1.SuspendLayout()
@@ -276,6 +276,14 @@ Partial Class inventryfrm
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Inventory"
         '
+        'TextBox2
+        '
+        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox2.Location = New System.Drawing.Point(576, 58)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 15)
+        Me.TextBox2.TabIndex = 350
+        '
         'TextBox1
         '
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
@@ -288,7 +296,7 @@ Partial Class inventryfrm
         'in_id_txt
         '
         Me.in_id_txt.ForeColor = System.Drawing.Color.LightCoral
-        Me.in_id_txt.Location = New System.Drawing.Point(285, 143)
+        Me.in_id_txt.Location = New System.Drawing.Point(490, 199)
         Me.in_id_txt.Name = "in_id_txt"
         Me.in_id_txt.Size = New System.Drawing.Size(216, 22)
         Me.in_id_txt.TabIndex = 348
@@ -296,7 +304,7 @@ Partial Class inventryfrm
         'stock_txt
         '
         Me.stock_txt.ForeColor = System.Drawing.Color.LightCoral
-        Me.stock_txt.Location = New System.Drawing.Point(285, 272)
+        Me.stock_txt.Location = New System.Drawing.Point(490, 328)
         Me.stock_txt.Name = "stock_txt"
         Me.stock_txt.Size = New System.Drawing.Size(216, 22)
         Me.stock_txt.TabIndex = 347
@@ -304,7 +312,7 @@ Partial Class inventryfrm
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(180, 138)
+        Me.Label10.Location = New System.Drawing.Point(385, 194)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(83, 17)
         Me.Label10.TabIndex = 344
@@ -313,7 +321,7 @@ Partial Class inventryfrm
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(180, 272)
+        Me.Label8.Location = New System.Drawing.Point(385, 328)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(82, 17)
         Me.Label8.TabIndex = 325
@@ -322,7 +330,7 @@ Partial Class inventryfrm
         'quantity_txt
         '
         Me.quantity_txt.ForeColor = System.Drawing.Color.LightCoral
-        Me.quantity_txt.Location = New System.Drawing.Point(285, 231)
+        Me.quantity_txt.Location = New System.Drawing.Point(490, 287)
         Me.quantity_txt.Name = "quantity_txt"
         Me.quantity_txt.Size = New System.Drawing.Size(216, 22)
         Me.quantity_txt.TabIndex = 324
@@ -359,7 +367,7 @@ Partial Class inventryfrm
         '
         Me.inventid_txt.Enabled = False
         Me.inventid_txt.ForeColor = System.Drawing.Color.LightCoral
-        Me.inventid_txt.Location = New System.Drawing.Point(285, 92)
+        Me.inventid_txt.Location = New System.Drawing.Point(490, 148)
         Me.inventid_txt.Name = "inventid_txt"
         Me.inventid_txt.Size = New System.Drawing.Size(216, 22)
         Me.inventid_txt.TabIndex = 321
@@ -367,7 +375,7 @@ Partial Class inventryfrm
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(180, 95)
+        Me.Label6.Location = New System.Drawing.Point(385, 151)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(49, 17)
         Me.Label6.TabIndex = 320
@@ -472,7 +480,7 @@ Partial Class inventryfrm
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(180, 308)
+        Me.Label3.Location = New System.Drawing.Point(385, 364)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(96, 17)
         Me.Label3.TabIndex = 309
@@ -484,7 +492,7 @@ Partial Class inventryfrm
         Me.inventrydtetxt.CalendarTitleBackColor = System.Drawing.Color.Salmon
         Me.inventrydtetxt.CalendarTitleForeColor = System.Drawing.Color.LightCoral
         Me.inventrydtetxt.CalendarTrailingForeColor = System.Drawing.Color.MistyRose
-        Me.inventrydtetxt.Location = New System.Drawing.Point(285, 308)
+        Me.inventrydtetxt.Location = New System.Drawing.Point(490, 364)
         Me.inventrydtetxt.Name = "inventrydtetxt"
         Me.inventrydtetxt.Size = New System.Drawing.Size(216, 22)
         Me.inventrydtetxt.TabIndex = 308
@@ -494,7 +502,7 @@ Partial Class inventryfrm
         Me.pid_txt.BackColor = System.Drawing.Color.White
         Me.pid_txt.ForeColor = System.Drawing.Color.LightCoral
         Me.pid_txt.FormattingEnabled = True
-        Me.pid_txt.Location = New System.Drawing.Point(285, 186)
+        Me.pid_txt.Location = New System.Drawing.Point(490, 242)
         Me.pid_txt.Name = "pid_txt"
         Me.pid_txt.Size = New System.Drawing.Size(216, 24)
         Me.pid_txt.TabIndex = 307
@@ -528,7 +536,7 @@ Partial Class inventryfrm
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(180, 234)
+        Me.Label4.Location = New System.Drawing.Point(385, 290)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(61, 17)
         Me.Label4.TabIndex = 301
@@ -537,7 +545,7 @@ Partial Class inventryfrm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(180, 186)
+        Me.Label1.Location = New System.Drawing.Point(385, 242)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(74, 17)
         Me.Label1.TabIndex = 300
@@ -685,14 +693,6 @@ Partial Class inventryfrm
         Me.Button1.TabIndex = 318
         Me.Button1.Text = "&Select Rows to Remove"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'TextBox2
-        '
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Location = New System.Drawing.Point(576, 58)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 15)
-        Me.TextBox2.TabIndex = 350
         '
         'inventryfrm
         '
