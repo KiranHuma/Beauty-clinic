@@ -40,7 +40,7 @@ Public Class inventryfrm
             con.Open()
            
 
-            cmd.CommandText = "insert into tbl_inventrry(Entryno,I_Id,Pro_id,Totalquantity,Stock_Status,Stockin_date)values('" & inventid_txt.Text & "','" & in_id_txt.Text & "','" & pid_txt.Text & "','" & quantity_txt.Text & "','" & stock_txt.Text & "','" & inventrydtetxt.Value & "')"
+            cmd.CommandText = "insert into tbl_inventrry(Entryno,I_Id,Pro_id,Product_name,Totalquantity,Stock_Status,Stockin_date)values('" & inventid_txt.Text & "','" & in_id_txt.Text & "','" & pid_txt.Text & "','" & inname_txt.Text & "','" & inquatity_txt.Text & "','" & stock_txt.Text & "','" & inventrydtetxt.Value & "')"
             cmd.ExecuteNonQuery()
                 con.Close()
         Catch ex As Exception
@@ -52,31 +52,22 @@ Public Class inventryfrm
     End Sub
     'edit function
     Private Sub edit()
-        dbaccessconnection()
-        If TextBox2.Text = "" Then
-            MessageBox.Show("Select Value from Grid")
-            TabControl1.SelectedTab = TabPage3
-        Else
-            Dim command As New SqlCommand("UPDATE tbl_inventrry SET Entryno=@iid, I_Id = @in_id ,Pro_id = @Pro_id ,Totalquantity = @tquantity ,Stock_Status=@Stockinfo,Stockin_date = @inventrydtetxt WHERE Entryno = @iid", con)
-            command.Parameters.Add("@iid", SqlDbType.Int).Value = inventid_txt.Text
-            command.Parameters.Add("@in_id", SqlDbType.NVarChar).Value = in_id_txt.Text
-            command.Parameters.Add("@Pro_id", SqlDbType.NVarChar).Value = pid_txt.Text
-            command.Parameters.Add("@tquantity", SqlDbType.NVarChar).Value = quantity_txt.Text
-            command.Parameters.Add("@Stockinfo", SqlDbType.NVarChar).Value = stock_txt.Text
+      
 
-            command.Parameters.Add("@inventrydtetxt", SqlDbType.DateTime).Value = inventrydtetxt.Text
+        Try
+
+            dbaccessconnection()
 
             con.Open()
-            If command.ExecuteNonQuery() = 1 Then
-                MessageBox.Show("Data Updated")
+                cmd.CommandText = ("UPDATE tbl_inventrry SET  Entryno= '" & inventid_txt.Text & "', I_Id= '" & in_id_txt.Text & "',Pro_id= '" & pid_txt.Text & "',Product_name= '" & inname_txt.Text & "',Totalquantity= '" & inquatity_txt.Text & "',Stock_Status= '" & stock_txt.Text & "',Stockin_date= '" & inventrydtetxt.Value & "' where Entryno=" & inventid_txt.Text & "")
+                cmd.ExecuteNonQuery()
+            ' MessageBox.Show("Data Updated")
                 Label25.Text = "Inventory details updated successfully!"
-            Else
-                MessageBox.Show("Data Not Updated")
-            End If
-
-            con.Close()
-
-        End If
+                get_indata.Refresh()
+                con.Close()
+        Catch ex As Exception
+            MessageBox.Show("Data Not Updated")
+        End Try
     End Sub
 
     'Show data in data grid
@@ -84,10 +75,11 @@ Public Class inventryfrm
         '"Select tbl_inventrry.In_ID ,tbl_products.p_name from tbl_products full join tbl_inventrry on tbl_products.pro_id=tbl_inventrry.In_ID ", con)
         'SELECT * FROM tbl_inventrry full join tbl_products on tbl_inventrry.In_ID= tbl_products.pro_id
         'SELECT *  FROM tbl_products UNION  SELECT * FROM tbl_inventrry 
+        'SELECT * From tbl_products where p_totalquantity!= 0
         Try
             Dim con As New SqlConnection(cs)
             con.Open()
-            Dim da As New SqlDataAdapter("SELECT * From tbl_products where p_totalquantity!= 0 ", con)
+            Dim da As New SqlDataAdapter("Select tbl_inventrry.Entryno,tbl_inventrry.I_Id ,tbl_products.P_id,tbl_products.p_name,tbl_products.p_price,tbl_products.padd_quantity,tbl_products.p_dte,tbl_inventrry.Totalquantity,tbl_inventrry.Stock_Status,tbl_inventrry.Stockin_date,tbl_products.p_description from tbl_products INNER  join tbl_inventrry on tbl_products.P_id=tbl_inventrry.Pro_id ", con)
             Dim dt As New DataTable
             da.Fill(dt)
             source2.DataSource = dt
@@ -153,9 +145,9 @@ Public Class inventryfrm
     End Sub
     Private Sub checkstock()
         If Not quantity_txt.Text = 0 Then
-            stock_txt.Text = "Stock IN"
+            stock_txt.Text = "StockIN"
         ElseIf quantity_txt.Text = 0 Then
-            stock_txt.Text = "Stock Out"
+            stock_txt.Text = "StockOut"
         End If
     End Sub
    
@@ -238,44 +230,17 @@ Public Class inventryfrm
     End Sub
 
     Private Sub btnupdte_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnupdte.Click
-
         edit()
         getdata()
         in_getdata()
 
     End Sub
 
-    Private Sub get_stockdata_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles get_stockdata.CellContentClick
-        TabControl1.SelectedTab = TabPage1
-        svemem.Enabled = False
-        Btndel.Enabled = True
-        btnupdte.Enabled = True
-    End Sub
+ 
 
-    Private Sub get_stockdata_CellMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles get_stockdata.CellMouseClick
-        Try
-
-            svemem.Enabled = False
-            Btndel.Enabled = True
-            btnupdte.Enabled = True
-            Me.inventid_txt.Text = get_stockdata.CurrentRow.Cells(0).Value.ToString
-            Me.in_id_txt.Text = get_stockdata.CurrentRow.Cells(1).Value.ToString
-            Me.pid_txt.Text = get_stockdata.CurrentRow.Cells(2).Value.ToString
-            Me.quantity_txt.Text = get_stockdata.CurrentRow.Cells(3).Value.ToString
-            Me.stock_txt.Text = get_stockdata.CurrentRow.Cells(4).Value.ToString
-
-            
-
-
-           
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Me.Dispose()
-        End Try
-    End Sub
 
     Private Sub Btndel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btndel.Click
-        TabControl1.SelectedTab = TabPage2
+        TabControl1.SelectedTab = TabPage3
     End Sub
 
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -299,7 +264,7 @@ Public Class inventryfrm
 
     Private Sub btnsearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnsearch.Click
         Try
-            source2.Filter = "[Stockinfo] = '" & serchstock_txt.Text & "'"
+            source2.Filter = "[Stock_Status] = '" & serchstock_txt.Text & "'"
             get_stockdata.Refresh()
 
         Catch ex As Exception
@@ -349,9 +314,13 @@ Public Class inventryfrm
             dbr = cmd.ExecuteReader()
             If dbr.Read() Then
 
-                quantity_txt.Text = dbr.GetValue(6)
+                quantity_txt.Text = dbr.GetValue(5)
                 'pid_txt.Text = dbr.GetValue(7)
-                inventrydtetxt.Value = dbr.GetValue(7)
+                inpudte_txt.Text = dbr.GetValue(7)
+                inname_txt.Text = dbr.GetValue(2)
+                inprice_txt.Text = dbr.GetValue(3)
+                inquatity_txt.Text = dbr.GetValue(6)
+                intxt_des.Text = dbr.GetValue(8)
 
             End If
             checkstock()
@@ -364,31 +333,15 @@ Public Class inventryfrm
    
 
    
-    Private Sub get_productdata_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles get_indata.CellContentClick
+    Private Sub get_productdata_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs)
         TabControl1.SelectedTab = TabPage1
         svemem.Enabled = False
         Btndel.Enabled = True
         btnupdte.Enabled = True
     End Sub
 
-    Private Sub get_productdata_CellMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles get_indata.CellMouseClick
-        Try
+    
 
-            Me.inventid_txt.Text = get_indata.CurrentRow.Cells(0).Value.ToString
-            Me.in_id_txt.Text = get_indata.CurrentRow.Cells(1).Value.ToString
-
-            Me.pid_txt.Text = get_indata.CurrentRow.Cells(2).Value.ToString
-            Me.quantity_txt.Text = get_indata.CurrentRow.Cells(3).Value.ToString
-            Me.stock_txt.Text = get_indata.CurrentRow.Cells(4).Value.ToString
-            Me.inventrydtetxt.Value = get_indata.CurrentRow.Cells(5).Value.ToString
-
-
-
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
 
     Private Sub DeleteSelecedRows()
         Dim ObjConnection As New SqlConnection()
@@ -419,5 +372,73 @@ Public Class inventryfrm
         in_getdata()
     End Sub
 
+    Private Sub get_stockdata_CellMouseDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs)
+
+    End Sub
+
+    Private Sub get_indata_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles get_indata.CellContentClick
+        TabControl1.SelectedTab = TabPage1
+
+        svemem.Enabled = False
+        Btndel.Enabled = True
+        btnupdte.Enabled = True
+    End Sub
+
+    Private Sub get_indata_CellMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles get_indata.CellMouseClick
+
+        Try
+            Me.inventid_txt.Text = get_indata.CurrentRow.Cells(0).Value.ToString
+            Me.in_id_txt.Text = get_indata.CurrentRow.Cells(1).Value.ToString
+            Me.pid_txt.Text = get_indata.CurrentRow.Cells(2).Value.ToString
+            Me.inname_txt.Text = get_indata.CurrentRow.Cells(3).Value.ToString
+            Me.inquatity_txt.Text = get_indata.CurrentRow.Cells(4).Value.ToString
+            Me.stock_txt.Text = get_indata.CurrentRow.Cells(5).Value.ToString
+            ' Me.stock_txt.Text = get_indata.CurrentRow.Cells(6).Value.ToString
+            Me.inventrydtetxt.Value = get_indata.CurrentRow.Cells(6).Value.ToString
+            ' Me.inpudte_txt.Text = get_indata.CurrentRow.Cells(6).Value.ToString
+            ' Me.inquatity_txt.Text = get_indata.CurrentRow.Cells(7).Value.ToString
+            'Me.stock_txt.Text = get_indata.CurrentRow.Cells(8).Value.ToString
+
+            ' Me.intxt_des.Text = get_indata.CurrentRow.Cells(10).Value.ToString
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+   
+    
+    Private Sub get_stockdata_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles get_stockdata.CellContentClick
+        TabControl1.SelectedTab = TabPage1
+        svemem.Enabled = False
+        Btndel.Enabled = True
+        btnupdte.Enabled = True
+    End Sub
+
  
+
+    Private Sub get_stockdata_CellMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles get_stockdata.CellMouseClick
+        Try
+
+            svemem.Enabled = False
+            Btndel.Enabled = True
+            btnupdte.Enabled = True
+
+            Me.inventid_txt.Text = get_stockdata.CurrentRow.Cells(0).Value.ToString
+            Me.in_id_txt.Text = get_stockdata.CurrentRow.Cells(1).Value.ToString
+            Me.pid_txt.Text = get_stockdata.CurrentRow.Cells(2).Value.ToString
+            Me.inname_txt.Text = get_stockdata.CurrentRow.Cells(3).Value.ToString
+            Me.inquatity_txt.Text = get_stockdata.CurrentRow.Cells(7).Value.ToString
+            Me.stock_txt.Text = get_stockdata.CurrentRow.Cells(8).Value.ToString
+            Me.inventrydtetxt.Value = get_stockdata.CurrentRow.Cells(9).Value.ToString
+            Me.quantity_txt.Text = get_stockdata.CurrentRow.Cells(5).Value.ToString
+            Me.inprice_txt.Text = get_stockdata.CurrentRow.Cells(4).Value.ToString
+            Me.intxt_des.Text = get_stockdata.CurrentRow.Cells(10).Value.ToString
+            Me.inpudte_txt.Text = get_stockdata.CurrentRow.Cells(6).Value.ToString
+
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Me.Dispose()
+        End Try
+    End Sub
 End Class

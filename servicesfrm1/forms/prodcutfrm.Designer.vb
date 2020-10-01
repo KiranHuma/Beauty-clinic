@@ -39,7 +39,6 @@ Partial Class prodcutfrm
         Me.salpr_txt = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.TextBox()
         Me.p_dtetxt = New System.Windows.Forms.DateTimePicker()
-        Me.Button8 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.name_txt = New System.Windows.Forms.ComboBox()
         Me.pquatity_txt = New System.Windows.Forms.TextBox()
@@ -138,7 +137,6 @@ Partial Class prodcutfrm
         Me.TabPage1.Controls.Add(Me.salpr_txt)
         Me.TabPage1.Controls.Add(Me.Label2)
         Me.TabPage1.Controls.Add(Me.p_dtetxt)
-        Me.TabPage1.Controls.Add(Me.Button8)
         Me.TabPage1.Controls.Add(Me.Button7)
         Me.TabPage1.Controls.Add(Me.name_txt)
         Me.TabPage1.Controls.Add(Me.pquatity_txt)
@@ -193,11 +191,12 @@ Partial Class prodcutfrm
         'Label2
         '
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.Label2.Location = New System.Drawing.Point(570, 278)
+        Me.Label2.Location = New System.Drawing.Point(548, 282)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(60, 15)
         Me.Label2.TabIndex = 337
         Me.Label2.Text = "0"
+        Me.Label2.Visible = False
         '
         'p_dtetxt
         '
@@ -206,22 +205,13 @@ Partial Class prodcutfrm
         Me.p_dtetxt.Size = New System.Drawing.Size(217, 22)
         Me.p_dtetxt.TabIndex = 336
         '
-        'Button8
-        '
-        Me.Button8.Location = New System.Drawing.Point(541, 275)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(23, 22)
-        Me.Button8.TabIndex = 335
-        Me.Button8.Text = "+"
-        Me.Button8.UseVisualStyleBackColor = True
-        '
         'Button7
         '
         Me.Button7.Location = New System.Drawing.Point(541, 178)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(67, 24)
+        Me.Button7.Size = New System.Drawing.Size(146, 24)
         Me.Button7.TabIndex = 334
-        Me.Button7.Text = "Check"
+        Me.Button7.Text = "Recent Names"
         Me.Button7.UseVisualStyleBackColor = True
         '
         'name_txt
@@ -448,9 +438,9 @@ Partial Class prodcutfrm
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(208, 331)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(38, 17)
+        Me.Label4.Size = New System.Drawing.Size(102, 17)
         Me.Label4.TabIndex = 291
-        Me.Label4.Text = "Date"
+        Me.Label4.Text = "Purchase Date"
         '
         'price_txt
         '
@@ -1152,7 +1142,6 @@ Partial Class prodcutfrm
     Friend WithEvents Label26 As System.Windows.Forms.Label
     Friend WithEvents name_txt As System.Windows.Forms.ComboBox
     Friend WithEvents Button7 As System.Windows.Forms.Button
-    Friend WithEvents Button8 As System.Windows.Forms.Button
     Friend WithEvents p_dtetxt As System.Windows.Forms.DateTimePicker
     Friend WithEvents get_productdata As System.Windows.Forms.DataGridView
     Friend WithEvents salpr_txt As System.Windows.Forms.TextBox

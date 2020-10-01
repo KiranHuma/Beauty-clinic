@@ -438,7 +438,24 @@ Public Class ratesfrm
     End Sub
 
     Private Sub pquantity_txt_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pquantity_txt.TextChanged
+        Dim str As String = cs
+        Dim con As SqlConnection = New SqlConnection(str)
+        Dim query As String = "select * from tbl_products where p_name = '" & pname_txt.Text & "' "
+        Dim cmd As SqlCommand = New SqlCommand(query, con)
+        Dim dbr As SqlDataReader
+        Try
 
+            con.Open()
+            dbr = cmd.ExecuteReader()
+            If dbr.Read() Then
+
+                pid_txt.Text = dbr.GetValue(1)
+                Label24.Text = dbr.GetValue(5)
+                unitprce_txt.Text = dbr.GetValue(3)
+            End If
+        Catch ex As Exception
+            MessageBox.Show("At least one entry", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        End Try
     End Sub
 
    
@@ -588,5 +605,12 @@ Public Class ratesfrm
     End Sub
 
    
+    Private Sub Label32_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label32.Click
+
+    End Sub
+
+    Private Sub Label24_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label24.Click
+
+    End Sub
 End Class
 '

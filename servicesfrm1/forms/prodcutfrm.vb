@@ -311,7 +311,7 @@ Public Class prodcutfrm
 
 
                 Label2.Text = dbr.GetValue(5)
-                pid_txt.Text = dbr.GetValue(1)
+                'pid_txt.Text = dbr.GetValue(1)
 
             End If
         Catch ex As Exception
@@ -324,15 +324,18 @@ Public Class prodcutfrm
         product_FillCombo()
     End Sub
     Private Sub add_quantity()
+        Try
+            Dim addd As Int64
 
-        Dim addd As Int64
+            addd = Convert.ToInt64(pquatity_txt.Text) + Convert.ToInt64(Label2.Text)
+            Label2.Text = Convert.ToString(addd)
 
-        addd = Convert.ToInt64(pquatity_txt.Text) + Convert.ToInt64(Label2.Text)
-        Label2.Text = Convert.ToString(addd)
-
+        Catch ex As Exception
+            MessageBox.Show("Please enter quantity", ex.Message)
+        End Try
     End Sub
 
-    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
+    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         add_quantity()
     End Sub
 
@@ -388,11 +391,11 @@ Public Class prodcutfrm
 
             s_insert()
             ser_getdata()
-            Label21.Text = "'" & pid_txt.Text & "' inventry details saved successfully!"
+            Label21.Text = "'" & rateid_txt.Text & "' inventry details saved successfully!"
             Label21.ForeColor = System.Drawing.Color.DarkGreen
 
         Catch ex As Exception
-            Label21.Text = "Error while saving '" & pid_txt.Text & "' inventry details"
+            Label21.Text = "Error while saving '" & rateid_txt.Text & "' inventry details"
             Label21.ForeColor = System.Drawing.Color.Red
             MsgBox("DataBase not connected due to the reason because " & ex.Message)
             'MessageBox.Show("Data already exist, you again select Ticket Details and Try other entry", "Data Invalid, Application is closing", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -545,5 +548,13 @@ Public Class prodcutfrm
 
     Private Sub ser_delbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ser_delbtn.Click
         TabControl1.SelectedTab = TabPage4
+    End Sub
+
+    Private Sub pquatity_txt_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles pquatity_txt.KeyPress
+
+    End Sub
+
+    Private Sub pquatity_txt_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pquatity_txt.TextChanged
+        add_quantity()
     End Sub
 End Class
