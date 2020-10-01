@@ -521,13 +521,13 @@ Public Class ratesfrm
             myConnToAccess.Open()
             ds = New DataSet
             tables = ds.Tables
-            da = New SqlDataAdapter("SELECT p_name from tbl_products", myConnToAccess)
-            da.Fill(ds, "tbl_products")
+            da = New SqlDataAdapter("SELECT Product_name from tbl_inventrry", myConnToAccess)
+            da.Fill(ds, "tbl_inventrry")
             Dim view1 As New DataView(tables(0))
             With pname_txt
-                .DataSource = ds.Tables("tbl_products")
-                .DisplayMember = "p_name"
-                .ValueMember = "p_name"
+                .DataSource = ds.Tables("tbl_inventrry")
+                .DisplayMember = "Product_name"
+                .ValueMember = "Product_name"
                 .SelectedIndex = -1
                 .AutoCompleteMode = AutoCompleteMode.SuggestAppend
                 .AutoCompleteSource = AutoCompleteSource.ListItems
@@ -540,7 +540,7 @@ Public Class ratesfrm
     Private Sub pname_txt_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pname_txt.SelectedIndexChanged
         Dim str As String = cs
         Dim con As SqlConnection = New SqlConnection(str)
-        Dim query As String = "select * from tbl_products where p_name = '" & pname_txt.Text & "' "
+        Dim query As String = "select * from tbl_inventrry where Product_name = '" & pname_txt.Text & "' "
         Dim cmd As SqlCommand = New SqlCommand(query, con)
         Dim dbr As SqlDataReader
         Try
@@ -549,9 +549,10 @@ Public Class ratesfrm
             dbr = cmd.ExecuteReader()
             If dbr.Read() Then
 
-                pid_txt.Text = dbr.GetValue(1)
-                Label24.Text = dbr.GetValue(5)
-                unitprce_txt.Text = dbr.GetValue(3)
+                pid_txt.Text = dbr.GetValue(2)
+                Label24.Text = dbr.GetValue(4)
+                unitprce_txt.Text = dbr.GetValue(8)
+
             End If
         Catch ex As Exception
             MessageBox.Show("At least one entry", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
@@ -611,7 +612,7 @@ Public Class ratesfrm
 
         Dim subb As Int64
 
-        subb = Convert.ToInt64(Label24.Text) - Convert.ToInt64(pquantity_txt.Text)
+        subb = Convert.ToInt64(pquantity_txt.Text) - Convert.ToInt64(Label24.Text)
         Label24.Text = Convert.ToString(subb)
 
 
@@ -622,10 +623,9 @@ Public Class ratesfrm
             dbaccessconnection()
             con.Open()
             
-
-            cmd.CommandText = ("UPDATE tbl_inventrry SET Product_name= '" & pname_txt.Text & "', Totalquantity= '" & Label24.Text & "',Stock_outdate= '" & p_date_txt.Text & "' where Product_name=" & pname_txt.Text & "")
-
-                cmd.ExecuteNonQuery()
+            'update orderinfo set orderstatus = '" & cmbOrderStatus.Text & "' where Orderno ='" & txtOrderNo.Text & "'"
+            cmd.CommandText = ("UPDATE tbl_inventrry SET Pro_id= '" & pid_txt.Text & "',Totalquantity= '" & Label24.Text & "',Stock_outdate= '" & p_date_txt.Value & "' where Pro_id='" & pid_txt.Text & "'")
+            cmd.ExecuteNonQuery()
             MessageBox.Show("Data Updated")
             message_txt.Text = "Product details updated successfully!"
                 con.Close()

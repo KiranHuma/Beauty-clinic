@@ -40,7 +40,7 @@ Public Class inventryfrm
             con.Open()
            
 
-            cmd.CommandText = "insert into tbl_inventrry(Entryno,I_Id,Pro_id,Product_name,Totalquantity,Stock_Status,Stockin_date)values('" & inventid_txt.Text & "','" & in_id_txt.Text & "','" & pid_txt.Text & "','" & inname_txt.Text & "','" & inquatity_txt.Text & "','" & stock_txt.Text & "','" & inventrydtetxt.Value & "')"
+            cmd.CommandText = "insert into tbl_inventrry(Entryno,I_Id,Pro_id,Product_name,Totalquantity,Stock_Status,Stockin_date,In_price)values('" & inventid_txt.Text & "','" & in_id_txt.Text & "','" & pid_txt.Text & "','" & inname_txt.Text & "','" & inquatity_txt.Text & "','" & stock_txt.Text & "','" & inpudte_txt.Text & "','" & inprice_txt.Text & "')"
             cmd.ExecuteNonQuery()
                 con.Close()
         Catch ex As Exception
@@ -59,7 +59,7 @@ Public Class inventryfrm
             dbaccessconnection()
 
             con.Open()
-                cmd.CommandText = ("UPDATE tbl_inventrry SET  Entryno= '" & inventid_txt.Text & "', I_Id= '" & in_id_txt.Text & "',Pro_id= '" & pid_txt.Text & "',Product_name= '" & inname_txt.Text & "',Totalquantity= '" & inquatity_txt.Text & "',Stock_Status= '" & stock_txt.Text & "',Stockin_date= '" & inventrydtetxt.Value & "' where Entryno=" & inventid_txt.Text & "")
+            cmd.CommandText = ("UPDATE tbl_inventrry SET  Entryno= '" & inventid_txt.Text & "', I_Id= '" & in_id_txt.Text & "',Pro_id= '" & pid_txt.Text & "',Product_name= '" & inname_txt.Text & "',Totalquantity= '" & inquatity_txt.Text & "',Stock_Status= '" & stock_txt.Text & "',Stockin_date= '" & inpudte_txt.Text & "',Stockin_date= '" & inprice_txt.Text & "' where Entryno=" & inventid_txt.Text & "")
                 cmd.ExecuteNonQuery()
             ' MessageBox.Show("Data Updated")
                 Label25.Text = "Inventory details updated successfully!"
@@ -394,7 +394,7 @@ Public Class inventryfrm
             Me.inquatity_txt.Text = get_indata.CurrentRow.Cells(4).Value.ToString
             Me.stock_txt.Text = get_indata.CurrentRow.Cells(5).Value.ToString
             ' Me.stock_txt.Text = get_indata.CurrentRow.Cells(6).Value.ToString
-            Me.inventrydtetxt.Value = get_indata.CurrentRow.Cells(6).Value.ToString
+            Me.inpudte_txt.Text = get_indata.CurrentRow.Cells(6).Value.ToString
             ' Me.inpudte_txt.Text = get_indata.CurrentRow.Cells(6).Value.ToString
             ' Me.inquatity_txt.Text = get_indata.CurrentRow.Cells(7).Value.ToString
             'Me.stock_txt.Text = get_indata.CurrentRow.Cells(8).Value.ToString
