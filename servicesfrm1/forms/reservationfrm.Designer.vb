@@ -30,6 +30,7 @@ Partial Class reservationfrm
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.rese_time = New System.Windows.Forms.DateTimePicker()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.reservedon_txt = New System.Windows.Forms.DateTimePicker()
@@ -79,7 +80,6 @@ Partial Class reservationfrm
         Me.get_reservationdata = New System.Windows.Forms.DataGridView()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -151,6 +151,16 @@ Partial Class reservationfrm
         Me.TabPage1.Text = "Reservation"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'TextBox1
+        '
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox1.Enabled = False
+        Me.TextBox1.Location = New System.Drawing.Point(513, 37)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 15)
+        Me.TextBox1.TabIndex = 383
+        Me.TextBox1.Visible = False
+        '
         'rese_time
         '
         Me.rese_time.Format = System.Windows.Forms.DateTimePickerFormat.Time
@@ -215,7 +225,7 @@ Partial Class reservationfrm
         '
         Me.Label18.AutoSize = True
         Me.Label18.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label18.Location = New System.Drawing.Point(756, 320)
+        Me.Label18.Location = New System.Drawing.Point(835, 292)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(56, 17)
         Me.Label18.TabIndex = 375
@@ -226,7 +236,7 @@ Partial Class reservationfrm
         '
         Me.Label20.AutoSize = True
         Me.Label20.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label20.Location = New System.Drawing.Point(677, 358)
+        Me.Label20.Location = New System.Drawing.Point(756, 330)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(130, 17)
         Me.Label20.TabIndex = 374
@@ -238,7 +248,7 @@ Partial Class reservationfrm
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label11.Location = New System.Drawing.Point(747, 210)
+        Me.Label11.Location = New System.Drawing.Point(826, 182)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(62, 17)
         Me.Label11.TabIndex = 372
@@ -250,7 +260,7 @@ Partial Class reservationfrm
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label12.Location = New System.Drawing.Point(749, 260)
+        Me.Label12.Location = New System.Drawing.Point(828, 232)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(60, 17)
         Me.Label12.TabIndex = 371
@@ -262,7 +272,7 @@ Partial Class reservationfrm
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label14.Location = New System.Drawing.Point(753, 170)
+        Me.Label14.Location = New System.Drawing.Point(832, 142)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(33, 17)
         Me.Label14.TabIndex = 370
@@ -274,7 +284,7 @@ Partial Class reservationfrm
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label16.Location = New System.Drawing.Point(753, 139)
+        Me.Label16.Location = New System.Drawing.Point(832, 111)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(56, 17)
         Me.Label16.TabIndex = 369
@@ -286,7 +296,7 @@ Partial Class reservationfrm
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label17.Location = New System.Drawing.Point(753, 101)
+        Me.Label17.Location = New System.Drawing.Point(832, 73)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(45, 17)
         Me.Label17.TabIndex = 368
@@ -724,16 +734,6 @@ Partial Class reservationfrm
         Me.Label9.Size = New System.Drawing.Size(223, 44)
         Me.Label9.TabIndex = 266
         Me.Label9.Text = "Reservation"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(513, 37)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 15)
-        Me.TextBox1.TabIndex = 383
-        Me.TextBox1.Visible = False
         '
         'reservationfrm
         '

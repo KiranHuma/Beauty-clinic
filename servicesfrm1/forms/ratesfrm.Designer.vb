@@ -23,16 +23,16 @@ Partial Class ratesfrm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ratesfrm))
-        Dim DataGridViewCellStyle51 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle52 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle53 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle54 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle55 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle56 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle57 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle58 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle59 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle60 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -63,77 +63,79 @@ Partial Class ratesfrm
         Me.get_ratesdata = New System.Windows.Forms.DataGridView()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.unitprce_txt = New System.Windows.Forms.ComboBox()
-        Me.sname_txt = New System.Windows.Forms.ComboBox()
-        Me.pname_txt = New System.Windows.Forms.ComboBox()
-        Me.mname_txt = New System.Windows.Forms.ComboBox()
+        Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.pprice_txt = New System.Windows.Forms.TextBox()
+        Me.discount_txt = New System.Windows.Forms.TextBox()
+        Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Label40 = New System.Windows.Forms.Label()
-        Me.totalbillafterdis_txt = New System.Windows.Forms.TextBox()
-        Me.Label38 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.p_date_txt = New System.Windows.Forms.DateTimePicker()
         Me.totalbill_txt = New System.Windows.Forms.TextBox()
-        Me.Label36 = New System.Windows.Forms.Label()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.servictotal_txt = New System.Windows.Forms.Label()
-        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.message_txt = New System.Windows.Forms.Label()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.totalbillafterdis_txt = New System.Windows.Forms.TextBox()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.transactionid_txt = New System.Windows.Forms.TextBox()
+        Me.mbid_txt = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.mname_txt = New System.Windows.Forms.ComboBox()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.pname_txt = New System.Windows.Forms.ComboBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.pid_txt = New System.Windows.Forms.TextBox()
+        Me.unitprce_txt = New System.Windows.Forms.ComboBox()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.pquantity_txt = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.pprice_txt = New System.Windows.Forms.TextBox()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.uinttotalprice_txt = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.servictotal_txt = New System.Windows.Forms.Label()
+        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.sprice_txt = New System.Windows.Forms.TextBox()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.sname_txt = New System.Windows.Forms.ComboBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.emname_txt = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.message_txt = New System.Windows.Forms.Label()
         Me.p_addbtn = New System.Windows.Forms.Button()
         Me.Label27 = New System.Windows.Forms.Label()
-        Me.Label32 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
-        Me.p_date_txt = New System.Windows.Forms.DateTimePicker()
         Me.p_editbtn = New System.Windows.Forms.Button()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
         Me.p_savebtn = New System.Windows.Forms.Button()
         Me.ssale_txt = New System.Windows.Forms.Label()
-        Me.Label31 = New System.Windows.Forms.Label()
         Me.p_delbtn = New System.Windows.Forms.Button()
-        Me.transactionid_txt = New System.Windows.Forms.TextBox()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.pquantity_txt = New System.Windows.Forms.TextBox()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.emname_txt = New System.Windows.Forms.TextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.discount_txt = New System.Windows.Forms.TextBox()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.sprice_txt = New System.Windows.Forms.TextBox()
-        Me.pid_txt = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.mbid_txt = New System.Windows.Forms.TextBox()
-        Me.Label17 = New System.Windows.Forms.Label()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.p_removebtn = New System.Windows.Forms.Button()
         Me.payment_grid = New System.Windows.Forms.DataGridView()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label34 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label39 = New System.Windows.Forms.Label()
-        Me.Label41 = New System.Windows.Forms.Label()
-        Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
-        Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label42 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -141,14 +143,14 @@ Partial Class ratesfrm
         CType(Me.get_ratesdata, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        Me.Panel4.SuspendLayout()
+        Me.Panel8.SuspendLayout()
+        Me.Panel7.SuspendLayout()
+        Me.Panel6.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        Me.Panel5.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         Me.TabPage4.SuspendLayout()
         CType(Me.payment_grid, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel5.SuspendLayout()
-        Me.Panel6.SuspendLayout()
-        Me.Panel7.SuspendLayout()
-        Me.Panel8.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -179,7 +181,7 @@ Partial Class ratesfrm
         Me.TabPage1.Location = New System.Drawing.Point(4, 25)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1465, 732)
+        Me.TabPage1.Size = New System.Drawing.Size(1892, 732)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Add Rates"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -443,7 +445,7 @@ Partial Class ratesfrm
         Me.TabPage2.Location = New System.Drawing.Point(4, 25)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1465, 732)
+        Me.TabPage2.Size = New System.Drawing.Size(1892, 732)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Rates Data"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -464,13 +466,13 @@ Partial Class ratesfrm
         '
         Me.get_ratesdata.AllowUserToAddRows = False
         Me.get_ratesdata.AllowUserToDeleteRows = False
-        DataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle51.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle51.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle51.ForeColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle51.SelectionBackColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle51.SelectionForeColor = System.Drawing.Color.White
-        Me.get_ratesdata.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle51
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
+        Me.get_ratesdata.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.get_ratesdata.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -478,43 +480,43 @@ Partial Class ratesfrm
         Me.get_ratesdata.BackgroundColor = System.Drawing.Color.Indigo
         Me.get_ratesdata.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.get_ratesdata.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
-        DataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle52.BackColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle52.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle52.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle52.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle52.SelectionForeColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle52.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.get_ratesdata.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle52
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.get_ratesdata.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.get_ratesdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle53.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle53.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle53.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle53.SelectionBackColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle53.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle53.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.get_ratesdata.DefaultCellStyle = DataGridViewCellStyle53
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.get_ratesdata.DefaultCellStyle = DataGridViewCellStyle3
         Me.get_ratesdata.EnableHeadersVisualStyles = False
         Me.get_ratesdata.GridColor = System.Drawing.Color.Indigo
         Me.get_ratesdata.Location = New System.Drawing.Point(25, 56)
         Me.get_ratesdata.Margin = New System.Windows.Forms.Padding(4)
         Me.get_ratesdata.Name = "get_ratesdata"
         Me.get_ratesdata.ReadOnly = True
-        DataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle54.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle54.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle54.ForeColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle54.SelectionBackColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle54.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.get_ratesdata.RowHeadersDefaultCellStyle = DataGridViewCellStyle54
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.get_ratesdata.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.get_ratesdata.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        DataGridViewCellStyle55.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle55.ForeColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle55.SelectionBackColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle55.SelectionForeColor = System.Drawing.Color.White
-        Me.get_ratesdata.RowsDefaultCellStyle = DataGridViewCellStyle55
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White
+        Me.get_ratesdata.RowsDefaultCellStyle = DataGridViewCellStyle5
         Me.get_ratesdata.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.get_ratesdata.Size = New System.Drawing.Size(1027, 654)
         Me.get_ratesdata.TabIndex = 152
@@ -553,46 +555,24 @@ Partial Class ratesfrm
         Me.Panel2.Size = New System.Drawing.Size(1819, 669)
         Me.Panel2.TabIndex = 341
         '
-        'Label14
+        'Panel8
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(375, 68)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(58, 17)
-        Me.Label14.TabIndex = 375
-        Me.Label14.Text = "In Stock"
-        '
-        'unitprce_txt
-        '
-        Me.unitprce_txt.FormattingEnabled = True
-        Me.unitprce_txt.Location = New System.Drawing.Point(134, 124)
-        Me.unitprce_txt.Name = "unitprce_txt"
-        Me.unitprce_txt.Size = New System.Drawing.Size(216, 24)
-        Me.unitprce_txt.TabIndex = 374
-        '
-        'sname_txt
-        '
-        Me.sname_txt.FormattingEnabled = True
-        Me.sname_txt.Location = New System.Drawing.Point(162, 74)
-        Me.sname_txt.Name = "sname_txt"
-        Me.sname_txt.Size = New System.Drawing.Size(216, 24)
-        Me.sname_txt.TabIndex = 373
-        '
-        'pname_txt
-        '
-        Me.pname_txt.FormattingEnabled = True
-        Me.pname_txt.Location = New System.Drawing.Point(134, 8)
-        Me.pname_txt.Name = "pname_txt"
-        Me.pname_txt.Size = New System.Drawing.Size(216, 24)
-        Me.pname_txt.TabIndex = 372
-        '
-        'mname_txt
-        '
-        Me.mname_txt.FormattingEnabled = True
-        Me.mname_txt.Location = New System.Drawing.Point(131, 88)
-        Me.mname_txt.Name = "mname_txt"
-        Me.mname_txt.Size = New System.Drawing.Size(216, 24)
-        Me.mname_txt.TabIndex = 371
+        Me.Panel8.Controls.Add(Me.Button4)
+        Me.Panel8.Controls.Add(Me.discount_txt)
+        Me.Panel8.Controls.Add(Me.RichTextBox3)
+        Me.Panel8.Controls.Add(Me.Label13)
+        Me.Panel8.Controls.Add(Me.Button3)
+        Me.Panel8.Controls.Add(Me.Label23)
+        Me.Panel8.Controls.Add(Me.Label41)
+        Me.Panel8.Controls.Add(Me.p_date_txt)
+        Me.Panel8.Controls.Add(Me.totalbill_txt)
+        Me.Panel8.Controls.Add(Me.Label37)
+        Me.Panel8.Controls.Add(Me.totalbillafterdis_txt)
+        Me.Panel8.Controls.Add(Me.Label40)
+        Me.Panel8.Location = New System.Drawing.Point(1079, 21)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(572, 442)
+        Me.Panel8.TabIndex = 380
         '
         'Button4
         '
@@ -603,13 +583,29 @@ Partial Class ratesfrm
         Me.Button4.Text = "Add service and product totall"
         Me.Button4.UseVisualStyleBackColor = True
         '
-        'pprice_txt
+        'discount_txt
         '
-        Me.pprice_txt.Location = New System.Drawing.Point(134, 160)
-        Me.pprice_txt.Name = "pprice_txt"
-        Me.pprice_txt.Size = New System.Drawing.Size(216, 22)
-        Me.pprice_txt.TabIndex = 369
-        Me.pprice_txt.Visible = False
+        Me.discount_txt.Location = New System.Drawing.Point(229, 124)
+        Me.discount_txt.Name = "discount_txt"
+        Me.discount_txt.Size = New System.Drawing.Size(216, 22)
+        Me.discount_txt.TabIndex = 299
+        '
+        'RichTextBox3
+        '
+        Me.RichTextBox3.Location = New System.Drawing.Point(226, 230)
+        Me.RichTextBox3.Name = "RichTextBox3"
+        Me.RichTextBox3.Size = New System.Drawing.Size(222, 96)
+        Me.RichTextBox3.TabIndex = 369
+        Me.RichTextBox3.Text = ""
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(114, 124)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(85, 17)
+        Me.Label13.TabIndex = 297
+        Me.Label13.Text = "Discount(%)"
         '
         'Button3
         '
@@ -620,39 +616,37 @@ Partial Class ratesfrm
         Me.Button3.Text = "Calculate"
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'Label40
+        'Label23
         '
-        Me.Label40.AutoSize = True
-        Me.Label40.Location = New System.Drawing.Point(155, 159)
-        Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(40, 17)
-        Me.Label40.TabIndex = 364
-        Me.Label40.Text = "Total"
+        Me.Label23.AutoSize = True
+        Me.Label23.Location = New System.Drawing.Point(88, 197)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(117, 17)
+        Me.Label23.TabIndex = 312
+        Me.Label23.Text = "Transaction Date"
         '
-        'totalbillafterdis_txt
+        'Label41
         '
-        Me.totalbillafterdis_txt.Location = New System.Drawing.Point(229, 159)
-        Me.totalbillafterdis_txt.Name = "totalbillafterdis_txt"
-        Me.totalbillafterdis_txt.Size = New System.Drawing.Size(216, 22)
-        Me.totalbillafterdis_txt.TabIndex = 363
+        Me.Label41.AutoSize = True
+        Me.Label41.Location = New System.Drawing.Point(125, 270)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(64, 17)
+        Me.Label41.TabIndex = 378
+        Me.Label41.Text = "Remarks"
         '
-        'Label38
+        'p_date_txt
         '
-        Me.Label38.AutoSize = True
-        Me.Label38.Location = New System.Drawing.Point(1564, 583)
-        Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(130, 17)
-        Me.Label38.TabIndex = 360
-        Me.Label38.Text = "Convert to decemel"
-        Me.Label38.Visible = False
+        Me.p_date_txt.Location = New System.Drawing.Point(229, 192)
+        Me.p_date_txt.Name = "p_date_txt"
+        Me.p_date_txt.Size = New System.Drawing.Size(216, 22)
+        Me.p_date_txt.TabIndex = 313
         '
-        'TextBox5
+        'totalbill_txt
         '
-        Me.TextBox5.Location = New System.Drawing.Point(1700, 580)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(106, 22)
-        Me.TextBox5.TabIndex = 359
-        Me.TextBox5.Visible = False
+        Me.totalbill_txt.Location = New System.Drawing.Point(229, 87)
+        Me.totalbill_txt.Name = "totalbill_txt"
+        Me.totalbill_txt.Size = New System.Drawing.Size(216, 22)
+        Me.totalbill_txt.TabIndex = 318
         '
         'Label37
         '
@@ -663,28 +657,325 @@ Partial Class ratesfrm
         Me.Label37.TabIndex = 358
         Me.Label37.Text = "Total sevice and product "
         '
-        'totalbill_txt
+        'totalbillafterdis_txt
         '
-        Me.totalbill_txt.Location = New System.Drawing.Point(229, 87)
-        Me.totalbill_txt.Name = "totalbill_txt"
-        Me.totalbill_txt.Size = New System.Drawing.Size(216, 22)
-        Me.totalbill_txt.TabIndex = 318
+        Me.totalbillafterdis_txt.Location = New System.Drawing.Point(229, 159)
+        Me.totalbillafterdis_txt.Name = "totalbillafterdis_txt"
+        Me.totalbillafterdis_txt.Size = New System.Drawing.Size(216, 22)
+        Me.totalbillafterdis_txt.TabIndex = 363
         '
-        'Label36
+        'Label40
         '
-        Me.Label36.AutoSize = True
-        Me.Label36.Location = New System.Drawing.Point(281, 293)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(122, 17)
-        Me.Label36.TabIndex = 357
-        Me.Label36.Text = "All Services Name"
+        Me.Label40.AutoSize = True
+        Me.Label40.Location = New System.Drawing.Point(155, 159)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(40, 17)
+        Me.Label40.TabIndex = 364
+        Me.Label40.Text = "Total"
+        '
+        'Panel7
+        '
+        Me.Panel7.Controls.Add(Me.transactionid_txt)
+        Me.Panel7.Controls.Add(Me.mbid_txt)
+        Me.Panel7.Controls.Add(Me.Label12)
+        Me.Panel7.Controls.Add(Me.Label11)
+        Me.Panel7.Controls.Add(Me.Label31)
+        Me.Panel7.Controls.Add(Me.mname_txt)
+        Me.Panel7.Location = New System.Drawing.Point(17, 19)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(515, 190)
+        Me.Panel7.TabIndex = 379
+        '
+        'transactionid_txt
+        '
+        Me.transactionid_txt.ForeColor = System.Drawing.SystemColors.InfoText
+        Me.transactionid_txt.Location = New System.Drawing.Point(131, 50)
+        Me.transactionid_txt.Name = "transactionid_txt"
+        Me.transactionid_txt.ReadOnly = True
+        Me.transactionid_txt.Size = New System.Drawing.Size(216, 22)
+        Me.transactionid_txt.TabIndex = 310
+        '
+        'mbid_txt
+        '
+        Me.mbid_txt.Location = New System.Drawing.Point(131, 116)
+        Me.mbid_txt.Name = "mbid_txt"
+        Me.mbid_txt.Size = New System.Drawing.Size(216, 22)
+        Me.mbid_txt.TabIndex = 280
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(19, 88)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(100, 17)
+        Me.Label12.TabIndex = 275
+        Me.Label12.Text = "Member Name"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(21, 121)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(76, 17)
+        Me.Label11.TabIndex = 274
+        Me.Label11.Text = "Member ID"
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Location = New System.Drawing.Point(19, 50)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(95, 17)
+        Me.Label31.TabIndex = 309
+        Me.Label31.Text = "Transaction #"
+        '
+        'mname_txt
+        '
+        Me.mname_txt.FormattingEnabled = True
+        Me.mname_txt.Location = New System.Drawing.Point(131, 88)
+        Me.mname_txt.Name = "mname_txt"
+        Me.mname_txt.Size = New System.Drawing.Size(216, 24)
+        Me.mname_txt.TabIndex = 371
+        '
+        'Panel6
+        '
+        Me.Panel6.Controls.Add(Me.TextBox2)
+        Me.Panel6.Controls.Add(Me.Label42)
+        Me.Panel6.Controls.Add(Me.pname_txt)
+        Me.Panel6.Controls.Add(Me.Label17)
+        Me.Panel6.Controls.Add(Me.Label14)
+        Me.Panel6.Controls.Add(Me.Label32)
+        Me.Panel6.Controls.Add(Me.pid_txt)
+        Me.Panel6.Controls.Add(Me.unitprce_txt)
+        Me.Panel6.Controls.Add(Me.Label22)
+        Me.Panel6.Controls.Add(Me.Label21)
+        Me.Panel6.Controls.Add(Me.pquantity_txt)
+        Me.Panel6.Controls.Add(Me.Label7)
+        Me.Panel6.Controls.Add(Me.pprice_txt)
+        Me.Panel6.Controls.Add(Me.Label24)
+        Me.Panel6.Controls.Add(Me.Label26)
+        Me.Panel6.Controls.Add(Me.Panel3)
+        Me.Panel6.Controls.Add(Me.Button1)
+        Me.Panel6.Location = New System.Drawing.Point(17, 225)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(515, 405)
+        Me.Panel6.TabIndex = 377
+        '
+        'pname_txt
+        '
+        Me.pname_txt.FormattingEnabled = True
+        Me.pname_txt.Location = New System.Drawing.Point(134, 8)
+        Me.pname_txt.Name = "pname_txt"
+        Me.pname_txt.Size = New System.Drawing.Size(216, 24)
+        Me.pname_txt.TabIndex = 372
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(22, 43)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(74, 17)
+        Me.Label17.TabIndex = 288
+        Me.Label17.Text = "Product ID"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(375, 68)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(58, 17)
+        Me.Label14.TabIndex = 375
+        Me.Label14.Text = "In Stock"
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Location = New System.Drawing.Point(290, 228)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(124, 17)
+        Me.Label32.TabIndex = 315
+        Me.Label32.Text = "All Products Name"
+        '
+        'pid_txt
+        '
+        Me.pid_txt.Location = New System.Drawing.Point(134, 43)
+        Me.pid_txt.Name = "pid_txt"
+        Me.pid_txt.Size = New System.Drawing.Size(216, 22)
+        Me.pid_txt.TabIndex = 287
+        '
+        'unitprce_txt
+        '
+        Me.unitprce_txt.FormattingEnabled = True
+        Me.unitprce_txt.Location = New System.Drawing.Point(134, 124)
+        Me.unitprce_txt.Name = "unitprce_txt"
+        Me.unitprce_txt.Size = New System.Drawing.Size(216, 24)
+        Me.unitprce_txt.TabIndex = 374
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(7, 163)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(93, 17)
+        Me.Label22.TabIndex = 294
+        Me.Label22.Text = "Product Price"
+        Me.Label22.Visible = False
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(22, 15)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(98, 17)
+        Me.Label21.TabIndex = 293
+        Me.Label21.Text = "Product Name"
+        '
+        'pquantity_txt
+        '
+        Me.pquantity_txt.Location = New System.Drawing.Point(134, 83)
+        Me.pquantity_txt.Name = "pquantity_txt"
+        Me.pquantity_txt.Size = New System.Drawing.Size(216, 22)
+        Me.pquantity_txt.TabIndex = 305
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(22, 86)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(61, 17)
+        Me.Label7.TabIndex = 304
+        Me.Label7.Text = "Quantity"
+        '
+        'pprice_txt
+        '
+        Me.pprice_txt.Location = New System.Drawing.Point(134, 160)
+        Me.pprice_txt.Name = "pprice_txt"
+        Me.pprice_txt.Size = New System.Drawing.Size(216, 22)
+        Me.pprice_txt.TabIndex = 369
+        Me.pprice_txt.Visible = False
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(356, 86)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(94, 17)
+        Me.Label24.TabIndex = 306
+        Me.Label24.Text = "Total quantity"
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Location = New System.Drawing.Point(22, 124)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(68, 17)
+        Me.Label26.TabIndex = 307
+        Me.Label26.Text = "Unit price"
+        '
+        'Panel3
+        '
+        Me.Panel3.Controls.Add(Me.RichTextBox1)
+        Me.Panel3.Controls.Add(Me.Label33)
+        Me.Panel3.Controls.Add(Me.uinttotalprice_txt)
+        Me.Panel3.Location = New System.Drawing.Point(216, 248)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(275, 149)
+        Me.Panel3.TabIndex = 318
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Location = New System.Drawing.Point(17, 13)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(244, 96)
+        Me.RichTextBox1.TabIndex = 318
+        Me.RichTextBox1.Text = ""
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Location = New System.Drawing.Point(64, 130)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(76, 17)
+        Me.Label33.TabIndex = 317
+        Me.Label33.Text = "Total Price"
+        '
+        'uinttotalprice_txt
+        '
+        Me.uinttotalprice_txt.AutoSize = True
+        Me.uinttotalprice_txt.Location = New System.Drawing.Point(198, 130)
+        Me.uinttotalprice_txt.Name = "uinttotalprice_txt"
+        Me.uinttotalprice_txt.Size = New System.Drawing.Size(16, 17)
+        Me.uinttotalprice_txt.TabIndex = 368
+        Me.uinttotalprice_txt.Text = "0"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(456, 68)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(50, 23)
+        Me.Button1.TabIndex = 351
+        Me.Button1.Text = "Add another product"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Panel5
+        '
+        Me.Panel5.Controls.Add(Me.ComboBox1)
+        Me.Panel5.Controls.Add(Me.Label39)
+        Me.Panel5.Controls.Add(Me.TextBox1)
+        Me.Panel5.Controls.Add(Me.Label34)
+        Me.Panel5.Controls.Add(Me.Panel4)
+        Me.Panel5.Controls.Add(Me.sprice_txt)
+        Me.Panel5.Controls.Add(Me.Label20)
+        Me.Panel5.Controls.Add(Me.sname_txt)
+        Me.Panel5.Controls.Add(Me.Label18)
+        Me.Panel5.Controls.Add(Me.emname_txt)
+        Me.Panel5.Controls.Add(Me.Label16)
+        Me.Panel5.Controls.Add(Me.Button2)
+        Me.Panel5.Controls.Add(Me.Label36)
+        Me.Panel5.Location = New System.Drawing.Point(550, 19)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(507, 488)
+        Me.Panel5.TabIndex = 376
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(162, 36)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(216, 24)
+        Me.ComboBox1.TabIndex = 377
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Location = New System.Drawing.Point(47, 39)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(55, 17)
+        Me.Label39.TabIndex = 376
+        Me.Label39.Text = "Rate ID"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(162, 193)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(216, 22)
+        Me.TextBox1.TabIndex = 375
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Location = New System.Drawing.Point(47, 193)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(85, 17)
+        Me.Label34.TabIndex = 374
+        Me.Label34.Text = "Discount(%)"
         '
         'Panel4
         '
         Me.Panel4.Controls.Add(Me.servictotal_txt)
         Me.Panel4.Controls.Add(Me.RichTextBox2)
         Me.Panel4.Controls.Add(Me.Label35)
-        Me.Panel4.Location = New System.Drawing.Point(228, 313)
+        Me.Panel4.Location = New System.Drawing.Point(131, 269)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(247, 154)
         Me.Panel4.TabIndex = 356
@@ -715,23 +1006,90 @@ Partial Class ratesfrm
         Me.Label35.TabIndex = 317
         Me.Label35.Text = "Total Price"
         '
+        'sprice_txt
+        '
+        Me.sprice_txt.Location = New System.Drawing.Point(162, 111)
+        Me.sprice_txt.Name = "sprice_txt"
+        Me.sprice_txt.Size = New System.Drawing.Size(216, 22)
+        Me.sprice_txt.TabIndex = 292
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(47, 111)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(91, 17)
+        Me.Label20.TabIndex = 290
+        Me.Label20.Text = "Service Price"
+        '
+        'sname_txt
+        '
+        Me.sname_txt.FormattingEnabled = True
+        Me.sname_txt.Location = New System.Drawing.Point(162, 74)
+        Me.sname_txt.Name = "sname_txt"
+        Me.sname_txt.Size = New System.Drawing.Size(216, 24)
+        Me.sname_txt.TabIndex = 373
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(47, 77)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(94, 17)
+        Me.Label18.TabIndex = 289
+        Me.Label18.Text = "Service name"
+        '
+        'emname_txt
+        '
+        Me.emname_txt.Location = New System.Drawing.Point(162, 155)
+        Me.emname_txt.Name = "emname_txt"
+        Me.emname_txt.Size = New System.Drawing.Size(216, 22)
+        Me.emname_txt.TabIndex = 302
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(47, 155)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(111, 17)
+        Me.Label16.TabIndex = 301
+        Me.Label16.Text = "Employee Name"
+        '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(384, 69)
+        Me.Button2.Location = New System.Drawing.Point(384, 74)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(63, 23)
         Me.Button2.TabIndex = 354
         Me.Button2.Text = "Add another product"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Button1
+        'Label36
         '
-        Me.Button1.Location = New System.Drawing.Point(456, 80)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(50, 23)
-        Me.Button1.TabIndex = 351
-        Me.Button1.Text = "Add another product"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Label36.AutoSize = True
+        Me.Label36.Location = New System.Drawing.Point(184, 249)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(122, 17)
+        Me.Label36.TabIndex = 357
+        Me.Label36.Text = "All Services Name"
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Location = New System.Drawing.Point(1564, 583)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(130, 17)
+        Me.Label38.TabIndex = 360
+        Me.Label38.Text = "Convert to decemel"
+        Me.Label38.Visible = False
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(1700, 580)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(106, 22)
+        Me.TextBox5.TabIndex = 359
+        Me.TextBox5.Visible = False
         '
         'message_txt
         '
@@ -746,42 +1104,6 @@ Partial Class ratesfrm
         Me.message_txt.TabIndex = 350
         Me.message_txt.Text = "Welcome"
         Me.message_txt.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'Panel3
-        '
-        Me.Panel3.Controls.Add(Me.RichTextBox1)
-        Me.Panel3.Controls.Add(Me.Label33)
-        Me.Panel3.Controls.Add(Me.uinttotalprice_txt)
-        Me.Panel3.Location = New System.Drawing.Point(90, 213)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(325, 162)
-        Me.Panel3.TabIndex = 318
-        '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Location = New System.Drawing.Point(17, 13)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(244, 96)
-        Me.RichTextBox1.TabIndex = 318
-        Me.RichTextBox1.Text = ""
-        '
-        'Label33
-        '
-        Me.Label33.AutoSize = True
-        Me.Label33.Location = New System.Drawing.Point(64, 130)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(76, 17)
-        Me.Label33.TabIndex = 317
-        Me.Label33.Text = "Total Price"
-        '
-        'uinttotalprice_txt
-        '
-        Me.uinttotalprice_txt.AutoSize = True
-        Me.uinttotalprice_txt.Location = New System.Drawing.Point(198, 130)
-        Me.uinttotalprice_txt.Name = "uinttotalprice_txt"
-        Me.uinttotalprice_txt.Size = New System.Drawing.Size(16, 17)
-        Me.uinttotalprice_txt.TabIndex = 368
-        Me.uinttotalprice_txt.Text = "0"
         '
         'p_addbtn
         '
@@ -810,15 +1132,6 @@ Partial Class ratesfrm
         Me.Label27.TabIndex = 349
         Me.Label27.Text = "Add New"
         '
-        'Label32
-        '
-        Me.Label32.AutoSize = True
-        Me.Label32.Location = New System.Drawing.Point(180, 193)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(124, 17)
-        Me.Label32.TabIndex = 315
-        Me.Label32.Text = "All Products Name"
-        '
         'Label29
         '
         Me.Label29.AutoSize = True
@@ -831,13 +1144,6 @@ Partial Class ratesfrm
         Me.Label29.Size = New System.Drawing.Size(36, 17)
         Me.Label29.TabIndex = 346
         Me.Label29.Text = "Edit"
-        '
-        'p_date_txt
-        '
-        Me.p_date_txt.Location = New System.Drawing.Point(229, 192)
-        Me.p_date_txt.Name = "p_date_txt"
-        Me.p_date_txt.Size = New System.Drawing.Size(216, 22)
-        Me.p_date_txt.TabIndex = 313
         '
         'p_editbtn
         '
@@ -879,15 +1185,6 @@ Partial Class ratesfrm
         Me.Label30.TabIndex = 343
         Me.Label30.Text = "Save"
         '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(88, 197)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(117, 17)
-        Me.Label23.TabIndex = 312
-        Me.Label23.Text = "Transaction Date"
-        '
         'p_savebtn
         '
         Me.p_savebtn.BackColor = System.Drawing.SystemColors.Control
@@ -911,15 +1208,6 @@ Partial Class ratesfrm
         Me.ssale_txt.TabIndex = 311
         Me.ssale_txt.Text = "Sale"
         '
-        'Label31
-        '
-        Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(19, 50)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(95, 17)
-        Me.Label31.TabIndex = 309
-        Me.Label31.Text = "Transaction #"
-        '
         'p_delbtn
         '
         Me.p_delbtn.BackColor = System.Drawing.Color.White
@@ -934,166 +1222,6 @@ Partial Class ratesfrm
         Me.p_delbtn.TabIndex = 345
         Me.p_delbtn.UseVisualStyleBackColor = False
         '
-        'transactionid_txt
-        '
-        Me.transactionid_txt.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.transactionid_txt.Location = New System.Drawing.Point(131, 50)
-        Me.transactionid_txt.Name = "transactionid_txt"
-        Me.transactionid_txt.ReadOnly = True
-        Me.transactionid_txt.Size = New System.Drawing.Size(216, 22)
-        Me.transactionid_txt.TabIndex = 310
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(22, 124)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(68, 17)
-        Me.Label26.TabIndex = 307
-        Me.Label26.Text = "Unit price"
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(356, 86)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(94, 17)
-        Me.Label24.TabIndex = 306
-        Me.Label24.Text = "Total quantity"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(22, 86)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(61, 17)
-        Me.Label7.TabIndex = 304
-        Me.Label7.Text = "Quantity"
-        '
-        'pquantity_txt
-        '
-        Me.pquantity_txt.Location = New System.Drawing.Point(134, 83)
-        Me.pquantity_txt.Name = "pquantity_txt"
-        Me.pquantity_txt.Size = New System.Drawing.Size(216, 22)
-        Me.pquantity_txt.TabIndex = 305
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(47, 155)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(111, 17)
-        Me.Label16.TabIndex = 301
-        Me.Label16.Text = "Employee Name"
-        '
-        'emname_txt
-        '
-        Me.emname_txt.Location = New System.Drawing.Point(162, 155)
-        Me.emname_txt.Name = "emname_txt"
-        Me.emname_txt.Size = New System.Drawing.Size(216, 22)
-        Me.emname_txt.TabIndex = 302
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(114, 124)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(85, 17)
-        Me.Label13.TabIndex = 297
-        Me.Label13.Text = "Discount(%)"
-        '
-        'discount_txt
-        '
-        Me.discount_txt.Location = New System.Drawing.Point(229, 124)
-        Me.discount_txt.Name = "discount_txt"
-        Me.discount_txt.Size = New System.Drawing.Size(216, 22)
-        Me.discount_txt.TabIndex = 299
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(22, 15)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(98, 17)
-        Me.Label21.TabIndex = 293
-        Me.Label21.Text = "Product Name"
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(7, 163)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(93, 17)
-        Me.Label22.TabIndex = 294
-        Me.Label22.Text = "Product Price"
-        Me.Label22.Visible = False
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(47, 77)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(94, 17)
-        Me.Label18.TabIndex = 289
-        Me.Label18.Text = "Service name"
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(47, 111)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(91, 17)
-        Me.Label20.TabIndex = 290
-        Me.Label20.Text = "Service Price"
-        '
-        'sprice_txt
-        '
-        Me.sprice_txt.Location = New System.Drawing.Point(162, 111)
-        Me.sprice_txt.Name = "sprice_txt"
-        Me.sprice_txt.Size = New System.Drawing.Size(216, 22)
-        Me.sprice_txt.TabIndex = 292
-        '
-        'pid_txt
-        '
-        Me.pid_txt.Location = New System.Drawing.Point(134, 43)
-        Me.pid_txt.Name = "pid_txt"
-        Me.pid_txt.Size = New System.Drawing.Size(216, 22)
-        Me.pid_txt.TabIndex = 287
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(21, 121)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(76, 17)
-        Me.Label11.TabIndex = 274
-        Me.Label11.Text = "Member ID"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(19, 88)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(100, 17)
-        Me.Label12.TabIndex = 275
-        Me.Label12.Text = "Member Name"
-        '
-        'mbid_txt
-        '
-        Me.mbid_txt.Location = New System.Drawing.Point(131, 116)
-        Me.mbid_txt.Name = "mbid_txt"
-        Me.mbid_txt.Size = New System.Drawing.Size(216, 22)
-        Me.mbid_txt.TabIndex = 280
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(22, 43)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(74, 17)
-        Me.Label17.TabIndex = 288
-        Me.Label17.Text = "Product ID"
-        '
         'TabPage4
         '
         Me.TabPage4.Controls.Add(Me.p_removebtn)
@@ -1101,7 +1229,7 @@ Partial Class ratesfrm
         Me.TabPage4.Location = New System.Drawing.Point(4, 25)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(1465, 732)
+        Me.TabPage4.Size = New System.Drawing.Size(1892, 732)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "View Payment Data"
         Me.TabPage4.UseVisualStyleBackColor = True
@@ -1122,13 +1250,13 @@ Partial Class ratesfrm
         '
         Me.payment_grid.AllowUserToAddRows = False
         Me.payment_grid.AllowUserToDeleteRows = False
-        DataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle56.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle56.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle56.ForeColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle56.SelectionBackColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle56.SelectionForeColor = System.Drawing.Color.White
-        Me.payment_grid.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle56
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White
+        Me.payment_grid.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle6
         Me.payment_grid.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -1136,170 +1264,62 @@ Partial Class ratesfrm
         Me.payment_grid.BackgroundColor = System.Drawing.Color.Indigo
         Me.payment_grid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.payment_grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
-        DataGridViewCellStyle57.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle57.BackColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle57.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle57.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle57.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle57.SelectionForeColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle57.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.payment_grid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle57
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.payment_grid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.payment_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle58.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle58.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle58.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle58.SelectionBackColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle58.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle58.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.payment_grid.DefaultCellStyle = DataGridViewCellStyle58
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.payment_grid.DefaultCellStyle = DataGridViewCellStyle8
         Me.payment_grid.EnableHeadersVisualStyles = False
         Me.payment_grid.GridColor = System.Drawing.Color.Indigo
         Me.payment_grid.Location = New System.Drawing.Point(25, 64)
         Me.payment_grid.Margin = New System.Windows.Forms.Padding(4)
         Me.payment_grid.Name = "payment_grid"
         Me.payment_grid.ReadOnly = True
-        DataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle59.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle59.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle59.ForeColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle59.SelectionBackColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle59.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle59.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.payment_grid.RowHeadersDefaultCellStyle = DataGridViewCellStyle59
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.payment_grid.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.payment_grid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        DataGridViewCellStyle60.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle60.ForeColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle60.SelectionBackColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle60.SelectionForeColor = System.Drawing.Color.White
-        Me.payment_grid.RowsDefaultCellStyle = DataGridViewCellStyle60
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White
+        Me.payment_grid.RowsDefaultCellStyle = DataGridViewCellStyle10
         Me.payment_grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.payment_grid.Size = New System.Drawing.Size(1027, 654)
         Me.payment_grid.TabIndex = 318
         '
-        'Panel5
+        'TextBox2
         '
-        Me.Panel5.Controls.Add(Me.ComboBox1)
-        Me.Panel5.Controls.Add(Me.Label39)
-        Me.Panel5.Controls.Add(Me.TextBox1)
-        Me.Panel5.Controls.Add(Me.Label34)
-        Me.Panel5.Controls.Add(Me.Panel4)
-        Me.Panel5.Controls.Add(Me.sprice_txt)
-        Me.Panel5.Controls.Add(Me.Label20)
-        Me.Panel5.Controls.Add(Me.sname_txt)
-        Me.Panel5.Controls.Add(Me.Label18)
-        Me.Panel5.Controls.Add(Me.emname_txt)
-        Me.Panel5.Controls.Add(Me.Label16)
-        Me.Panel5.Controls.Add(Me.Button2)
-        Me.Panel5.Controls.Add(Me.Label36)
-        Me.Panel5.Location = New System.Drawing.Point(550, 19)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(507, 488)
-        Me.Panel5.TabIndex = 376
+        Me.TextBox2.Location = New System.Drawing.Point(134, 195)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(216, 22)
+        Me.TextBox2.TabIndex = 377
         '
-        'Panel6
+        'Label42
         '
-        Me.Panel6.Controls.Add(Me.pname_txt)
-        Me.Panel6.Controls.Add(Me.Label17)
-        Me.Panel6.Controls.Add(Me.Label14)
-        Me.Panel6.Controls.Add(Me.Label32)
-        Me.Panel6.Controls.Add(Me.pid_txt)
-        Me.Panel6.Controls.Add(Me.unitprce_txt)
-        Me.Panel6.Controls.Add(Me.Label22)
-        Me.Panel6.Controls.Add(Me.Label21)
-        Me.Panel6.Controls.Add(Me.pquantity_txt)
-        Me.Panel6.Controls.Add(Me.Label7)
-        Me.Panel6.Controls.Add(Me.pprice_txt)
-        Me.Panel6.Controls.Add(Me.Label24)
-        Me.Panel6.Controls.Add(Me.Label26)
-        Me.Panel6.Controls.Add(Me.Panel3)
-        Me.Panel6.Controls.Add(Me.Button1)
-        Me.Panel6.Location = New System.Drawing.Point(17, 225)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(515, 405)
-        Me.Panel6.TabIndex = 377
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(162, 193)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(216, 22)
-        Me.TextBox1.TabIndex = 375
-        '
-        'Label34
-        '
-        Me.Label34.AutoSize = True
-        Me.Label34.Location = New System.Drawing.Point(47, 193)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(85, 17)
-        Me.Label34.TabIndex = 374
-        Me.Label34.Text = "Discount(%)"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(162, 36)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(216, 24)
-        Me.ComboBox1.TabIndex = 377
-        '
-        'Label39
-        '
-        Me.Label39.AutoSize = True
-        Me.Label39.Location = New System.Drawing.Point(47, 39)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(55, 17)
-        Me.Label39.TabIndex = 376
-        Me.Label39.Text = "Rate ID"
-        '
-        'Label41
-        '
-        Me.Label41.AutoSize = True
-        Me.Label41.Location = New System.Drawing.Point(125, 270)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(64, 17)
-        Me.Label41.TabIndex = 378
-        Me.Label41.Text = "Remarks"
-        '
-        'RichTextBox3
-        '
-        Me.RichTextBox3.Location = New System.Drawing.Point(226, 230)
-        Me.RichTextBox3.Name = "RichTextBox3"
-        Me.RichTextBox3.Size = New System.Drawing.Size(222, 96)
-        Me.RichTextBox3.TabIndex = 369
-        Me.RichTextBox3.Text = ""
-        '
-        'Panel7
-        '
-        Me.Panel7.Controls.Add(Me.transactionid_txt)
-        Me.Panel7.Controls.Add(Me.mbid_txt)
-        Me.Panel7.Controls.Add(Me.Label12)
-        Me.Panel7.Controls.Add(Me.Label11)
-        Me.Panel7.Controls.Add(Me.Label31)
-        Me.Panel7.Controls.Add(Me.mname_txt)
-        Me.Panel7.Location = New System.Drawing.Point(17, 19)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(515, 190)
-        Me.Panel7.TabIndex = 379
-        '
-        'Panel8
-        '
-        Me.Panel8.Controls.Add(Me.Button4)
-        Me.Panel8.Controls.Add(Me.discount_txt)
-        Me.Panel8.Controls.Add(Me.RichTextBox3)
-        Me.Panel8.Controls.Add(Me.Label13)
-        Me.Panel8.Controls.Add(Me.Button3)
-        Me.Panel8.Controls.Add(Me.Label23)
-        Me.Panel8.Controls.Add(Me.Label41)
-        Me.Panel8.Controls.Add(Me.p_date_txt)
-        Me.Panel8.Controls.Add(Me.totalbill_txt)
-        Me.Panel8.Controls.Add(Me.Label37)
-        Me.Panel8.Controls.Add(Me.totalbillafterdis_txt)
-        Me.Panel8.Controls.Add(Me.Label40)
-        Me.Panel8.Location = New System.Drawing.Point(1079, 21)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(572, 442)
-        Me.Panel8.TabIndex = 380
+        Me.Label42.AutoSize = True
+        Me.Label42.Location = New System.Drawing.Point(19, 195)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(85, 17)
+        Me.Label42.TabIndex = 376
+        Me.Label42.Text = "Discount(%)"
         '
         'ratesfrm
         '
@@ -1319,20 +1339,20 @@ Partial Class ratesfrm
         Me.TabPage3.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        Me.Panel4.ResumeLayout(False)
-        Me.Panel4.PerformLayout()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
-        Me.TabPage4.ResumeLayout(False)
-        CType(Me.payment_grid, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel5.ResumeLayout(False)
-        Me.Panel5.PerformLayout()
-        Me.Panel6.ResumeLayout(False)
-        Me.Panel6.PerformLayout()
-        Me.Panel7.ResumeLayout(False)
-        Me.Panel7.PerformLayout()
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
+        Me.Panel7.ResumeLayout(False)
+        Me.Panel7.PerformLayout()
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
+        Me.TabPage4.ResumeLayout(False)
+        CType(Me.payment_grid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1437,4 +1457,6 @@ Partial Class ratesfrm
     Friend WithEvents Label39 As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label34 As System.Windows.Forms.Label
+    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents Label42 As System.Windows.Forms.Label
 End Class
