@@ -453,6 +453,7 @@ Public Class ratesfrm
                 Label24.Text = dbr.GetValue(5)
                 unitprce_txt.Text = dbr.GetValue(3)
             End If
+            subtruct_stock()
         Catch ex As Exception
             MessageBox.Show("At least one entry", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End Try
@@ -604,13 +605,39 @@ Public Class ratesfrm
         End Try
     End Sub
 
-   
-    Private Sub Label32_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label32.Click
+    Private Sub subtruct_stock()
+
+
+
+        Dim subb As Int64
+
+        subb = Convert.ToInt64(Label24.Text) - Convert.ToInt64(pquantity_txt.Text)
+        Label24.Text = Convert.ToString(subb)
+
 
     End Sub
+    Private Sub quantitystockout_in()
+        Try
 
-    Private Sub Label24_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label24.Click
+            dbaccessconnection()
+            con.Open()
+            
 
+            cmd.CommandText = ("UPDATE tbl_inventrry SET Product_name= '" & pname_txt.Text & "', Totalquantity= '" & Label24.Text & "',Stock_outdate= '" & p_date_txt.Text & "' where Product_name=" & pname_txt.Text & "")
+
+                cmd.ExecuteNonQuery()
+            MessageBox.Show("Data Updated")
+            message_txt.Text = "Product details updated successfully!"
+                con.Close()
+
+
+        Catch ex As Exception
+            MessageBox.Show("Data Not Updated" & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub update_inbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles update_inbtn.Click
+        quantitystockout_in()
     End Sub
 End Class
 '

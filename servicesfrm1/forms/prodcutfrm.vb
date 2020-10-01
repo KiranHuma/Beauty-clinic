@@ -557,4 +557,5 @@ Public Class prodcutfrm
     Private Sub pquatity_txt_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pquatity_txt.TextChanged
         add_quantity()
     End Sub
+
 End Class

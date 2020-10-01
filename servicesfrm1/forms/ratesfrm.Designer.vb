@@ -84,6 +84,8 @@ Partial Class ratesfrm
         Me.Label31 = New System.Windows.Forms.Label()
         Me.mname_txt = New System.Windows.Forms.ComboBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label42 = New System.Windows.Forms.Label()
         Me.pname_txt = New System.Windows.Forms.ComboBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -134,8 +136,7 @@ Partial Class ratesfrm
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.p_removebtn = New System.Windows.Forms.Button()
         Me.payment_grid = New System.Windows.Forms.DataGridView()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label42 = New System.Windows.Forms.Label()
+        Me.update_inbtn = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -739,6 +740,7 @@ Partial Class ratesfrm
         '
         'Panel6
         '
+        Me.Panel6.Controls.Add(Me.update_inbtn)
         Me.Panel6.Controls.Add(Me.TextBox2)
         Me.Panel6.Controls.Add(Me.Label42)
         Me.Panel6.Controls.Add(Me.pname_txt)
@@ -761,6 +763,22 @@ Partial Class ratesfrm
         Me.Panel6.Size = New System.Drawing.Size(515, 405)
         Me.Panel6.TabIndex = 377
         '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(134, 195)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(216, 22)
+        Me.TextBox2.TabIndex = 377
+        '
+        'Label42
+        '
+        Me.Label42.AutoSize = True
+        Me.Label42.Location = New System.Drawing.Point(19, 195)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(85, 17)
+        Me.Label42.TabIndex = 376
+        Me.Label42.Text = "Discount(%)"
+        '
         'pname_txt
         '
         Me.pname_txt.FormattingEnabled = True
@@ -781,7 +799,7 @@ Partial Class ratesfrm
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(375, 68)
+        Me.Label14.Location = New System.Drawing.Point(356, 68)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(58, 17)
         Me.Label14.TabIndex = 375
@@ -1305,21 +1323,14 @@ Partial Class ratesfrm
         Me.payment_grid.Size = New System.Drawing.Size(1027, 654)
         Me.payment_grid.TabIndex = 318
         '
-        'TextBox2
+        'update_inbtn
         '
-        Me.TextBox2.Location = New System.Drawing.Point(134, 195)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(216, 22)
-        Me.TextBox2.TabIndex = 377
-        '
-        'Label42
-        '
-        Me.Label42.AutoSize = True
-        Me.Label42.Location = New System.Drawing.Point(19, 195)
-        Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(85, 17)
-        Me.Label42.TabIndex = 376
-        Me.Label42.Text = "Discount(%)"
+        Me.update_inbtn.Location = New System.Drawing.Point(441, 145)
+        Me.update_inbtn.Name = "update_inbtn"
+        Me.update_inbtn.Size = New System.Drawing.Size(50, 23)
+        Me.update_inbtn.TabIndex = 378
+        Me.update_inbtn.Text = "Add another product"
+        Me.update_inbtn.UseVisualStyleBackColor = True
         '
         'ratesfrm
         '
@@ -1459,4 +1470,5 @@ Partial Class ratesfrm
     Friend WithEvents Label34 As System.Windows.Forms.Label
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents Label42 As System.Windows.Forms.Label
+    Friend WithEvents update_inbtn As System.Windows.Forms.Button
 End Class

@@ -79,7 +79,7 @@ Public Class inventryfrm
         Try
             Dim con As New SqlConnection(cs)
             con.Open()
-            Dim da As New SqlDataAdapter("Select tbl_inventrry.Entryno,tbl_inventrry.I_Id ,tbl_products.P_id,tbl_products.p_name,tbl_products.p_price,tbl_products.padd_quantity,tbl_products.p_dte,tbl_inventrry.Totalquantity,tbl_inventrry.Stock_Status,tbl_inventrry.Stockin_date,tbl_products.p_description from tbl_products INNER  join tbl_inventrry on tbl_products.P_id=tbl_inventrry.Pro_id ", con)
+            Dim da As New SqlDataAdapter("Select tbl_inventrry.Entryno,tbl_inventrry.I_Id ,tbl_products.P_id,tbl_products.p_name,tbl_products.p_price,tbl_products.padd_quantity,tbl_products.p_dte,tbl_inventrry.Totalquantity,tbl_inventrry.Stock_Status,tbl_inventrry.Stockin_date,tbl_inventrry.Stock_outdate,tbl_products.p_description from tbl_products INNER  join tbl_inventrry on tbl_products.P_id=tbl_inventrry.Pro_id ", con)
             Dim dt As New DataTable
             da.Fill(dt)
             source2.DataSource = dt
