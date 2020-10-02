@@ -76,12 +76,13 @@ Partial Class MainFrom1
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button4.Location = New System.Drawing.Point(54, 129)
+        Me.Button4.Location = New System.Drawing.Point(71, 314)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(170, 56)
         Me.Button4.TabIndex = 3
         Me.Button4.Text = "Register Promos"
         Me.Button4.UseVisualStyleBackColor = False
+        Me.Button4.Visible = False
         '
         'Button5
         '
@@ -89,7 +90,7 @@ Partial Class MainFrom1
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button5.Location = New System.Drawing.Point(230, 129)
+        Me.Button5.Location = New System.Drawing.Point(54, 129)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(170, 56)
         Me.Button5.TabIndex = 4
@@ -102,7 +103,7 @@ Partial Class MainFrom1
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button6.Location = New System.Drawing.Point(406, 129)
+        Me.Button6.Location = New System.Drawing.Point(230, 129)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(170, 56)
         Me.Button6.TabIndex = 5
@@ -114,7 +115,7 @@ Partial Class MainFrom1
         Me.Button7.BackColor = System.Drawing.SystemColors.HotTrack
         Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button7.ForeColor = System.Drawing.Color.Crimson
-        Me.Button7.Location = New System.Drawing.Point(406, 196)
+        Me.Button7.Location = New System.Drawing.Point(406, 129)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(170, 56)
         Me.Button7.TabIndex = 6

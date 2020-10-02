@@ -23,11 +23,11 @@ Partial Class reservationfrm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(reservationfrm))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -80,6 +80,7 @@ Partial Class reservationfrm
         Me.get_reservationdata = New System.Windows.Forms.DataGridView()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.Button12 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -225,7 +226,7 @@ Partial Class reservationfrm
         '
         Me.Label18.AutoSize = True
         Me.Label18.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label18.Location = New System.Drawing.Point(835, 292)
+        Me.Label18.Location = New System.Drawing.Point(880, 305)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(56, 17)
         Me.Label18.TabIndex = 375
@@ -236,7 +237,7 @@ Partial Class reservationfrm
         '
         Me.Label20.AutoSize = True
         Me.Label20.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label20.Location = New System.Drawing.Point(756, 330)
+        Me.Label20.Location = New System.Drawing.Point(801, 343)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(130, 17)
         Me.Label20.TabIndex = 374
@@ -248,7 +249,7 @@ Partial Class reservationfrm
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label11.Location = New System.Drawing.Point(826, 182)
+        Me.Label11.Location = New System.Drawing.Point(871, 195)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(62, 17)
         Me.Label11.TabIndex = 372
@@ -260,7 +261,7 @@ Partial Class reservationfrm
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label12.Location = New System.Drawing.Point(828, 232)
+        Me.Label12.Location = New System.Drawing.Point(873, 245)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(60, 17)
         Me.Label12.TabIndex = 371
@@ -272,7 +273,7 @@ Partial Class reservationfrm
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label14.Location = New System.Drawing.Point(832, 142)
+        Me.Label14.Location = New System.Drawing.Point(877, 155)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(33, 17)
         Me.Label14.TabIndex = 370
@@ -284,7 +285,7 @@ Partial Class reservationfrm
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label16.Location = New System.Drawing.Point(832, 111)
+        Me.Label16.Location = New System.Drawing.Point(877, 124)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(56, 17)
         Me.Label16.TabIndex = 369
@@ -296,7 +297,7 @@ Partial Class reservationfrm
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label17.Location = New System.Drawing.Point(832, 73)
+        Me.Label17.Location = New System.Drawing.Point(877, 86)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(45, 17)
         Me.Label17.TabIndex = 368
@@ -382,7 +383,7 @@ Partial Class reservationfrm
         '
         Me.re_gendrtxt.AutoSize = True
         Me.re_gendrtxt.ForeColor = System.Drawing.Color.LightCoral
-        Me.re_gendrtxt.Location = New System.Drawing.Point(830, 320)
+        Me.re_gendrtxt.Location = New System.Drawing.Point(1061, 305)
         Me.re_gendrtxt.Name = "re_gendrtxt"
         Me.re_gendrtxt.Size = New System.Drawing.Size(0, 17)
         Me.re_gendrtxt.TabIndex = 361
@@ -391,7 +392,7 @@ Partial Class reservationfrm
         '
         Me.re_serdescriptiontxt.AutoSize = True
         Me.re_serdescriptiontxt.ForeColor = System.Drawing.Color.LightCoral
-        Me.re_serdescriptiontxt.Location = New System.Drawing.Point(832, 358)
+        Me.re_serdescriptiontxt.Location = New System.Drawing.Point(1063, 343)
         Me.re_serdescriptiontxt.Name = "re_serdescriptiontxt"
         Me.re_serdescriptiontxt.Size = New System.Drawing.Size(0, 17)
         Me.re_serdescriptiontxt.TabIndex = 360
@@ -410,7 +411,7 @@ Partial Class reservationfrm
         Me.re_memberloction_txt.AutoSize = True
         Me.re_memberloction_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.re_memberloction_txt.ForeColor = System.Drawing.Color.LightCoral
-        Me.re_memberloction_txt.Location = New System.Drawing.Point(826, 210)
+        Me.re_memberloction_txt.Location = New System.Drawing.Point(1057, 195)
         Me.re_memberloction_txt.Name = "re_memberloction_txt"
         Me.re_memberloction_txt.Size = New System.Drawing.Size(0, 17)
         Me.re_memberloction_txt.TabIndex = 354
@@ -420,7 +421,7 @@ Partial Class reservationfrm
         Me.re_memberadress_txt.AutoSize = True
         Me.re_memberadress_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.re_memberadress_txt.ForeColor = System.Drawing.Color.LightCoral
-        Me.re_memberadress_txt.Location = New System.Drawing.Point(828, 260)
+        Me.re_memberadress_txt.Location = New System.Drawing.Point(1059, 245)
         Me.re_memberadress_txt.Name = "re_memberadress_txt"
         Me.re_memberadress_txt.Size = New System.Drawing.Size(0, 17)
         Me.re_memberadress_txt.TabIndex = 352
@@ -430,7 +431,7 @@ Partial Class reservationfrm
         Me.re_memberage_txt.AutoSize = True
         Me.re_memberage_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.re_memberage_txt.ForeColor = System.Drawing.Color.LightCoral
-        Me.re_memberage_txt.Location = New System.Drawing.Point(832, 170)
+        Me.re_memberage_txt.Location = New System.Drawing.Point(1063, 155)
         Me.re_memberage_txt.Name = "re_memberage_txt"
         Me.re_memberage_txt.Size = New System.Drawing.Size(0, 17)
         Me.re_memberage_txt.TabIndex = 351
@@ -440,7 +441,7 @@ Partial Class reservationfrm
         Me.re_membercntct_txt.AutoSize = True
         Me.re_membercntct_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.re_membercntct_txt.ForeColor = System.Drawing.Color.LightCoral
-        Me.re_membercntct_txt.Location = New System.Drawing.Point(832, 139)
+        Me.re_membercntct_txt.Location = New System.Drawing.Point(1063, 124)
         Me.re_membercntct_txt.Name = "re_membercntct_txt"
         Me.re_membercntct_txt.Size = New System.Drawing.Size(0, 17)
         Me.re_membercntct_txt.TabIndex = 350
@@ -450,7 +451,7 @@ Partial Class reservationfrm
         Me.re_mname_txt.AutoSize = True
         Me.re_mname_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.re_mname_txt.ForeColor = System.Drawing.Color.LightCoral
-        Me.re_mname_txt.Location = New System.Drawing.Point(832, 101)
+        Me.re_mname_txt.Location = New System.Drawing.Point(1063, 86)
         Me.re_mname_txt.Name = "re_mname_txt"
         Me.re_mname_txt.Size = New System.Drawing.Size(0, 17)
         Me.re_mname_txt.TabIndex = 349
@@ -657,13 +658,13 @@ Partial Class reservationfrm
         '
         Me.get_reservationdata.AllowUserToAddRows = False
         Me.get_reservationdata.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
-        Me.get_reservationdata.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White
+        Me.get_reservationdata.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle6
         Me.get_reservationdata.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -671,43 +672,43 @@ Partial Class reservationfrm
         Me.get_reservationdata.BackgroundColor = System.Drawing.Color.LightCoral
         Me.get_reservationdata.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.get_reservationdata.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.get_reservationdata.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.get_reservationdata.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.get_reservationdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.get_reservationdata.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.get_reservationdata.DefaultCellStyle = DataGridViewCellStyle8
         Me.get_reservationdata.EnableHeadersVisualStyles = False
         Me.get_reservationdata.GridColor = System.Drawing.Color.LightCoral
         Me.get_reservationdata.Location = New System.Drawing.Point(7, 91)
         Me.get_reservationdata.Margin = New System.Windows.Forms.Padding(4)
         Me.get_reservationdata.Name = "get_reservationdata"
         Me.get_reservationdata.ReadOnly = True
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.get_reservationdata.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.get_reservationdata.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.get_reservationdata.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White
-        Me.get_reservationdata.RowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White
+        Me.get_reservationdata.RowsDefaultCellStyle = DataGridViewCellStyle10
         Me.get_reservationdata.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.get_reservationdata.Size = New System.Drawing.Size(1243, 488)
         Me.get_reservationdata.TabIndex = 320
@@ -735,12 +736,28 @@ Partial Class reservationfrm
         Me.Label9.TabIndex = 266
         Me.Label9.Text = "Reservation"
         '
+        'Button12
+        '
+        Me.Button12.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button12.BackColor = System.Drawing.Color.SteelBlue
+        Me.Button12.BackgroundImage = CType(resources.GetObject("Button12.BackgroundImage"), System.Drawing.Image)
+        Me.Button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button12.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Button12.Location = New System.Drawing.Point(1307, 22)
+        Me.Button12.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(31, 30)
+        Me.Button12.TabIndex = 303
+        Me.Button12.UseVisualStyleBackColor = False
+        '
         'reservationfrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.RoyalBlue
         Me.ClientSize = New System.Drawing.Size(1351, 820)
+        Me.Controls.Add(Me.Button12)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.TabControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -810,4 +827,5 @@ Partial Class reservationfrm
     Friend WithEvents reservedon_txt As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label21 As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Button12 As System.Windows.Forms.Button
 End Class

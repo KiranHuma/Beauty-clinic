@@ -60,11 +60,11 @@ Partial Class regmmberfrm
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.memberdata = New System.Windows.Forms.DataGridView()
         Me.Button12 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -221,6 +221,7 @@ Partial Class regmmberfrm
         Me.Label12.Size = New System.Drawing.Size(42, 17)
         Me.Label12.TabIndex = 269
         Me.Label12.Text = "Print"
+        Me.Label12.Visible = False
         '
         'Label11
         '
@@ -462,6 +463,18 @@ Partial Class regmmberfrm
         Me.TabPage2.Text = "Members Data"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'Button6
+        '
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.ForeColor = System.Drawing.Color.LightCoral
+        Me.Button6.Location = New System.Drawing.Point(894, 29)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(179, 31)
+        Me.Button6.TabIndex = 317
+        Me.Button6.Text = "&Select Rows to Remove"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -553,18 +566,6 @@ Partial Class regmmberfrm
         Me.Button12.Size = New System.Drawing.Size(31, 30)
         Me.Button12.TabIndex = 303
         Me.Button12.UseVisualStyleBackColor = False
-        '
-        'Button6
-        '
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.ForeColor = System.Drawing.Color.LightCoral
-        Me.Button6.Location = New System.Drawing.Point(894, 29)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(179, 31)
-        Me.Button6.TabIndex = 317
-        Me.Button6.Text = "&Select Rows to Remove"
-        Me.Button6.UseVisualStyleBackColor = True
         '
         'regmmberfrm
         '
