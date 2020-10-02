@@ -50,7 +50,7 @@ Partial Class MainFrom1
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button2.Location = New System.Drawing.Point(230, 67)
+        Me.Button2.Location = New System.Drawing.Point(406, 67)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(170, 56)
         Me.Button2.TabIndex = 1
@@ -63,7 +63,7 @@ Partial Class MainFrom1
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button3.Location = New System.Drawing.Point(406, 67)
+        Me.Button3.Location = New System.Drawing.Point(230, 128)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(170, 56)
         Me.Button3.TabIndex = 2
@@ -90,7 +90,7 @@ Partial Class MainFrom1
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button5.Location = New System.Drawing.Point(54, 129)
+        Me.Button5.Location = New System.Drawing.Point(230, 67)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(170, 56)
         Me.Button5.TabIndex = 4
@@ -103,7 +103,7 @@ Partial Class MainFrom1
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button6.Location = New System.Drawing.Point(230, 129)
+        Me.Button6.Location = New System.Drawing.Point(54, 128)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(170, 56)
         Me.Button6.TabIndex = 5

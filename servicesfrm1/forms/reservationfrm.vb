@@ -40,6 +40,7 @@ Public Class reservationfrm
         con.Open()
         cmd.CommandText = "insert into tbl_reservation(R_Entryno,Re_id,Rate_ID,Service_Name,Gender,Service_Description,Member_ID,Memebr_name,m_contactinfo,m_age,m_location,m_address,Reservation_Date,Reservation_Time,R_Date)values('" & reentry_txt.Text & "','" & resid_txt.Text & "','" & rid_txt.Text & "','" & rese_sertxt.Text & "','" & re_gendrtxt.Text & "','" & re_serdescriptiontxt.Text & "','" & mid_txt.Text & "','" & re_mname_txt.Text & "','" & re_membercntct_txt.Text & "','" & re_memberage_txt.Text & "','" & re_memberloction_txt.Text & "','" & re_memberadress_txt.Text & "','" & dte_txt.Value & "','" & rese_time.Value & "','" & reservedon_txt.Value & "')"
         cmd.ExecuteNonQuery()
+        Label4.Text = "'" & re_mname_txt.Text & "' reserve details saved successfully!"
         con.Close()
     End Sub
     Private Sub getdata()
@@ -63,6 +64,7 @@ Public Class reservationfrm
 
     Private Sub svemem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles svemem.Click
         insert()
+
     End Sub
     Private Sub s_nameadd()
         rese_sertxt.Text &= rese_sertxtt.Text & ","

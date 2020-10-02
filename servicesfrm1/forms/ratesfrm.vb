@@ -441,7 +441,7 @@ Public Class ratesfrm
 
     End Sub
     Private Sub p_nameadd()
-        RichTextBox1.Text &= "Name" & pname_txt.Text & "," & "Price" + unitprce_txt.Text & "," & "Discount" + pr_single_dis.Text & "," & "Bill" + single_dis_txt.Text & vbNewLine
+        RichTextBox1.Text &= "Name" & ":" & pname_txt.Text & "," & "Price" & ":" + unitprce_txt.Text & "," & "Discount" & ":" + pr_single_dis.Text & "," & "Bill" & ":" + single_dis_txt.Text & vbNewLine
     End Sub
     'single item total
     Private Sub prosingle_pricetotal()
