@@ -38,18 +38,18 @@ Public Class ratesfrm
             Me.Dispose()
         End Try
     End Sub
- 
-
-
-  
-   
-   
- 
     Private Sub ratesfrm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
         pay_txtboxid()
         Membr_FillCombo()
         product_FillCombo()
-        ' service_FillCombo()
+        pro2_getdata()
+        ser2_getdata()
+        payment_getdata()
+        service_FillCombo()
+        Call CenterToScreen()
+        ' Me.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        ' Me.WindowState = FormWindowState.Maximized
     End Sub
 
     ' for payment tab
@@ -58,7 +58,7 @@ Public Class ratesfrm
     Private Sub p_insert()
         dbaccessconnection()
         con.Open()
-        cmd.CommandText = "insert into tbl_productsales(transactionid,mname,mbid,pname,pid,pquantity,pprice,sname,sprice,emname,tbill,discount,billafterdis,psle,pdte)values('" & transactionid_txt.Text & "','" & mname_txt.Text & "','" & mbid_txt.Text & "','" & RichTextBox1.Text & "','" & pid_txt.Text & "','" & pquantity_txt.Text & "','" & uinttotalprice_txt.Text & "','" & RichTextBox2.Text & "','" & servictotal_txt.Text & "','" & emname_txt.Text & "','" & totalbill_txt.Text & "','" & discount_txt.Text & "','" & totalbillafterdis_txt.Text & "','" & ssale_txt.Text & "','" & p_date_txt.Value & "')"
+        cmd.CommandText = "insert into tbl_productsales(Transaction_ID,Member_Name,Memebr_ID,Product_Details,Product_Total_Items,ProPrice_without_Discount,ProPrice_with_Discount,Product_Remarks,Service_Details,SerPrice_without_Discount,SerPrice_with_Discount,Service_Remarks,Transaction_Date)values('" & transactionid_txt.Text & "','" & mname_txt.Text & "','" & mbid_txt.Text & "','" & RichTextBox1.Text & "','" & Label5.Text & "','" & uinttotalprice_txt.Text & "','" & pro_single_totalbill.Text & "','" & RichTextBox4.Text & "','" & RichTextBox2.Text & "','" & servictotal_txt.Text & "','" & sertotal_bill.Text & "','" & RichTextBox5.Text & "','" & transactiondte_txt.Value & "')"
         cmd.ExecuteNonQuery()
         con.Close()
     End Sub
@@ -68,7 +68,7 @@ Public Class ratesfrm
             dbaccessconnection()
             con.Open()
             Dim num As New Integer
-            cmd.CommandText = "SELECT MAX(transactionid) FROM tbl_productsales "
+            cmd.CommandText = "SELECT MAX(Transaction_ID) FROM tbl_productsales "
             If (IsDBNull(cmd.ExecuteScalar)) Then
                 num = 1
                 transactionid_txt.Text = num.ToString
@@ -84,16 +84,38 @@ Public Class ratesfrm
         End Try
     End Sub
    
-    Private Sub p_getdata()
+    Private Sub payment_getdata()
 
         Dim con As New SqlConnection(cs)
         con.Open()
-        Dim da As New SqlDataAdapter("Select transactionid,mname,mbid,pname,pid,pquantity,pprice,sname,sprice,emname,tbill,discount,billafterdis,psle,pdte from tbl_productsales ", con)
+        Dim da As New SqlDataAdapter("Select Transaction_ID,Member_Name,Memebr_ID,Product_Details,Product_Total_Items,ProPrice_without_Discount,ProPrice_with_Discount,Product_Remarks,Service_Details,SerPrice_without_Discount,SerPrice_with_Discount,Service_Remarks,Transaction_Date from tbl_productsales", con)
         Dim dt As New DataTable
         da.Fill(dt)
         source1.DataSource = dt
         payment_grid.DataSource = dt
         payment_grid.Refresh()
+    End Sub
+    Private Sub pro2_getdata()
+
+        Dim con As New SqlConnection(cs)
+        con.Open()
+        Dim da As New SqlDataAdapter("Select I_Id,Pro_id,Product_name,Totalquantity,In_price from tbl_inventrry ", con)
+        Dim dt As New DataTable
+        da.Fill(dt)
+        source1.DataSource = dt
+        pro2_gird.DataSource = dt
+        pro2_gird.Refresh()
+    End Sub
+    Private Sub ser2_getdata()
+
+        Dim con As New SqlConnection(cs)
+        con.Open()
+        Dim da As New SqlDataAdapter("Select Rate_ID,Service_Name,Service_Price from tbl_services ", con)
+        Dim dt As New DataTable
+        da.Fill(dt)
+        source1.DataSource = dt
+        ser2_grid.DataSource = dt
+        ser2_grid.Refresh()
     End Sub
     'to empty textboxes
     Private Sub p_clear()
@@ -134,7 +156,7 @@ Public Class ratesfrm
             MessageBox.Show("Are you sure to add data", "Data Adding", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
             p_insert()
-            p_getdata()
+            payment_getdata()
             message_txt.Text = "'" & pid_txt.Text & "' payment details saved successfully!"
             message_txt.ForeColor = System.Drawing.Color.DarkGreen
 
@@ -146,17 +168,7 @@ Public Class ratesfrm
             Me.Dispose()
         End Try
     End Sub
-
-
-
-
-   
-    
-
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-        s_pricetotal()
-        s_nameadd()
-    End Sub
+  
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
         totalbill()
@@ -165,6 +177,7 @@ Public Class ratesfrm
 
     Private Sub TabPage3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabPage3.Click
         pay_txtboxid()
+
     End Sub
 
    
@@ -208,26 +221,7 @@ Public Class ratesfrm
             MessageBox.Show("At least one entry", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End Try
     End Sub
-    Private Sub mname_txt_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mname_txt.SelectedIndexChanged
-
-        Dim str As String = cs
-        Dim con As SqlConnection = New SqlConnection(str)
-        Dim query As String = "select * from tbl_memberreg where m_name = '" & mname_txt.Text & "' "
-        Dim cmd As SqlCommand = New SqlCommand(query, con)
-        Dim dbr As SqlDataReader
-        Try
-
-            con.Open()
-            dbr = cmd.ExecuteReader()
-            If dbr.Read() Then
-
-                mbid_txt.Text = dbr.GetValue(1)
-            End If
-        Catch ex As Exception
-            MessageBox.Show("At least one entry", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-        End Try
-
-    End Sub
+   
     Private Sub product_FillCombo()
         Try
 
@@ -251,6 +245,7 @@ Public Class ratesfrm
                 .SelectedIndex = -1
                 .AutoCompleteMode = AutoCompleteMode.SuggestAppend
                 .AutoCompleteSource = AutoCompleteSource.ListItems
+
             End With
         Catch ex As Exception
             MessageBox.Show("At least one entry", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
@@ -291,13 +286,13 @@ Public Class ratesfrm
             myConnToAccess.Open()
             ds = New DataSet
             tables = ds.Tables
-            da = New SqlDataAdapter("SELECT s_name from tbl_services", myConnToAccess)
+            da = New SqlDataAdapter("SELECT Rate_ID from tbl_services", myConnToAccess)
             da.Fill(ds, "tbl_services")
             Dim view1 As New DataView(tables(0))
-            With sname_txt
+            With s_rateid_txt
                 .DataSource = ds.Tables("tbl_services")
-                .DisplayMember = "s_name"
-                .ValueMember = "s_name"
+                .DisplayMember = "Rate_ID"
+                .ValueMember = "Rate_ID"
                 .SelectedIndex = -1
                 .AutoCompleteMode = AutoCompleteMode.SuggestAppend
                 .AutoCompleteSource = AutoCompleteSource.ListItems
@@ -306,66 +301,29 @@ Public Class ratesfrm
             MessageBox.Show("At least one entry", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End Try
     End Sub
-
-    Private Sub sname_txt_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles sname_txt.SelectedIndexChanged
-        Dim str As String = cs
-        Dim con As SqlConnection = New SqlConnection(str)
-        Dim query As String = "select * from tbl_services where s_name = '" & sname_txt.Text & "' "
-        Dim cmd As SqlCommand = New SqlCommand(query, con)
-        Dim dbr As SqlDataReader
-        Try
-
-            con.Open()
-            dbr = cmd.ExecuteReader()
-            If dbr.Read() Then
-
-                sprice_txt.Text = dbr.GetValue(3)
-            End If
-        Catch ex As Exception
-            MessageBox.Show("At least one entry", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-        End Try
-    End Sub
-
     Private Sub subtruct_stock()
-
-
-
         Dim subb As Int64
-
         subb = Convert.ToInt64(Label24.Text) - Convert.ToInt64(pquantity_txt.Text)
         Label24.Text = Convert.ToString(subb)
-
-
     End Sub
     Private Sub proupdate_stockout_in()
         Try
-
             dbaccessconnection()
             con.Open()
-
-           
             cmd.CommandText = ("UPDATE tbl_products SET p_totalquantity= '" & Label24.Text & "' where P_id='" & pid_txt.Text & "'")
             cmd.ExecuteNonQuery()
-
             message_txt.Text = "Product details updated successfully!"
             con.Close()
-
-
         Catch ex As Exception
             MessageBox.Show("Data Not Updated" & ex.Message)
         End Try
     End Sub
     Private Sub quantitystockout_in()
         Try
-
             dbaccessconnection()
             con.Open()
-            
-
             cmd.CommandText = ("UPDATE tbl_inventrry SET Totalquantity= '" & Label24.Text & "',Stock_outdate= '" & p_date_txt.Value & "' where Pro_id='" & pid_txt.Text & "'")
-
             cmd.ExecuteNonQuery()
-
             message_txt.Text = "Product details updated successfully!"
                 con.Close()
 
@@ -374,20 +332,6 @@ Public Class ratesfrm
             MessageBox.Show("Data Not Updated" & ex.Message)
         End Try
     End Sub
-  
- 
-    Private Sub update_inbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        p_discount()
-        ' quantitystockout_in()
-
-        ' p_discount()
-    End Sub
-
-
-    Private Sub p_billafter_distxt_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles p_billafter_distxt.Click
-        pro_pricetotal()
-    End Sub
-
     'discount function
     Private Sub total_discount()
         Dim PercentageNumberResult As Double
@@ -396,23 +340,7 @@ Public Class ratesfrm
         Dim subtractdiscount As Double
         subtractdiscount = totalbill_txt.Text - TextBox5.Text
         totalbillafterdis_txt.Text = subtractdiscount
-    End Sub
-   
-    Private Sub p_discount()
-        Dim PercentageNumberResult As Double
-        PercentageNumberResult = uinttotalprice_txt.Text / 100 * p_discnt_txt.Text
-        TextBox5.Text = PercentageNumberResult
-        Dim subtractdiscount As Double
-        subtractdiscount = uinttotalprice_txt.Text - TextBox5.Text
-        p_billafter_distxt.Text = subtractdiscount
-
-    End Sub
-    Private Sub pro_pricetotal()
-        Dim addd As Double
-        addd = Double.Parse(p_billafter_distxt.Text) + Double.Parse(totalitemsbill.Text)
-        totalitemsbill.Text = (addd)
-    End Sub
-   
+    End Sub 
     Private Sub p_pricetotal()
 
         Dim mul As Int64
@@ -425,15 +353,8 @@ Public Class ratesfrm
     End Sub
 
    
-    Private Sub s_pricetotal()
-        Dim addd As Int64
-        addd = Convert.ToInt64(sprice_txt.Text) + Convert.ToInt64(servictotal_txt.Text)
-        servictotal_txt.Text = Convert.ToString(addd)
-    End Sub
-    Private Sub s_nameadd()
-
-        RichTextBox2.Text &= sname_txt.Text & ","
-    End Sub
+  
+   
     Private Sub totalbill()
         Dim addd As Int64
         addd = Convert.ToInt64(uinttotalprice_txt.Text) + Convert.ToInt64(servictotal_txt.Text)
@@ -449,6 +370,12 @@ Public Class ratesfrm
         addd = Double.Parse(single_dis_txt.Text) + Double.Parse(pro_single_totalbill.Text)
         pro_single_totalbill.Text = (addd)
     End Sub
+    Private Sub pro_quantitytotal()
+        Dim addd As Double
+        addd = Double.Parse(pquantity_txt.Text) + Double.Parse(Label5.Text)
+        Label5.Text = (addd)
+    End Sub
+   
     Private Sub prosingle_discount()
         Dim PercentageNumberResult As Double
         PercentageNumberResult = pprice_txt.Text / 100 * pr_single_dis.Text
@@ -457,12 +384,7 @@ Public Class ratesfrm
         subtractdiscount = pprice_txt.Text - TextBox5.Text
         single_dis_txt.Text = subtractdiscount
     End Sub
-    Private Sub check_stockstatus()
-        If Label24.Text < 0 Then
-            Button1.Enabled = False
-            Label14.Text = "NO Stock avaliable"
-        End If
-    End Sub
+  
     Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
 
         Try
@@ -474,13 +396,17 @@ Public Class ratesfrm
             Else
                 If pquantity_txt.Text = "" Then
                     MsgBox("Enter quantity ")
+
                 Else
+
                     subtruct_stock()
                     p_pricetotal()
                     prosingle_discount()
                     prosingle_pricetotal()
                     quantitystockout_in()
                     p_nameadd()
+                    pro_quantitytotal()
+
                 End If
             End If
         Catch ex As Exception
@@ -493,17 +419,148 @@ Public Class ratesfrm
 
     End Sub
 
-    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         p_pricetotal()
-        p_discount()
+
         'quantitystockout_in()
         prosingle_discount()
         'p_nameadd()
-        pro_pricetotal()
+
+    End Sub
+    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
+        source1.Filter = "[Product_name] = '" & TextBox2.Text & "'"
+        pro2_gird.Refresh()
+        TextBox2.Text = ""
     End Sub
 
-    Private Sub single_dis_txt_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles single_dis_txt.TextChanged
+    Private Sub pro2_gird_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles pro2_gird.CellContentClick
+        Try
 
+            Me.pid_txt.Text = pro2_gird.CurrentRow.Cells(1).Value.ToString
+            Me.pname_txt.Text = pro2_gird.CurrentRow.Cells(2).Value.ToString
+            Me.Label24.Text = pro2_gird.CurrentRow.Cells(3).Value.ToString
+            Me.unitprce_txt.Text = pro2_gird.CurrentRow.Cells(4).Value.ToString
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub Button12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click
+        Me.Dispose()
+    End Sub
+    'services sale
+
+    Private Sub services_single_discount()
+        Dim PercentageNumberResult As Double
+        PercentageNumberResult = sprice_txt.Text / 100 * ser_dis_txt.Text
+        TextBox5.Text = PercentageNumberResult
+        Dim subtractdiscount As Double
+        subtractdiscount = sprice_txt.Text - TextBox5.Text
+        ser_peritm_txt.Text = subtractdiscount
+    End Sub
+    Private Sub s_pricetotal()
+        Dim addd As Int64
+        addd = Convert.ToInt64(sprice_txt.Text) + Convert.ToInt64(servictotal_txt.Text)
+        servictotal_txt.Text = Convert.ToString(addd)
+    End Sub
+    Private Sub s_pricewithdiscounttotal()
+       
+
+        Dim addd As Double
+        addd = Double.Parse(ser_peritm_txt.Text) + Double.Parse(sertotal_bill.Text)
+        sertotal_bill.Text = Convert.ToString(addd)
+    End Sub
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        Try
+
+
+            s_pricetotal()
+            s_nameadd()
+            ' s_pricetotal()
+            services_single_discount()
+            s_pricewithdiscounttotal()
+        Catch ex As Exception
+            MsgBox("Error " & ex.Message)
+
+            Me.Dispose()
+        End Try
+        
+    End Sub
+    Private Sub s_nameadd()
+        RichTextBox2.Text &= "Name" & ":" & sname_txt.Text & "," & "Price" & ":" + sprice_txt.Text & "," & "Discount" & ":" + ser_dis_txt.Text & "," & "Bill" & ":" + sertotal_bill.Text & "Employee" & ":" + emname_txt.Text & vbNewLine
+
+    End Sub
+    Private Sub s_rateid_txt_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles s_rateid_txt.SelectedIndexChanged
+        Dim str As String = cs
+        Dim con As SqlConnection = New SqlConnection(str)
+        Dim query As String = "select * from tbl_services where Rate_ID = '" & s_rateid_txt.Text & "' "
+        Dim cmd As SqlCommand = New SqlCommand(query, con)
+        Dim dbr As SqlDataReader
+        Try
+
+            con.Open()
+            dbr = cmd.ExecuteReader()
+            If dbr.Read() Then
+
+                sname_txt.Text = dbr.GetValue(2)
+                sprice_txt.Text = dbr.GetValue(4)
+            End If
+        Catch ex As Exception
+            MessageBox.Show("At least one entry", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        End Try
+    End Sub
+
+    Private Sub ser2_grid_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles ser2_grid.CellContentClick
+
+        Try
+
+            Me.s_rateid_txt.Text = ser2_grid.CurrentRow.Cells(0).Value.ToString
+            Me.sname_txt.Text = ser2_grid.CurrentRow.Cells(1).Value.ToString
+            Me.sprice_txt.Text = ser2_grid.CurrentRow.Cells(2).Value.ToString
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub Button5_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+        source1.Filter = "[Service_Name] = '" & TextBox6.Text & "'"
+        ser2_grid.Refresh()
+        TextBox6.Text = ""
+    End Sub
+
+    Private Sub mbid_txt_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mbid_txt.TextChanged
+
+    End Sub
+
+   
+    Private Sub mname_txt_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mname_txt.SelectedIndexChanged
+        Dim str As String = cs
+        Dim con As SqlConnection = New SqlConnection(str)
+        Dim query As String = "select * from tbl_memberreg where m_name = '" & mname_txt.Text & "' "
+        Dim cmd As SqlCommand = New SqlCommand(query, con)
+        Dim dbr As SqlDataReader
+        Try
+
+            con.Open()
+            dbr = cmd.ExecuteReader()
+            If dbr.Read() Then
+
+                mbid_txt.Text = dbr.GetValue(1)
+            End If
+        Catch ex As Exception
+            MessageBox.Show("At least one entry", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        End Try
+    End Sub
+
+    Private Sub Label24_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label24.Click
+
+    End Sub
+
+    Private Sub Label24_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles Label24.TextChanged
+        If Label24.Text < 0 Then
+            MessageBox.Show("Out of stock", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        End If
     End Sub
 End Class
 '

@@ -121,7 +121,9 @@ Public Class reservationfrm
                 .DataSource = ds.Tables("tbl_services")
                 .DisplayMember = "Rate_ID"
                 .ValueMember = "Rate_ID"
-                .SelectedIndex = 0
+                .SelectedIndex = -1
+                .AutoCompleteMode = AutoCompleteMode.SuggestAppend
+                .AutoCompleteSource = AutoCompleteSource.ListItems
             End With
 
 
@@ -168,7 +170,9 @@ Public Class reservationfrm
                 .DataSource = ds.Tables("tbl_memberreg")
                 .DisplayMember = "M_ID"
                 .ValueMember = "M_ID"
-                .SelectedIndex = 0
+                .SelectedIndex = -1
+                .AutoCompleteMode = AutoCompleteMode.SuggestAppend
+                .AutoCompleteSource = AutoCompleteSource.ListItems
             End With
 
 
