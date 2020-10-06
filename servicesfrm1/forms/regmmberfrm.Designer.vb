@@ -40,8 +40,6 @@ Partial Class regmmberfrm
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.m_dtetxt = New System.Windows.Forms.DateTimePicker()
-        Me.loctxt = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.midtxt = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.addresstxt = New System.Windows.Forms.RichTextBox()
@@ -93,8 +91,6 @@ Partial Class regmmberfrm
         Me.TabPage1.Controls.Add(Me.Label12)
         Me.TabPage1.Controls.Add(Me.Label11)
         Me.TabPage1.Controls.Add(Me.m_dtetxt)
-        Me.TabPage1.Controls.Add(Me.loctxt)
-        Me.TabPage1.Controls.Add(Me.Label10)
         Me.TabPage1.Controls.Add(Me.midtxt)
         Me.TabPage1.Controls.Add(Me.Label9)
         Me.TabPage1.Controls.Add(Me.addresstxt)
@@ -228,7 +224,7 @@ Partial Class regmmberfrm
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label11.Location = New System.Drawing.Point(180, 433)
+        Me.Label11.Location = New System.Drawing.Point(180, 380)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(38, 17)
         Me.Label11.TabIndex = 268
@@ -236,29 +232,10 @@ Partial Class regmmberfrm
         '
         'm_dtetxt
         '
-        Me.m_dtetxt.Location = New System.Drawing.Point(262, 428)
+        Me.m_dtetxt.Location = New System.Drawing.Point(262, 375)
         Me.m_dtetxt.Name = "m_dtetxt"
         Me.m_dtetxt.Size = New System.Drawing.Size(183, 22)
         Me.m_dtetxt.TabIndex = 267
-        '
-        'loctxt
-        '
-        Me.loctxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.loctxt.Location = New System.Drawing.Point(260, 379)
-        Me.loctxt.Name = "loctxt"
-        Me.loctxt.Size = New System.Drawing.Size(183, 22)
-        Me.loctxt.TabIndex = 266
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label10.Location = New System.Drawing.Point(178, 384)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(62, 17)
-        Me.Label10.TabIndex = 265
-        Me.Label10.Text = "Location"
         '
         'midtxt
         '
@@ -612,8 +589,6 @@ Partial Class regmmberfrm
     Friend WithEvents addresstxt As System.Windows.Forms.RichTextBox
     Friend WithEvents midtxt As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents loctxt As System.Windows.Forms.TextBox
-    Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents m_dtetxt As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label

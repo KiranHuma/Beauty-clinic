@@ -49,7 +49,7 @@ Public Class regmmberfrm
     Private Sub insert()
         dbaccessconnection()
         con.Open()
-        cmd.CommandText = "insert into tbl_memberreg(mid,M_ID,m_name,m_contactinfo,m_age,m_location,m_address,m_dte)values('" & mid_txt.Text & "','" & midtxt.Text & "','" & nametxt.Text & "','" & cntcttxt.Text & "','" & agetxt.Text & "','" & loctxt.Text & "','" & addresstxt.Text & "','" & m_dtetxt.Value & "')"
+        cmd.CommandText = "insert into tbl_memberreg(mid,M_ID,m_name,m_contactinfo,m_age,m_address,m_dte)values('" & mid_txt.Text & "','" & midtxt.Text & "','" & nametxt.Text & "','" & cntcttxt.Text & "','" & agetxt.Text & "','" & addresstxt.Text & "','" & m_dtetxt.Value & "')"
         cmd.ExecuteNonQuery()
         con.Close()
     End Sub
@@ -59,7 +59,7 @@ Public Class regmmberfrm
 
         Dim con As New SqlConnection(cs)
         con.Open()
-        Dim da As New SqlDataAdapter("Select mid,M_ID,m_name,m_contactinfo,m_age,m_location,m_address,m_dte from tbl_memberreg ", con)
+        Dim da As New SqlDataAdapter("Select mid,M_ID,m_name,m_contactinfo,m_age,m_address,m_dte from tbl_memberreg ", con)
         Dim dt As New DataTable
         da.Fill(dt)
         source2.DataSource = dt
@@ -111,7 +111,7 @@ Public Class regmmberfrm
             nametxt.Text = ""
             cntcttxt.Text = ""
             agetxt.Text = ""
-            loctxt.Text = ""
+
             addresstxt.Text = ""
 
 
@@ -132,7 +132,7 @@ Public Class regmmberfrm
                 TabControl1.SelectedTab = TabPage2
             Else
 
-                cmd.CommandText = ("UPDATE tbl_memberreg SET  mid= '" & mid_txt.Text & "', M_ID= '" & midtxt.Text & "',m_name= '" & nametxt.Text & "',m_contactinfo= '" & cntcttxt.Text & "',m_age= '" & agetxt.Text & "',m_location= '" & loctxt.Text & "',m_address= '" & addresstxt.Text & "',m_dte= '" & m_dtetxt.Value & "' where mid=" & mid_txt.Text & "")
+                cmd.CommandText = ("UPDATE tbl_memberreg SET  mid= '" & mid_txt.Text & "', M_ID= '" & midtxt.Text & "',m_name= '" & nametxt.Text & "',m_contactinfo= '" & cntcttxt.Text & "',m_age= '" & agetxt.Text & "',m_address= '" & addresstxt.Text & "',m_dte= '" & m_dtetxt.Value & "' where mid=" & mid_txt.Text & "")
                 cmd.ExecuteNonQuery()
                 MessageBox.Show("Data Updated")
                 Label25.Text = "Members details updated successfully!"
@@ -218,9 +218,9 @@ Public Class regmmberfrm
             Me.nametxt.Text = memberdata.CurrentRow.Cells(2).Value.ToString
             Me.cntcttxt.Text = memberdata.CurrentRow.Cells(3).Value.ToString
             Me.agetxt.Text = memberdata.CurrentRow.Cells(4).Value.ToString
-            Me.loctxt.Text = memberdata.CurrentRow.Cells(5).Value.ToString
-            Me.addresstxt.Text = memberdata.CurrentRow.Cells(6).Value.ToString
-            Me.m_dtetxt.Value = memberdata.CurrentRow.Cells(7).Value.ToString
+
+            Me.addresstxt.Text = memberdata.CurrentRow.Cells(5).Value.ToString
+            Me.m_dtetxt.Value = memberdata.CurrentRow.Cells(6).Value.ToString
 
 
         Catch ex As Exception
