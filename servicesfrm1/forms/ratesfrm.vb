@@ -916,7 +916,8 @@ Public Class ratesfrm
     End Sub
 
     Private Sub payment_grid_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles payment_grid.CellContentClick
-        'TabControl1.SelectedTab = TabPage1
+        TabControl1.SelectedTab = TabPage3
+
         p_savebtn.Enabled = False
         p_editbtn.Enabled = True
 
