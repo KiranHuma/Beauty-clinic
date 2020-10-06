@@ -36,13 +36,9 @@ Partial Class prodcutfrm
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.pid_txt = New System.Windows.Forms.TextBox()
-        Me.salpr_txt = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.TextBox()
         Me.p_dtetxt = New System.Windows.Forms.DateTimePicker()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.name_txt = New System.Windows.Forms.ComboBox()
-        Me.pquatity_txt = New System.Windows.Forms.TextBox()
-        Me.Label24 = New System.Windows.Forms.Label()
         Me.Btnadd = New System.Windows.Forms.Button()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -134,13 +130,9 @@ Partial Class prodcutfrm
         'TabPage1
         '
         Me.TabPage1.Controls.Add(Me.pid_txt)
-        Me.TabPage1.Controls.Add(Me.salpr_txt)
-        Me.TabPage1.Controls.Add(Me.Label2)
         Me.TabPage1.Controls.Add(Me.p_dtetxt)
         Me.TabPage1.Controls.Add(Me.Button7)
         Me.TabPage1.Controls.Add(Me.name_txt)
-        Me.TabPage1.Controls.Add(Me.pquatity_txt)
-        Me.TabPage1.Controls.Add(Me.Label24)
         Me.TabPage1.Controls.Add(Me.Btnadd)
         Me.TabPage1.Controls.Add(Me.Label19)
         Me.TabPage1.Controls.Add(Me.Panel1)
@@ -179,28 +171,9 @@ Partial Class prodcutfrm
         Me.pid_txt.Size = New System.Drawing.Size(216, 22)
         Me.pid_txt.TabIndex = 339
         '
-        'salpr_txt
-        '
-        Me.salpr_txt.Location = New System.Drawing.Point(451, 247)
-        Me.salpr_txt.Name = "salpr_txt"
-        Me.salpr_txt.Size = New System.Drawing.Size(86, 22)
-        Me.salpr_txt.TabIndex = 338
-        Me.salpr_txt.Text = "purchase"
-        Me.salpr_txt.Visible = False
-        '
-        'Label2
-        '
-        Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.Label2.Location = New System.Drawing.Point(548, 282)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(60, 15)
-        Me.Label2.TabIndex = 337
-        Me.Label2.Text = "0"
-        Me.Label2.Visible = False
-        '
         'p_dtetxt
         '
-        Me.p_dtetxt.Location = New System.Drawing.Point(320, 326)
+        Me.p_dtetxt.Location = New System.Drawing.Point(319, 263)
         Me.p_dtetxt.Name = "p_dtetxt"
         Me.p_dtetxt.Size = New System.Drawing.Size(217, 22)
         Me.p_dtetxt.TabIndex = 336
@@ -221,22 +194,6 @@ Partial Class prodcutfrm
         Me.name_txt.Name = "name_txt"
         Me.name_txt.Size = New System.Drawing.Size(214, 24)
         Me.name_txt.TabIndex = 333
-        '
-        'pquatity_txt
-        '
-        Me.pquatity_txt.Location = New System.Drawing.Point(320, 275)
-        Me.pquatity_txt.Name = "pquatity_txt"
-        Me.pquatity_txt.Size = New System.Drawing.Size(215, 22)
-        Me.pquatity_txt.TabIndex = 331
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(209, 278)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(61, 17)
-        Me.Label24.TabIndex = 330
-        Me.Label24.Text = "Quantity"
         '
         'Btnadd
         '
@@ -436,11 +393,11 @@ Partial Class prodcutfrm
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(208, 331)
+        Me.Label4.Location = New System.Drawing.Point(195, 268)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(102, 17)
+        Me.Label4.Size = New System.Drawing.Size(118, 17)
         Me.Label4.TabIndex = 291
-        Me.Label4.Text = "Purchase Date"
+        Me.Label4.Text = "Registration Date"
         '
         'price_txt
         '
@@ -478,7 +435,7 @@ Partial Class prodcutfrm
         '
         'des_txt
         '
-        Me.des_txt.Location = New System.Drawing.Point(321, 374)
+        Me.des_txt.Location = New System.Drawing.Point(320, 311)
         Me.des_txt.Name = "des_txt"
         Me.des_txt.Size = New System.Drawing.Size(216, 126)
         Me.des_txt.TabIndex = 283
@@ -487,7 +444,7 @@ Partial Class prodcutfrm
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(206, 374)
+        Me.Label5.Location = New System.Drawing.Point(195, 311)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(79, 17)
         Me.Label5.TabIndex = 278
@@ -1136,17 +1093,12 @@ Partial Class prodcutfrm
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents TabPage4 As System.Windows.Forms.TabPage
-    Friend WithEvents pquatity_txt As System.Windows.Forms.TextBox
-    Friend WithEvents Label24 As System.Windows.Forms.Label
     Friend WithEvents s_dte_txt As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label26 As System.Windows.Forms.Label
     Friend WithEvents name_txt As System.Windows.Forms.ComboBox
     Friend WithEvents Button7 As System.Windows.Forms.Button
     Friend WithEvents p_dtetxt As System.Windows.Forms.DateTimePicker
     Friend WithEvents get_productdata As System.Windows.Forms.DataGridView
-    Friend WithEvents salpr_txt As System.Windows.Forms.TextBox
-    Friend WithEvents Label2 As System.Windows.Forms.TextBox
-    Friend WithEvents pid_txt As System.Windows.Forms.TextBox
     Friend WithEvents sevicedes_txt As System.Windows.Forms.RichTextBox
     Friend WithEvents Label27 As System.Windows.Forms.Label
     Friend WithEvents gnder_txt As System.Windows.Forms.ComboBox
@@ -1159,4 +1111,5 @@ Partial Class prodcutfrm
     Friend WithEvents Label21 As System.Windows.Forms.Label
     Friend WithEvents Label29 As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents pid_txt As System.Windows.Forms.TextBox
 End Class

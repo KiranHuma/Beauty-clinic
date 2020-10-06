@@ -40,7 +40,7 @@ Public Class inventryfrm
             con.Open()
            
 
-            cmd.CommandText = "insert into tbl_inventrry(Entryno,I_Id,Pro_id,Product_name,Totalquantity,Stock_Status,Stockin_date,In_price)values('" & inventid_txt.Text & "','" & in_id_txt.Text & "','" & pid_txt.Text & "','" & inname_txt.Text & "','" & inquatity_txt.Text & "','" & stock_txt.Text & "','" & inpudte_txt.Text & "','" & inprice_txt.Text & "')"
+            cmd.CommandText = "insert into tbl_inventrry(Entryno,I_Id,Pro_id,Product_name,Recent_Purchase_Quantity,Totalquantity,Stock_Status,Stockin_date)values('" & inventid_txt.Text & "','" & in_id_txt.Text & "','" & pid_txt.Text & "','" & inname_txt.Text & "','" & quantity_txt.Text & "','" & inquatity_txt.Text & "','" & stock_txt.Text & "','" & inpudte_txt.Value & "')"
             cmd.ExecuteNonQuery()
                 con.Close()
         Catch ex As Exception
@@ -59,7 +59,7 @@ Public Class inventryfrm
             dbaccessconnection()
 
             con.Open()
-            cmd.CommandText = ("UPDATE tbl_inventrry SET  Entryno= '" & inventid_txt.Text & "', I_Id= '" & in_id_txt.Text & "',Pro_id= '" & pid_txt.Text & "',Product_name= '" & inname_txt.Text & "',Totalquantity= '" & inquatity_txt.Text & "',Stock_Status= '" & stock_txt.Text & "',Stockin_date= '" & inpudte_txt.Text & "',Stockin_date= '" & inprice_txt.Text & "' where Entryno=" & inventid_txt.Text & "")
+            cmd.CommandText = ("UPDATE tbl_inventrry SET  Entryno= '" & inventid_txt.Text & "', I_Id= '" & in_id_txt.Text & "',Pro_id= '" & pid_txt.Text & "',Product_name= '" & inname_txt.Text & "',Recent_Purchase_Quantity= '" & quantity_txt.Text & "',Totalquantity= '" & inquatity_txt.Text & "',Stock_Status= '" & stock_txt.Text & "',Stockin_date= '" & inpudte_txt.Value & "' where Entryno=" & inventid_txt.Text & "")
                 cmd.ExecuteNonQuery()
             ' MessageBox.Show("Data Updated")
                 Label25.Text = "Inventory details updated successfully!"
@@ -79,7 +79,7 @@ Public Class inventryfrm
         Try
             Dim con As New SqlConnection(cs)
             con.Open()
-            Dim da As New SqlDataAdapter("Select tbl_inventrry.Entryno,tbl_inventrry.I_Id ,tbl_products.P_id,tbl_products.p_name,tbl_products.p_price,tbl_products.padd_quantity,tbl_products.p_dte,tbl_inventrry.Totalquantity,tbl_inventrry.Stock_Status,tbl_inventrry.Stockin_date,tbl_inventrry.Stock_outdate,tbl_products.p_description from tbl_products INNER  join tbl_inventrry on tbl_products.P_id=tbl_inventrry.Pro_id ", con)
+            Dim da As New SqlDataAdapter("Select tbl_inventrry.Entryno,tbl_inventrry.I_Id ,tbl_products.P_id,tbl_products.p_name,tbl_inventrry.Recent_Purchase_Quantity,tbl_inventrry.Sale_Quantity,tbl_inventrry.Totalquantity,tbl_inventrry.Stock_Status,tbl_inventrry.Stockin_date,tbl_inventrry.Stock_outdate,tbl_products.p_description from tbl_products INNER  join tbl_inventrry on tbl_products.P_id=tbl_inventrry.Pro_id ", con)
             Dim dt As New DataTable
             da.Fill(dt)
             source2.DataSource = dt
@@ -120,7 +120,7 @@ Public Class inventryfrm
                 .ValueMember = "P_id"
                 .SelectedIndex = 0
             End With
-            checkstock()
+            ' checkstock()
 
         Catch ex As Exception
             MessageBox.Show(" Error while retriving data" & ex.Message)
@@ -132,7 +132,7 @@ Public Class inventryfrm
 
     Private Sub stockfrm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         dbaccessconnection()
-        source1.Filter = "[P_id] = '" & pid_txt.Text & "'"
+        'source1.Filter = "[P_id] = '" & pid_txt.Text & "'"
         Me.Label23.Text = Format(Now, "dd-MMM-yyyy")
         FillCombo()
         get_stockdata.Refresh()
@@ -143,12 +143,10 @@ Public Class inventryfrm
         in_getdata()
 
     End Sub
-    Private Sub checkstock()
-        If Not quantity_txt.Text = 0 Then
-            stock_txt.Text = "StockIN"
-        ElseIf quantity_txt.Text = 0 Then
-            stock_txt.Text = "StockOut"
-        End If
+    Public Sub checkinventory()
+      
+        
+           
     End Sub
    
     Private Sub txtboxid()
@@ -314,18 +312,18 @@ Public Class inventryfrm
             dbr = cmd.ExecuteReader()
             If dbr.Read() Then
 
-                quantity_txt.Text = dbr.GetValue(5)
+                'quantity_txt.Text = dbr.GetValue(5)
                 'pid_txt.Text = dbr.GetValue(7)
-                inpudte_txt.Text = dbr.GetValue(7)
+                'inpudte_txt.Text = dbr.GetValue(7)
                 inname_txt.Text = dbr.GetValue(2)
                 inprice_txt.Text = dbr.GetValue(3)
-                inquatity_txt.Text = dbr.GetValue(6)
-                intxt_des.Text = dbr.GetValue(8)
+                ' inquatity_txt.Text = dbr.GetValue(6)
+                intxt_des.Text = dbr.GetValue(5)
 
             End If
-            checkstock()
+            ' checkstock()
         Catch ex As Exception
-            MessageBox.Show("At least one entry", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            MessageBox.Show("At least one entry change", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End Try
 
     End Sub
@@ -378,7 +376,10 @@ Public Class inventryfrm
 
     Private Sub get_indata_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles get_indata.CellContentClick
         TabControl1.SelectedTab = TabPage1
-
+        Label14.Visible = True
+        inventrydtetxt.Visible = True
+        Label17.Visible = True
+        Label14.Visible = True
         svemem.Enabled = False
         Btndel.Enabled = True
         btnupdte.Enabled = True
@@ -391,15 +392,14 @@ Public Class inventryfrm
             Me.in_id_txt.Text = get_indata.CurrentRow.Cells(1).Value.ToString
             Me.pid_txt.Text = get_indata.CurrentRow.Cells(2).Value.ToString
             Me.inname_txt.Text = get_indata.CurrentRow.Cells(3).Value.ToString
-            Me.inquatity_txt.Text = get_indata.CurrentRow.Cells(4).Value.ToString
-            Me.stock_txt.Text = get_indata.CurrentRow.Cells(5).Value.ToString
-            ' Me.stock_txt.Text = get_indata.CurrentRow.Cells(6).Value.ToString
-            Me.inpudte_txt.Text = get_indata.CurrentRow.Cells(6).Value.ToString
-            ' Me.inpudte_txt.Text = get_indata.CurrentRow.Cells(6).Value.ToString
-            ' Me.inquatity_txt.Text = get_indata.CurrentRow.Cells(7).Value.ToString
-            'Me.stock_txt.Text = get_indata.CurrentRow.Cells(8).Value.ToString
+            Me.quantity_txt.Text = get_indata.CurrentRow.Cells(4).Value.ToString
+            Me.inquatity_txt.Text = get_indata.CurrentRow.Cells(5).Value.ToString
+            Me.stock_txt.Text = get_indata.CurrentRow.Cells(6).Value.ToString
+            Me.inpudte_txt.Text = get_indata.CurrentRow.Cells(7).Value.ToString
+            Me.Label17.Text = get_indata.CurrentRow.Cells(8).Value.ToString
+            Me.inventrydtetxt.Text = get_indata.CurrentRow.Cells(9).Value.ToString
+            ' Me.inprice_txt.Text = get_indata.CurrentRow.Cells(10).Value.ToString
 
-            ' Me.intxt_des.Text = get_indata.CurrentRow.Cells(10).Value.ToString
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
@@ -409,6 +409,10 @@ Public Class inventryfrm
     
     Private Sub get_stockdata_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles get_stockdata.CellContentClick
         TabControl1.SelectedTab = TabPage1
+        Label14.Visible = True
+        inventrydtetxt.Visible = True
+        Label13.Visible = True
+        Label17.Visible = True
         svemem.Enabled = False
         Btndel.Enabled = True
         btnupdte.Enabled = True
@@ -422,23 +426,67 @@ Public Class inventryfrm
             svemem.Enabled = False
             Btndel.Enabled = True
             btnupdte.Enabled = True
-
+            '  0tbl_inventrry.Entryno,1tbl_inventrry.I_Id ,2tbl_products.P_id,3tbl_products.p_name,5tbl_inventrry.Product_Quantity,6tbl_inventrry.Sale_Quantity,7tbl_inventrry.Totalquantity,8tbl_inventrry.Stock_Status,9tbl_inventrry.Stockin_date,10tbl_inventrry.Stock_outdate,11tbl_products.p_description from tbl_products INNER  join tbl_inventrry on tbl_products.P_id=tbl_inventrry.Pro_id ", con)
             Me.inventid_txt.Text = get_stockdata.CurrentRow.Cells(0).Value.ToString
             Me.in_id_txt.Text = get_stockdata.CurrentRow.Cells(1).Value.ToString
             Me.pid_txt.Text = get_stockdata.CurrentRow.Cells(2).Value.ToString
             Me.inname_txt.Text = get_stockdata.CurrentRow.Cells(3).Value.ToString
-            Me.inquatity_txt.Text = get_stockdata.CurrentRow.Cells(7).Value.ToString
-            Me.stock_txt.Text = get_stockdata.CurrentRow.Cells(8).Value.ToString
-            Me.inventrydtetxt.Value = get_stockdata.CurrentRow.Cells(9).Value.ToString
-            Me.quantity_txt.Text = get_stockdata.CurrentRow.Cells(5).Value.ToString
-            Me.inprice_txt.Text = get_stockdata.CurrentRow.Cells(4).Value.ToString
-            Me.intxt_des.Text = get_stockdata.CurrentRow.Cells(10).Value.ToString
-            Me.inpudte_txt.Text = get_stockdata.CurrentRow.Cells(6).Value.ToString
+            Me.Label17.Text = get_stockdata.CurrentRow.Cells(5).Value.ToString
+            Me.inquatity_txt.Text = get_stockdata.CurrentRow.Cells(6).Value.ToString
+            Me.stock_txt.Text = get_stockdata.CurrentRow.Cells(7).Value.ToString
 
+            'Me.inprice_txt.Text = get_stockdata.CurrentRow.Cells(4).Value.ToString
+            Me.inpudte_txt.Value = get_stockdata.CurrentRow.Cells(8).Value.ToString
+            Me.quantity_txt.Text = get_stockdata.CurrentRow.Cells(4).Value.ToString
+            Me.inventrydtetxt.Text = get_stockdata.CurrentRow.Cells(9).Value.ToString
+            Me.intxt_des.Text = get_stockdata.CurrentRow.Cells(10).Value.ToString
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Me.Dispose()
         End Try
+    End Sub
+
+   
+    Private Sub stockin()
+        Dim addd As Int64
+        addd = Convert.ToInt64(quantity_txt.Text) + Convert.ToInt64(inquatity_txt.Text)
+        inquatity_txt.Text = Convert.ToString(addd)
+
+    End Sub
+
+    Private Sub quantity_txt_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles quantity_txt.TextChanged
+
+    End Sub
+
+    Private Sub quantity_txt_Validated(ByVal sender As Object, ByVal e As System.EventArgs) Handles quantity_txt.Validated
+        stockin()
+    End Sub
+
+    Private Sub inname_txt_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles inname_txt.TextChanged
+        Dim strsql As String = "select Product_name,Totalquantity,Recent_Purchase_Quantity from tbl_inventrry where Product_name like('" + inname_txt.Text + "%')"
+        Dim strcon As String = cs
+        Dim odapre As New SqlDataAdapter(strsql, strcon)
+        Dim datTable As New DataTable
+        Dim incount As Integer
+        odapre.Fill(datTable)
+        For incount = 0 To datTable.Rows.Count - 1
+            inquatity_txt.Text = datTable.Rows(incount)("Totalquantity").ToString
+            ' quantity_txt.Text = datTable.Rows(incount)("Product_Quantity").ToString
+            Label18.Text = datTable.Rows(incount)("Recent_Purchase_Quantity").ToString
+
+            ' DateofBirthDateTimePicker.Text = datTable.Rows(incount)("DateofBirth").ToString
+            ' EmailaddressTextBox.Text = datTable.Rows(incount)("Emailaddress").ToString
+            ' PicturesPictureBox1. = datTable.Rows(incount)("Pictures")
+        Next
+        ' inname_txt.Text = Label21.Text
+    End Sub
+
+    Private Sub inname_txt_Validated(ByVal sender As Object, ByVal e As System.EventArgs) Handles inname_txt.Validated
+   
+    End Sub
+
+    Private Sub pid_txt_Validated(ByVal sender As Object, ByVal e As System.EventArgs) Handles pid_txt.Validated
+       
     End Sub
 End Class

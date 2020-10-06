@@ -45,7 +45,7 @@ Public Class prodcutfrm
     Private Sub insert()
         dbaccessconnection()
         con.Open()
-        cmd.CommandText = "insert into tbl_products(pro_id,P_id,p_name,p_price,p_typ,padd_quantity,p_totalquantity,p_dte,p_description,photo)values('" & pro_txt.Text & "','" & pid_txt.Text & "','" & name_txt.Text & "','" & price_txt.Text & "','" & salpr_txt.Text & "','" & pquatity_txt.Text & "','" & Label2.Text & "','" & p_dtetxt.Value & "','" & des_txt.Text & "',@photo)"
+        cmd.CommandText = "insert into tbl_products(pro_id,P_id,p_name,p_price,p_dte,p_description,photo)values('" & pro_txt.Text & "','" & pid_txt.Text & "','" & name_txt.Text & "','" & price_txt.Text & "','" & p_dtetxt.Value & "','" & des_txt.Text & "',@photo)"
         Dim ms As New MemoryStream()
         Dim bmpImage As New Bitmap(photo.Image)
         bmpImage.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg)
@@ -57,10 +57,6 @@ Public Class prodcutfrm
        
         con.Close()
     End Sub
-
-
-    '"insert into tbl_products(pro_id,P_id,p_name,p_price,p_description,p_typ,p_dte,photo)values
-    '('" & pro_txt.Text & "','" & pid_txt.Text & "','" & name_txt.Text & "','" & price_txt.Text & "','" & des_txt.Text & "','" & salpr_txt.Text & "','" & p_dtetxt.Value & "',@photo)"
 
     Private Sub edit()
 
@@ -74,7 +70,7 @@ Public Class prodcutfrm
             TabControl1.SelectedTab = TabPage2
         Else
 
-                cmd.CommandText = ("UPDATE tbl_products SET  pro_id= '" & pro_txt.Text & "', P_id= '" & pid_txt.Text & "',p_name= '" & name_txt.Text & "',p_price= '" & price_txt.Text & "',p_typ= '" & salpr_txt.Text & "',padd_quantity= '" & pquatity_txt.Text & "',p_totalquantity= '" & Label2.Text & "',p_dte= '" & p_dtetxt.Value & "',p_description= '" & des_txt.Text & "',photo=@photo where pro_id=" & pro_txt.Text & "")
+                cmd.CommandText = ("UPDATE tbl_products SET  pro_id= '" & pro_txt.Text & "', P_id= '" & pid_txt.Text & "',p_name= '" & name_txt.Text & "',p_price= '" & price_txt.Text & "',p_dte= '" & p_dtetxt.Value & "',p_description= '" & des_txt.Text & "',photo=@photo where pro_id=" & pro_txt.Text & "")
             Dim ms As New MemoryStream()
             Dim bmpImage As New Bitmap(photo.Image)
             bmpImage.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg)
@@ -243,10 +239,6 @@ Public Class prodcutfrm
         TabControl1.SelectedTab = TabPage2
     End Sub
 
-  
-
-   
-
     Private Sub DeleteSelecedRows()
         Dim ObjConnection As New SqlConnection()
         Dim i As Integer
@@ -282,7 +274,7 @@ Public Class prodcutfrm
             name_txt.Text = ""
             price_txt.Text = ""
             des_txt.Text = ""
-            salpr_txt.Text = ""
+
             ' p_dtetxt.Value = ""
             'photo.Dispose()
 
@@ -297,47 +289,12 @@ Public Class prodcutfrm
         svemem.Enabled = True
     End Sub
 
-    Private Sub name_txt_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles name_txt.SelectedIndexChanged
-        Dim str As String = cs
-        Dim con As SqlConnection = New SqlConnection(str)
-        Dim query As String = "select * from tbl_products where p_name = '" & name_txt.Text & "' "
-        Dim cmd As SqlCommand = New SqlCommand(query, con)
-        Dim dbr As SqlDataReader
-        Try
-
-            con.Open()
-            dbr = cmd.ExecuteReader()
-            If dbr.Read() Then
-
-
-                Label2.Text = dbr.GetValue(5)
-                'pid_txt.Text = dbr.GetValue(1)
-
-            End If
-        Catch ex As Exception
-            MessageBox.Show("At least one entry", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-        End Try
-    End Sub
-
 
     Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
         product_FillCombo()
     End Sub
-    Private Sub add_quantity()
-        Try
-            Dim addd As Int64
+  
 
-            addd = Convert.ToInt64(pquatity_txt.Text) + Convert.ToInt64(Label2.Text)
-            Label2.Text = Convert.ToString(addd)
-
-        Catch ex As Exception
-            MessageBox.Show("Please enter quantity", ex.Message)
-        End Try
-    End Sub
-
-    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        add_quantity()
-    End Sub
 
     Private Sub get_productdata_CellMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles get_productdata.CellMouseClick
         Try
@@ -346,17 +303,14 @@ Public Class prodcutfrm
             Me.pid_txt.Text = get_productdata.CurrentRow.Cells(1).Value.ToString
             Me.name_txt.Text = get_productdata.CurrentRow.Cells(2).Value.ToString
             Me.price_txt.Text = get_productdata.CurrentRow.Cells(3).Value.ToString
-            Me.salpr_txt.Text = get_productdata.CurrentRow.Cells(4).Value.ToString
-            Me.pquatity_txt.Text = get_productdata.CurrentRow.Cells(5).Value.ToString
-            Me.Label2.Text = get_productdata.CurrentRow.Cells(6).Value.ToString
-            Me.p_dtetxt.Value = get_productdata.CurrentRow.Cells(7).Value.ToString
-            Me.des_txt.Text = get_productdata.CurrentRow.Cells(8).Value.ToString
+            Me.p_dtetxt.Value = get_productdata.CurrentRow.Cells(4).Value.ToString
+            Me.des_txt.Text = get_productdata.CurrentRow.Cells(5).Value.ToString
 
 
             ' Image()
             Dim i As Integer
             i = get_productdata.CurrentRow.Index
-            Dim bytes As [Byte]() = (Me.get_productdata.Item(9, i).Value)
+            Dim bytes As [Byte]() = (Me.get_productdata.Item(6, i).Value)
             Dim ms As New MemoryStream(bytes)
             photo.Image = Image.FromStream(ms)
         Catch ex As Exception
@@ -391,7 +345,7 @@ Public Class prodcutfrm
 
             s_insert()
             ser_getdata()
-            Label21.Text = "'" & rateid_txt.Text & "' inventry details saved successfully!"
+            Label21.Text = "'" & rateid_txt.Text & "' services details saved successfully!"
             Label21.ForeColor = System.Drawing.Color.DarkGreen
 
         Catch ex As Exception
@@ -550,12 +504,10 @@ Public Class prodcutfrm
         TabControl1.SelectedTab = TabPage4
     End Sub
 
-    Private Sub pquatity_txt_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles pquatity_txt.KeyPress
+    Private Sub pquatity_txt_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
 
     End Sub
 
-    Private Sub pquatity_txt_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pquatity_txt.TextChanged
-        add_quantity()
-    End Sub
+  
 
 End Class

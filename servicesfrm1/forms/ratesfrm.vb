@@ -81,7 +81,7 @@ Public Class ratesfrm
             End If
             con.Close()
         Catch ex As Exception
-            MsgBox("Error" & ex.Message)
+            MsgBox("Error in Entrynumber" & ex.Message)
             Me.Dispose()
         End Try
     End Sub
@@ -101,7 +101,7 @@ Public Class ratesfrm
 
         Dim con As New SqlConnection(cs)
         con.Open()
-        Dim da As New SqlDataAdapter("Select I_Id,Pro_id,Product_name,Totalquantity,In_price from tbl_inventrry ", con)
+        Dim da As New SqlDataAdapter("Select I_Id,Pro_id,Product_name,Totalquantity from tbl_inventrry ", con)
         Dim dt As New DataTable
         da.Fill(dt)
         source1.DataSource = dt
@@ -196,7 +196,7 @@ Public Class ratesfrm
                 .AutoCompleteSource = AutoCompleteSource.ListItems
             End With
         Catch ex As Exception
-            MessageBox.Show("At least one entry", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            MessageBox.Show("Error in Entrynumber" & ex.Message)
         End Try
     End Sub
    
@@ -226,7 +226,7 @@ Public Class ratesfrm
 
             End With
         Catch ex As Exception
-            MessageBox.Show("At least one entry", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            MessageBox.Show("Error in Entrynumber" & ex.Message)
         End Try
     End Sub
 
@@ -243,12 +243,12 @@ Public Class ratesfrm
             If dbr.Read() Then
 
                 pid_txt.Text = dbr.GetValue(2)
-                Label24.Text = dbr.GetValue(4)
-                unitprce_txt.Text = dbr.GetValue(8)
+                Label24.Text = dbr.GetValue(5)
+                'unitprce_txt.Text = dbr.GetValue(8)
 
             End If
         Catch ex As Exception
-            MessageBox.Show("At least one entry", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            MessageBox.Show("Error in Entrynumber" & ex.Message)
         End Try
     End Sub
     Private Sub service_FillCombo()
@@ -284,28 +284,17 @@ Public Class ratesfrm
         subb = Convert.ToInt64(Label24.Text) - Convert.ToInt64(pquantity_txt.Text)
         Label24.Text = Convert.ToString(subb)
     End Sub
-    Private Sub proupdate_stockout_in()
-        Try
-            dbaccessconnection()
-            con.Open()
-            cmd.CommandText = ("UPDATE tbl_products SET p_totalquantity= '" & Label24.Text & "' where P_id='" & pid_txt.Text & "'")
-            cmd.ExecuteNonQuery()
-            message_txt.Text = "Product details updated successfully!"
-            con.Close()
-        Catch ex As Exception
-            MessageBox.Show("Data Not Updated" & ex.Message)
-        End Try
-    End Sub
+ 
     Private Sub quantitystockout_in()
         Try
             dbaccessconnection()
             con.Open()
-            cmd.CommandText = ("UPDATE tbl_inventrry SET Totalquantity= '" & Label24.Text & "',Stock_outdate= '" & p_date_txt.Value & "' where Pro_id='" & pid_txt.Text & "'")
+            cmd.CommandText = ("UPDATE tbl_inventrry SET Sale_Quantity= '" & pquantity_txt.Text & "',Totalquantity= '" & Label24.Text & "',Stock_outdate= '" & transactiondte_txt.Value & "' where Pro_id='" & pid_txt.Text & "'")
             cmd.ExecuteNonQuery()
-            message_txt.Text = "Product details updated successfully!"
+            'message_txt.Text = " details updated successfully!"
                 con.Close()
 
-            proupdate_stockout_in()
+
         Catch ex As Exception
             MessageBox.Show("Data Not Updated" & ex.Message)
         End Try
@@ -439,7 +428,7 @@ Public Class ratesfrm
             Me.pid_txt.Text = pro2_gird.CurrentRow.Cells(1).Value.ToString
             Me.pname_txt.Text = pro2_gird.CurrentRow.Cells(2).Value.ToString
             Me.Label24.Text = pro2_gird.CurrentRow.Cells(3).Value.ToString
-            Me.unitprce_txt.Text = pro2_gird.CurrentRow.Cells(4).Value.ToString
+            'Me.unitprce_txt.Text = pro2_gird.CurrentRow.Cells(4).Value.ToString
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
@@ -1000,6 +989,22 @@ Public Class ratesfrm
 
     Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
    
+    End Sub
+
+    Private Sub pid_txt_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pid_txt.TextChanged
+
+        Dim strsql As String = "select p_price from tbl_products where p_name like('" + pname_txt.Text + "%')"
+        Dim strcon As String = cs
+        Dim odapre As New SqlDataAdapter(strsql, strcon)
+        Dim datTable As New DataTable
+        Dim incount As Integer
+        odapre.Fill(datTable)
+        For incount = 0 To datTable.Rows.Count - 1
+            unitprce_txt.Text = datTable.Rows(incount)("p_price").ToString
+            ' DateofBirthDateTimePicker.Text = datTable.Rows(incount)("DateofBirth").ToString
+            ' EmailaddressTextBox.Text = datTable.Rows(incount)("Emailaddress").ToString
+            ' PicturesPictureBox1. = datTable.Rows(incount)("Pictures")
+        Next
     End Sub
 End Class
 '
