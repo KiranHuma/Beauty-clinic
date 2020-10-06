@@ -23,22 +23,22 @@ Partial Class ratesfrm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle36 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle37 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle38 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle39 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle40 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ratesfrm))
-        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle34 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle35 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle41 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle42 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle43 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle44 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle45 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -156,6 +156,7 @@ Partial Class ratesfrm
         Me.payment_grid = New System.Windows.Forms.DataGridView()
         Me.Button12 = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TabControl1.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -403,13 +404,13 @@ Partial Class ratesfrm
         '
         Me.pro2_gird.AllowUserToAddRows = False
         Me.pro2_gird.AllowUserToDeleteRows = False
-        DataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle36.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle36.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle36.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.White
-        Me.pro2_gird.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle36
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
+        Me.pro2_gird.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.pro2_gird.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -417,43 +418,43 @@ Partial Class ratesfrm
         Me.pro2_gird.BackgroundColor = System.Drawing.Color.LightCoral
         Me.pro2_gird.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.pro2_gird.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
-        DataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle37.BackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle37.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle37.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle37.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle37.SelectionForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.pro2_gird.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle37
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.pro2_gird.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.pro2_gird.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle38.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle38.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle38.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle38.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.pro2_gird.DefaultCellStyle = DataGridViewCellStyle38
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.pro2_gird.DefaultCellStyle = DataGridViewCellStyle3
         Me.pro2_gird.EnableHeadersVisualStyles = False
         Me.pro2_gird.GridColor = System.Drawing.Color.LightCoral
         Me.pro2_gird.Location = New System.Drawing.Point(50, 337)
         Me.pro2_gird.Margin = New System.Windows.Forms.Padding(4)
         Me.pro2_gird.Name = "pro2_gird"
         Me.pro2_gird.ReadOnly = True
-        DataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle39.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle39.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle39.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.pro2_gird.RowHeadersDefaultCellStyle = DataGridViewCellStyle39
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.pro2_gird.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.pro2_gird.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        DataGridViewCellStyle40.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle40.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle40.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle40.SelectionForeColor = System.Drawing.Color.White
-        Me.pro2_gird.RowsDefaultCellStyle = DataGridViewCellStyle40
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White
+        Me.pro2_gird.RowsDefaultCellStyle = DataGridViewCellStyle5
         Me.pro2_gird.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.pro2_gird.Size = New System.Drawing.Size(864, 222)
         Me.pro2_gird.TabIndex = 393
@@ -827,6 +828,7 @@ Partial Class ratesfrm
         Me.TabPage1.Controls.Add(Me.totalofser_pro_outdis)
         Me.TabPage1.Controls.Add(Me.total_ser_pro_withdis)
         Me.TabPage1.Controls.Add(Me.GroupBox3)
+        Me.TabPage1.Controls.Add(Me.Panel1)
         Me.TabPage1.Location = New System.Drawing.Point(4, 25)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
@@ -932,7 +934,7 @@ Partial Class ratesfrm
         Me.Label29.BackColor = System.Drawing.Color.Transparent
         Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label29.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label29.Location = New System.Drawing.Point(1442, 309)
+        Me.Label29.Location = New System.Drawing.Point(1442, 292)
         Me.Label29.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(36, 17)
@@ -1100,13 +1102,13 @@ Partial Class ratesfrm
         '
         Me.ser2_grid.AllowUserToAddRows = False
         Me.ser2_grid.AllowUserToDeleteRows = False
-        DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle31.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle31.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle31.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.White
-        Me.ser2_grid.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle31
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White
+        Me.ser2_grid.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle6
         Me.ser2_grid.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -1114,43 +1116,43 @@ Partial Class ratesfrm
         Me.ser2_grid.BackgroundColor = System.Drawing.Color.LightCoral
         Me.ser2_grid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.ser2_grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
-        DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle32.BackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle32.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle32.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ser2_grid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle32
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ser2_grid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.ser2_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle33.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle33.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle33.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ser2_grid.DefaultCellStyle = DataGridViewCellStyle33
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ser2_grid.DefaultCellStyle = DataGridViewCellStyle8
         Me.ser2_grid.EnableHeadersVisualStyles = False
         Me.ser2_grid.GridColor = System.Drawing.Color.LightCoral
         Me.ser2_grid.Location = New System.Drawing.Point(28, 322)
         Me.ser2_grid.Margin = New System.Windows.Forms.Padding(4)
         Me.ser2_grid.Name = "ser2_grid"
         Me.ser2_grid.ReadOnly = True
-        DataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle34.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle34.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle34.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ser2_grid.RowHeadersDefaultCellStyle = DataGridViewCellStyle34
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ser2_grid.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.ser2_grid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        DataGridViewCellStyle35.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle35.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.White
-        Me.ser2_grid.RowsDefaultCellStyle = DataGridViewCellStyle35
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White
+        Me.ser2_grid.RowsDefaultCellStyle = DataGridViewCellStyle10
         Me.ser2_grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.ser2_grid.Size = New System.Drawing.Size(1041, 291)
         Me.ser2_grid.TabIndex = 393
@@ -1443,13 +1445,13 @@ Partial Class ratesfrm
         '
         Me.payment_grid.AllowUserToAddRows = False
         Me.payment_grid.AllowUserToDeleteRows = False
-        DataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle41.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle41.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle41.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle41.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle41.SelectionForeColor = System.Drawing.Color.White
-        Me.payment_grid.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle41
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White
+        Me.payment_grid.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle11
         Me.payment_grid.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -1457,43 +1459,43 @@ Partial Class ratesfrm
         Me.payment_grid.BackgroundColor = System.Drawing.Color.SteelBlue
         Me.payment_grid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.payment_grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
-        DataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle42.BackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle42.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle42.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle42.SelectionForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.payment_grid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle42
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.payment_grid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
         Me.payment_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle43.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle43.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle43.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle43.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle43.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.payment_grid.DefaultCellStyle = DataGridViewCellStyle43
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.payment_grid.DefaultCellStyle = DataGridViewCellStyle13
         Me.payment_grid.EnableHeadersVisualStyles = False
         Me.payment_grid.GridColor = System.Drawing.Color.SteelBlue
         Me.payment_grid.Location = New System.Drawing.Point(7, 209)
         Me.payment_grid.Margin = New System.Windows.Forms.Padding(4)
         Me.payment_grid.Name = "payment_grid"
         Me.payment_grid.ReadOnly = True
-        DataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle44.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle44.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle44.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle44.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle44.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.payment_grid.RowHeadersDefaultCellStyle = DataGridViewCellStyle44
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.payment_grid.RowHeadersDefaultCellStyle = DataGridViewCellStyle14
         Me.payment_grid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
-        DataGridViewCellStyle45.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle45.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle45.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle45.SelectionForeColor = System.Drawing.Color.White
-        Me.payment_grid.RowsDefaultCellStyle = DataGridViewCellStyle45
+        DataGridViewCellStyle15.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle15.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White
+        Me.payment_grid.RowsDefaultCellStyle = DataGridViewCellStyle15
         Me.payment_grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.payment_grid.Size = New System.Drawing.Size(1490, 574)
         Me.payment_grid.TabIndex = 320
@@ -1512,6 +1514,13 @@ Partial Class ratesfrm
         Me.Button12.Size = New System.Drawing.Size(43, 38)
         Me.Button12.TabIndex = 303
         Me.Button12.UseVisualStyleBackColor = False
+        '
+        'Panel1
+        '
+        Me.Panel1.Location = New System.Drawing.Point(1432, 249)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(52, 60)
+        Me.Panel1.TabIndex = 411
         '
         'ratesfrm
         '
@@ -1671,4 +1680,5 @@ Partial Class ratesfrm
     Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
     Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
 End Class

@@ -902,15 +902,17 @@ Public Class ratesfrm
     End Sub
     Private Sub p_editbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles p_editbtn.Click
         edit()
-        p_editbtn.Enabled = True
+
         payment_getdata()
+        p_editbtn.Enabled = False
+    End Sub
+
+    Private Sub p_editbtn_DragOver(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles p_editbtn.DragOver
+        
     End Sub
 
     Private Sub p_editbtn_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles p_editbtn.MouseHover
-        ToolTip1.IsBalloon = True
-        ToolTip1.UseAnimation = True
-        ToolTip1.ToolTipTitle = ""
-        ToolTip1.SetToolTip(p_editbtn, "Select the field from Grid to Edit")
+      
     End Sub
 
     Private Sub payment_grid_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles payment_grid.CellContentClick
@@ -976,6 +978,27 @@ Public Class ratesfrm
 
     Private Sub p_removebtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles p_removebtn.Click
         DeleteSelecedRows()
+    End Sub
+    Private Sub Label15_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs)
+   
+    End Sub
+
+    Private Sub Panel1_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Panel1.MouseHover
+        If p_editbtn.Enabled = False Then
+            ToolTip1.IsBalloon = True
+            ToolTip1.UseAnimation = True
+            ToolTip1.ToolTipTitle = ""
+            ToolTip1.SetToolTip(Panel1, "Select the field from Grid to Edit")
+        Else
+            ToolTip1.IsBalloon = True
+            ToolTip1.UseAnimation = True
+            ToolTip1.ToolTipTitle = ""
+            ToolTip1.SetToolTip(Panel1, "Click to Edit")
+        End If
+    End Sub
+
+    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
+   
     End Sub
 End Class
 '
