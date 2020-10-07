@@ -22,27 +22,28 @@ Partial Class inventryfrm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(inventryfrm))
-        Dim DataGridViewCellStyle41 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle42 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle43 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle44 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle45 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle46 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle47 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle48 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle49 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle50 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Button12 = New System.Windows.Forms.Button()
         Me.RectangleShape4 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.ShapeContainer2 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.get_stockdata = New System.Windows.Forms.DataGridView()
-        Me.serchstock_txt = New System.Windows.Forms.ComboBox()
-        Me.btnsearch = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.inventrydtetxt = New System.Windows.Forms.Label()
+        Me.inquatity_txt = New System.Windows.Forms.TextBox()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
@@ -87,10 +88,17 @@ Partial Class inventryfrm
         Me.RectangleShape1 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
         Me.get_indata = New System.Windows.Forms.DataGridView()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.inquatity_txt = New System.Windows.Forms.TextBox()
-        Me.inventrydtetxt = New System.Windows.Forms.Label()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.TabPage2.SuspendLayout()
         CType(Me.get_stockdata, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage1.SuspendLayout()
@@ -149,8 +157,6 @@ Partial Class inventryfrm
         '
         Me.TabPage2.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.TabPage2.Controls.Add(Me.get_stockdata)
-        Me.TabPage2.Controls.Add(Me.serchstock_txt)
-        Me.TabPage2.Controls.Add(Me.btnsearch)
         Me.TabPage2.Controls.Add(Me.Panel2)
         Me.TabPage2.ForeColor = System.Drawing.Color.LightBlue
         Me.TabPage2.Location = New System.Drawing.Point(4, 28)
@@ -164,13 +170,13 @@ Partial Class inventryfrm
         '
         Me.get_stockdata.AllowUserToAddRows = False
         Me.get_stockdata.AllowUserToDeleteRows = False
-        DataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle41.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle41.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle41.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle41.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle41.SelectionForeColor = System.Drawing.Color.White
-        Me.get_stockdata.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle41
+        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle21.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle21.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle21.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.White
+        Me.get_stockdata.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle21
         Me.get_stockdata.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -178,70 +184,46 @@ Partial Class inventryfrm
         Me.get_stockdata.BackgroundColor = System.Drawing.Color.LightCoral
         Me.get_stockdata.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.get_stockdata.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
-        DataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle42.BackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle42.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle42.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle42.SelectionForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.get_stockdata.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle42
+        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle22.BackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle22.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle22.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.get_stockdata.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle22
         Me.get_stockdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle43.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle43.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle43.ForeColor = System.Drawing.Color.LightBlue
-        DataGridViewCellStyle43.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle43.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.get_stockdata.DefaultCellStyle = DataGridViewCellStyle43
+        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle23.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle23.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle23.ForeColor = System.Drawing.Color.LightBlue
+        DataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.get_stockdata.DefaultCellStyle = DataGridViewCellStyle23
         Me.get_stockdata.EnableHeadersVisualStyles = False
         Me.get_stockdata.GridColor = System.Drawing.Color.LightCoral
-        Me.get_stockdata.Location = New System.Drawing.Point(25, 144)
+        Me.get_stockdata.Location = New System.Drawing.Point(7, 7)
         Me.get_stockdata.Margin = New System.Windows.Forms.Padding(4)
         Me.get_stockdata.Name = "get_stockdata"
         Me.get_stockdata.ReadOnly = True
-        DataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle44.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle44.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle44.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle44.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle44.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.get_stockdata.RowHeadersDefaultCellStyle = DataGridViewCellStyle44
+        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle24.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle24.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.get_stockdata.RowHeadersDefaultCellStyle = DataGridViewCellStyle24
         Me.get_stockdata.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        DataGridViewCellStyle45.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle45.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle45.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle45.SelectionForeColor = System.Drawing.Color.White
-        Me.get_stockdata.RowsDefaultCellStyle = DataGridViewCellStyle45
+        DataGridViewCellStyle25.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle25.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.White
+        Me.get_stockdata.RowsDefaultCellStyle = DataGridViewCellStyle25
         Me.get_stockdata.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.get_stockdata.Size = New System.Drawing.Size(1150, 447)
+        Me.get_stockdata.Size = New System.Drawing.Size(1180, 584)
         Me.get_stockdata.TabIndex = 322
-        '
-        'serchstock_txt
-        '
-        Me.serchstock_txt.BackColor = System.Drawing.Color.LightCoral
-        Me.serchstock_txt.ForeColor = System.Drawing.Color.White
-        Me.serchstock_txt.FormattingEnabled = True
-        Me.serchstock_txt.Items.AddRange(New Object() {"Stock IN "})
-        Me.serchstock_txt.Location = New System.Drawing.Point(25, 81)
-        Me.serchstock_txt.Margin = New System.Windows.Forms.Padding(4)
-        Me.serchstock_txt.Name = "serchstock_txt"
-        Me.serchstock_txt.Size = New System.Drawing.Size(524, 24)
-        Me.serchstock_txt.TabIndex = 314
-        '
-        'btnsearch
-        '
-        Me.btnsearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnsearch.ForeColor = System.Drawing.Color.LightCoral
-        Me.btnsearch.Location = New System.Drawing.Point(580, 74)
-        Me.btnsearch.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnsearch.Name = "btnsearch"
-        Me.btnsearch.Size = New System.Drawing.Size(121, 31)
-        Me.btnsearch.TabIndex = 313
-        Me.btnsearch.Text = "&Search Stock"
-        Me.btnsearch.UseVisualStyleBackColor = True
         '
         'Panel2
         '
@@ -302,10 +284,28 @@ Partial Class inventryfrm
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Inventory"
         '
+        'inventrydtetxt
+        '
+        Me.inventrydtetxt.AutoSize = True
+        Me.inventrydtetxt.Location = New System.Drawing.Point(916, 155)
+        Me.inventrydtetxt.Name = "inventrydtetxt"
+        Me.inventrydtetxt.Size = New System.Drawing.Size(59, 17)
+        Me.inventrydtetxt.TabIndex = 377
+        Me.inventrydtetxt.Text = "Label21"
+        Me.inventrydtetxt.Visible = False
+        '
+        'inquatity_txt
+        '
+        Me.inquatity_txt.Location = New System.Drawing.Point(177, 378)
+        Me.inquatity_txt.Name = "inquatity_txt"
+        Me.inquatity_txt.Size = New System.Drawing.Size(216, 22)
+        Me.inquatity_txt.TabIndex = 376
+        Me.inquatity_txt.Text = "0"
+        '
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(760, 235)
+        Me.Label20.Location = New System.Drawing.Point(741, 27)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(117, 17)
         Me.Label20.TabIndex = 375
@@ -314,7 +314,7 @@ Partial Class inventryfrm
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(909, 235)
+        Me.Label18.Location = New System.Drawing.Point(890, 27)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(98, 17)
         Me.Label18.TabIndex = 374
@@ -346,7 +346,6 @@ Partial Class inventryfrm
         Me.stock_txt.Name = "stock_txt"
         Me.stock_txt.Size = New System.Drawing.Size(216, 22)
         Me.stock_txt.TabIndex = 370
-        Me.stock_txt.Text = "Stock"
         '
         'inname_txt
         '
@@ -421,9 +420,9 @@ Partial Class inventryfrm
         Me.Label14.AutoSize = True
         Me.Label14.Location = New System.Drawing.Point(760, 153)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(70, 17)
+        Me.Label14.Size = New System.Drawing.Size(104, 17)
         Me.Label14.TabIndex = 352
-        Me.Label14.Text = "Sale Date"
+        Me.Label14.Text = "Stock Out Date"
         Me.Label14.Visible = False
         '
         'Label16
@@ -540,10 +539,11 @@ Partial Class inventryfrm
         '
         Me.btnupdte.BackColor = System.Drawing.Color.White
         Me.btnupdte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnupdte.Enabled = False
         Me.btnupdte.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnupdte.ForeColor = System.Drawing.Color.White
         Me.btnupdte.Image = CType(resources.GetObject("btnupdte.Image"), System.Drawing.Image)
-        Me.btnupdte.Location = New System.Drawing.Point(883, 526)
+        Me.btnupdte.Location = New System.Drawing.Point(883, 525)
         Me.btnupdte.Margin = New System.Windows.Forms.Padding(4)
         Me.btnupdte.Name = "btnupdte"
         Me.btnupdte.Size = New System.Drawing.Size(42, 34)
@@ -744,6 +744,14 @@ Partial Class inventryfrm
         '
         'TabPage3
         '
+        Me.TabPage3.Controls.Add(Me.RadioButton1)
+        Me.TabPage3.Controls.Add(Me.Label24)
+        Me.TabPage3.Controls.Add(Me.DateTimePicker2)
+        Me.TabPage3.Controls.Add(Me.DateTimePicker1)
+        Me.TabPage3.Controls.Add(Me.Label21)
+        Me.TabPage3.Controls.Add(Me.TextBox3)
+        Me.TabPage3.Controls.Add(Me.RadioButton3)
+        Me.TabPage3.Controls.Add(Me.RadioButton4)
         Me.TabPage3.Controls.Add(Me.get_indata)
         Me.TabPage3.Controls.Add(Me.Button1)
         Me.TabPage3.Location = New System.Drawing.Point(4, 28)
@@ -754,17 +762,99 @@ Partial Class inventryfrm
         Me.TabPage3.Text = "Inventroy Records"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
+        'RadioButton1
+        '
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.RadioButton1.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.RadioButton1.Location = New System.Drawing.Point(23, 10)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(169, 24)
+        Me.RadioButton1.TabIndex = 333
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "Search By  Date"
+        Me.RadioButton1.UseVisualStyleBackColor = True
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.Label24.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.Label24.Location = New System.Drawing.Point(242, 37)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(25, 20)
+        Me.Label24.TabIndex = 332
+        Me.Label24.Text = "to"
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.Location = New System.Drawing.Point(292, 37)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(200, 22)
+        Me.DateTimePicker2.TabIndex = 331
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(23, 37)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 22)
+        Me.DateTimePicker1.TabIndex = 330
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.Label21.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.Label21.Location = New System.Drawing.Point(20, 72)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(221, 20)
+        Me.Label21.TabIndex = 328
+        Me.Label21.Text = "Search By Product Name"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(23, 92)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(262, 22)
+        Me.TextBox3.TabIndex = 327
+        '
+        'RadioButton3
+        '
+        Me.RadioButton3.AutoSize = True
+        Me.RadioButton3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton3.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.RadioButton3.Location = New System.Drawing.Point(1050, 17)
+        Me.RadioButton3.Name = "RadioButton3"
+        Me.RadioButton3.Size = New System.Drawing.Size(113, 24)
+        Me.RadioButton3.TabIndex = 326
+        Me.RadioButton3.TabStop = True
+        Me.RadioButton3.Text = "Stock Out"
+        Me.RadioButton3.UseVisualStyleBackColor = True
+        '
+        'RadioButton4
+        '
+        Me.RadioButton4.AutoSize = True
+        Me.RadioButton4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton4.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.RadioButton4.Location = New System.Drawing.Point(876, 17)
+        Me.RadioButton4.Name = "RadioButton4"
+        Me.RadioButton4.Size = New System.Drawing.Size(98, 24)
+        Me.RadioButton4.TabIndex = 325
+        Me.RadioButton4.TabStop = True
+        Me.RadioButton4.Text = "Stock In"
+        Me.RadioButton4.UseVisualStyleBackColor = True
+        '
         'get_indata
         '
         Me.get_indata.AllowUserToAddRows = False
         Me.get_indata.AllowUserToDeleteRows = False
-        DataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle46.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle46.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle46.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle46.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle46.SelectionForeColor = System.Drawing.Color.White
-        Me.get_indata.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle46
+        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle26.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle26.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle26.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.White
+        Me.get_indata.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle26
         Me.get_indata.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -772,43 +862,43 @@ Partial Class inventryfrm
         Me.get_indata.BackgroundColor = System.Drawing.Color.LightCoral
         Me.get_indata.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.get_indata.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
-        DataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle47.BackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle47.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle47.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle47.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle47.SelectionForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.get_indata.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle47
+        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle27.BackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle27.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle27.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.get_indata.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle27
         Me.get_indata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle48.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle48.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle48.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle48.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle48.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.get_indata.DefaultCellStyle = DataGridViewCellStyle48
+        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle28.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle28.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle28.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.get_indata.DefaultCellStyle = DataGridViewCellStyle28
         Me.get_indata.EnableHeadersVisualStyles = False
         Me.get_indata.GridColor = System.Drawing.Color.LightCoral
         Me.get_indata.Location = New System.Drawing.Point(23, 125)
         Me.get_indata.Margin = New System.Windows.Forms.Padding(4)
         Me.get_indata.Name = "get_indata"
         Me.get_indata.ReadOnly = True
-        DataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle49.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle49.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle49.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle49.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle49.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle49.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.get_indata.RowHeadersDefaultCellStyle = DataGridViewCellStyle49
+        DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle29.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle29.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle29.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.get_indata.RowHeadersDefaultCellStyle = DataGridViewCellStyle29
         Me.get_indata.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        DataGridViewCellStyle50.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle50.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle50.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle50.SelectionForeColor = System.Drawing.Color.White
-        Me.get_indata.RowsDefaultCellStyle = DataGridViewCellStyle50
+        DataGridViewCellStyle30.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle30.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.White
+        Me.get_indata.RowsDefaultCellStyle = DataGridViewCellStyle30
         Me.get_indata.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.get_indata.Size = New System.Drawing.Size(1150, 488)
         Me.get_indata.TabIndex = 321
@@ -816,7 +906,7 @@ Partial Class inventryfrm
         'Button1
         '
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ForeColor = System.Drawing.Color.LightCoral
+        Me.Button1.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Button1.Location = New System.Drawing.Point(994, 59)
         Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
@@ -824,24 +914,6 @@ Partial Class inventryfrm
         Me.Button1.TabIndex = 318
         Me.Button1.Text = "&Select Rows to Remove"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'inquatity_txt
-        '
-        Me.inquatity_txt.Location = New System.Drawing.Point(177, 378)
-        Me.inquatity_txt.Name = "inquatity_txt"
-        Me.inquatity_txt.Size = New System.Drawing.Size(216, 22)
-        Me.inquatity_txt.TabIndex = 376
-        Me.inquatity_txt.Text = "0"
-        '
-        'inventrydtetxt
-        '
-        Me.inventrydtetxt.AutoSize = True
-        Me.inventrydtetxt.Location = New System.Drawing.Point(916, 155)
-        Me.inventrydtetxt.Name = "inventrydtetxt"
-        Me.inventrydtetxt.Size = New System.Drawing.Size(59, 17)
-        Me.inventrydtetxt.TabIndex = 377
-        Me.inventrydtetxt.Text = "Label21"
-        Me.inventrydtetxt.Visible = False
         '
         'inventryfrm
         '
@@ -866,6 +938,7 @@ Partial Class inventryfrm
         Me.Panel1.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage3.ResumeLayout(False)
+        Me.TabPage3.PerformLayout()
         CType(Me.get_indata, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -876,8 +949,6 @@ Partial Class inventryfrm
     Friend WithEvents ShapeContainer2 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
-    Friend WithEvents serchstock_txt As System.Windows.Forms.ComboBox
-    Friend WithEvents btnsearch As System.Windows.Forms.Button
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
     Friend WithEvents Label10 As System.Windows.Forms.Label
@@ -918,7 +989,6 @@ Partial Class inventryfrm
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents get_indata As System.Windows.Forms.DataGridView
-    Friend WithEvents get_stockdata As System.Windows.Forms.DataGridView
     Friend WithEvents inname_txt As System.Windows.Forms.TextBox
     Friend WithEvents quantity_txt As System.Windows.Forms.TextBox
     Friend WithEvents inpudte_txt As System.Windows.Forms.DateTimePicker
@@ -929,4 +999,14 @@ Partial Class inventryfrm
     Friend WithEvents Label20 As System.Windows.Forms.Label
     Friend WithEvents inquatity_txt As System.Windows.Forms.TextBox
     Friend WithEvents inventrydtetxt As System.Windows.Forms.Label
+    Friend WithEvents RadioButton3 As System.Windows.Forms.RadioButton
+    Friend WithEvents RadioButton4 As System.Windows.Forms.RadioButton
+    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents Label24 As System.Windows.Forms.Label
+    Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Label21 As System.Windows.Forms.Label
+    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
+    Friend WithEvents get_stockdata As System.Windows.Forms.DataGridView
+    Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
 End Class
