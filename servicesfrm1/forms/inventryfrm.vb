@@ -296,10 +296,20 @@ Public Class inventryfrm
         Btndel.Enabled = True
         btnupdte.Enabled = True
     End Sub
-    'Delete button in grid tab
+    'Delete selected values from grid by single click in grid tab
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+
         DeleteSelecedRows()
     End Sub
+    'Show popup by Mouse hover in grid tab
+    Private Sub Button1_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.MouseHover
+        ToolTip1.IsBalloon = True
+        ToolTip1.UseAnimation = True
+        ToolTip1.ToolTipTitle = ""
+        ToolTip1.SetToolTip(Button1, "Select the one field or more from Grid to Remove")
+    End Sub
+
+   
     'by clicking on ingrid content of inventory tab grid
     Private Sub get_indata_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles get_indata.CellContentClick
         TabControl1.SelectedTab = TabPage1
@@ -449,15 +459,6 @@ Public Class inventryfrm
         payment_productsearchdate()
     End Sub
     'tooltip message on mouse hover on edit btn
-    Private Sub TabPage1_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabPage1.MouseHover
-       
-    End Sub
-
-   
-    Private Sub TabPage1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabPage1.Click
-
-    End Sub
-
     Private Sub Label7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label7.Click
         If btnupdte.Enabled = False Then
             ToolTip1.IsBalloon = True
@@ -498,4 +499,6 @@ Public Class inventryfrm
             stock_txt.Text = "StockOut"
         End If
     End Sub
+   
+    
 End Class
