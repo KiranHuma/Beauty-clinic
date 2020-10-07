@@ -19,3 +19,4 @@ F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\obj\x86\Debug\servicesfrm1.pd
 F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\obj\x86\Debug\servicesfrm1.productreporfrm.resources
 F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\obj\x86\Debug\servicesfrm1.prodctreportview.resources
 F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\obj\x86\Debug\Skintimate Beauty Clinic.vbproj.ResolveComReference.cache
+F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\obj\x86\Debug\Skintimate Beauty Clinic.vbprojResolveAssemblyReference.cache
