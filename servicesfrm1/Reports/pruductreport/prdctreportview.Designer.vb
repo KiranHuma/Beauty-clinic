@@ -35,7 +35,7 @@ Partial Class prodctreportview
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
         Me.CrystalReportViewer1.ReportSource = Me.productreport1
-        Me.CrystalReportViewer1.Size = New System.Drawing.Size(1120, 485)
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(1528, 896)
         Me.CrystalReportViewer1.TabIndex = 0
         Me.CrystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
         '
@@ -43,10 +43,11 @@ Partial Class prodctreportview
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1120, 485)
+        Me.ClientSize = New System.Drawing.Size(1528, 896)
         Me.Controls.Add(Me.CrystalReportViewer1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "prodctreportview"
-        Me.Text = "prodctreportview"
+        Me.Text = "Product Report"
         Me.ResumeLayout(False)
 
     End Sub

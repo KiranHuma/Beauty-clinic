@@ -1048,6 +1048,9 @@ Public Class ratesfrm
             prodcut_getdata.DataSource = dt
             myConnection.Close()
             prodcut_getdata.Refresh()
+            Button5.Enabled = True
+            Button3.Enabled = True
+            Button4.Enabled = True
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Failed:Date Search", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Me.Dispose()

@@ -180,6 +180,12 @@
       <DependentUpon>productreports.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reports\TransactionReport\ProductSaleReportFrm.Designer.vb">
+      <DependentUpon>ProductSaleReportFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\TransactionReport\ProductSaleReportFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="forms\MainFrom1.resx">
@@ -228,6 +234,9 @@
     <EmbeddedResource Include="Reports\pruductreport\productreports.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>productreports.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TransactionReport\ProductSaleReportFrm.resx">
+      <DependentUpon>ProductSaleReportFrm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -291,6 +300,7 @@
   <ItemGroup>
     <None Include="Resources\image.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
