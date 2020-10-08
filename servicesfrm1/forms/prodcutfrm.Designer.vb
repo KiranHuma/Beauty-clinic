@@ -22,6 +22,7 @@ Partial Class prodcutfrm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(prodcutfrm))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -115,6 +116,7 @@ Partial Class prodcutfrm
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.select_delet = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.photo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -205,7 +207,7 @@ Partial Class prodcutfrm
         Me.Button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button12.ForeColor = System.Drawing.Color.White
-        Me.Button12.Location = New System.Drawing.Point(1491, 87)
+        Me.Button12.Location = New System.Drawing.Point(1491, 58)
         Me.Button12.Margin = New System.Windows.Forms.Padding(4)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(31, 30)
@@ -232,11 +234,11 @@ Partial Class prodcutfrm
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Vivaldi", 36.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.Label6.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label6.Location = New System.Drawing.Point(506, 36)
+        Me.Label6.Location = New System.Drawing.Point(494, 42)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(418, 71)
         Me.Label6.TabIndex = 279
-        Me.Label6.Text = "Register Products"
+        Me.Label6.Text = "&Register Products"
         '
         'Button7
         '
@@ -370,6 +372,7 @@ Partial Class prodcutfrm
         '
         Me.btnupdte.BackColor = System.Drawing.Color.White
         Me.btnupdte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnupdte.Enabled = False
         Me.btnupdte.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnupdte.ForeColor = System.Drawing.Color.White
         Me.btnupdte.Image = CType(resources.GetObject("btnupdte.Image"), System.Drawing.Image)
@@ -383,9 +386,9 @@ Partial Class prodcutfrm
         'uploadbtn
         '
         Me.uploadbtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
-        Me.uploadbtn.Location = New System.Drawing.Point(1060, 394)
+        Me.uploadbtn.Location = New System.Drawing.Point(1117, 473)
         Me.uploadbtn.Name = "uploadbtn"
-        Me.uploadbtn.Size = New System.Drawing.Size(75, 35)
+        Me.uploadbtn.Size = New System.Drawing.Size(106, 35)
         Me.uploadbtn.TabIndex = 295
         Me.uploadbtn.Text = "Upload"
         Me.uploadbtn.UseVisualStyleBackColor = True
@@ -410,7 +413,7 @@ Partial Class prodcutfrm
         Me.photo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.photo.Location = New System.Drawing.Point(1016, 230)
         Me.photo.Name = "photo"
-        Me.photo.Size = New System.Drawing.Size(158, 138)
+        Me.photo.Size = New System.Drawing.Size(306, 221)
         Me.photo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.photo.TabIndex = 294
         Me.photo.TabStop = False
@@ -419,7 +422,7 @@ Partial Class prodcutfrm
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
-        Me.Label8.Location = New System.Drawing.Point(1036, 201)
+        Me.Label8.Location = New System.Drawing.Point(1097, 198)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(130, 20)
         Me.Label8.TabIndex = 293
@@ -570,7 +573,7 @@ Partial Class prodcutfrm
         Me.get_productdata.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.LightCoral
@@ -579,7 +582,7 @@ Partial Class prodcutfrm
         Me.get_productdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
         DataGridViewCellStyle3.ForeColor = System.Drawing.Color.LightCoral
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightCoral
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
@@ -594,7 +597,7 @@ Partial Class prodcutfrm
         Me.get_productdata.ReadOnly = True
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
         DataGridViewCellStyle4.ForeColor = System.Drawing.Color.LightCoral
         DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightCoral
         DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White
@@ -721,16 +724,16 @@ Partial Class prodcutfrm
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Vivaldi", 36.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.Label23.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label23.Location = New System.Drawing.Point(515, 6)
+        Me.Label23.Location = New System.Drawing.Point(481, 21)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(421, 71)
         Me.Label23.TabIndex = 357
-        Me.Label23.Text = "Register Services"
+        Me.Label23.Text = "&Register Services"
         '
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.BackColor = System.Drawing.Color.LightCoral
+        Me.Label21.BackColor = System.Drawing.Color.White
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.White
         Me.Label21.Location = New System.Drawing.Point(314, 650)
@@ -863,7 +866,7 @@ Partial Class prodcutfrm
         Me.Label13.AutoSize = True
         Me.Label13.BackColor = System.Drawing.Color.Transparent
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label13.ForeColor = System.Drawing.Color.LightCoral
         Me.Label13.Location = New System.Drawing.Point(1215, 804)
         Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label13.Name = "Label13"
@@ -876,7 +879,7 @@ Partial Class prodcutfrm
         Me.Label18.AutoSize = True
         Me.Label18.BackColor = System.Drawing.Color.Transparent
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label18.ForeColor = System.Drawing.Color.LightCoral
         Me.Label18.Location = New System.Drawing.Point(1436, 804)
         Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label18.Name = "Label18"
@@ -889,7 +892,7 @@ Partial Class prodcutfrm
         Me.Label20.AutoSize = True
         Me.Label20.BackColor = System.Drawing.Color.Transparent
         Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label20.ForeColor = System.Drawing.Color.LightCoral
         Me.Label20.Location = New System.Drawing.Point(1373, 804)
         Me.Label20.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label20.Name = "Label20"
@@ -901,6 +904,7 @@ Partial Class prodcutfrm
         '
         Me.ser_editbtn.BackColor = System.Drawing.Color.White
         Me.ser_editbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ser_editbtn.Enabled = False
         Me.ser_editbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ser_editbtn.ForeColor = System.Drawing.Color.White
         Me.ser_editbtn.Image = CType(resources.GetObject("ser_editbtn.Image"), System.Drawing.Image)
@@ -930,7 +934,7 @@ Partial Class prodcutfrm
         Me.Label22.AutoSize = True
         Me.Label22.BackColor = System.Drawing.Color.Transparent
         Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label22.ForeColor = System.Drawing.Color.LightCoral
         Me.Label22.Location = New System.Drawing.Point(1301, 804)
         Me.Label22.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label22.Name = "Label22"
@@ -1103,7 +1107,7 @@ Partial Class prodcutfrm
         Me.sergetdata.ReadOnly = True
         DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
         DataGridViewCellStyle9.ForeColor = System.Drawing.Color.LightCoral
         DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.LightCoral
         DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White
@@ -1111,6 +1115,7 @@ Partial Class prodcutfrm
         Me.sergetdata.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.sergetdata.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
         DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
         DataGridViewCellStyle10.ForeColor = System.Drawing.Color.LightCoral
         DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.LightCoral
         DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White
@@ -1126,9 +1131,9 @@ Partial Class prodcutfrm
         Me.Label29.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label29.Location = New System.Drawing.Point(27, 89)
         Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(221, 20)
+        Me.Label29.Size = New System.Drawing.Size(219, 20)
         Me.Label29.TabIndex = 345
-        Me.Label29.Text = "Search By Product Name"
+        Me.Label29.Text = "Search By Service Name"
         '
         'RadioButton2
         '
@@ -1303,4 +1308,5 @@ Partial Class prodcutfrm
     Friend WithEvents DateTimePicker3 As System.Windows.Forms.DateTimePicker
     Friend WithEvents DateTimePicker4 As System.Windows.Forms.DateTimePicker
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
 End Class

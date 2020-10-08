@@ -22,480 +22,74 @@ Partial Class regmmberfrm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(regmmberfrm))
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.memberdata = New System.Windows.Forms.DataGridView()
-        Me.Button12 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.nametxt = New System.Windows.Forms.TextBox()
-        Me.cntcttxt = New System.Windows.Forms.TextBox()
-        Me.svemem = New System.Windows.Forms.Button()
-        Me.Btndel = New System.Windows.Forms.Button()
-        Me.btnupdte = New System.Windows.Forms.Button()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.agetxt = New System.Windows.Forms.TextBox()
-        Me.addresstxt = New System.Windows.Forms.RichTextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.midtxt = New System.Windows.Forms.TextBox()
-        Me.m_dtetxt = New System.Windows.Forms.DateTimePicker()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.mid_txt = New System.Windows.Forms.TextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Btnadd = New System.Windows.Forms.Button()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Button12 = New System.Windows.Forms.Button()
         Me.welcomemsg = New System.Windows.Forms.Label()
+        Me.Btnadd = New System.Windows.Forms.Button()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.mid_txt = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.m_dtetxt = New System.Windows.Forms.DateTimePicker()
+        Me.midtxt = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.addresstxt = New System.Windows.Forms.RichTextBox()
+        Me.agetxt = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.btnupdte = New System.Windows.Forms.Button()
+        Me.Btndel = New System.Windows.Forms.Button()
+        Me.svemem = New System.Windows.Forms.Button()
+        Me.cntcttxt = New System.Windows.Forms.TextBox()
+        Me.nametxt = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.memberdata = New System.Windows.Forms.DataGridView()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.TabControl1.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.memberdata, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
         '
+        Me.TabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(155, 101)
+        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1106, 673)
+        Me.TabControl1.Size = New System.Drawing.Size(1534, 931)
         Me.TabControl1.TabIndex = 0
-        '
-        'TabPage2
-        '
-        Me.TabPage2.Controls.Add(Me.Button6)
-        Me.TabPage2.Controls.Add(Me.Label5)
-        Me.TabPage2.Controls.Add(Me.TextBox1)
-        Me.TabPage2.Controls.Add(Me.memberdata)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1098, 644)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Members Data"
-        Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'Button6
-        '
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.ForeColor = System.Drawing.Color.LightCoral
-        Me.Button6.Location = New System.Drawing.Point(894, 29)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(179, 31)
-        Me.Button6.TabIndex = 317
-        Me.Button6.Text = "&Select Rows to Remove"
-        Me.Button6.UseVisualStyleBackColor = True
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label5.Location = New System.Drawing.Point(150, 49)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(81, 25)
-        Me.Label5.TabIndex = 152
-        Me.Label5.Text = "Search"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(261, 49)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(205, 22)
-        Me.TextBox1.TabIndex = 151
-        '
-        'memberdata
-        '
-        Me.memberdata.AllowUserToAddRows = False
-        Me.memberdata.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
-        Me.memberdata.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.memberdata.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.memberdata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.memberdata.BackgroundColor = System.Drawing.Color.LightCoral
-        Me.memberdata.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.memberdata.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.memberdata.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.memberdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.memberdata.DefaultCellStyle = DataGridViewCellStyle3
-        Me.memberdata.EnableHeadersVisualStyles = False
-        Me.memberdata.GridColor = System.Drawing.Color.LightCoral
-        Me.memberdata.Location = New System.Drawing.Point(7, 100)
-        Me.memberdata.Margin = New System.Windows.Forms.Padding(4)
-        Me.memberdata.Name = "memberdata"
-        Me.memberdata.ReadOnly = True
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.memberdata.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
-        Me.memberdata.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White
-        Me.memberdata.RowsDefaultCellStyle = DataGridViewCellStyle5
-        Me.memberdata.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.memberdata.Size = New System.Drawing.Size(1084, 537)
-        Me.memberdata.TabIndex = 150
-        '
-        'Button12
-        '
-        Me.Button12.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button12.BackColor = System.Drawing.Color.SteelBlue
-        Me.Button12.BackgroundImage = CType(resources.GetObject("Button12.BackgroundImage"), System.Drawing.Image)
-        Me.Button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button12.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Button12.Location = New System.Drawing.Point(1307, 24)
-        Me.Button12.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(31, 30)
-        Me.Button12.TabIndex = 303
-        Me.Button12.UseVisualStyleBackColor = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label1.Location = New System.Drawing.Point(178, 215)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(45, 17)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Name"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label2.Location = New System.Drawing.Point(178, 274)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(56, 17)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Contact"
-        '
-        'nametxt
-        '
-        Me.nametxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nametxt.Location = New System.Drawing.Point(260, 210)
-        Me.nametxt.Name = "nametxt"
-        Me.nametxt.Size = New System.Drawing.Size(183, 22)
-        Me.nametxt.TabIndex = 2
-        '
-        'cntcttxt
-        '
-        Me.cntcttxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cntcttxt.Location = New System.Drawing.Point(260, 269)
-        Me.cntcttxt.Name = "cntcttxt"
-        Me.cntcttxt.Size = New System.Drawing.Size(183, 22)
-        Me.cntcttxt.TabIndex = 3
-        '
-        'svemem
-        '
-        Me.svemem.BackColor = System.Drawing.Color.White
-        Me.svemem.BackgroundImage = CType(resources.GetObject("svemem.BackgroundImage"), System.Drawing.Image)
-        Me.svemem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.svemem.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.svemem.ForeColor = System.Drawing.Color.White
-        Me.svemem.Location = New System.Drawing.Point(926, 39)
-        Me.svemem.Margin = New System.Windows.Forms.Padding(4)
-        Me.svemem.Name = "svemem"
-        Me.svemem.Size = New System.Drawing.Size(36, 33)
-        Me.svemem.TabIndex = 248
-        Me.svemem.UseVisualStyleBackColor = False
-        '
-        'Btndel
-        '
-        Me.Btndel.BackColor = System.Drawing.Color.White
-        Me.Btndel.BackgroundImage = CType(resources.GetObject("Btndel.BackgroundImage"), System.Drawing.Image)
-        Me.Btndel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Btndel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btndel.ForeColor = System.Drawing.Color.White
-        Me.Btndel.Location = New System.Drawing.Point(1032, 39)
-        Me.Btndel.Margin = New System.Windows.Forms.Padding(4)
-        Me.Btndel.Name = "Btndel"
-        Me.Btndel.Size = New System.Drawing.Size(44, 33)
-        Me.Btndel.TabIndex = 253
-        Me.Btndel.UseVisualStyleBackColor = False
-        '
-        'btnupdte
-        '
-        Me.btnupdte.BackColor = System.Drawing.Color.White
-        Me.btnupdte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnupdte.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnupdte.ForeColor = System.Drawing.Color.White
-        Me.btnupdte.Image = CType(resources.GetObject("btnupdte.Image"), System.Drawing.Image)
-        Me.btnupdte.Location = New System.Drawing.Point(979, 39)
-        Me.btnupdte.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnupdte.Name = "btnupdte"
-        Me.btnupdte.Size = New System.Drawing.Size(45, 33)
-        Me.btnupdte.TabIndex = 252
-        Me.btnupdte.UseVisualStyleBackColor = False
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label7.Location = New System.Drawing.Point(982, 76)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(36, 17)
-        Me.Label7.TabIndex = 254
-        Me.Label7.Text = "Edit"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.BackColor = System.Drawing.Color.Transparent
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label15.Location = New System.Drawing.Point(1028, 76)
-        Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(55, 17)
-        Me.Label15.TabIndex = 255
-        Me.Label15.Text = "Delete"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label3.Location = New System.Drawing.Point(920, 76)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(44, 17)
-        Me.Label3.TabIndex = 256
-        Me.Label3.Text = "Save"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label4.Location = New System.Drawing.Point(412, 88)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(332, 44)
-        Me.Label4.TabIndex = 257
-        Me.Label4.Text = "Register Members"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label8.Location = New System.Drawing.Point(178, 329)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(33, 17)
-        Me.Label8.TabIndex = 258
-        Me.Label8.Text = "Age"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label6.Location = New System.Drawing.Point(459, 110)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(60, 17)
-        Me.Label6.TabIndex = 259
-        Me.Label6.Text = "Address"
-        '
-        'agetxt
-        '
-        Me.agetxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.agetxt.Location = New System.Drawing.Point(260, 324)
-        Me.agetxt.Name = "agetxt"
-        Me.agetxt.Size = New System.Drawing.Size(183, 22)
-        Me.agetxt.TabIndex = 260
-        '
-        'addresstxt
-        '
-        Me.addresstxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.addresstxt.Location = New System.Drawing.Point(541, 107)
-        Me.addresstxt.Name = "addresstxt"
-        Me.addresstxt.Size = New System.Drawing.Size(294, 102)
-        Me.addresstxt.TabIndex = 262
-        Me.addresstxt.Text = ""
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label9.Location = New System.Drawing.Point(178, 163)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(70, 17)
-        Me.Label9.TabIndex = 263
-        Me.Label9.Text = "MemberId"
-        '
-        'midtxt
-        '
-        Me.midtxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.midtxt.Location = New System.Drawing.Point(260, 159)
-        Me.midtxt.Name = "midtxt"
-        Me.midtxt.ReadOnly = True
-        Me.midtxt.Size = New System.Drawing.Size(183, 22)
-        Me.midtxt.TabIndex = 264
-        '
-        'm_dtetxt
-        '
-        Me.m_dtetxt.Location = New System.Drawing.Point(262, 375)
-        Me.m_dtetxt.Name = "m_dtetxt"
-        Me.m_dtetxt.Size = New System.Drawing.Size(183, 22)
-        Me.m_dtetxt.TabIndex = 267
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label11.Location = New System.Drawing.Point(180, 380)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(38, 17)
-        Me.Label11.TabIndex = 268
-        Me.Label11.Text = "Date"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.BackColor = System.Drawing.Color.Transparent
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label12.Location = New System.Drawing.Point(1029, 147)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(42, 17)
-        Me.Label12.TabIndex = 269
-        Me.Label12.Text = "Print"
-        Me.Label12.Visible = False
-        '
-        'mid_txt
-        '
-        Me.mid_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.mid_txt.Location = New System.Drawing.Point(260, 105)
-        Me.mid_txt.Name = "mid_txt"
-        Me.mid_txt.ReadOnly = True
-        Me.mid_txt.Size = New System.Drawing.Size(183, 22)
-        Me.mid_txt.TabIndex = 270
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label13.Location = New System.Drawing.Point(178, 110)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(49, 17)
-        Me.Label13.TabIndex = 271
-        Me.Label13.Text = "Entry#"
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.LightCoral
-        Me.Panel1.Controls.Add(Me.Label23)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.ForeColor = System.Drawing.Color.Snow
-        Me.Panel1.Location = New System.Drawing.Point(3, 622)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1092, 19)
-        Me.Panel1.TabIndex = 328
-        '
-        'Label23
-        '
-        Me.Label23.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label23.AutoSize = True
-        Me.Label23.BackColor = System.Drawing.Color.Transparent
-        Me.Label23.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Label23.Font = New System.Drawing.Font("Arial Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.ForeColor = System.Drawing.Color.White
-        Me.Label23.Location = New System.Drawing.Point(855, -6)
-        Me.Label23.Margin = New System.Windows.Forms.Padding(7, 0, 7, 0)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(63, 28)
-        Me.Label23.TabIndex = 302
-        Me.Label23.Text = "Date"
-        Me.Label23.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.BackColor = System.Drawing.Color.Transparent
-        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label19.Location = New System.Drawing.Point(837, 74)
-        Me.Label19.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(71, 17)
-        Me.Label19.TabIndex = 331
-        Me.Label19.Text = "Add New"
-        '
-        'Btnadd
-        '
-        Me.Btnadd.BackColor = System.Drawing.Color.Transparent
-        Me.Btnadd.BackgroundImage = CType(resources.GetObject("Btnadd.BackgroundImage"), System.Drawing.Image)
-        Me.Btnadd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Btnadd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btnadd.ForeColor = System.Drawing.Color.White
-        Me.Btnadd.Location = New System.Drawing.Point(863, 35)
-        Me.Btnadd.Margin = New System.Windows.Forms.Padding(4)
-        Me.Btnadd.Name = "Btnadd"
-        Me.Btnadd.Size = New System.Drawing.Size(45, 35)
-        Me.Btnadd.TabIndex = 330
-        Me.Btnadd.UseVisualStyleBackColor = False
         '
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.White
+        Me.TabPage1.Controls.Add(Me.Button12)
         Me.TabPage1.Controls.Add(Me.welcomemsg)
         Me.TabPage1.Controls.Add(Me.Btnadd)
         Me.TabPage1.Controls.Add(Me.Label19)
@@ -523,12 +117,27 @@ Partial Class regmmberfrm
         Me.TabPage1.Controls.Add(Me.Label2)
         Me.TabPage1.Controls.Add(Me.Label1)
         Me.TabPage1.ForeColor = System.Drawing.Color.LightCoral
-        Me.TabPage1.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 28)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1098, 644)
+        Me.TabPage1.Size = New System.Drawing.Size(1526, 899)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Add new"
+        '
+        'Button12
+        '
+        Me.Button12.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button12.BackColor = System.Drawing.Color.White
+        Me.Button12.BackgroundImage = CType(resources.GetObject("Button12.BackgroundImage"), System.Drawing.Image)
+        Me.Button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button12.ForeColor = System.Drawing.Color.White
+        Me.Button12.Location = New System.Drawing.Point(1486, 73)
+        Me.Button12.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(31, 30)
+        Me.Button12.TabIndex = 303
+        Me.Button12.UseVisualStyleBackColor = False
         '
         'welcomemsg
         '
@@ -536,7 +145,7 @@ Partial Class regmmberfrm
         Me.welcomemsg.BackColor = System.Drawing.Color.White
         Me.welcomemsg.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.welcomemsg.ForeColor = System.Drawing.Color.White
-        Me.welcomemsg.Location = New System.Drawing.Point(222, 514)
+        Me.welcomemsg.Location = New System.Drawing.Point(289, 704)
         Me.welcomemsg.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.welcomemsg.Name = "welcomemsg"
         Me.welcomemsg.Size = New System.Drawing.Size(73, 17)
@@ -544,33 +153,451 @@ Partial Class regmmberfrm
         Me.welcomemsg.Text = "Welcome"
         Me.welcomemsg.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
+        'Btnadd
+        '
+        Me.Btnadd.BackColor = System.Drawing.Color.Transparent
+        Me.Btnadd.BackgroundImage = CType(resources.GetObject("Btnadd.BackgroundImage"), System.Drawing.Image)
+        Me.Btnadd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Btnadd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btnadd.ForeColor = System.Drawing.Color.White
+        Me.Btnadd.Location = New System.Drawing.Point(1267, 731)
+        Me.Btnadd.Margin = New System.Windows.Forms.Padding(4)
+        Me.Btnadd.Name = "Btnadd"
+        Me.Btnadd.Size = New System.Drawing.Size(45, 35)
+        Me.Btnadd.TabIndex = 330
+        Me.Btnadd.UseVisualStyleBackColor = False
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.BackColor = System.Drawing.Color.Transparent
+        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.ForeColor = System.Drawing.Color.LightCoral
+        Me.Label19.Location = New System.Drawing.Point(1241, 770)
+        Me.Label19.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(71, 17)
+        Me.Label19.TabIndex = 331
+        Me.Label19.Text = "Add New"
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.LightCoral
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel1.ForeColor = System.Drawing.Color.Snow
+        Me.Panel1.Location = New System.Drawing.Point(3, 877)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1520, 19)
+        Me.Panel1.TabIndex = 328
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.Label13.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label13.Location = New System.Drawing.Point(343, 267)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(63, 20)
+        Me.Label13.TabIndex = 271
+        Me.Label13.Text = "Entry#"
+        '
+        'mid_txt
+        '
+        Me.mid_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.mid_txt.Location = New System.Drawing.Point(462, 265)
+        Me.mid_txt.Name = "mid_txt"
+        Me.mid_txt.ReadOnly = True
+        Me.mid_txt.Size = New System.Drawing.Size(183, 22)
+        Me.mid_txt.TabIndex = 270
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.BackColor = System.Drawing.Color.Transparent
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.LightCoral
+        Me.Label12.Location = New System.Drawing.Point(1191, 770)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(42, 17)
+        Me.Label12.TabIndex = 269
+        Me.Label12.Text = "Print"
+        Me.Label12.Visible = False
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.Label11.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label11.Location = New System.Drawing.Point(345, 537)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(49, 20)
+        Me.Label11.TabIndex = 268
+        Me.Label11.Text = "Date"
+        '
+        'm_dtetxt
+        '
+        Me.m_dtetxt.Location = New System.Drawing.Point(462, 535)
+        Me.m_dtetxt.Name = "m_dtetxt"
+        Me.m_dtetxt.Size = New System.Drawing.Size(183, 22)
+        Me.m_dtetxt.TabIndex = 267
+        '
+        'midtxt
+        '
+        Me.midtxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.midtxt.Location = New System.Drawing.Point(462, 319)
+        Me.midtxt.Name = "midtxt"
+        Me.midtxt.ReadOnly = True
+        Me.midtxt.Size = New System.Drawing.Size(183, 22)
+        Me.midtxt.TabIndex = 264
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.Label9.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label9.Location = New System.Drawing.Point(343, 320)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(91, 20)
+        Me.Label9.TabIndex = 263
+        Me.Label9.Text = "MemberId"
+        '
+        'addresstxt
+        '
+        Me.addresstxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.addresstxt.Location = New System.Drawing.Point(952, 267)
+        Me.addresstxt.Name = "addresstxt"
+        Me.addresstxt.Size = New System.Drawing.Size(294, 102)
+        Me.addresstxt.TabIndex = 262
+        Me.addresstxt.Text = ""
+        '
+        'agetxt
+        '
+        Me.agetxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.agetxt.Location = New System.Drawing.Point(462, 484)
+        Me.agetxt.Name = "agetxt"
+        Me.agetxt.Size = New System.Drawing.Size(183, 22)
+        Me.agetxt.TabIndex = 260
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.Label6.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label6.Location = New System.Drawing.Point(835, 269)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(78, 20)
+        Me.Label6.TabIndex = 259
+        Me.Label6.Text = "Address"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.Label8.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label8.Location = New System.Drawing.Point(343, 486)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(41, 20)
+        Me.Label8.TabIndex = 258
+        Me.Label8.Text = "Age"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Vivaldi", 36.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.Label4.ForeColor = System.Drawing.Color.LightCoral
+        Me.Label4.Location = New System.Drawing.Point(537, 60)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(436, 71)
+        Me.Label4.TabIndex = 257
+        Me.Label4.Text = "&Register Members"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.LightCoral
+        Me.Label3.Location = New System.Drawing.Point(1324, 772)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(44, 17)
+        Me.Label3.TabIndex = 256
+        Me.Label3.Text = "Save"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.BackColor = System.Drawing.Color.Transparent
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.LightCoral
+        Me.Label15.Location = New System.Drawing.Point(1432, 772)
+        Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(55, 17)
+        Me.Label15.TabIndex = 255
+        Me.Label15.Text = "Delete"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.LightCoral
+        Me.Label7.Location = New System.Drawing.Point(1386, 772)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(36, 17)
+        Me.Label7.TabIndex = 254
+        Me.Label7.Text = "Edit"
+        '
+        'btnupdte
+        '
+        Me.btnupdte.BackColor = System.Drawing.Color.White
+        Me.btnupdte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnupdte.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnupdte.ForeColor = System.Drawing.Color.White
+        Me.btnupdte.Image = CType(resources.GetObject("btnupdte.Image"), System.Drawing.Image)
+        Me.btnupdte.Location = New System.Drawing.Point(1383, 735)
+        Me.btnupdte.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnupdte.Name = "btnupdte"
+        Me.btnupdte.Size = New System.Drawing.Size(45, 33)
+        Me.btnupdte.TabIndex = 252
+        Me.btnupdte.UseVisualStyleBackColor = False
+        '
+        'Btndel
+        '
+        Me.Btndel.BackColor = System.Drawing.Color.White
+        Me.Btndel.BackgroundImage = CType(resources.GetObject("Btndel.BackgroundImage"), System.Drawing.Image)
+        Me.Btndel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Btndel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btndel.ForeColor = System.Drawing.Color.White
+        Me.Btndel.Location = New System.Drawing.Point(1436, 735)
+        Me.Btndel.Margin = New System.Windows.Forms.Padding(4)
+        Me.Btndel.Name = "Btndel"
+        Me.Btndel.Size = New System.Drawing.Size(44, 33)
+        Me.Btndel.TabIndex = 253
+        Me.Btndel.UseVisualStyleBackColor = False
+        '
+        'svemem
+        '
+        Me.svemem.BackColor = System.Drawing.Color.White
+        Me.svemem.BackgroundImage = CType(resources.GetObject("svemem.BackgroundImage"), System.Drawing.Image)
+        Me.svemem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.svemem.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.svemem.ForeColor = System.Drawing.Color.White
+        Me.svemem.Location = New System.Drawing.Point(1330, 735)
+        Me.svemem.Margin = New System.Windows.Forms.Padding(4)
+        Me.svemem.Name = "svemem"
+        Me.svemem.Size = New System.Drawing.Size(36, 33)
+        Me.svemem.TabIndex = 248
+        Me.svemem.UseVisualStyleBackColor = False
+        '
+        'cntcttxt
+        '
+        Me.cntcttxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cntcttxt.Location = New System.Drawing.Point(462, 429)
+        Me.cntcttxt.Name = "cntcttxt"
+        Me.cntcttxt.Size = New System.Drawing.Size(183, 22)
+        Me.cntcttxt.TabIndex = 3
+        '
+        'nametxt
+        '
+        Me.nametxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nametxt.Location = New System.Drawing.Point(462, 370)
+        Me.nametxt.Name = "nametxt"
+        Me.nametxt.Size = New System.Drawing.Size(183, 22)
+        Me.nametxt.TabIndex = 2
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.Label2.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label2.Location = New System.Drawing.Point(343, 431)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(74, 20)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Contact"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.Label1.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label1.Location = New System.Drawing.Point(343, 372)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(57, 20)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Name"
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.RadioButton1)
+        Me.TabPage2.Controls.Add(Me.Label24)
+        Me.TabPage2.Controls.Add(Me.DateTimePicker2)
+        Me.TabPage2.Controls.Add(Me.DateTimePicker1)
+        Me.TabPage2.Controls.Add(Me.Label21)
+        Me.TabPage2.Controls.Add(Me.TextBox3)
+        Me.TabPage2.Controls.Add(Me.Button6)
+        Me.TabPage2.Controls.Add(Me.memberdata)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 28)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(1526, 899)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "Members Data"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'RadioButton1
+        '
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.RadioButton1.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.RadioButton1.Location = New System.Drawing.Point(38, 45)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(169, 24)
+        Me.RadioButton1.TabIndex = 339
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "Search By  Date"
+        Me.RadioButton1.UseVisualStyleBackColor = True
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.Label24.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.Label24.Location = New System.Drawing.Point(257, 72)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(25, 20)
+        Me.Label24.TabIndex = 338
+        Me.Label24.Text = "to"
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.Location = New System.Drawing.Point(307, 72)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(200, 22)
+        Me.DateTimePicker2.TabIndex = 337
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(38, 72)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 22)
+        Me.DateTimePicker1.TabIndex = 336
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.Label21.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.Label21.Location = New System.Drawing.Point(35, 107)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(223, 20)
+        Me.Label21.TabIndex = 335
+        Me.Label21.Text = "Search By Member Name"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(39, 142)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(244, 22)
+        Me.TextBox3.TabIndex = 334
+        '
+        'Button6
+        '
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.ForeColor = System.Drawing.Color.LightCoral
+        Me.Button6.Location = New System.Drawing.Point(1310, 190)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(179, 31)
+        Me.Button6.TabIndex = 317
+        Me.Button6.Text = "&Select Rows to Remove"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'memberdata
+        '
+        Me.memberdata.AllowUserToAddRows = False
+        Me.memberdata.AllowUserToDeleteRows = False
+        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle16.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle16.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle16.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.White
+        Me.memberdata.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle16
+        Me.memberdata.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.memberdata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.memberdata.BackgroundColor = System.Drawing.Color.LightCoral
+        Me.memberdata.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.memberdata.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle17.BackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle17.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.memberdata.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
+        Me.memberdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle18.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle18.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.memberdata.DefaultCellStyle = DataGridViewCellStyle18
+        Me.memberdata.EnableHeadersVisualStyles = False
+        Me.memberdata.GridColor = System.Drawing.Color.LightCoral
+        Me.memberdata.Location = New System.Drawing.Point(7, 252)
+        Me.memberdata.Margin = New System.Windows.Forms.Padding(4)
+        Me.memberdata.Name = "memberdata"
+        Me.memberdata.ReadOnly = True
+        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle19.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle19.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.memberdata.RowHeadersDefaultCellStyle = DataGridViewCellStyle19
+        Me.memberdata.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
+        DataGridViewCellStyle20.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle20.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.White
+        Me.memberdata.RowsDefaultCellStyle = DataGridViewCellStyle20
+        Me.memberdata.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.memberdata.Size = New System.Drawing.Size(1512, 640)
+        Me.memberdata.TabIndex = 150
+        '
         'regmmberfrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
-        Me.ClientSize = New System.Drawing.Size(1351, 820)
-        Me.Controls.Add(Me.Button12)
+        Me.ClientSize = New System.Drawing.Size(1534, 931)
         Me.Controls.Add(Me.TabControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "regmmberfrm"
         Me.Text = "regmmberfrm"
         Me.TabControl1.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         CType(Me.memberdata, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        Me.TabPage1.ResumeLayout(False)
-        Me.TabPage1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
     Friend WithEvents memberdata As System.Windows.Forms.DataGridView
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Button12 As System.Windows.Forms.Button
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
@@ -578,7 +605,6 @@ Partial Class regmmberfrm
     Friend WithEvents Btnadd As System.Windows.Forms.Button
     Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents Label23 As System.Windows.Forms.Label
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents mid_txt As System.Windows.Forms.TextBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
@@ -601,4 +627,11 @@ Partial Class regmmberfrm
     Friend WithEvents nametxt As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
+    Friend WithEvents Label24 As System.Windows.Forms.Label
+    Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Label21 As System.Windows.Forms.Label
+    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
 End Class
