@@ -38,7 +38,7 @@ Public Class reservationfrm
     Private Sub insert()
         dbaccessconnection()
         con.Open()
-        cmd.CommandText = "insert into tbl_reservation(R_Entryno,Re_id,Rate_ID,Service_Name,Gender,Service_Description,Member_ID,Memebr_name,m_contactinfo,m_age,m_address,Reservation_Date,Reservation_Time,R_Date)values('" & reentry_txt.Text & "','" & resid_txt.Text & "','" & rid_txt.Text & "','" & rese_sertxt.Text & "','" & re_gendrtxt.Text & "','" & re_serdescriptiontxt.Text & "','" & mid_txt.Text & "','" & re_mname_txt.Text & "','" & re_membercntct_txt.Text & "','" & re_memberage_txt.Text & "','" & re_memberadress_txt.Text & "','" & dte_txt.Value & "','" & rese_time.Value & "','" & reservedon_txt.Value & "')"
+        cmd.CommandText = "insert into tbl_reservation(R_Entryno,Re_id,Rate_ID,Service_Name,Gender,Service_Description,Member_ID,Memebr_name,m_contactinfo,m_age,m_address,Reservation_Date,Reservation_Time,R_Date,Reservation_Status)values('" & reentry_txt.Text & "','" & resid_txt.Text & "','" & rid_txt.Text & "','" & rese_sertxt.Text & "','" & re_gendrtxt.Text & "','" & re_serdescriptiontxt.Text & "','" & mid_txt.Text & "','" & re_mname_txt.Text & "','" & re_membercntct_txt.Text & "','" & re_memberage_txt.Text & "','" & re_memberadress_txt.Text & "','" & dte_txt.Value & "','" & rese_time.Value & "','" & reservedon_txt.Value & "','" & pending_txt.Text & "')"
         cmd.ExecuteNonQuery()
         Label4.Text = "'" & re_mname_txt.Text & "' reserve details saved successfully!"
         con.Close()
@@ -527,5 +527,15 @@ Public Class reservationfrm
 
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
         ratesfrm.Show()
+    End Sub
+
+   
+
+    Private Sub rese_sertxtt_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rese_sertxtt.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub rese_sertxtt_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles rese_sertxtt.TextChanged
+        s_nameadd()
     End Sub
 End Class

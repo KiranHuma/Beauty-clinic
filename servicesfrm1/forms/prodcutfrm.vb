@@ -45,7 +45,7 @@ Public Class prodcutfrm
     Private Sub insert()
         dbaccessconnection()
         con.Open()
-        cmd.CommandText = "insert into tbl_products(pro_id,P_id,p_name,p_price,p_dte,p_description,photo)values('" & pro_txt.Text & "','" & pid_txt.Text & "','" & name_txt.Text & "','" & price_txt.Text & "','" & p_dtetxt.Value & "','" & des_txt.Text & "',@photo)"
+        cmd.CommandText = "insert into tbl_products(pro_id,P_id,P_name,p_price,p_dte,p_description,photo)values('" & pro_txt.Text & "','" & pid_txt.Text & "','" & name_txt.Text & "','" & price_txt.Text & "','" & p_dtetxt.Value & "','" & des_txt.Text & "',@photo)"
         Dim ms As New MemoryStream()
         Dim bmpImage As New Bitmap(photo.Image)
         bmpImage.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg)
@@ -70,7 +70,7 @@ Public Class prodcutfrm
             TabControl1.SelectedTab = TabPage2
         Else
 
-                cmd.CommandText = ("UPDATE tbl_products SET  pro_id= '" & pro_txt.Text & "', P_id= '" & pid_txt.Text & "',p_name= '" & name_txt.Text & "',p_price= '" & price_txt.Text & "',p_dte= '" & p_dtetxt.Value & "',p_description= '" & des_txt.Text & "',photo=@photo where pro_id=" & pro_txt.Text & "")
+                cmd.CommandText = ("UPDATE tbl_products SET  pro_id= '" & pro_txt.Text & "', P_id= '" & pid_txt.Text & "',P_name= '" & name_txt.Text & "',p_price= '" & price_txt.Text & "',p_dte= '" & p_dtetxt.Value & "',p_description= '" & des_txt.Text & "',photo=@photo where pro_id=" & pro_txt.Text & "")
             Dim ms As New MemoryStream()
             Dim bmpImage As New Bitmap(photo.Image)
             bmpImage.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg)
@@ -165,13 +165,13 @@ Public Class prodcutfrm
             myConnToAccess.Open()
             ds = New DataSet
             tables = ds.Tables
-            da = New SqlDataAdapter("SELECT p_name from tbl_products", myConnToAccess)
+            da = New SqlDataAdapter("SELECT P_name from tbl_products", myConnToAccess)
             da.Fill(ds, "tbl_products")
             Dim view1 As New DataView(tables(0))
             With name_txt
                 .DataSource = ds.Tables("tbl_products")
-                .DisplayMember = "p_name"
-                .ValueMember = "p_name"
+                .DisplayMember = "P_name"
+                .ValueMember = "P_name"
                 .SelectedIndex = -1
                 .AutoCompleteMode = AutoCompleteMode.SuggestAppend
                 .AutoCompleteSource = AutoCompleteSource.ListItems
