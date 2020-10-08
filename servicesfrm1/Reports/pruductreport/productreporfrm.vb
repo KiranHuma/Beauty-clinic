@@ -33,17 +33,24 @@ Public Class productreporfrm
         End Try
     End Sub
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        Dim cn As New SqlConnection
-        Dim ds As New DataSet
-        Dim dt As New DataTable
-        Dim dfrom As DateTime = DateTimePicker1.Value
-        Dim dto As DateTime = DateTimePicker2.Value
-        cn.ConnectionString = cs
-        cn.Open()
-        Dim str As String = "select pro_id,P_id,p_name,p_price,p_description,p_typ,p_dte from tbl_products where p_dte >= '" & Format(dfrom, "MM-dd-yyyy") & "' and p_dte <='" & Format(dto, "MM-dd-yyyy") & "'"
-        Dim da As SqlDataAdapter = New SqlDataAdapter(str, cn)
-        da.Fill(dt)
-        DataGridView1.DataSource = dt
+        Try
+            Dim cn As New SqlConnection
+            Dim ds As New DataSet
+            Dim dt As New DataTable
+            Dim dfrom As DateTime = DateTimePicker1.Value
+            Dim dto As DateTime = DateTimePicker2.Value
+            cn.ConnectionString = cs
+            cn.Open()
+            Dim str As String = "select pro_id,P_id,p_name,p_price,p_dte,p_description from tbl_products where p_dte >= '" & Format(dfrom, "MM-dd-yyyy") & "' and p_dte <='" & Format(dto, "MM-dd-yyyy") & "'"
+            Dim da As SqlDataAdapter = New SqlDataAdapter(str, cn)
+            da.Fill(dt)
+            DataGridView1.DataSource = dt
+            Button2.Enabled = True
+            Button3.Enabled = True
+            Button4.Enabled = True
+        Catch ex As Exception
+            MsgBox("Failed:Get Data " & ex.Message)
+        End Try
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
@@ -59,7 +66,7 @@ Public Class productreporfrm
             Dim dfrom As DateTime = DateTimePicker1.Value
             Dim dto As DateTime = DateTimePicker2.Value
             MyCommand.Connection = myConnection
-            MyCommand.CommandText = "select pro_id,P_id,p_name,p_price,p_description,p_typ,p_dte  from tbl_products  where p_dte  >= '" & Format(dfrom, "MM-dd-yyyy") & "' and p_dte <='" & Format(dto, "MM-dd-yyyy") & "'"
+            MyCommand.CommandText = "select pro_id,P_id,p_name,p_price,p_dte,p_description from tbl_products  where p_dte  >= '" & Format(dfrom, "MM-dd-yyyy") & "' and p_dte <='" & Format(dto, "MM-dd-yyyy") & "'"
             MyCommand.CommandType = CommandType.Text
             myDA.SelectCommand = MyCommand
             myDA.Fill(myDS, "tbl_products")
@@ -171,6 +178,16 @@ Public Class productreporfrm
     End Sub
 
     Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+    Private Sub Button4_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button4.MouseHover
+
+        ToolTip1.IsBalloon = True
+        ToolTip1.UseAnimation = True
+        ToolTip1.ToolTipTitle = ""
+        ToolTip1.SetToolTip(Button4, "Get Data By Clicking on Get data Button")
+
 
     End Sub
 End Class

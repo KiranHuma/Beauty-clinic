@@ -289,7 +289,7 @@ Public Class prodcutfrm
     End Sub
     'report button
     Private Sub Label9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label9.Click
-        productreporfrm.Show()
+
     End Sub
     'grid mouseclick
     Private Sub get_productdata_CellMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles get_productdata.CellMouseClick
@@ -674,5 +674,9 @@ Public Class prodcutfrm
         ToolTip1.UseAnimation = True
         ToolTip1.ToolTipTitle = ""
         ToolTip1.SetToolTip(select_delet, "Select the one field or more from Grid to Remove")
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        productreporfrm.Show()
     End Sub
 End Class
