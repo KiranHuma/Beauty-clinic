@@ -529,6 +529,7 @@ Partial Class prodcutfrm
         '
         'TabPage2
         '
+        Me.TabPage2.BackColor = System.Drawing.Color.White
         Me.TabPage2.Controls.Add(Me.Panel3)
         Me.TabPage2.Controls.Add(Me.Label2)
         Me.TabPage2.Controls.Add(Me.RadioButton1)
@@ -544,7 +545,6 @@ Partial Class prodcutfrm
         Me.TabPage2.Size = New System.Drawing.Size(1526, 899)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "View Product Data"
-        Me.TabPage2.UseVisualStyleBackColor = True
         '
         'Panel3
         '
@@ -573,7 +573,7 @@ Partial Class prodcutfrm
         Me.get_productdata.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.LightCoral
@@ -582,7 +582,7 @@ Partial Class prodcutfrm
         Me.get_productdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle3.ForeColor = System.Drawing.Color.LightCoral
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightCoral
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
@@ -597,7 +597,7 @@ Partial Class prodcutfrm
         Me.get_productdata.ReadOnly = True
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle4.ForeColor = System.Drawing.Color.LightCoral
         DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightCoral
         DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White
@@ -1039,6 +1039,7 @@ Partial Class prodcutfrm
         '
         'TabPage4
         '
+        Me.TabPage4.BackColor = System.Drawing.Color.White
         Me.TabPage4.Controls.Add(Me.Panel4)
         Me.TabPage4.Controls.Add(Me.Label29)
         Me.TabPage4.Controls.Add(Me.RadioButton2)
@@ -1053,7 +1054,6 @@ Partial Class prodcutfrm
         Me.TabPage4.Size = New System.Drawing.Size(1526, 899)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Services Data"
-        Me.TabPage4.UseVisualStyleBackColor = True
         '
         'Panel4
         '
@@ -1185,7 +1185,7 @@ Partial Class prodcutfrm
         Me.select_delet.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.select_delet.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold)
         Me.select_delet.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.select_delet.Location = New System.Drawing.Point(1190, 89)
+        Me.select_delet.Location = New System.Drawing.Point(1277, 133)
         Me.select_delet.Margin = New System.Windows.Forms.Padding(4)
         Me.select_delet.Name = "select_delet"
         Me.select_delet.Size = New System.Drawing.Size(206, 31)

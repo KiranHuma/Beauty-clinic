@@ -556,11 +556,12 @@ Public Class prodcutfrm
             get_productdata.DataSource = dt
             myConnection.Close()
             get_productdata.Refresh()
+            RadioButton1.Checked = False
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Failed:Date Search", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Me.Dispose()
         End Try
-        ' RadioButton1.Checked = False
+
     End Sub
     Private Sub search_txt()
         Dim str As String
@@ -600,11 +601,12 @@ Public Class prodcutfrm
             sergetdata.DataSource = dt
             myConnection.Close()
             sergetdata.Refresh()
+            RadioButton2.Checked = False
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Failed:Date Search", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Me.Dispose()
         End Try
-        ' RadioButton1.Checked = False
+
     End Sub
     Private Sub services_search_txt()
         Dim str As String
@@ -658,5 +660,19 @@ Public Class prodcutfrm
             ToolTip1.ToolTipTitle = ""
             ToolTip1.SetToolTip(Label20, "Click to Edit")
         End If
+    End Sub
+
+    Private Sub Button6_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button6.MouseHover
+        ToolTip1.IsBalloon = True
+        ToolTip1.UseAnimation = True
+        ToolTip1.ToolTipTitle = ""
+        ToolTip1.SetToolTip(Button6, "Select the one field or more from Grid to Remove")
+    End Sub
+
+    Private Sub select_delet_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles select_delet.MouseHover
+        ToolTip1.IsBalloon = True
+        ToolTip1.UseAnimation = True
+        ToolTip1.ToolTipTitle = ""
+        ToolTip1.SetToolTip(select_delet, "Select the one field or more from Grid to Remove")
     End Sub
 End Class

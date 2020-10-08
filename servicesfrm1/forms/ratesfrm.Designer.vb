@@ -23,35 +23,40 @@ Partial Class ratesfrm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle34 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle35 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle106 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle107 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle108 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle109 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle110 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ratesfrm))
-        Dim DataGridViewCellStyle36 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle37 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle38 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle39 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle40 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle41 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle42 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle43 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle44 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle45 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle111 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle112 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle113 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle114 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle115 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle116 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle117 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle118 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle119 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle120 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle121 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle122 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle123 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle124 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle125 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle101 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle102 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle103 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle104 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle105 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Label19 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.transactiondte_txt = New System.Windows.Forms.DateTimePicker()
-        Me.transactionid_txt = New System.Windows.Forms.TextBox()
-        Me.mbid_txt = New System.Windows.Forms.TextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label31 = New System.Windows.Forms.Label()
-        Me.mname_txt = New System.Windows.Forms.ComboBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.pro_single_totalbill = New System.Windows.Forms.Label()
         Me.Label33 = New System.Windows.Forms.Label()
@@ -60,7 +65,6 @@ Partial Class ratesfrm
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.pro2_gird = New System.Windows.Forms.DataGridView()
-        Me.Button6 = New System.Windows.Forms.Button()
         Me.unitprce_txt = New System.Windows.Forms.TextBox()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.pname_txt = New System.Windows.Forms.ComboBox()
@@ -82,24 +86,20 @@ Partial Class ratesfrm
         Me.Label45 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.single_dis_txt = New System.Windows.Forms.TextBox()
-        Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.discount_txt = New System.Windows.Forms.TextBox()
-        Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label41 = New System.Windows.Forms.Label()
-        Me.p_date_txt = New System.Windows.Forms.DateTimePicker()
-        Me.totalbill_txt = New System.Windows.Forms.TextBox()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.totalbillafterdis_txt = New System.Windows.Forms.TextBox()
-        Me.Label40 = New System.Windows.Forms.Label()
-        Me.Label38 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.message_txt = New System.Windows.Forms.Label()
-        Me.ssale_txt = New System.Windows.Forms.Label()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.transactiondte_txt = New System.Windows.Forms.DateTimePicker()
+        Me.transactionid_txt = New System.Windows.Forms.TextBox()
+        Me.mbid_txt = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.mname_txt = New System.Windows.Forms.ComboBox()
+        Me.Button12 = New System.Windows.Forms.Button()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.message_txt = New System.Windows.Forms.Label()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.p_addbtn = New System.Windows.Forms.Button()
         Me.p_delbtn = New System.Windows.Forms.Button()
@@ -115,6 +115,7 @@ Partial Class ratesfrm
         Me.totalofser_pro_outdis = New System.Windows.Forms.TextBox()
         Me.total_ser_pro_withdis = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Label23 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.sertotal_bill = New System.Windows.Forms.Label()
         Me.Label35 = New System.Windows.Forms.Label()
@@ -124,7 +125,6 @@ Partial Class ratesfrm
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ser2_grid = New System.Windows.Forms.DataGridView()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
         Me.s_rateid_txt = New System.Windows.Forms.ComboBox()
         Me.Label36 = New System.Windows.Forms.Label()
@@ -155,17 +155,29 @@ Partial Class ratesfrm
         Me.Button8 = New System.Windows.Forms.Button()
         Me.p_removebtn = New System.Windows.Forms.Button()
         Me.payment_grid = New System.Windows.Forms.DataGridView()
-        Me.Button12 = New System.Windows.Forms.Button()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.prodcut_getdata = New System.Windows.Forms.DataGridView()
+        Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.serv_getdata = New System.Windows.Forms.DataGridView()
+        Me.RadioButton5 = New System.Windows.Forms.RadioButton()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Label15 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage3.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        Me.GroupBox5.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.pro2_gird, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel8.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -173,140 +185,75 @@ Partial Class ratesfrm
         Me.TabPage2.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         CType(Me.payment_grid, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage4.SuspendLayout()
+        CType(Me.prodcut_getdata, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage5.SuspendLayout()
+        CType(Me.serv_getdata, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
         '
+        Me.TabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(28, 41)
+        Me.TabControl1.Controls.Add(Me.TabPage4)
+        Me.TabControl1.Controls.Add(Me.TabPage5)
+        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1512, 823)
+        Me.TabControl1.Size = New System.Drawing.Size(1534, 1102)
         Me.TabControl1.TabIndex = 274
         '
         'TabPage3
         '
+        Me.TabPage3.BackColor = System.Drawing.Color.White
+        Me.TabPage3.Controls.Add(Me.Label19)
         Me.TabPage3.Controls.Add(Me.Panel2)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage3.Controls.Add(Me.GroupBox1)
+        Me.TabPage3.Controls.Add(Me.GroupBox5)
+        Me.TabPage3.Controls.Add(Me.Button12)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 28)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(1504, 794)
+        Me.TabPage3.Size = New System.Drawing.Size(1526, 1070)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Product Transaction"
-        Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Vivaldi", 36.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.Label19.ForeColor = System.Drawing.Color.LightCoral
+        Me.Label19.Location = New System.Drawing.Point(529, 3)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(466, 71)
+        Me.Label19.TabIndex = 385
+        Me.Label19.Text = "&Product Transaction"
         '
         'Panel2
         '
-        Me.Panel2.Controls.Add(Me.GroupBox5)
-        Me.Panel2.Controls.Add(Me.GroupBox1)
-        Me.Panel2.Controls.Add(Me.Panel8)
-        Me.Panel2.Controls.Add(Me.Label38)
-        Me.Panel2.Controls.Add(Me.TextBox5)
-        Me.Panel2.Controls.Add(Me.message_txt)
-        Me.Panel2.Controls.Add(Me.ssale_txt)
-        Me.Panel2.Location = New System.Drawing.Point(7, 6)
+        Me.Panel2.BackColor = System.Drawing.Color.LightCoral
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel2.ForeColor = System.Drawing.Color.Snow
+        Me.Panel2.Location = New System.Drawing.Point(3, 1048)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1406, 769)
-        Me.Panel2.TabIndex = 341
-        '
-        'GroupBox5
-        '
-        Me.GroupBox5.BackColor = System.Drawing.Color.SteelBlue
-        Me.GroupBox5.Controls.Add(Me.Label6)
-        Me.GroupBox5.Controls.Add(Me.transactiondte_txt)
-        Me.GroupBox5.Controls.Add(Me.transactionid_txt)
-        Me.GroupBox5.Controls.Add(Me.mbid_txt)
-        Me.GroupBox5.Controls.Add(Me.Label12)
-        Me.GroupBox5.Controls.Add(Me.Label11)
-        Me.GroupBox5.Controls.Add(Me.Label31)
-        Me.GroupBox5.Controls.Add(Me.mname_txt)
-        Me.GroupBox5.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.GroupBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox5.Location = New System.Drawing.Point(18, 19)
-        Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(1370, 129)
-        Me.GroupBox5.TabIndex = 383
-        Me.GroupBox5.TabStop = False
-        Me.GroupBox5.Text = "Members"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(901, 50)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(133, 17)
-        Me.Label6.TabIndex = 379
-        Me.Label6.Text = "Transaction Date"
-        '
-        'transactiondte_txt
-        '
-        Me.transactiondte_txt.Location = New System.Drawing.Point(1053, 45)
-        Me.transactiondte_txt.Name = "transactiondte_txt"
-        Me.transactiondte_txt.Size = New System.Drawing.Size(234, 22)
-        Me.transactiondte_txt.TabIndex = 378
-        '
-        'transactionid_txt
-        '
-        Me.transactionid_txt.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.transactionid_txt.Location = New System.Drawing.Point(556, 21)
-        Me.transactionid_txt.Name = "transactionid_txt"
-        Me.transactionid_txt.ReadOnly = True
-        Me.transactionid_txt.Size = New System.Drawing.Size(216, 22)
-        Me.transactionid_txt.TabIndex = 376
-        '
-        'mbid_txt
-        '
-        Me.mbid_txt.Location = New System.Drawing.Point(556, 87)
-        Me.mbid_txt.Name = "mbid_txt"
-        Me.mbid_txt.Size = New System.Drawing.Size(216, 22)
-        Me.mbid_txt.TabIndex = 374
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(435, 59)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(111, 17)
-        Me.Label12.TabIndex = 373
-        Me.Label12.Text = "Member Name"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(446, 92)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(85, 17)
-        Me.Label11.TabIndex = 372
-        Me.Label11.Text = "Member ID"
-        '
-        'Label31
-        '
-        Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(423, 21)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(108, 17)
-        Me.Label31.TabIndex = 375
-        Me.Label31.Text = "Transaction #"
-        '
-        'mname_txt
-        '
-        Me.mname_txt.FormattingEnabled = True
-        Me.mname_txt.Location = New System.Drawing.Point(556, 59)
-        Me.mname_txt.Name = "mname_txt"
-        Me.mname_txt.Size = New System.Drawing.Size(216, 24)
-        Me.mname_txt.TabIndex = 377
+        Me.Panel2.Size = New System.Drawing.Size(1520, 19)
+        Me.Panel2.TabIndex = 384
         '
         'GroupBox1
         '
-        Me.GroupBox1.BackColor = System.Drawing.Color.SteelBlue
+        Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.BackColor = System.Drawing.Color.White
+        Me.GroupBox1.Controls.Add(Me.TextBox5)
+        Me.GroupBox1.Controls.Add(Me.Label13)
         Me.GroupBox1.Controls.Add(Me.Label15)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.TextBox2)
         Me.GroupBox1.Controls.Add(Me.pro2_gird)
-        Me.GroupBox1.Controls.Add(Me.Button6)
         Me.GroupBox1.Controls.Add(Me.unitprce_txt)
         Me.GroupBox1.Controls.Add(Me.RichTextBox1)
         Me.GroupBox1.Controls.Add(Me.pname_txt)
@@ -330,12 +277,39 @@ Partial Class ratesfrm
         Me.GroupBox1.Controls.Add(Me.single_dis_txt)
         Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(18, 154)
+        Me.GroupBox1.ForeColor = System.Drawing.Color.SteelBlue
+        Me.GroupBox1.Location = New System.Drawing.Point(46, 405)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1370, 579)
+        Me.GroupBox1.Size = New System.Drawing.Size(1379, 605)
         Me.GroupBox1.TabIndex = 381
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Product Sale"
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(589, 251)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox5.TabIndex = 402
+        Me.TextBox5.Visible = False
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(43, 339)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(189, 17)
+        Me.Label13.TabIndex = 401
+        Me.Label13.Text = "Search By Product Name"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(43, 277)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(69, 17)
+        Me.Label15.TabIndex = 400
+        Me.Label15.Text = "Quantity"
         '
         'GroupBox2
         '
@@ -362,11 +336,11 @@ Partial Class ratesfrm
         'Label33
         '
         Me.Label33.AutoSize = True
-        Me.Label33.Location = New System.Drawing.Point(94, 27)
+        Me.Label33.Location = New System.Drawing.Point(110, 36)
         Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(211, 17)
+        Me.Label33.Size = New System.Drawing.Size(196, 17)
         Me.Label33.TabIndex = 317
-        Me.Label33.Text = "Total Price without Discount"
+        Me.Label33.Text = "Total Bill without Discount"
         '
         'uinttotalprice_txt
         '
@@ -397,7 +371,7 @@ Partial Class ratesfrm
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(953, 453)
+        Me.TextBox2.Location = New System.Drawing.Point(43, 359)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(263, 22)
         Me.TextBox2.TabIndex = 394
@@ -406,70 +380,61 @@ Partial Class ratesfrm
         '
         Me.pro2_gird.AllowUserToAddRows = False
         Me.pro2_gird.AllowUserToDeleteRows = False
-        DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle31.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle31.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle31.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.White
-        Me.pro2_gird.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle31
+        DataGridViewCellStyle106.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle106.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle106.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle106.ForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle106.SelectionBackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle106.SelectionForeColor = System.Drawing.Color.White
+        Me.pro2_gird.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle106
         Me.pro2_gird.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pro2_gird.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.pro2_gird.BackgroundColor = System.Drawing.Color.LightCoral
+        Me.pro2_gird.BackgroundColor = System.Drawing.Color.SteelBlue
         Me.pro2_gird.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.pro2_gird.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
-        DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle32.BackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle32.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle32.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.pro2_gird.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle32
+        DataGridViewCellStyle107.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle107.BackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle107.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle107.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle107.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle107.SelectionForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle107.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.pro2_gird.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle107
         Me.pro2_gird.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle33.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle33.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle33.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.pro2_gird.DefaultCellStyle = DataGridViewCellStyle33
+        DataGridViewCellStyle108.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle108.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle108.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle108.ForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle108.SelectionBackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle108.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle108.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.pro2_gird.DefaultCellStyle = DataGridViewCellStyle108
         Me.pro2_gird.EnableHeadersVisualStyles = False
-        Me.pro2_gird.GridColor = System.Drawing.Color.LightCoral
-        Me.pro2_gird.Location = New System.Drawing.Point(50, 337)
+        Me.pro2_gird.GridColor = System.Drawing.Color.SteelBlue
+        Me.pro2_gird.Location = New System.Drawing.Point(22, 388)
         Me.pro2_gird.Margin = New System.Windows.Forms.Padding(4)
         Me.pro2_gird.Name = "pro2_gird"
         Me.pro2_gird.ReadOnly = True
-        DataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle34.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle34.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle34.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.pro2_gird.RowHeadersDefaultCellStyle = DataGridViewCellStyle34
+        DataGridViewCellStyle109.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle109.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle109.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle109.ForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle109.SelectionBackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle109.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle109.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.pro2_gird.RowHeadersDefaultCellStyle = DataGridViewCellStyle109
         Me.pro2_gird.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        DataGridViewCellStyle35.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle35.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.White
-        Me.pro2_gird.RowsDefaultCellStyle = DataGridViewCellStyle35
+        DataGridViewCellStyle110.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle110.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
+        DataGridViewCellStyle110.ForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle110.SelectionBackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle110.SelectionForeColor = System.Drawing.Color.White
+        Me.pro2_gird.RowsDefaultCellStyle = DataGridViewCellStyle110
         Me.pro2_gird.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.pro2_gird.Size = New System.Drawing.Size(864, 222)
+        Me.pro2_gird.Size = New System.Drawing.Size(1335, 199)
         Me.pro2_gird.TabIndex = 393
-        '
-        'Button6
-        '
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Location = New System.Drawing.Point(1053, 493)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(74, 27)
-        Me.Button6.TabIndex = 395
-        Me.Button6.Text = "Search ProductName"
-        Me.Button6.UseVisualStyleBackColor = True
         '
         'unitprce_txt
         '
@@ -543,7 +508,7 @@ Partial Class ratesfrm
         '
         Me.Button1.Location = New System.Drawing.Point(359, 178)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(88, 23)
+        Me.Button1.Size = New System.Drawing.Size(103, 32)
         Me.Button1.TabIndex = 351
         Me.Button1.Text = "Calculate "
         Me.Button1.UseVisualStyleBackColor = True
@@ -652,169 +617,116 @@ Partial Class ratesfrm
         Me.single_dis_txt.TabIndex = 384
         Me.single_dis_txt.Text = "0"
         '
-        'Panel8
+        'GroupBox5
         '
-        Me.Panel8.Controls.Add(Me.Button4)
-        Me.Panel8.Controls.Add(Me.discount_txt)
-        Me.Panel8.Controls.Add(Me.RichTextBox3)
-        Me.Panel8.Controls.Add(Me.Label13)
-        Me.Panel8.Controls.Add(Me.Button3)
-        Me.Panel8.Controls.Add(Me.Label23)
-        Me.Panel8.Controls.Add(Me.Label41)
-        Me.Panel8.Controls.Add(Me.p_date_txt)
-        Me.Panel8.Controls.Add(Me.totalbill_txt)
-        Me.Panel8.Controls.Add(Me.Label37)
-        Me.Panel8.Controls.Add(Me.totalbillafterdis_txt)
-        Me.Panel8.Controls.Add(Me.Label40)
-        Me.Panel8.Location = New System.Drawing.Point(1782, 19)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(10, 33)
-        Me.Panel8.TabIndex = 380
-        Me.Panel8.Visible = False
+        Me.GroupBox5.BackColor = System.Drawing.Color.White
+        Me.GroupBox5.Controls.Add(Me.Label6)
+        Me.GroupBox5.Controls.Add(Me.transactiondte_txt)
+        Me.GroupBox5.Controls.Add(Me.transactionid_txt)
+        Me.GroupBox5.Controls.Add(Me.mbid_txt)
+        Me.GroupBox5.Controls.Add(Me.Label12)
+        Me.GroupBox5.Controls.Add(Me.Label11)
+        Me.GroupBox5.Controls.Add(Me.Label31)
+        Me.GroupBox5.Controls.Add(Me.mname_txt)
+        Me.GroupBox5.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.GroupBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox5.ForeColor = System.Drawing.Color.SteelBlue
+        Me.GroupBox5.Location = New System.Drawing.Point(46, 72)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(1379, 122)
+        Me.GroupBox5.TabIndex = 383
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "Members"
         '
-        'Button4
+        'Label6
         '
-        Me.Button4.Location = New System.Drawing.Point(226, 41)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(222, 31)
-        Me.Button4.TabIndex = 370
-        Me.Button4.Text = "Add service and product totall"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(902, 69)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(133, 17)
+        Me.Label6.TabIndex = 379
+        Me.Label6.Text = "Transaction Date"
         '
-        'discount_txt
+        'transactiondte_txt
         '
-        Me.discount_txt.Location = New System.Drawing.Point(229, 124)
-        Me.discount_txt.Name = "discount_txt"
-        Me.discount_txt.Size = New System.Drawing.Size(216, 22)
-        Me.discount_txt.TabIndex = 299
+        Me.transactiondte_txt.Location = New System.Drawing.Point(1054, 64)
+        Me.transactiondte_txt.Name = "transactiondte_txt"
+        Me.transactiondte_txt.Size = New System.Drawing.Size(234, 22)
+        Me.transactiondte_txt.TabIndex = 378
         '
-        'RichTextBox3
+        'transactionid_txt
         '
-        Me.RichTextBox3.Location = New System.Drawing.Point(226, 230)
-        Me.RichTextBox3.Name = "RichTextBox3"
-        Me.RichTextBox3.Size = New System.Drawing.Size(222, 96)
-        Me.RichTextBox3.TabIndex = 369
-        Me.RichTextBox3.Text = ""
+        Me.transactionid_txt.ForeColor = System.Drawing.SystemColors.InfoText
+        Me.transactionid_txt.Location = New System.Drawing.Point(567, 21)
+        Me.transactionid_txt.Name = "transactionid_txt"
+        Me.transactionid_txt.ReadOnly = True
+        Me.transactionid_txt.Size = New System.Drawing.Size(216, 22)
+        Me.transactionid_txt.TabIndex = 376
         '
-        'Label13
+        'mbid_txt
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(114, 124)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(85, 17)
-        Me.Label13.TabIndex = 297
-        Me.Label13.Text = "Discount(%)"
+        Me.mbid_txt.Location = New System.Drawing.Point(567, 87)
+        Me.mbid_txt.Name = "mbid_txt"
+        Me.mbid_txt.ReadOnly = True
+        Me.mbid_txt.Size = New System.Drawing.Size(216, 22)
+        Me.mbid_txt.TabIndex = 374
         '
-        'Button3
+        'Label12
         '
-        Me.Button3.Location = New System.Drawing.Point(469, 159)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(93, 23)
-        Me.Button3.TabIndex = 367
-        Me.Button3.Text = "Calculate"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(446, 59)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(111, 17)
+        Me.Label12.TabIndex = 373
+        Me.Label12.Text = "Member Name"
         '
-        'Label23
+        'Label11
         '
-        Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(88, 197)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(117, 17)
-        Me.Label23.TabIndex = 312
-        Me.Label23.Text = "Transaction Date"
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(457, 92)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(85, 17)
+        Me.Label11.TabIndex = 372
+        Me.Label11.Text = "Member ID"
         '
-        'Label41
+        'Label31
         '
-        Me.Label41.AutoSize = True
-        Me.Label41.Location = New System.Drawing.Point(125, 270)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(64, 17)
-        Me.Label41.TabIndex = 378
-        Me.Label41.Text = "Remarks"
+        Me.Label31.AutoSize = True
+        Me.Label31.Location = New System.Drawing.Point(434, 21)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(108, 17)
+        Me.Label31.TabIndex = 375
+        Me.Label31.Text = "Transaction #"
         '
-        'p_date_txt
+        'mname_txt
         '
-        Me.p_date_txt.Location = New System.Drawing.Point(229, 192)
-        Me.p_date_txt.Name = "p_date_txt"
-        Me.p_date_txt.Size = New System.Drawing.Size(216, 22)
-        Me.p_date_txt.TabIndex = 313
+        Me.mname_txt.FormattingEnabled = True
+        Me.mname_txt.Location = New System.Drawing.Point(567, 59)
+        Me.mname_txt.Name = "mname_txt"
+        Me.mname_txt.Size = New System.Drawing.Size(216, 24)
+        Me.mname_txt.TabIndex = 377
         '
-        'totalbill_txt
+        'Button12
         '
-        Me.totalbill_txt.Location = New System.Drawing.Point(229, 87)
-        Me.totalbill_txt.Name = "totalbill_txt"
-        Me.totalbill_txt.Size = New System.Drawing.Size(216, 22)
-        Me.totalbill_txt.TabIndex = 318
-        '
-        'Label37
-        '
-        Me.Label37.AutoSize = True
-        Me.Label37.Location = New System.Drawing.Point(55, 87)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(168, 17)
-        Me.Label37.TabIndex = 358
-        Me.Label37.Text = "Total sevice and product "
-        '
-        'totalbillafterdis_txt
-        '
-        Me.totalbillafterdis_txt.Location = New System.Drawing.Point(229, 159)
-        Me.totalbillafterdis_txt.Name = "totalbillafterdis_txt"
-        Me.totalbillafterdis_txt.Size = New System.Drawing.Size(216, 22)
-        Me.totalbillafterdis_txt.TabIndex = 363
-        '
-        'Label40
-        '
-        Me.Label40.AutoSize = True
-        Me.Label40.Location = New System.Drawing.Point(155, 159)
-        Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(40, 17)
-        Me.Label40.TabIndex = 364
-        Me.Label40.Text = "Total"
-        '
-        'Label38
-        '
-        Me.Label38.AutoSize = True
-        Me.Label38.Location = New System.Drawing.Point(1284, 829)
-        Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(92, 17)
-        Me.Label38.TabIndex = 360
-        Me.Label38.Text = "C-to-decemel"
-        Me.Label38.Visible = False
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(1355, 826)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(21, 22)
-        Me.TextBox5.TabIndex = 359
-        Me.TextBox5.Visible = False
-        '
-        'message_txt
-        '
-        Me.message_txt.AutoSize = True
-        Me.message_txt.BackColor = System.Drawing.Color.LightCoral
-        Me.message_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.message_txt.ForeColor = System.Drawing.Color.White
-        Me.message_txt.Location = New System.Drawing.Point(365, 835)
-        Me.message_txt.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.message_txt.Name = "message_txt"
-        Me.message_txt.Size = New System.Drawing.Size(73, 17)
-        Me.message_txt.TabIndex = 350
-        Me.message_txt.Text = "Welcome"
-        Me.message_txt.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.message_txt.Visible = False
-        '
-        'ssale_txt
-        '
-        Me.ssale_txt.AutoSize = True
-        Me.ssale_txt.Location = New System.Drawing.Point(1332, 798)
-        Me.ssale_txt.Name = "ssale_txt"
-        Me.ssale_txt.Size = New System.Drawing.Size(36, 17)
-        Me.ssale_txt.TabIndex = 311
-        Me.ssale_txt.Text = "Sale"
+        Me.Button12.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button12.BackColor = System.Drawing.Color.White
+        Me.Button12.BackgroundImage = CType(resources.GetObject("Button12.BackgroundImage"), System.Drawing.Image)
+        Me.Button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button12.ForeColor = System.Drawing.Color.White
+        Me.Button12.Location = New System.Drawing.Point(1474, 228)
+        Me.Button12.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(43, 38)
+        Me.Button12.TabIndex = 303
+        Me.Button12.UseVisualStyleBackColor = False
         '
         'TabPage1
         '
+        Me.TabPage1.BackColor = System.Drawing.Color.White
+        Me.TabPage1.Controls.Add(Me.Label25)
+        Me.TabPage1.Controls.Add(Me.message_txt)
+        Me.TabPage1.Controls.Add(Me.Panel3)
         Me.TabPage1.Controls.Add(Me.Label10)
         Me.TabPage1.Controls.Add(Me.p_addbtn)
         Me.TabPage1.Controls.Add(Me.p_delbtn)
@@ -831,18 +743,48 @@ Partial Class ratesfrm
         Me.TabPage1.Controls.Add(Me.total_ser_pro_withdis)
         Me.TabPage1.Controls.Add(Me.GroupBox3)
         Me.TabPage1.Controls.Add(Me.Panel1)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 28)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1504, 794)
+        Me.TabPage1.Size = New System.Drawing.Size(1526, 1070)
         Me.TabPage1.TabIndex = 4
         Me.TabPage1.Text = "Services Transaction"
-        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Vivaldi", 36.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.Label25.ForeColor = System.Drawing.Color.LightCoral
+        Me.Label25.Location = New System.Drawing.Point(518, 3)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(469, 71)
+        Me.Label25.TabIndex = 414
+        Me.Label25.Text = "&Service Transaction"
+        '
+        'message_txt
+        '
+        Me.message_txt.AutoSize = True
+        Me.message_txt.ForeColor = System.Drawing.Color.White
+        Me.message_txt.Location = New System.Drawing.Point(94, 723)
+        Me.message_txt.Name = "message_txt"
+        Me.message_txt.Size = New System.Drawing.Size(66, 17)
+        Me.message_txt.TabIndex = 413
+        Me.message_txt.Text = "Welcome"
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.LightCoral
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel3.ForeColor = System.Drawing.Color.Snow
+        Me.Panel3.Location = New System.Drawing.Point(3, 1048)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(1520, 19)
+        Me.Panel3.TabIndex = 412
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(228, 763)
+        Me.Label10.Location = New System.Drawing.Point(166, 730)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(0, 17)
         Me.Label10.TabIndex = 410
@@ -854,7 +796,7 @@ Partial Class ratesfrm
         Me.p_addbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.p_addbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.p_addbtn.ForeColor = System.Drawing.Color.White
-        Me.p_addbtn.Location = New System.Drawing.Point(1439, 56)
+        Me.p_addbtn.Location = New System.Drawing.Point(1202, 738)
         Me.p_addbtn.Margin = New System.Windows.Forms.Padding(4)
         Me.p_addbtn.Name = "p_addbtn"
         Me.p_addbtn.Size = New System.Drawing.Size(45, 35)
@@ -868,7 +810,7 @@ Partial Class ratesfrm
         Me.p_delbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.p_delbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.p_delbtn.ForeColor = System.Drawing.Color.White
-        Me.p_delbtn.Location = New System.Drawing.Point(1439, 346)
+        Me.p_delbtn.Location = New System.Drawing.Point(1428, 739)
         Me.p_delbtn.Margin = New System.Windows.Forms.Padding(4)
         Me.p_delbtn.Name = "p_delbtn"
         Me.p_delbtn.Size = New System.Drawing.Size(52, 34)
@@ -882,7 +824,7 @@ Partial Class ratesfrm
         Me.p_savebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.p_savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.p_savebtn.ForeColor = System.Drawing.SystemColors.Control
-        Me.p_savebtn.Location = New System.Drawing.Point(1445, 155)
+        Me.p_savebtn.Location = New System.Drawing.Point(1291, 740)
         Me.p_savebtn.Margin = New System.Windows.Forms.Padding(4)
         Me.p_savebtn.Name = "p_savebtn"
         Me.p_savebtn.Size = New System.Drawing.Size(36, 33)
@@ -895,7 +837,7 @@ Partial Class ratesfrm
         Me.Label30.BackColor = System.Drawing.Color.Transparent
         Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label30.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label30.Location = New System.Drawing.Point(1436, 202)
+        Me.Label30.Location = New System.Drawing.Point(1282, 787)
         Me.Label30.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(44, 17)
@@ -908,7 +850,7 @@ Partial Class ratesfrm
         Me.Label28.BackColor = System.Drawing.Color.Transparent
         Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label28.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label28.Location = New System.Drawing.Point(1429, 400)
+        Me.Label28.Location = New System.Drawing.Point(1425, 787)
         Me.Label28.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(55, 17)
@@ -923,7 +865,7 @@ Partial Class ratesfrm
         Me.p_editbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.p_editbtn.ForeColor = System.Drawing.Color.White
         Me.p_editbtn.Image = CType(resources.GetObject("p_editbtn.Image"), System.Drawing.Image)
-        Me.p_editbtn.Location = New System.Drawing.Point(1439, 254)
+        Me.p_editbtn.Location = New System.Drawing.Point(1366, 749)
         Me.p_editbtn.Margin = New System.Windows.Forms.Padding(4)
         Me.p_editbtn.Name = "p_editbtn"
         Me.p_editbtn.Size = New System.Drawing.Size(42, 34)
@@ -936,7 +878,7 @@ Partial Class ratesfrm
         Me.Label29.BackColor = System.Drawing.Color.Transparent
         Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label29.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label29.Location = New System.Drawing.Point(1442, 292)
+        Me.Label29.Location = New System.Drawing.Point(1369, 787)
         Me.Label29.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(36, 17)
@@ -949,7 +891,7 @@ Partial Class ratesfrm
         Me.Label27.BackColor = System.Drawing.Color.Transparent
         Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label27.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label27.Location = New System.Drawing.Point(1429, 101)
+        Me.Label27.Location = New System.Drawing.Point(1192, 783)
         Me.Label27.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(71, 17)
@@ -961,7 +903,7 @@ Partial Class ratesfrm
         Me.Button7.Cursor = System.Windows.Forms.Cursors.Default
         Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button7.ForeColor = System.Drawing.Color.LightCoral
-        Me.Button7.Location = New System.Drawing.Point(1297, 723)
+        Me.Button7.Location = New System.Drawing.Point(974, 713)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(93, 36)
         Me.Button7.TabIndex = 400
@@ -971,44 +913,48 @@ Partial Class ratesfrm
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(749, 742)
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.Label9.Location = New System.Drawing.Point(494, 784)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(247, 17)
+        Me.Label9.Size = New System.Drawing.Size(332, 20)
         Me.Label9.TabIndex = 400
         Me.Label9.Text = "Services and Products(With Discount)"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(708, 697)
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(420, 753)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(303, 17)
+        Me.Label8.Size = New System.Drawing.Size(406, 20)
         Me.Label8.TabIndex = 400
         Me.Label8.Text = "Total Services and Products(Without Discount)"
         '
         'totalofser_pro_outdis
         '
-        Me.totalofser_pro_outdis.Location = New System.Drawing.Point(1049, 697)
+        Me.totalofser_pro_outdis.Location = New System.Drawing.Point(907, 755)
         Me.totalofser_pro_outdis.Name = "totalofser_pro_outdis"
+        Me.totalofser_pro_outdis.ReadOnly = True
         Me.totalofser_pro_outdis.Size = New System.Drawing.Size(226, 22)
         Me.totalofser_pro_outdis.TabIndex = 400
         '
         'total_ser_pro_withdis
         '
-        Me.total_ser_pro_withdis.Location = New System.Drawing.Point(1049, 737)
+        Me.total_ser_pro_withdis.Location = New System.Drawing.Point(907, 787)
         Me.total_ser_pro_withdis.Name = "total_ser_pro_withdis"
+        Me.total_ser_pro_withdis.ReadOnly = True
         Me.total_ser_pro_withdis.Size = New System.Drawing.Size(226, 22)
         Me.total_ser_pro_withdis.TabIndex = 401
         '
         'GroupBox3
         '
-        Me.GroupBox3.BackColor = System.Drawing.Color.SteelBlue
+        Me.GroupBox3.BackColor = System.Drawing.Color.White
+        Me.GroupBox3.Controls.Add(Me.Label23)
         Me.GroupBox3.Controls.Add(Me.GroupBox4)
         Me.GroupBox3.Controls.Add(Me.RichTextBox5)
         Me.GroupBox3.Controls.Add(Me.Label4)
         Me.GroupBox3.Controls.Add(Me.ser2_grid)
         Me.GroupBox3.Controls.Add(Me.TextBox6)
-        Me.GroupBox3.Controls.Add(Me.Button5)
         Me.GroupBox3.Controls.Add(Me.RichTextBox2)
         Me.GroupBox3.Controls.Add(Me.s_rateid_txt)
         Me.GroupBox3.Controls.Add(Me.Label36)
@@ -1026,12 +972,22 @@ Partial Class ratesfrm
         Me.GroupBox3.Controls.Add(Me.sprice_txt)
         Me.GroupBox3.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(20, 27)
+        Me.GroupBox3.ForeColor = System.Drawing.Color.SteelBlue
+        Me.GroupBox3.Location = New System.Drawing.Point(66, 77)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(1401, 635)
+        Me.GroupBox3.Size = New System.Drawing.Size(1440, 625)
         Me.GroupBox3.TabIndex = 383
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Services"
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Location = New System.Drawing.Point(36, 273)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(164, 17)
+        Me.Label23.TabIndex = 401
+        Me.Label23.Text = "Search Service Name"
         '
         'GroupBox4
         '
@@ -1061,9 +1017,9 @@ Partial Class ratesfrm
         Me.Label35.AutoSize = True
         Me.Label35.Location = New System.Drawing.Point(105, 18)
         Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(211, 17)
+        Me.Label35.Size = New System.Drawing.Size(196, 17)
         Me.Label35.TabIndex = 317
-        Me.Label35.Text = "Total Price without Discount"
+        Me.Label35.Text = "Total Bill without Discount"
         '
         'Label2
         '
@@ -1104,77 +1060,68 @@ Partial Class ratesfrm
         '
         Me.ser2_grid.AllowUserToAddRows = False
         Me.ser2_grid.AllowUserToDeleteRows = False
-        DataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle36.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle36.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle36.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.White
-        Me.ser2_grid.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle36
+        DataGridViewCellStyle111.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle111.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle111.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle111.ForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle111.SelectionBackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle111.SelectionForeColor = System.Drawing.Color.White
+        Me.ser2_grid.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle111
         Me.ser2_grid.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ser2_grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.ser2_grid.BackgroundColor = System.Drawing.Color.LightCoral
+        Me.ser2_grid.BackgroundColor = System.Drawing.Color.SteelBlue
         Me.ser2_grid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.ser2_grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
-        DataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle37.BackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle37.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle37.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle37.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle37.SelectionForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ser2_grid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle37
+        DataGridViewCellStyle112.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle112.BackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle112.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle112.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle112.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle112.SelectionForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle112.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ser2_grid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle112
         Me.ser2_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle38.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle38.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle38.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle38.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ser2_grid.DefaultCellStyle = DataGridViewCellStyle38
+        DataGridViewCellStyle113.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle113.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle113.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle113.ForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle113.SelectionBackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle113.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle113.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ser2_grid.DefaultCellStyle = DataGridViewCellStyle113
         Me.ser2_grid.EnableHeadersVisualStyles = False
-        Me.ser2_grid.GridColor = System.Drawing.Color.LightCoral
+        Me.ser2_grid.GridColor = System.Drawing.Color.SteelBlue
         Me.ser2_grid.Location = New System.Drawing.Point(28, 322)
         Me.ser2_grid.Margin = New System.Windows.Forms.Padding(4)
         Me.ser2_grid.Name = "ser2_grid"
         Me.ser2_grid.ReadOnly = True
-        DataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle39.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle39.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle39.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ser2_grid.RowHeadersDefaultCellStyle = DataGridViewCellStyle39
+        DataGridViewCellStyle114.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle114.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle114.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle114.ForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle114.SelectionBackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle114.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle114.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ser2_grid.RowHeadersDefaultCellStyle = DataGridViewCellStyle114
         Me.ser2_grid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        DataGridViewCellStyle40.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle40.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle40.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle40.SelectionForeColor = System.Drawing.Color.White
-        Me.ser2_grid.RowsDefaultCellStyle = DataGridViewCellStyle40
+        DataGridViewCellStyle115.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle115.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle115.ForeColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle115.SelectionBackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle115.SelectionForeColor = System.Drawing.Color.White
+        Me.ser2_grid.RowsDefaultCellStyle = DataGridViewCellStyle115
         Me.ser2_grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.ser2_grid.Size = New System.Drawing.Size(1041, 291)
+        Me.ser2_grid.Size = New System.Drawing.Size(1374, 281)
         Me.ser2_grid.TabIndex = 393
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(1165, 481)
+        Me.TextBox6.Location = New System.Drawing.Point(39, 293)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(226, 22)
         Me.TextBox6.TabIndex = 394
-        '
-        'Button5
-        '
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Location = New System.Drawing.Point(1227, 529)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(110, 26)
-        Me.Button5.TabIndex = 395
-        Me.Button5.Text = "Search ProductName"
-        Me.Button5.UseVisualStyleBackColor = True
         '
         'RichTextBox2
         '
@@ -1308,25 +1255,25 @@ Partial Class ratesfrm
         '
         'Panel1
         '
-        Me.Panel1.Location = New System.Drawing.Point(1432, 249)
+        Me.Panel1.Location = New System.Drawing.Point(1359, 744)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(52, 60)
         Me.Panel1.TabIndex = 411
         '
         'TabPage2
         '
+        Me.TabPage2.BackColor = System.Drawing.Color.White
         Me.TabPage2.Controls.Add(Me.GroupBox6)
         Me.TabPage2.Controls.Add(Me.TextBox1)
         Me.TabPage2.Controls.Add(Me.Button8)
         Me.TabPage2.Controls.Add(Me.p_removebtn)
         Me.TabPage2.Controls.Add(Me.payment_grid)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 28)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1504, 794)
+        Me.TabPage2.Size = New System.Drawing.Size(1526, 1070)
         Me.TabPage2.TabIndex = 5
         Me.TabPage2.Text = "Transaction Record"
-        Me.TabPage2.UseVisualStyleBackColor = True
         '
         'GroupBox6
         '
@@ -1338,23 +1285,25 @@ Partial Class ratesfrm
         Me.GroupBox6.Controls.Add(Me.RadioButton3)
         Me.GroupBox6.Controls.Add(Me.RadioButton1)
         Me.GroupBox6.Controls.Add(Me.RadioButton2)
+        Me.GroupBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox6.ForeColor = System.Drawing.Color.SteelBlue
         Me.GroupBox6.Location = New System.Drawing.Point(7, 13)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(601, 189)
+        Me.GroupBox6.Size = New System.Drawing.Size(693, 189)
         Me.GroupBox6.TabIndex = 339
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Filter Data"
         '
         'trandteto_txt
         '
-        Me.trandteto_txt.Location = New System.Drawing.Point(67, 137)
+        Me.trandteto_txt.Location = New System.Drawing.Point(83, 116)
         Me.trandteto_txt.Name = "trandteto_txt"
         Me.trandteto_txt.Size = New System.Drawing.Size(200, 22)
         Me.trandteto_txt.TabIndex = 328
         '
         'trandtefrom_txt
         '
-        Me.trandtefrom_txt.Location = New System.Drawing.Point(62, 74)
+        Me.trandtefrom_txt.Location = New System.Drawing.Point(83, 62)
         Me.trandtefrom_txt.Name = "trandtefrom_txt"
         Me.trandtefrom_txt.Size = New System.Drawing.Size(200, 22)
         Me.trandtefrom_txt.TabIndex = 327
@@ -1364,7 +1313,7 @@ Partial Class ratesfrm
         Me.servcheck.AutoSize = True
         Me.servcheck.Location = New System.Drawing.Point(442, 146)
         Me.servcheck.Name = "servcheck"
-        Me.servcheck.Size = New System.Drawing.Size(127, 21)
+        Me.servcheck.Size = New System.Drawing.Size(141, 21)
         Me.servcheck.TabIndex = 336
         Me.servcheck.Text = "Search by Date"
         Me.servcheck.UseVisualStyleBackColor = True
@@ -1375,7 +1324,7 @@ Partial Class ratesfrm
         Me.transactioncheck.AutoSize = True
         Me.transactioncheck.Location = New System.Drawing.Point(442, 38)
         Me.transactioncheck.Name = "transactioncheck"
-        Me.transactioncheck.Size = New System.Drawing.Size(127, 21)
+        Me.transactioncheck.Size = New System.Drawing.Size(141, 21)
         Me.transactioncheck.TabIndex = 337
         Me.transactioncheck.Text = "Search by Date"
         Me.transactioncheck.UseVisualStyleBackColor = True
@@ -1386,7 +1335,7 @@ Partial Class ratesfrm
         Me.prodcutcheckbox.AutoSize = True
         Me.prodcutcheckbox.Location = New System.Drawing.Point(442, 92)
         Me.prodcutcheckbox.Name = "prodcutcheckbox"
-        Me.prodcutcheckbox.Size = New System.Drawing.Size(127, 21)
+        Me.prodcutcheckbox.Size = New System.Drawing.Size(141, 21)
         Me.prodcutcheckbox.TabIndex = 335
         Me.prodcutcheckbox.Text = "Search by Date"
         Me.prodcutcheckbox.UseVisualStyleBackColor = True
@@ -1397,7 +1346,7 @@ Partial Class ratesfrm
         Me.RadioButton3.AutoSize = True
         Me.RadioButton3.Location = New System.Drawing.Point(351, 11)
         Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(250, 21)
+        Me.RadioButton3.Size = New System.Drawing.Size(283, 21)
         Me.RadioButton3.TabIndex = 324
         Me.RadioButton3.Text = "Transaction Products and Services"
         Me.RadioButton3.UseVisualStyleBackColor = True
@@ -1407,7 +1356,7 @@ Partial Class ratesfrm
         Me.RadioButton1.AutoSize = True
         Me.RadioButton1.Location = New System.Drawing.Point(458, 65)
         Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(85, 21)
+        Me.RadioButton1.Size = New System.Drawing.Size(93, 21)
         Me.RadioButton1.TabIndex = 322
         Me.RadioButton1.Text = "Products"
         Me.RadioButton1.UseVisualStyleBackColor = True
@@ -1417,20 +1366,23 @@ Partial Class ratesfrm
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.Location = New System.Drawing.Point(458, 119)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(83, 21)
+        Me.RadioButton2.Size = New System.Drawing.Size(91, 21)
         Me.RadioButton2.TabIndex = 323
         Me.RadioButton2.Text = "Services"
         Me.RadioButton2.UseVisualStyleBackColor = True
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(1113, 146)
+        Me.TextBox1.ForeColor = System.Drawing.Color.SteelBlue
+        Me.TextBox1.Location = New System.Drawing.Point(1191, 146)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(366, 22)
+        Me.TextBox1.Size = New System.Drawing.Size(288, 22)
         Me.TextBox1.TabIndex = 338
         '
         'Button8
         '
+        Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button8.ForeColor = System.Drawing.Color.SteelBlue
         Me.Button8.Location = New System.Drawing.Point(1381, 174)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(98, 28)
@@ -1441,7 +1393,8 @@ Partial Class ratesfrm
         'p_removebtn
         '
         Me.p_removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.p_removebtn.ForeColor = System.Drawing.Color.LightCoral
+        Me.p_removebtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.p_removebtn.ForeColor = System.Drawing.Color.SteelBlue
         Me.p_removebtn.Location = New System.Drawing.Point(1263, 51)
         Me.p_removebtn.Margin = New System.Windows.Forms.Padding(4)
         Me.p_removebtn.Name = "p_removebtn"
@@ -1454,92 +1407,331 @@ Partial Class ratesfrm
         '
         Me.payment_grid.AllowUserToAddRows = False
         Me.payment_grid.AllowUserToDeleteRows = False
-        DataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle41.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle41.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle41.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle41.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle41.SelectionForeColor = System.Drawing.Color.White
-        Me.payment_grid.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle41
+        DataGridViewCellStyle116.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle116.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle116.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle116.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle116.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle116.SelectionForeColor = System.Drawing.Color.White
+        Me.payment_grid.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle116
         Me.payment_grid.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.payment_grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.payment_grid.BackgroundColor = System.Drawing.Color.SteelBlue
+        Me.payment_grid.BackgroundColor = System.Drawing.Color.LightCoral
         Me.payment_grid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.payment_grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
-        DataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle42.BackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle42.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle42.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle42.SelectionForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.payment_grid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle42
+        DataGridViewCellStyle117.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle117.BackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle117.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle117.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle117.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle117.SelectionForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle117.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.payment_grid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle117
         Me.payment_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle43.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle43.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle43.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle43.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle43.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.payment_grid.DefaultCellStyle = DataGridViewCellStyle43
+        DataGridViewCellStyle118.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle118.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle118.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle118.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle118.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle118.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle118.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.payment_grid.DefaultCellStyle = DataGridViewCellStyle118
         Me.payment_grid.EnableHeadersVisualStyles = False
-        Me.payment_grid.GridColor = System.Drawing.Color.SteelBlue
+        Me.payment_grid.GridColor = System.Drawing.Color.LightCoral
         Me.payment_grid.Location = New System.Drawing.Point(7, 209)
         Me.payment_grid.Margin = New System.Windows.Forms.Padding(4)
         Me.payment_grid.Name = "payment_grid"
         Me.payment_grid.ReadOnly = True
-        DataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle44.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle44.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle44.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle44.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle44.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.payment_grid.RowHeadersDefaultCellStyle = DataGridViewCellStyle44
+        DataGridViewCellStyle119.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle119.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle119.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle119.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle119.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle119.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle119.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.payment_grid.RowHeadersDefaultCellStyle = DataGridViewCellStyle119
         Me.payment_grid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
-        DataGridViewCellStyle45.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle45.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle45.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle45.SelectionForeColor = System.Drawing.Color.White
-        Me.payment_grid.RowsDefaultCellStyle = DataGridViewCellStyle45
+        DataGridViewCellStyle120.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle120.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle120.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle120.SelectionForeColor = System.Drawing.Color.White
+        Me.payment_grid.RowsDefaultCellStyle = DataGridViewCellStyle120
         Me.payment_grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.payment_grid.Size = New System.Drawing.Size(1490, 574)
+        Me.payment_grid.Size = New System.Drawing.Size(1512, 850)
         Me.payment_grid.TabIndex = 320
         '
-        'Button12
+        'TabPage4
         '
-        Me.Button12.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button12.BackColor = System.Drawing.Color.LightCoral
-        Me.Button12.BackgroundImage = CType(resources.GetObject("Button12.BackgroundImage"), System.Drawing.Image)
-        Me.Button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button12.ForeColor = System.Drawing.Color.LightCoral
-        Me.Button12.Location = New System.Drawing.Point(1493, 13)
-        Me.Button12.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(43, 38)
-        Me.Button12.TabIndex = 303
-        Me.Button12.UseVisualStyleBackColor = False
+        Me.TabPage4.BackColor = System.Drawing.Color.White
+        Me.TabPage4.Controls.Add(Me.RadioButton4)
+        Me.TabPage4.Controls.Add(Me.Label37)
+        Me.TabPage4.Controls.Add(Me.DateTimePicker2)
+        Me.TabPage4.Controls.Add(Me.DateTimePicker1)
+        Me.TabPage4.Controls.Add(Me.Label38)
+        Me.TabPage4.Controls.Add(Me.TextBox3)
+        Me.TabPage4.Controls.Add(Me.prodcut_getdata)
+        Me.TabPage4.Location = New System.Drawing.Point(4, 28)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage4.Size = New System.Drawing.Size(1526, 1070)
+        Me.TabPage4.TabIndex = 6
+        Me.TabPage4.Text = "Products Sale Record"
         '
-        'Label15
+        'RadioButton4
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(43, 277)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(69, 17)
-        Me.Label15.TabIndex = 400
-        Me.Label15.Text = "Quantity"
+        Me.RadioButton4.AutoSize = True
+        Me.RadioButton4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.RadioButton4.ForeColor = System.Drawing.Color.SteelBlue
+        Me.RadioButton4.Location = New System.Drawing.Point(48, 43)
+        Me.RadioButton4.Name = "RadioButton4"
+        Me.RadioButton4.Size = New System.Drawing.Size(169, 24)
+        Me.RadioButton4.TabIndex = 345
+        Me.RadioButton4.TabStop = True
+        Me.RadioButton4.Text = "Search By  Date"
+        Me.RadioButton4.UseVisualStyleBackColor = True
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.Label37.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.Label37.Location = New System.Drawing.Point(267, 70)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(25, 20)
+        Me.Label37.TabIndex = 344
+        Me.Label37.Text = "to"
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.Location = New System.Drawing.Point(317, 70)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(200, 22)
+        Me.DateTimePicker2.TabIndex = 343
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(48, 70)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 22)
+        Me.DateTimePicker1.TabIndex = 342
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.Label38.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label38.Location = New System.Drawing.Point(45, 105)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(223, 20)
+        Me.Label38.TabIndex = 341
+        Me.Label38.Text = "Search By Member Name"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(49, 140)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(244, 22)
+        Me.TextBox3.TabIndex = 340
+        '
+        'prodcut_getdata
+        '
+        Me.prodcut_getdata.AllowUserToAddRows = False
+        Me.prodcut_getdata.AllowUserToDeleteRows = False
+        DataGridViewCellStyle121.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle121.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle121.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle121.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle121.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle121.SelectionForeColor = System.Drawing.Color.White
+        Me.prodcut_getdata.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle121
+        Me.prodcut_getdata.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.prodcut_getdata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.prodcut_getdata.BackgroundColor = System.Drawing.Color.LightCoral
+        Me.prodcut_getdata.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.prodcut_getdata.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
+        DataGridViewCellStyle122.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle122.BackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle122.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle122.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle122.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle122.SelectionForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle122.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.prodcut_getdata.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle122
+        Me.prodcut_getdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle123.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle123.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle123.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle123.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle123.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle123.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle123.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.prodcut_getdata.DefaultCellStyle = DataGridViewCellStyle123
+        Me.prodcut_getdata.EnableHeadersVisualStyles = False
+        Me.prodcut_getdata.GridColor = System.Drawing.Color.LightCoral
+        Me.prodcut_getdata.Location = New System.Drawing.Point(7, 215)
+        Me.prodcut_getdata.Margin = New System.Windows.Forms.Padding(4)
+        Me.prodcut_getdata.Name = "prodcut_getdata"
+        Me.prodcut_getdata.ReadOnly = True
+        DataGridViewCellStyle124.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle124.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle124.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle124.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle124.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle124.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle124.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.prodcut_getdata.RowHeadersDefaultCellStyle = DataGridViewCellStyle124
+        Me.prodcut_getdata.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
+        DataGridViewCellStyle125.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle125.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle125.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle125.SelectionForeColor = System.Drawing.Color.White
+        Me.prodcut_getdata.RowsDefaultCellStyle = DataGridViewCellStyle125
+        Me.prodcut_getdata.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.prodcut_getdata.Size = New System.Drawing.Size(1512, 846)
+        Me.prodcut_getdata.TabIndex = 151
+        '
+        'TabPage5
+        '
+        Me.TabPage5.BackColor = System.Drawing.Color.White
+        Me.TabPage5.Controls.Add(Me.serv_getdata)
+        Me.TabPage5.Controls.Add(Me.RadioButton5)
+        Me.TabPage5.Controls.Add(Me.Label40)
+        Me.TabPage5.Controls.Add(Me.DateTimePicker3)
+        Me.TabPage5.Controls.Add(Me.DateTimePicker4)
+        Me.TabPage5.Controls.Add(Me.Label41)
+        Me.TabPage5.Controls.Add(Me.TextBox4)
+        Me.TabPage5.Location = New System.Drawing.Point(4, 28)
+        Me.TabPage5.Name = "TabPage5"
+        Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage5.Size = New System.Drawing.Size(1526, 1070)
+        Me.TabPage5.TabIndex = 7
+        Me.TabPage5.Text = "Services Sale Record"
+        '
+        'serv_getdata
+        '
+        Me.serv_getdata.AllowUserToAddRows = False
+        Me.serv_getdata.AllowUserToDeleteRows = False
+        DataGridViewCellStyle101.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle101.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle101.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle101.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle101.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle101.SelectionForeColor = System.Drawing.Color.White
+        Me.serv_getdata.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle101
+        Me.serv_getdata.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.serv_getdata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.serv_getdata.BackgroundColor = System.Drawing.Color.LightCoral
+        Me.serv_getdata.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.serv_getdata.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
+        DataGridViewCellStyle102.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle102.BackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle102.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle102.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle102.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle102.SelectionForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle102.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.serv_getdata.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle102
+        Me.serv_getdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle103.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle103.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle103.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle103.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle103.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle103.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle103.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.serv_getdata.DefaultCellStyle = DataGridViewCellStyle103
+        Me.serv_getdata.EnableHeadersVisualStyles = False
+        Me.serv_getdata.GridColor = System.Drawing.Color.LightCoral
+        Me.serv_getdata.Location = New System.Drawing.Point(10, 188)
+        Me.serv_getdata.Margin = New System.Windows.Forms.Padding(4)
+        Me.serv_getdata.Name = "serv_getdata"
+        Me.serv_getdata.ReadOnly = True
+        DataGridViewCellStyle104.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle104.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle104.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle104.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle104.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle104.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle104.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.serv_getdata.RowHeadersDefaultCellStyle = DataGridViewCellStyle104
+        Me.serv_getdata.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
+        DataGridViewCellStyle105.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle105.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle105.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle105.SelectionForeColor = System.Drawing.Color.White
+        Me.serv_getdata.RowsDefaultCellStyle = DataGridViewCellStyle105
+        Me.serv_getdata.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.serv_getdata.Size = New System.Drawing.Size(1512, 846)
+        Me.serv_getdata.TabIndex = 353
+        '
+        'RadioButton5
+        '
+        Me.RadioButton5.AutoSize = True
+        Me.RadioButton5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.RadioButton5.ForeColor = System.Drawing.Color.SteelBlue
+        Me.RadioButton5.Location = New System.Drawing.Point(27, 29)
+        Me.RadioButton5.Name = "RadioButton5"
+        Me.RadioButton5.Size = New System.Drawing.Size(169, 24)
+        Me.RadioButton5.TabIndex = 352
+        Me.RadioButton5.TabStop = True
+        Me.RadioButton5.Text = "Search By  Date"
+        Me.RadioButton5.UseVisualStyleBackColor = True
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.Label40.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.Label40.Location = New System.Drawing.Point(246, 56)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(25, 20)
+        Me.Label40.TabIndex = 351
+        Me.Label40.Text = "to"
+        '
+        'DateTimePicker3
+        '
+        Me.DateTimePicker3.Location = New System.Drawing.Point(296, 56)
+        Me.DateTimePicker3.Name = "DateTimePicker3"
+        Me.DateTimePicker3.Size = New System.Drawing.Size(200, 22)
+        Me.DateTimePicker3.TabIndex = 350
+        '
+        'DateTimePicker4
+        '
+        Me.DateTimePicker4.Location = New System.Drawing.Point(27, 56)
+        Me.DateTimePicker4.Name = "DateTimePicker4"
+        Me.DateTimePicker4.Size = New System.Drawing.Size(200, 22)
+        Me.DateTimePicker4.TabIndex = 349
+        '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.Label41.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label41.Location = New System.Drawing.Point(24, 91)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(223, 20)
+        Me.Label41.TabIndex = 348
+        Me.Label41.Text = "Search By Member Name"
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(28, 126)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(244, 22)
+        Me.TextBox4.TabIndex = 347
         '
         'ratesfrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightCoral
-        Me.ClientSize = New System.Drawing.Size(1552, 938)
-        Me.Controls.Add(Me.Button12)
+        Me.ClientSize = New System.Drawing.Size(1534, 1102)
         Me.Controls.Add(Me.TabControl1)
         Me.ForeColor = System.Drawing.Color.LightCoral
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -1548,17 +1740,14 @@ Partial Class ratesfrm
         Me.Text = "Transactions "
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage3.ResumeLayout(False)
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
-        Me.GroupBox5.ResumeLayout(False)
-        Me.GroupBox5.PerformLayout()
+        Me.TabPage3.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.pro2_gird, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel8.ResumeLayout(False)
-        Me.Panel8.PerformLayout()
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
@@ -1571,45 +1760,33 @@ Partial Class ratesfrm
         Me.GroupBox6.ResumeLayout(False)
         Me.GroupBox6.PerformLayout()
         CType(Me.payment_grid, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage4.ResumeLayout(False)
+        Me.TabPage4.PerformLayout()
+        CType(Me.prodcut_getdata, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage5.ResumeLayout(False)
+        Me.TabPage5.PerformLayout()
+        CType(Me.serv_getdata, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
-    Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Label26 As System.Windows.Forms.Label
     Friend WithEvents Label24 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents pquantity_txt As System.Windows.Forms.TextBox
-    Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents discount_txt As System.Windows.Forms.TextBox
     Friend WithEvents Label21 As System.Windows.Forms.Label
     Friend WithEvents Label22 As System.Windows.Forms.Label
     Friend WithEvents pid_txt As System.Windows.Forms.TextBox
     Friend WithEvents Label17 As System.Windows.Forms.Label
-    Friend WithEvents ssale_txt As System.Windows.Forms.Label
-    Friend WithEvents message_txt As System.Windows.Forms.Label
-    Friend WithEvents p_date_txt As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Label23 As System.Windows.Forms.Label
     Friend WithEvents Label32 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Label33 As System.Windows.Forms.Label
-    Friend WithEvents Label40 As System.Windows.Forms.Label
-    Friend WithEvents totalbillafterdis_txt As System.Windows.Forms.TextBox
-    Friend WithEvents Label38 As System.Windows.Forms.Label
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
-    Friend WithEvents Label37 As System.Windows.Forms.Label
-    Friend WithEvents totalbill_txt As System.Windows.Forms.TextBox
-    Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents uinttotalprice_txt As System.Windows.Forms.Label
     Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
     Friend WithEvents pprice_txt As System.Windows.Forms.TextBox
-    Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents pname_txt As System.Windows.Forms.ComboBox
     Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents Panel8 As System.Windows.Forms.Panel
-    Friend WithEvents RichTextBox3 As System.Windows.Forms.RichTextBox
-    Friend WithEvents Label41 As System.Windows.Forms.Label
     Friend WithEvents Label45 As System.Windows.Forms.Label
     Friend WithEvents single_dis_txt As System.Windows.Forms.TextBox
     Friend WithEvents Label46 As System.Windows.Forms.Label
@@ -1618,11 +1795,9 @@ Partial Class ratesfrm
     Friend WithEvents RichTextBox4 As System.Windows.Forms.RichTextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents pro2_gird As System.Windows.Forms.DataGridView
-    Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents unitprce_txt As System.Windows.Forms.TextBox
-    Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
     Friend WithEvents transactionid_txt As System.Windows.Forms.TextBox
     Friend WithEvents mbid_txt As System.Windows.Forms.TextBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
@@ -1643,7 +1818,6 @@ Partial Class ratesfrm
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents ser2_grid As System.Windows.Forms.DataGridView
     Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
-    Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents RichTextBox2 As System.Windows.Forms.RichTextBox
     Friend WithEvents servictotal_txt As System.Windows.Forms.Label
     Friend WithEvents s_rateid_txt As System.Windows.Forms.ComboBox
@@ -1693,4 +1867,29 @@ Partial Class ratesfrm
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents TabPage4 As System.Windows.Forms.TabPage
+    Friend WithEvents TabPage5 As System.Windows.Forms.TabPage
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents Label19 As System.Windows.Forms.Label
+    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
+    Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
+    Friend WithEvents Panel3 As System.Windows.Forms.Panel
+    Friend WithEvents Label23 As System.Windows.Forms.Label
+    Friend WithEvents Label25 As System.Windows.Forms.Label
+    Friend WithEvents message_txt As System.Windows.Forms.Label
+    Friend WithEvents RadioButton4 As System.Windows.Forms.RadioButton
+    Friend WithEvents Label37 As System.Windows.Forms.Label
+    Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Label38 As System.Windows.Forms.Label
+    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents serv_getdata As System.Windows.Forms.DataGridView
+    Friend WithEvents RadioButton5 As System.Windows.Forms.RadioButton
+    Friend WithEvents Label40 As System.Windows.Forms.Label
+    Friend WithEvents DateTimePicker3 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents DateTimePicker4 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Label41 As System.Windows.Forms.Label
+    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents prodcut_getdata As System.Windows.Forms.DataGridView
 End Class

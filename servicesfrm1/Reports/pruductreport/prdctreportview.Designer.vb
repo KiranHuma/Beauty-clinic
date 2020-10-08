@@ -23,7 +23,7 @@ Partial Class prodctreportview
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
-        Me.productreport1 = New servicesfrm1.productreport()
+        Me.productreport1 = New servicesfrm1.productreports()
         Me.SuspendLayout()
         '
         'CrystalReportViewer1
@@ -50,5 +50,5 @@ Partial Class prodctreportview
 
     End Sub
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
-    Friend WithEvents productreport1 As servicesfrm1.productreport
+    Friend WithEvents productreport1 As servicesfrm1.productreports
 End Class

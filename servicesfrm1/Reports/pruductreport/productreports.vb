@@ -18,7 +18,7 @@ Imports System
 Imports System.ComponentModel
 
 
-Public Class productreport
+Public Class productreports
     Inherits ReportClass
     
     Public Sub New()
@@ -27,7 +27,7 @@ Public Class productreport
     
     Public Overrides Property ResourceName() As String
         Get
-            Return "productreport.rpt"
+            Return "productreports.rpt"
         End Get
         Set
             'Do nothing
@@ -45,7 +45,7 @@ Public Class productreport
     
     Public Overrides Property FullResourceName() As String
         Get
-            Return "servicesfrm1.productreport.rpt"
+            Return "servicesfrm1.productreports.rpt"
         End Get
         Set
             'Do nothing
@@ -94,7 +94,7 @@ Public Class productreport
 End Class
 
 <System.Drawing.ToolboxBitmapAttribute(GetType(CrystalDecisions.[Shared].ExportOptions), "report.bmp")>  _
-Public Class Cachedproductreport
+Public Class Cachedproductreports
     Inherits Component
     Implements ICachedReport
     
@@ -136,7 +136,7 @@ Public Class Cachedproductreport
     End Property
     
     Public Overridable Function CreateReport() As CrystalDecisions.CrystalReports.Engine.ReportDocument Implements CrystalDecisions.ReportSource.ICachedReport.CreateReport
-        Dim rpt As productreport = New productreport()
+        Dim rpt As productreports = New productreports()
         rpt.Site = Me.Site
         Return rpt
     End Function

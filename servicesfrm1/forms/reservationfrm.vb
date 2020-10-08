@@ -198,6 +198,7 @@ Public Class reservationfrm
     End Sub
     'Functions on form load
     Private Sub reservationfrm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Call CenterToScreen()
         dbaccessconnection()
         getdata()
         txtboxid()
@@ -276,10 +277,11 @@ Public Class reservationfrm
         RateID_FillCombo()
         M_ID_FillCombo()
         svemem.Enabled = True
+        btnupdte.Enabled = False
     End Sub
     'add services if more then 1
     Private Sub s_nameadd()
-        rese_sertxt.Text &= rese_sertxtt.Text & ","
+        rese_sertxt.Text &= rese_sertxtt.Text & "," & vbNewLine
     End Sub
     'for services:::By selecting from dropdown menu ,it will gives the deltails in other textboxes w.r.t selected value
     Private Sub rid_txt_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rid_txt.SelectedIndexChanged
@@ -441,22 +443,49 @@ Public Class reservationfrm
             con.Open()
             cmd.CommandText = ("UPDATE tbl_reservation SET Serve_Emplyee= '" & today_employeeadd_txt.Text & "',Reservation_Status='" & today_Cstatus.Text & "',Reservation_Served_EndTime='" & DateTimePicker1.Value & "' where R_Entryno=" & today_entry.Text & "")
             cmd.ExecuteNonQuery()
-            MessageBox.Show("Status Updated")
+            ' MessageBox.Show("Status Updated")
             con.Close()
         Catch ex As Exception
             MessageBox.Show("Data Not Updated" & ex.Message)
         End Try
     End Sub
+    'check if emplyee is available or not
+   
+    Private Sub Check_employee()
+        'employee_search_txt()
+      
+        Dim str As String
+        Try
+            con.Open()
+            str = "Select R_Entryno,Memebr_name,Reservation_Time,Reservation_Served_EndTime,Serve_Emplyee,Reservation_Status from tbl_reservation where Serve_Emplyee like '" & today_employeeadd_txt.Text & "%'  And Reservation_Time BETWEEN '" & today_Ctime.Text & "' AND '" & Label31.Text & "'  And Reservation_Status ='Serving' AND Reservation_Date = '" & Label11.Text & "'"
+            cmd = New SqlCommand(str, con)
+            da = New SqlDataAdapter(cmd)
+            ds = New DataSet
+            da.Fill(ds, "tbl_reservation")
+            con.Close()
+            DataGridView1.DataSource = ds
+            DataGridView1.DataMember = "tbl_reservation"
+            
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+
+    End Sub
     'add the new reservation
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
         refreshstatus()
         getdata_reservation()
+        DataGridView1.Visible = True
+       
+       
+        Me.Label33.Text = ""
     End Sub
     Private Sub getdata_served_reservation()
         Try
             Dim con As New SqlConnection(cs)
             con.Open()
-            Dim da As New SqlDataAdapter("Select Top 20 R_Entryno,Memebr_name,Reservation_Date,Reservation_Time,Reservation_Served_EndTime,Reservation_Status From tbl_reservation where Reservation_Date = '" & Label11.Text & "' And Reservation_Status ='Served'", con)
+            Dim da As New SqlDataAdapter("Select Top 20 R_Entryno,Memebr_name,Reservation_Date,Reservation_Time,Reservation_Served_EndTime,Reservation_Status,Serve_Emplyee From tbl_reservation where Reservation_Date = '" & Label11.Text & "' And Reservation_Status ='Served'", con)
             Dim dt As New DataTable
             da.Fill(dt)
             source2.DataSource = dt
@@ -513,37 +542,13 @@ Public Class reservationfrm
     Private Sub RadioButton4_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioButton4.CheckedChanged
         getdata_cancelled_reservation()
     End Sub
-    'check if emplyee is available or not
-    Private Sub Check_employee()
-        Dim str As String
-        Try
-            con.Open()
-            str = "Select R_Entryno,Memebr_name,Reservation_Time,Reservation_Served_EndTime,Serve_Emplyee,Reservation_Status from tbl_reservation where Serve_Emplyee like '" & today_employeeadd_txt.Text & "%'  And Reservation_Time BETWEEN '" & today_Ctime.Text & "' AND '" & Label31.Text & "'  And Reservation_Status ='Serving' AND Reservation_Date = '" & Label11.Text & "'"
-            cmd = New SqlCommand(str, con)
-            da = New SqlDataAdapter(cmd)
-            ds = New DataSet
-            da.Fill(ds, "tbl_reservation")
-            con.Close()
-            DataGridView1.DataSource = ds
-            DataGridView1.DataMember = "tbl_reservation"
-            DataGridView1.Visible = True
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
-        If (DataGridView1.Rows.Count = 0) Then
-            Me.Label33.Text = "Available"
-        Else
-            Me.Label33.Text = "Not Available"
-            Button3.Enabled = False
-        End If
-    End Sub
+   
     'check employee availabilty after wrinting its name in textbox
     Private Sub today_employeeadd_txt_Validated(ByVal sender As Object, ByVal e As System.EventArgs) Handles today_employeeadd_txt.Validated
         Check_employee()
     End Sub
 
-
-    Private Sub today_Cname_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles today_Cname.TextChanged
+    Private Sub today_Cname_MouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles today_Cname.MouseClick
 
     End Sub
 
@@ -551,7 +556,8 @@ Public Class reservationfrm
 
     End Sub
 
-    Private Sub today_Cname_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles today_Cname.Validating
+    'textboxs papoluating
+    Private Sub today_textbox_client()
         Dim strsql As String = "select R_Entryno,Memebr_name,Reservation_Date,Reservation_Time,Reservation_Served_EndTime,Serve_Emplyee,Reservation_Status from tbl_reservation where Memebr_name like('" + today_Cname.Text + "%')"
         Dim strcon As String = cs
         Dim odapre As New SqlDataAdapter(strsql, strcon)
@@ -570,24 +576,151 @@ Public Class reservationfrm
             ' PicturesPictureBox1. = datTable.Rows(incount)("Pictures")
         Next
     End Sub
+    Private Sub today_Cname_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles today_Cname.Validating
+        today_textbox_client()
+    End Sub
 
 
    
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        today_Cname.Text = ""
         today_entry.Text = ""
         today_Cstatus.Text = ""
         today_employeeadd_txt.Text = ""
         today_entry.Text = ""
         Button3.Enabled = True
-
+        getdata_reservation()
+        Label33.Text = ""
     End Sub
-
+    'payment button
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+        today_Cname.Text = ratesfrm.mname_txt.Text
         ratesfrm.Show()
     End Sub
+    'send member name and employee name to payment form
 
-
-    Private Sub rese_sertxtt_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles rese_sertxtt.TextChanged
+    'search by date
+    Private Sub payment_productsearchdate()
+        con.Close()
+        Try
+            ' Dim cn As New SqlConnection
+            Dim ds As New DataSet
+            Dim dt As New DataTable
+            Dim dfrom As DateTime = DateTimePicker1.Value
+            Dim dto As DateTime = DateTimePicker2.Value
+            myConnection.ConnectionString = cs
+            myConnection.Open()
+            Dim str As String = "Select * from tbl_reservation where R_Date >= '" & Format(dfrom, "MM-dd-yyyy") & "' and R_Date <='" & Format(dto, "MM-dd-yyyy") & "'"
+            Dim da As SqlDataAdapter = New SqlDataAdapter(str, myConnection)
+            da.Fill(dt)
+            get_reservationdata.DataSource = dt
+            myConnection.Close()
+            get_reservationdata.Refresh()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Failed:Date Search", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Me.Dispose()
+        End Try
+    End Sub
+    Private Sub RadioButton5_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioButton5.CheckedChanged
+        payment_productsearchdate()
+        RadioButton5.Checked = False
+    End Sub
+    'search member name in grid
+    Private Sub search_txt()
+        Dim str As String
+        Try
+            con.Open()
+            str = "Select * from tbl_reservation where Memebr_name like '" & TextBox2.Text & "%'"
+            cmd = New SqlCommand(str, con)
+            da = New SqlDataAdapter(cmd)
+            ds = New DataSet
+            da.Fill(ds, "tbl_reservation")
+            con.Close()
+            get_reservationdata.DataSource = ds
+            get_reservationdata.DataMember = "tbl_reservation"
+            get_reservationdata.Visible = True
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Failed:Member Name Search", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Me.Dispose()
+        End Try
+    End Sub
+   
+    Private Sub rese_sertxtt_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rese_sertxtt.SelectedIndexChanged
         s_nameadd()
+    End Sub
+    Private Sub TextBox2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox2.TextChanged
+        search_txt()
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+        Try
+           
+            Me.today_Cname.Text = DataGridView1.CurrentRow.Cells(1).Value.ToString
+           
+
+        Catch ex As Exception
+            MessageBox.Show("Failed:Selected Value of Cellcontent ", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            Me.Dispose()
+        End Try
+    End Sub
+
+    Private Sub today_Cname_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles today_Cname.TextChanged
+        today_textbox_client()
+    End Sub
+
+    Private Sub today_Cstatus_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles today_Cstatus.SelectedIndexChanged
+        If today_Cstatus.Text = "Pending" Then
+            today_employeeadd_txt.Text = ""
+            Button3.Enabled = True
+        Else
+            Button3.Enabled = True
+        End If
+    End Sub
+
+    
+
+    Private Sub today_employeeadd_txt_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles today_employeeadd_txt.Validating
+
+    End Sub
+
+    Private Sub employee_search_txt()
+        Dim str As String
+        Try
+            con.Open()
+            str = "Select R_Entryno,Reservation_Status,Serve_Emplyee from tbl_reservation where Serve_Emplyee like '" & today_employeeadd_txt.Text & "%' And Reservation_Status='Serving' And Reservation_Date = '" & Label11.Text & "'"
+            cmd = New SqlCommand(str, con)
+            da = New SqlDataAdapter(cmd)
+            ds = New DataSet
+            da.Fill(ds, "tbl_reservation")
+            con.Close()
+            DataGridView1.DataSource = ds
+            DataGridView1.DataMember = "tbl_reservation"
+            DataGridView1.Visible = True
+           
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Failed:Emplyee NameSearch", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Me.Dispose()
+        End Try
+    End Sub
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub today_employeeadd_txt_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles today_employeeadd_txt.TextChanged
+        employee_search_txt()
+        If (DataGridView1.Rows.Count = 0 Or Nothing) Then
+            Me.Label33.Text = "Available"
+            Button3.Enabled = True
+        Else
+           
+            Me.Label33.Text = "Not Available"
+            Button3.Enabled = False
+
+
+        End If
+    End Sub
+
+    Private Sub Label10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label10.Click
+
     End Sub
 End Class

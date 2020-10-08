@@ -58,7 +58,8 @@ Public Class ratesfrm
         product_FillCombo()
         pro2_getdata()
         ser2_getdata()
-
+        transaction_servicesgetdata()
+        transaction_productgetdata()
         service_FillCombo()
         p_editbtn.Enabled = False
         Call CenterToScreen()
@@ -122,6 +123,7 @@ Public Class ratesfrm
         ser2_grid.DataSource = dt
         ser2_grid.Refresh()
     End Sub
+    
     'to empty textboxes
     Private Sub p_clear()
         Try
@@ -138,9 +140,7 @@ Public Class ratesfrm
         End Try
     End Sub
    
-    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
-        total_discount()
-    End Sub
+  
   
     Private Sub p_addbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         p_clear()
@@ -151,11 +151,7 @@ Public Class ratesfrm
    
   
 
-    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
-        totalbill()
-    End Sub
-
-
+    
     Private Sub TabPage3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabPage3.Click
         pay_txtboxid()
 
@@ -303,14 +299,7 @@ Public Class ratesfrm
         End Try
     End Sub
     'discount function
-    Private Sub total_discount()
-        Dim PercentageNumberResult As Double
-        PercentageNumberResult = totalbill_txt.Text / 100 * discount_txt.Text
-        TextBox5.Text = PercentageNumberResult
-        Dim subtractdiscount As Double
-        subtractdiscount = totalbill_txt.Text - TextBox5.Text
-        totalbillafterdis_txt.Text = subtractdiscount
-    End Sub 
+  
     Private Sub p_pricetotal()
 
         Dim mul As Int64
@@ -325,12 +314,7 @@ Public Class ratesfrm
    
   
    
-    Private Sub totalbill()
-        Dim addd As Int64
-        addd = Convert.ToInt64(uinttotalprice_txt.Text) + Convert.ToInt64(servictotal_txt.Text)
-        totalbill_txt.Text = Convert.ToString(addd)
-
-    End Sub
+   
     Private Sub p_nameadd()
         RichTextBox1.Text &= "Name" & ":" & pname_txt.Text & "," & "Price" & ":" + unitprce_txt.Text & "," & "Discount" & ":" + pr_single_dis.Text & "," & "Bill" & ":" + single_dis_txt.Text & vbNewLine
     End Sub
@@ -367,7 +351,6 @@ Public Class ratesfrm
         totalofser_pro_outdis.Text = Convert.ToString(addd)
     End Sub
     Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-
         Try
            
            
@@ -400,10 +383,7 @@ Public Class ratesfrm
 
     End Sub
 
-    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
-      
-
-
+    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If TextBox2.Text = "" Then
             MsgBox("please provide name")
         Else
@@ -428,9 +408,9 @@ Public Class ratesfrm
     Private Sub pro2_gird_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles pro2_gird.CellContentClick
         Try
 
-            Me.pid_txt.Text = pro2_gird.CurrentRow.Cells(1).Value.ToString
+            ' Me.pid_txt.Text = pro2_gird.CurrentRow.Cells(1).Value.ToString
             Me.pname_txt.Text = pro2_gird.CurrentRow.Cells(2).Value.ToString
-            Me.Label24.Text = pro2_gird.CurrentRow.Cells(3).Value.ToString
+            'Me.Label24.Text = pro2_gird.CurrentRow.Cells(3).Value.ToString
             'Me.unitprce_txt.Text = pro2_gird.CurrentRow.Cells(4).Value.ToString
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -547,7 +527,7 @@ Public Class ratesfrm
     End Sub
 
   
-    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         'p_pricetotal()
         services_sale()
         'quantitystockout_in()
@@ -597,12 +577,9 @@ Public Class ratesfrm
     Private Sub TextBox2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox2.TextChanged
 
 
-        If TextBox2.Text = "" And TextBox2.Text.Length = 0 Then
-            pro2_gird.Visible = False
-        Else
             Try
                 con.Open()
-                str = "select * from tbl_inventrry where Product_name like '" & TextBox2.Text & "%'"
+            str = "select I_Id,Pro_id,Product_name,Totalquantity from tbl_inventrry where Product_name like '" & TextBox2.Text & "%'"
                 cmd = New SqlCommand(str, con)
                 da = New SqlDataAdapter(cmd)
                 ds = New DataSet
@@ -614,7 +591,7 @@ Public Class ratesfrm
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try
-        End If
+
     End Sub
 
     Private Sub TextBox6_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox6.TextChanged
@@ -624,7 +601,7 @@ Public Class ratesfrm
         Else
             Try
                 con.Open()
-                str = "select * from tbl_services where Service_Name like '" & TextBox6.Text & "%'"
+                str = "select Rate_ID,Service_Name,Service_Price from tbl_services where Service_Name like '" & TextBox6.Text & "%'"
                 cmd = New SqlCommand(str, con)
                 da = New SqlDataAdapter(cmd)
                 ds = New DataSet
@@ -894,7 +871,8 @@ Public Class ratesfrm
     End Sub
     Private Sub p_editbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles p_editbtn.Click
         edit()
-
+        transaction_servicesgetdata()
+        transaction_productgetdata()
         payment_getdata()
         p_editbtn.Enabled = False
     End Sub
@@ -1008,6 +986,147 @@ Public Class ratesfrm
             ' EmailaddressTextBox.Text = datTable.Rows(incount)("Emailaddress").ToString
             ' PicturesPictureBox1. = datTable.Rows(incount)("Pictures")
         Next
+    End Sub
+
+    Private Sub sname_txt_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles sname_txt.SelectedIndexChanged
+        Try
+            Dim strsql As String = "select Serve_Emplyee from tbl_reservation where Memebr_name like('" + mname_txt.Text + "%')"
+            Dim strcon As String = cs
+            Dim odapre As New SqlDataAdapter(strsql, strcon)
+            Dim datTable As New DataTable
+            Dim incount As Integer
+            odapre.Fill(datTable)
+            For incount = 0 To datTable.Rows.Count - 1
+                emname_txt.Text = datTable.Rows(incount)("Serve_Emplyee").ToString
+
+            Next
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Failed:EmployeeName Populating", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Me.Dispose()
+        End Try
+    End Sub
+    'services transaction getdata
+    Private Sub transaction_servicesgetdata()
+        
+        Dim con As New SqlConnection(cs)
+        con.Open()
+        Dim da As New SqlDataAdapter("Select Transaction_ID,Member_Name,Memebr_ID,Service_Details,SerPrice_without_Discount,SerPrice_with_Discount,Service_Remarks,Transaction_Date,Transaction_Date from tbl_productsales", con)
+        Dim dt As New DataTable
+        da.Fill(dt)
+        source1.DataSource = dt
+        serv_getdata.DataSource = dt
+        serv_getdata.Refresh()
+    End Sub
+
+    'product transaction getdata
+    Private Sub transaction_productgetdata()
+
+        Dim con As New SqlConnection(cs)
+        con.Open()
+        Dim da As New SqlDataAdapter("Select Transaction_ID,Member_Name,Memebr_ID,Product_Details,Product_Total_Items,ProPrice_without_Discount,ProPrice_with_Discount,Product_Remarks,Transaction_Date from tbl_productsales", con)
+        Dim dt As New DataTable
+        da.Fill(dt)
+        source1.DataSource = dt
+        prodcut_getdata.DataSource = dt
+        prodcut_getdata.Refresh()
+    End Sub
+
+    'searchproduct by date
+    Private Sub product_searchdate()
+        con.Close()
+        Try
+            ' Dim cn As New SqlConnection
+            Dim ds As New DataSet
+            Dim dt As New DataTable
+            Dim dfrom As DateTime = DateTimePicker1.Value
+            Dim dto As DateTime = DateTimePicker2.Value
+            myConnection.ConnectionString = cs
+            myConnection.Open()
+            Dim str As String = "Select Transaction_ID,Member_Name,Memebr_ID,Product_Details,Product_Total_Items,ProPrice_without_Discount,ProPrice_with_Discount,Product_Remarks,Transaction_Date from tbl_productsales where Transaction_Date >= '" & Format(dfrom, "MM-dd-yyyy") & "' and Transaction_Date <='" & Format(dto, "MM-dd-yyyy") & "'"
+            Dim da As SqlDataAdapter = New SqlDataAdapter(str, myConnection)
+            da.Fill(dt)
+            prodcut_getdata.DataSource = dt
+            myConnection.Close()
+            prodcut_getdata.Refresh()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Failed:Date Search", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Me.Dispose()
+        End Try
+    End Sub
+    Private Sub RadioButton4_CheckedChanged_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioButton4.CheckedChanged
+        product_searchdate()
+        RadioButton4.Checked = False
+    End Sub
+    'searchservices by date
+    Private Sub services_searchdate()
+        con.Close()
+        Try
+            ' Dim cn As New SqlConnection
+            Dim ds As New DataSet
+            Dim dt As New DataTable
+            Dim dfrom As DateTime = DateTimePicker1.Value
+            Dim dto As DateTime = DateTimePicker2.Value
+            myConnection.ConnectionString = cs
+            myConnection.Open()
+            Dim str As String = "Select  Transaction_ID,Member_Name,Memebr_ID,Service_Details,SerPrice_without_Discount,SerPrice_with_Discount,Service_Remarks,Transaction_Date,Transaction_Date from tbl_productsales where Transaction_Date >= '" & Format(dfrom, "MM-dd-yyyy") & "' and Transaction_Date <='" & Format(dto, "MM-dd-yyyy") & "'"
+            Dim da As SqlDataAdapter = New SqlDataAdapter(str, myConnection)
+            da.Fill(dt)
+            serv_getdata.DataSource = dt
+            myConnection.Close()
+            serv_getdata.Refresh()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Failed:Date Search", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Me.Dispose()
+        End Try
+    End Sub
+    'search member name in productgrid
+    Private Sub product_search_txtbox()
+        Dim str As String
+        Try
+            con.Open()
+            str = "Select Transaction_ID,Member_Name,Memebr_ID,Product_Details,Product_Total_Items,ProPrice_without_Discount,ProPrice_with_Discount,Product_Remarks,Transaction_Date from tbl_productsales  where Member_Name like '" & TextBox3.Text & "%'"
+            cmd = New SqlCommand(str, con)
+            da = New SqlDataAdapter(cmd)
+            ds = New DataSet
+            da.Fill(ds, "tbl_productsales")
+            con.Close()
+            prodcut_getdata.DataSource = ds
+            prodcut_getdata.DataMember = "tbl_productsales"
+            prodcut_getdata.Visible = True
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Failed:Member Name Search", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Me.Dispose()
+        End Try
+    End Sub
+    Private Sub RadioButton5_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioButton5.CheckedChanged
+        services_searchdate()
+        RadioButton5.Checked = False
+    End Sub
+
+    Private Sub TextBox3_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox3.TextChanged
+        product_search_txtbox()
+    End Sub
+    'search member name in servicesgrid
+    Private Sub services_search_txtbox()
+        Dim str As String
+        Try
+            con.Open()
+            str = "Select  Transaction_ID,Member_Name,Memebr_ID,Service_Details,SerPrice_without_Discount,SerPrice_with_Discount,Service_Remarks,Transaction_Date,Transaction_Date from tbl_productsales  where Member_Name like '" & TextBox4.Text & "%'"
+            cmd = New SqlCommand(str, con)
+            da = New SqlDataAdapter(cmd)
+            ds = New DataSet
+            da.Fill(ds, "tbl_productsales")
+            con.Close()
+            serv_getdata.DataSource = ds
+            serv_getdata.DataMember = "tbl_productsales"
+            serv_getdata.Visible = True
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Failed:Member Name Search", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Me.Dispose()
+        End Try
+    End Sub
+    Private Sub TextBox4_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox4.TextChanged
+        services_search_txtbox()
     End Sub
 End Class
 '

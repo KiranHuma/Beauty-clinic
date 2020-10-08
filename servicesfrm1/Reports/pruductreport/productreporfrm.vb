@@ -50,7 +50,7 @@ Public Class productreporfrm
         Try
             Cursor = Cursors.WaitCursor
 
-            Dim rprt As New productreport 'The report you created.
+            Dim rprt As New productreports 'The report you created.
             Dim myConnection As SqlConnection
             Dim MyCommand As New SqlCommand()
             Dim myDA As New SqlDataAdapter()
@@ -72,7 +72,7 @@ Public Class productreporfrm
     End Sub
     Private myDS As New mainclinicdbDataSet() ' Dataset you created.
     Private Sub wordconvert()
-        Dim rpt As New productreport() 'The report you created.
+        Dim rpt As New productreports() 'The report you created.
         Dim myConnection As SqlConnection
         Dim MyCommand As New SqlCommand()
         Dim myDA As New SqlDataAdapter()
@@ -143,12 +143,12 @@ Public Class productreporfrm
 
     Private Sub productreporfrm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         wordconvert()
-
+        Call CenterToScreen()
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
         'This Code is used to Convert to word document
-        Dim reportWord As New productreport() ' Report Name 
+        Dim reportWord As New productreports() ' Report Name 
         Dim strExportFile As String = "e:\TestWord.doc"
         reportWord.ExportOptions.ExportDestinationType = ExportDestinationType.DiskFile
         reportWord.ExportOptions.ExportFormatType = ExportFormatType.WordForWindows
@@ -163,6 +163,14 @@ Public Class productreporfrm
 
 
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub Button12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click
+        Me.Dispose()
+    End Sub
+
+    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
 
     End Sub
 End Class

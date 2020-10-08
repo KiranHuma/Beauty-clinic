@@ -284,7 +284,7 @@ Public Class regmmberfrm
         End If
     End Sub
     'search by date
-    Private Sub payment_productsearchdate()
+    Private Sub member_searchdate()
         con.Close()
         Try
             ' Dim cn As New SqlConnection
@@ -306,8 +306,8 @@ Public Class regmmberfrm
         End Try
     End Sub
     Private Sub RadioButton1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioButton1.CheckedChanged
-        payment_productsearchdate()
-        'RadioButton1.Checked = False
+        member_searchdate()
+        RadioButton1.Checked = False
     End Sub
     'search member name in grid
     Private Sub search_txt()
@@ -330,5 +330,18 @@ Public Class regmmberfrm
     End Sub
     Private Sub TextBox3_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox3.TextChanged
         search_txt()
+    End Sub
+
+    Private Sub Button6_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button6.MouseHover
+        ToolTip1.IsBalloon = True
+        ToolTip1.UseAnimation = True
+        ToolTip1.ToolTipTitle = ""
+        ToolTip1.SetToolTip(Button6, "Select the one field or more from Grid to Remove")
+    End Sub
+
+  
+    
+    Private Sub TabPage1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabPage1.Click
+
     End Sub
 End Class

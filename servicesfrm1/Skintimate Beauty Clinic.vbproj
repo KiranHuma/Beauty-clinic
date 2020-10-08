@@ -174,10 +174,10 @@
     <Compile Include="Reports\pruductreport\productreporfrm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reports\pruductreport\productreport.vb">
+    <Compile Include="Reports\pruductreport\productreports.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>productreport.rpt</DependentUpon>
+      <DependentUpon>productreports.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
@@ -225,9 +225,9 @@
     <EmbeddedResource Include="Reports\pruductreport\productreporfrm.resx">
       <DependentUpon>productreporfrm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\pruductreport\productreport.rpt">
+    <EmbeddedResource Include="Reports\pruductreport\productreports.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>productreport.vb</LastGenOutput>
+      <LastGenOutput>productreports.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

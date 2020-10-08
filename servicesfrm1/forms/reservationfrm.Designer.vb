@@ -36,9 +36,13 @@ Partial Class reservationfrm
         Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Button12 = New System.Windows.Forms.Button()
+        Me.Label31 = New System.Windows.Forms.Label()
         Me.welcomemsg = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.pending_txt = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.rese_time = New System.Windows.Forms.DateTimePicker()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.reservedon_txt = New System.Windows.Forms.DateTimePicker()
@@ -55,7 +59,6 @@ Partial Class reservationfrm
         Me.Label8 = New System.Windows.Forms.Label()
         Me.rid_txt = New System.Windows.Forms.ComboBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label23 = New System.Windows.Forms.Label()
         Me.mid_txt = New System.Windows.Forms.ComboBox()
         Me.re_gendrtxt = New System.Windows.Forms.Label()
         Me.re_serdescriptiontxt = New System.Windows.Forms.Label()
@@ -81,6 +84,12 @@ Partial Class reservationfrm
         Me.dte_txt = New System.Windows.Forms.DateTimePicker()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.RadioButton5 = New System.Windows.Forms.RadioButton()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.get_reservationdata = New System.Windows.Forms.DataGridView()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
@@ -109,14 +118,9 @@ Partial Class reservationfrm
         Me.Label24 = New System.Windows.Forms.Label()
         Me.today_employeeadd_txt = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Button12 = New System.Windows.Forms.Button()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Label31 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        Me.Panel1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.get_reservationdata, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
@@ -125,20 +129,27 @@ Partial Class reservationfrm
         '
         'TabControl1
         '
+        Me.TabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
-        Me.TabControl1.Location = New System.Drawing.Point(53, 98)
+        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1262, 615)
+        Me.TabControl1.Size = New System.Drawing.Size(1534, 931)
         Me.TabControl1.TabIndex = 263
         '
         'TabPage1
         '
+        Me.TabPage1.BackColor = System.Drawing.Color.White
+        Me.TabPage1.Controls.Add(Me.Button12)
+        Me.TabPage1.Controls.Add(Me.Label31)
         Me.TabPage1.Controls.Add(Me.welcomemsg)
+        Me.TabPage1.Controls.Add(Me.Label11)
         Me.TabPage1.Controls.Add(Me.pending_txt)
         Me.TabPage1.Controls.Add(Me.TextBox1)
+        Me.TabPage1.Controls.Add(Me.Label9)
         Me.TabPage1.Controls.Add(Me.rese_time)
         Me.TabPage1.Controls.Add(Me.Label22)
         Me.TabPage1.Controls.Add(Me.reservedon_txt)
@@ -179,13 +190,37 @@ Partial Class reservationfrm
         Me.TabPage1.Controls.Add(Me.svemem)
         Me.TabPage1.Controls.Add(Me.dte_txt)
         Me.TabPage1.Controls.Add(Me.Label2)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 28)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1254, 586)
+        Me.TabPage1.Size = New System.Drawing.Size(1526, 899)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Reservation"
-        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Button12
+        '
+        Me.Button12.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button12.BackColor = System.Drawing.Color.White
+        Me.Button12.BackgroundImage = CType(resources.GetObject("Button12.BackgroundImage"), System.Drawing.Image)
+        Me.Button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button12.ForeColor = System.Drawing.Color.White
+        Me.Button12.Location = New System.Drawing.Point(1486, 71)
+        Me.Button12.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(31, 30)
+        Me.Button12.TabIndex = 303
+        Me.Button12.UseVisualStyleBackColor = False
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Location = New System.Drawing.Point(1242, 183)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(39, 17)
+        Me.Label31.TabIndex = 339
+        Me.Label31.Text = "Time"
+        Me.Label31.Visible = False
         '
         'welcomemsg
         '
@@ -193,7 +228,7 @@ Partial Class reservationfrm
         Me.welcomemsg.BackColor = System.Drawing.Color.White
         Me.welcomemsg.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.welcomemsg.ForeColor = System.Drawing.Color.White
-        Me.welcomemsg.Location = New System.Drawing.Point(133, 488)
+        Me.welcomemsg.Location = New System.Drawing.Point(160, 674)
         Me.welcomemsg.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.welcomemsg.Name = "welcomemsg"
         Me.welcomemsg.Size = New System.Drawing.Size(73, 17)
@@ -201,12 +236,22 @@ Partial Class reservationfrm
         Me.welcomemsg.Text = "Welcome"
         Me.welcomemsg.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(1099, 183)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(38, 17)
+        Me.Label11.TabIndex = 338
+        Me.Label11.Text = "Date"
+        Me.Label11.Visible = False
+        '
         'pending_txt
         '
         Me.pending_txt.AutoSize = True
         Me.pending_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.pending_txt.ForeColor = System.Drawing.Color.LightCoral
-        Me.pending_txt.Location = New System.Drawing.Point(862, 313)
+        Me.pending_txt.Location = New System.Drawing.Point(1066, 475)
         Me.pending_txt.Name = "pending_txt"
         Me.pending_txt.Size = New System.Drawing.Size(60, 17)
         Me.pending_txt.TabIndex = 384
@@ -223,10 +268,21 @@ Partial Class reservationfrm
         Me.TextBox1.TabIndex = 383
         Me.TextBox1.Visible = False
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Vivaldi", 36.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.Label9.ForeColor = System.Drawing.Color.LightCoral
+        Me.Label9.Location = New System.Drawing.Point(536, 37)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(279, 71)
+        Me.Label9.TabIndex = 266
+        Me.Label9.Text = "&Reservation"
+        '
         'rese_time
         '
         Me.rese_time.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.rese_time.Location = New System.Drawing.Point(179, 336)
+        Me.rese_time.Location = New System.Drawing.Point(311, 451)
         Me.rese_time.Name = "rese_time"
         Me.rese_time.ShowUpDown = True
         Me.rese_time.Size = New System.Drawing.Size(200, 22)
@@ -235,15 +291,17 @@ Partial Class reservationfrm
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(54, 341)
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.Label22.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label22.Location = New System.Drawing.Point(132, 456)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(39, 17)
+        Me.Label22.Size = New System.Drawing.Size(50, 20)
         Me.Label22.TabIndex = 381
         Me.Label22.Text = "Time"
         '
         'reservedon_txt
         '
-        Me.reservedon_txt.Location = New System.Drawing.Point(179, 376)
+        Me.reservedon_txt.Location = New System.Drawing.Point(311, 491)
         Me.reservedon_txt.Name = "reservedon_txt"
         Me.reservedon_txt.Size = New System.Drawing.Size(200, 22)
         Me.reservedon_txt.TabIndex = 380
@@ -251,34 +309,38 @@ Partial Class reservationfrm
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(54, 381)
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.Label21.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label21.Location = New System.Drawing.Point(132, 496)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(38, 17)
+        Me.Label21.Size = New System.Drawing.Size(49, 20)
         Me.Label21.TabIndex = 379
         Me.Label21.Text = "Date"
         '
         'rese_sertxtt
         '
+        Me.rese_sertxtt.ForeColor = System.Drawing.Color.SteelBlue
         Me.rese_sertxtt.FormattingEnabled = True
         Me.rese_sertxtt.Items.AddRange(New Object() {"Facial Waxing", "Underarm Waxing", "Half legs Waxing", "Full legs Waxing", "Bikini Waxing", "Brazillian Waxing", "Full Body Waxing", "Eyebrow Threading", "Upper Lip", "Korean Natural Lash", "Korean Mascara Look", "Barbie Natural Look", "Barbie Volume Set", "Rusian Volume Set", "Sidney Volume Set", "Eyelash Perm with Keratin", "Manicure", "Pedicure", "Gel Polish", "Foot Spa", "Ear Candling", "Warts Removal", "Facial RF", "Facial Whitening", "Glutathione IV Push/Drip", "Mesolipo Slimming Inject", "Diamond Peel", "Lipo Cavitation and Lipo Laser", "Lipo Cavitation and Lipo Laser(Arms)", "Lipo Cavitation and Lipo Laser(Tummy)", "Lipo Cavitation and Lipo Laser(Legs)"})
-        Me.rese_sertxtt.Location = New System.Drawing.Point(179, 208)
+        Me.rese_sertxtt.Location = New System.Drawing.Point(311, 323)
         Me.rese_sertxtt.Name = "rese_sertxtt"
         Me.rese_sertxtt.Size = New System.Drawing.Size(200, 24)
         Me.rese_sertxtt.TabIndex = 378
         '
         'rese_sertxt
         '
-        Me.rese_sertxt.Location = New System.Drawing.Point(404, 183)
+        Me.rese_sertxt.ForeColor = System.Drawing.Color.SteelBlue
+        Me.rese_sertxt.Location = New System.Drawing.Point(548, 307)
         Me.rese_sertxt.Name = "rese_sertxt"
-        Me.rese_sertxt.Size = New System.Drawing.Size(164, 118)
+        Me.rese_sertxt.Size = New System.Drawing.Size(226, 118)
         Me.rese_sertxt.TabIndex = 376
         Me.rese_sertxt.Text = ""
         '
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label18.Location = New System.Drawing.Point(884, 246)
+        Me.Label18.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label18.Location = New System.Drawing.Point(1088, 408)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(56, 17)
         Me.Label18.TabIndex = 375
@@ -288,8 +350,8 @@ Partial Class reservationfrm
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label20.Location = New System.Drawing.Point(805, 284)
+        Me.Label20.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label20.Location = New System.Drawing.Point(1009, 446)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(130, 17)
         Me.Label20.TabIndex = 374
@@ -300,8 +362,8 @@ Partial Class reservationfrm
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label12.Location = New System.Drawing.Point(877, 186)
+        Me.Label12.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label12.Location = New System.Drawing.Point(1081, 348)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(60, 17)
         Me.Label12.TabIndex = 371
@@ -312,8 +374,8 @@ Partial Class reservationfrm
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label14.Location = New System.Drawing.Point(877, 155)
+        Me.Label14.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label14.Location = New System.Drawing.Point(1081, 317)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(33, 17)
         Me.Label14.TabIndex = 370
@@ -324,8 +386,8 @@ Partial Class reservationfrm
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label16.Location = New System.Drawing.Point(877, 124)
+        Me.Label16.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label16.Location = New System.Drawing.Point(1081, 286)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(56, 17)
         Me.Label16.TabIndex = 369
@@ -336,8 +398,8 @@ Partial Class reservationfrm
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label17.Location = New System.Drawing.Point(877, 86)
+        Me.Label17.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label17.Location = New System.Drawing.Point(1081, 248)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(45, 17)
         Me.Label17.TabIndex = 368
@@ -346,7 +408,8 @@ Partial Class reservationfrm
         '
         'reentry_txt
         '
-        Me.reentry_txt.Location = New System.Drawing.Point(179, 68)
+        Me.reentry_txt.ForeColor = System.Drawing.Color.SteelBlue
+        Me.reentry_txt.Location = New System.Drawing.Point(311, 183)
         Me.reentry_txt.Name = "reentry_txt"
         Me.reentry_txt.ReadOnly = True
         Me.reentry_txt.Size = New System.Drawing.Size(200, 22)
@@ -355,16 +418,19 @@ Partial Class reservationfrm
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(54, 68)
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.Label8.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label8.Location = New System.Drawing.Point(132, 183)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(75, 17)
+        Me.Label8.Size = New System.Drawing.Size(96, 20)
         Me.Label8.TabIndex = 366
         Me.Label8.Text = "Re_Entry#"
         '
         'rid_txt
         '
+        Me.rid_txt.ForeColor = System.Drawing.Color.SteelBlue
         Me.rid_txt.FormattingEnabled = True
-        Me.rid_txt.Location = New System.Drawing.Point(179, 163)
+        Me.rid_txt.Location = New System.Drawing.Point(311, 278)
         Me.rid_txt.Name = "rid_txt"
         Me.rid_txt.Size = New System.Drawing.Size(200, 24)
         Me.rid_txt.TabIndex = 364
@@ -372,34 +438,18 @@ Partial Class reservationfrm
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.LightCoral
-        Me.Panel1.Controls.Add(Me.Label23)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel1.ForeColor = System.Drawing.Color.Snow
-        Me.Panel1.Location = New System.Drawing.Point(3, 564)
+        Me.Panel1.Location = New System.Drawing.Point(3, 877)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1248, 19)
+        Me.Panel1.Size = New System.Drawing.Size(1520, 19)
         Me.Panel1.TabIndex = 363
-        '
-        'Label23
-        '
-        Me.Label23.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label23.AutoSize = True
-        Me.Label23.BackColor = System.Drawing.Color.Transparent
-        Me.Label23.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Label23.Font = New System.Drawing.Font("Arial Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.ForeColor = System.Drawing.Color.White
-        Me.Label23.Location = New System.Drawing.Point(1011, -6)
-        Me.Label23.Margin = New System.Windows.Forms.Padding(7, 0, 7, 0)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(63, 28)
-        Me.Label23.TabIndex = 302
-        Me.Label23.Text = "Date"
-        Me.Label23.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'mid_txt
         '
+        Me.mid_txt.ForeColor = System.Drawing.Color.SteelBlue
         Me.mid_txt.FormattingEnabled = True
-        Me.mid_txt.Location = New System.Drawing.Point(179, 258)
+        Me.mid_txt.Location = New System.Drawing.Point(311, 373)
         Me.mid_txt.Name = "mid_txt"
         Me.mid_txt.Size = New System.Drawing.Size(200, 24)
         Me.mid_txt.TabIndex = 362
@@ -407,8 +457,8 @@ Partial Class reservationfrm
         're_gendrtxt
         '
         Me.re_gendrtxt.AutoSize = True
-        Me.re_gendrtxt.ForeColor = System.Drawing.Color.LightCoral
-        Me.re_gendrtxt.Location = New System.Drawing.Point(1065, 246)
+        Me.re_gendrtxt.ForeColor = System.Drawing.Color.SteelBlue
+        Me.re_gendrtxt.Location = New System.Drawing.Point(1269, 408)
         Me.re_gendrtxt.Name = "re_gendrtxt"
         Me.re_gendrtxt.Size = New System.Drawing.Size(0, 17)
         Me.re_gendrtxt.TabIndex = 361
@@ -416,8 +466,8 @@ Partial Class reservationfrm
         're_serdescriptiontxt
         '
         Me.re_serdescriptiontxt.AutoSize = True
-        Me.re_serdescriptiontxt.ForeColor = System.Drawing.Color.LightCoral
-        Me.re_serdescriptiontxt.Location = New System.Drawing.Point(1067, 284)
+        Me.re_serdescriptiontxt.ForeColor = System.Drawing.Color.SteelBlue
+        Me.re_serdescriptiontxt.Location = New System.Drawing.Point(1271, 446)
         Me.re_serdescriptiontxt.Name = "re_serdescriptiontxt"
         Me.re_serdescriptiontxt.Size = New System.Drawing.Size(0, 17)
         Me.re_serdescriptiontxt.TabIndex = 360
@@ -425,9 +475,11 @@ Partial Class reservationfrm
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(54, 208)
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.Label13.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label13.Location = New System.Drawing.Point(132, 323)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(96, 17)
+        Me.Label13.Size = New System.Drawing.Size(126, 20)
         Me.Label13.TabIndex = 356
         Me.Label13.Text = "Service Name"
         '
@@ -435,8 +487,8 @@ Partial Class reservationfrm
         '
         Me.re_memberadress_txt.AutoSize = True
         Me.re_memberadress_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.re_memberadress_txt.ForeColor = System.Drawing.Color.LightCoral
-        Me.re_memberadress_txt.Location = New System.Drawing.Point(1063, 186)
+        Me.re_memberadress_txt.ForeColor = System.Drawing.Color.SteelBlue
+        Me.re_memberadress_txt.Location = New System.Drawing.Point(1267, 348)
         Me.re_memberadress_txt.Name = "re_memberadress_txt"
         Me.re_memberadress_txt.Size = New System.Drawing.Size(0, 17)
         Me.re_memberadress_txt.TabIndex = 352
@@ -445,8 +497,8 @@ Partial Class reservationfrm
         '
         Me.re_memberage_txt.AutoSize = True
         Me.re_memberage_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.re_memberage_txt.ForeColor = System.Drawing.Color.LightCoral
-        Me.re_memberage_txt.Location = New System.Drawing.Point(1063, 155)
+        Me.re_memberage_txt.ForeColor = System.Drawing.Color.SteelBlue
+        Me.re_memberage_txt.Location = New System.Drawing.Point(1267, 317)
         Me.re_memberage_txt.Name = "re_memberage_txt"
         Me.re_memberage_txt.Size = New System.Drawing.Size(0, 17)
         Me.re_memberage_txt.TabIndex = 351
@@ -455,8 +507,8 @@ Partial Class reservationfrm
         '
         Me.re_membercntct_txt.AutoSize = True
         Me.re_membercntct_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.re_membercntct_txt.ForeColor = System.Drawing.Color.LightCoral
-        Me.re_membercntct_txt.Location = New System.Drawing.Point(1063, 124)
+        Me.re_membercntct_txt.ForeColor = System.Drawing.Color.SteelBlue
+        Me.re_membercntct_txt.Location = New System.Drawing.Point(1267, 286)
         Me.re_membercntct_txt.Name = "re_membercntct_txt"
         Me.re_membercntct_txt.Size = New System.Drawing.Size(0, 17)
         Me.re_membercntct_txt.TabIndex = 350
@@ -465,8 +517,8 @@ Partial Class reservationfrm
         '
         Me.re_mname_txt.AutoSize = True
         Me.re_mname_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.re_mname_txt.ForeColor = System.Drawing.Color.LightCoral
-        Me.re_mname_txt.Location = New System.Drawing.Point(1063, 86)
+        Me.re_mname_txt.ForeColor = System.Drawing.Color.SteelBlue
+        Me.re_mname_txt.Location = New System.Drawing.Point(1267, 248)
         Me.re_mname_txt.Name = "re_mname_txt"
         Me.re_mname_txt.Size = New System.Drawing.Size(0, 17)
         Me.re_mname_txt.TabIndex = 349
@@ -478,7 +530,7 @@ Partial Class reservationfrm
         Me.Btnadd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Btnadd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btnadd.ForeColor = System.Drawing.Color.White
-        Me.Btnadd.Location = New System.Drawing.Point(979, 479)
+        Me.Btnadd.Location = New System.Drawing.Point(1230, 709)
         Me.Btnadd.Margin = New System.Windows.Forms.Padding(4)
         Me.Btnadd.Name = "Btnadd"
         Me.Btnadd.Size = New System.Drawing.Size(45, 35)
@@ -491,7 +543,7 @@ Partial Class reservationfrm
         Me.Label19.BackColor = System.Drawing.Color.Transparent
         Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label19.Location = New System.Drawing.Point(953, 518)
+        Me.Label19.Location = New System.Drawing.Point(1204, 748)
         Me.Label19.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(71, 17)
@@ -504,7 +556,7 @@ Partial Class reservationfrm
         Me.Label15.BackColor = System.Drawing.Color.Transparent
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label15.Location = New System.Drawing.Point(1170, 520)
+        Me.Label15.Location = New System.Drawing.Point(1421, 750)
         Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(55, 17)
@@ -517,7 +569,7 @@ Partial Class reservationfrm
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label10.Location = New System.Drawing.Point(1107, 520)
+        Me.Label10.Location = New System.Drawing.Point(1358, 750)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(36, 17)
@@ -528,10 +580,11 @@ Partial Class reservationfrm
         '
         Me.btnupdte.BackColor = System.Drawing.Color.White
         Me.btnupdte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnupdte.Enabled = False
         Me.btnupdte.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnupdte.ForeColor = System.Drawing.Color.White
         Me.btnupdte.Image = CType(resources.GetObject("btnupdte.Image"), System.Drawing.Image)
-        Me.btnupdte.Location = New System.Drawing.Point(1101, 479)
+        Me.btnupdte.Location = New System.Drawing.Point(1352, 709)
         Me.btnupdte.Margin = New System.Windows.Forms.Padding(4)
         Me.btnupdte.Name = "btnupdte"
         Me.btnupdte.Size = New System.Drawing.Size(42, 34)
@@ -545,7 +598,7 @@ Partial Class reservationfrm
         Me.Btndel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Btndel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btndel.ForeColor = System.Drawing.Color.White
-        Me.Btndel.Location = New System.Drawing.Point(1173, 479)
+        Me.Btndel.Location = New System.Drawing.Point(1424, 709)
         Me.Btndel.Margin = New System.Windows.Forms.Padding(4)
         Me.Btndel.Name = "Btndel"
         Me.Btndel.Size = New System.Drawing.Size(52, 34)
@@ -558,7 +611,7 @@ Partial Class reservationfrm
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label7.Location = New System.Drawing.Point(1169, 516)
+        Me.Label7.Location = New System.Drawing.Point(1420, 746)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(50, 20)
@@ -572,7 +625,7 @@ Partial Class reservationfrm
         Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.ForeColor = System.Drawing.SystemColors.Control
-        Me.Button2.Location = New System.Drawing.Point(1173, 479)
+        Me.Button2.Location = New System.Drawing.Point(1424, 709)
         Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(36, 33)
@@ -581,7 +634,8 @@ Partial Class reservationfrm
         '
         'resid_txt
         '
-        Me.resid_txt.Location = New System.Drawing.Point(179, 120)
+        Me.resid_txt.ForeColor = System.Drawing.Color.SteelBlue
+        Me.resid_txt.Location = New System.Drawing.Point(311, 235)
         Me.resid_txt.Name = "resid_txt"
         Me.resid_txt.ReadOnly = True
         Me.resid_txt.Size = New System.Drawing.Size(200, 22)
@@ -590,27 +644,33 @@ Partial Class reservationfrm
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(54, 120)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.Label6.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label6.Location = New System.Drawing.Point(132, 235)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(101, 17)
+        Me.Label6.Size = New System.Drawing.Size(134, 20)
         Me.Label6.TabIndex = 272
         Me.Label6.Text = "Reservation ID"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(54, 163)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.Label3.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label3.Location = New System.Drawing.Point(132, 278)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(51, 17)
+        Me.Label3.Size = New System.Drawing.Size(67, 20)
         Me.Label3.TabIndex = 268
         Me.Label3.Text = "RateID"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(54, 262)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.Label5.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label5.Location = New System.Drawing.Point(132, 377)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(72, 17)
+        Me.Label5.Size = New System.Drawing.Size(95, 20)
         Me.Label5.TabIndex = 270
         Me.Label5.Text = "MemberID"
         '
@@ -620,7 +680,7 @@ Partial Class reservationfrm
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label1.Location = New System.Drawing.Point(1032, 516)
+        Me.Label1.Location = New System.Drawing.Point(1283, 746)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(50, 20)
@@ -634,7 +694,7 @@ Partial Class reservationfrm
         Me.svemem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.svemem.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.svemem.ForeColor = System.Drawing.SystemColors.Control
-        Me.svemem.Location = New System.Drawing.Point(1038, 479)
+        Me.svemem.Location = New System.Drawing.Point(1289, 709)
         Me.svemem.Margin = New System.Windows.Forms.Padding(4)
         Me.svemem.Name = "svemem"
         Me.svemem.Size = New System.Drawing.Size(36, 33)
@@ -643,7 +703,7 @@ Partial Class reservationfrm
         '
         'dte_txt
         '
-        Me.dte_txt.Location = New System.Drawing.Point(179, 298)
+        Me.dte_txt.Location = New System.Drawing.Point(311, 413)
         Me.dte_txt.Name = "dte_txt"
         Me.dte_txt.Size = New System.Drawing.Size(200, 22)
         Me.dte_txt.TabIndex = 266
@@ -651,23 +711,87 @@ Partial Class reservationfrm
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(54, 303)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.Label2.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label2.Location = New System.Drawing.Point(132, 418)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(118, 17)
+        Me.Label2.Size = New System.Drawing.Size(155, 20)
         Me.Label2.TabIndex = 263
         Me.Label2.Text = "Reservation Date"
         '
         'TabPage2
         '
+        Me.TabPage2.BackColor = System.Drawing.Color.White
+        Me.TabPage2.Controls.Add(Me.RadioButton5)
+        Me.TabPage2.Controls.Add(Me.Label4)
+        Me.TabPage2.Controls.Add(Me.DateTimePicker2)
+        Me.TabPage2.Controls.Add(Me.DateTimePicker3)
+        Me.TabPage2.Controls.Add(Me.Label23)
+        Me.TabPage2.Controls.Add(Me.TextBox2)
         Me.TabPage2.Controls.Add(Me.get_reservationdata)
         Me.TabPage2.Controls.Add(Me.Button6)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 28)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1254, 586)
+        Me.TabPage2.Size = New System.Drawing.Size(1526, 899)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Reservation Records"
-        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'RadioButton5
+        '
+        Me.RadioButton5.AutoSize = True
+        Me.RadioButton5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.RadioButton5.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.RadioButton5.Location = New System.Drawing.Point(40, 41)
+        Me.RadioButton5.Name = "RadioButton5"
+        Me.RadioButton5.Size = New System.Drawing.Size(169, 24)
+        Me.RadioButton5.TabIndex = 345
+        Me.RadioButton5.TabStop = True
+        Me.RadioButton5.Text = "Search By  Date"
+        Me.RadioButton5.UseVisualStyleBackColor = True
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.Label4.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.Label4.Location = New System.Drawing.Point(259, 68)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(25, 20)
+        Me.Label4.TabIndex = 344
+        Me.Label4.Text = "to"
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.Location = New System.Drawing.Point(309, 68)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(200, 22)
+        Me.DateTimePicker2.TabIndex = 343
+        '
+        'DateTimePicker3
+        '
+        Me.DateTimePicker3.Location = New System.Drawing.Point(40, 68)
+        Me.DateTimePicker3.Name = "DateTimePicker3"
+        Me.DateTimePicker3.Size = New System.Drawing.Size(200, 22)
+        Me.DateTimePicker3.TabIndex = 342
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.Label23.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.Label23.Location = New System.Drawing.Point(37, 103)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(223, 20)
+        Me.Label23.TabIndex = 341
+        Me.Label23.Text = "Search By Member Name"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(41, 138)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(244, 22)
+        Me.TextBox2.TabIndex = 340
         '
         'get_reservationdata
         '
@@ -706,7 +830,7 @@ Partial Class reservationfrm
         Me.get_reservationdata.DefaultCellStyle = DataGridViewCellStyle3
         Me.get_reservationdata.EnableHeadersVisualStyles = False
         Me.get_reservationdata.GridColor = System.Drawing.Color.LightCoral
-        Me.get_reservationdata.Location = New System.Drawing.Point(7, 91)
+        Me.get_reservationdata.Location = New System.Drawing.Point(7, 224)
         Me.get_reservationdata.Margin = New System.Windows.Forms.Padding(4)
         Me.get_reservationdata.Name = "get_reservationdata"
         Me.get_reservationdata.ReadOnly = True
@@ -725,23 +849,25 @@ Partial Class reservationfrm
         DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White
         Me.get_reservationdata.RowsDefaultCellStyle = DataGridViewCellStyle5
         Me.get_reservationdata.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.get_reservationdata.Size = New System.Drawing.Size(1243, 488)
+        Me.get_reservationdata.Size = New System.Drawing.Size(1515, 668)
         Me.get_reservationdata.TabIndex = 320
         '
         'Button6
         '
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.ForeColor = System.Drawing.Color.LightCoral
-        Me.Button6.Location = New System.Drawing.Point(867, 42)
+        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold)
+        Me.Button6.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Button6.Location = New System.Drawing.Point(1263, 164)
         Me.Button6.Margin = New System.Windows.Forms.Padding(4)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(179, 31)
+        Me.Button6.Size = New System.Drawing.Size(221, 31)
         Me.Button6.TabIndex = 317
         Me.Button6.Text = "&Select Rows to Remove"
         Me.Button6.UseVisualStyleBackColor = True
         '
         'TabPage3
         '
+        Me.TabPage3.BackColor = System.Drawing.Color.White
         Me.TabPage3.Controls.Add(Me.Button5)
         Me.TabPage3.Controls.Add(Me.Button4)
         Me.TabPage3.Controls.Add(Me.Label33)
@@ -767,28 +893,31 @@ Partial Class reservationfrm
         Me.TabPage3.Controls.Add(Me.Label24)
         Me.TabPage3.Controls.Add(Me.today_employeeadd_txt)
         Me.TabPage3.Controls.Add(Me.DataGridView1)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 28)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(1254, 586)
+        Me.TabPage3.Size = New System.Drawing.Size(1526, 899)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Today Reservations"
-        Me.TabPage3.UseVisualStyleBackColor = True
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(1157, 89)
+        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Button5.Location = New System.Drawing.Point(1389, 97)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 28)
+        Me.Button5.Size = New System.Drawing.Size(91, 28)
         Me.Button5.TabIndex = 352
         Me.Button5.Text = "Payment"
         Me.Button5.UseVisualStyleBackColor = True
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(998, 21)
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Button4.Location = New System.Drawing.Point(1246, 29)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(116, 23)
+        Me.Button4.Size = New System.Drawing.Size(116, 28)
         Me.Button4.TabIndex = 351
         Me.Button4.Text = "Book New"
         Me.Button4.UseVisualStyleBackColor = True
@@ -796,7 +925,8 @@ Partial Class reservationfrm
         'Label33
         '
         Me.Label33.AutoSize = True
-        Me.Label33.Location = New System.Drawing.Point(466, 192)
+        Me.Label33.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label33.Location = New System.Drawing.Point(559, 184)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(0, 17)
         Me.Label33.TabIndex = 350
@@ -804,7 +934,7 @@ Partial Class reservationfrm
         'today_Ctime
         '
         Me.today_Ctime.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.today_Ctime.Location = New System.Drawing.Point(176, 126)
+        Me.today_Ctime.Location = New System.Drawing.Point(205, 126)
         Me.today_Ctime.Name = "today_Ctime"
         Me.today_Ctime.ShowUpDown = True
         Me.today_Ctime.Size = New System.Drawing.Size(173, 22)
@@ -813,7 +943,7 @@ Partial Class reservationfrm
         'DateTimePicker1
         '
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.DateTimePicker1.Location = New System.Drawing.Point(438, 126)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(509, 123)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.ShowUpDown = True
         Me.DateTimePicker1.Size = New System.Drawing.Size(193, 22)
@@ -822,17 +952,21 @@ Partial Class reservationfrm
         'Label32
         '
         Me.Label32.AutoSize = True
-        Me.Label32.Location = New System.Drawing.Point(364, 126)
+        Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label32.Location = New System.Drawing.Point(415, 126)
         Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(68, 17)
+        Me.Label32.Size = New System.Drawing.Size(76, 17)
         Me.Label32.TabIndex = 347
         Me.Label32.Text = "End Time"
         '
         'today_Cstatus
         '
+        Me.today_Cstatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.today_Cstatus.ForeColor = System.Drawing.Color.SteelBlue
         Me.today_Cstatus.FormattingEnabled = True
         Me.today_Cstatus.Items.AddRange(New Object() {"Pending", "Serving", "Served", "Cancelled"})
-        Me.today_Cstatus.Location = New System.Drawing.Point(176, 151)
+        Me.today_Cstatus.Location = New System.Drawing.Point(205, 159)
         Me.today_Cstatus.Name = "today_Cstatus"
         Me.today_Cstatus.Size = New System.Drawing.Size(173, 24)
         Me.today_Cstatus.TabIndex = 344
@@ -840,33 +974,41 @@ Partial Class reservationfrm
         'Label30
         '
         Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(42, 151)
+        Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label30.Location = New System.Drawing.Point(42, 159)
         Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(128, 17)
+        Me.Label30.Size = New System.Drawing.Size(146, 17)
         Me.Label30.TabIndex = 343
         Me.Label30.Text = "Reservation Status"
         '
         'Label29
         '
         Me.Label29.AutoSize = True
+        Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.ForeColor = System.Drawing.Color.SteelBlue
         Me.Label29.Location = New System.Drawing.Point(42, 123)
         Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(96, 17)
+        Me.Label29.Size = New System.Drawing.Size(108, 17)
         Me.Label29.TabIndex = 341
         Me.Label29.Text = "Time Reserve"
         '
         'Label28
         '
         Me.Label28.AutoSize = True
+        Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.ForeColor = System.Drawing.Color.SteelBlue
         Me.Label28.Location = New System.Drawing.Point(48, 95)
         Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(95, 17)
+        Me.Label28.Size = New System.Drawing.Size(107, 17)
         Me.Label28.TabIndex = 339
         Me.Label28.Text = "Reserve Date"
         '
         'today_Cdate
         '
-        Me.today_Cdate.Location = New System.Drawing.Point(176, 95)
+        Me.today_Cdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.today_Cdate.ForeColor = System.Drawing.Color.SteelBlue
+        Me.today_Cdate.Location = New System.Drawing.Point(205, 95)
         Me.today_Cdate.Name = "today_Cdate"
         Me.today_Cdate.ReadOnly = True
         Me.today_Cdate.Size = New System.Drawing.Size(173, 22)
@@ -875,31 +1017,39 @@ Partial Class reservationfrm
         'Label27
         '
         Me.Label27.AutoSize = True
+        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.ForeColor = System.Drawing.Color.SteelBlue
         Me.Label27.Location = New System.Drawing.Point(48, 35)
         Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(84, 17)
+        Me.Label27.Size = New System.Drawing.Size(95, 17)
         Me.Label27.TabIndex = 335
         Me.Label27.Text = "Client Name"
         '
         'Label26
         '
         Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.ForeColor = System.Drawing.Color.SteelBlue
         Me.Label26.Location = New System.Drawing.Point(48, 67)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(97, 17)
+        Me.Label26.Size = New System.Drawing.Size(110, 17)
         Me.Label26.TabIndex = 334
         Me.Label26.Text = "Client Number"
         '
         'today_Cname
         '
-        Me.today_Cname.Location = New System.Drawing.Point(176, 35)
+        Me.today_Cname.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.today_Cname.ForeColor = System.Drawing.Color.SteelBlue
+        Me.today_Cname.Location = New System.Drawing.Point(205, 35)
         Me.today_Cname.Name = "today_Cname"
         Me.today_Cname.Size = New System.Drawing.Size(173, 22)
         Me.today_Cname.TabIndex = 333
         '
         'today_entry
         '
-        Me.today_entry.Location = New System.Drawing.Point(176, 67)
+        Me.today_entry.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.today_entry.ForeColor = System.Drawing.Color.SteelBlue
+        Me.today_entry.Location = New System.Drawing.Point(205, 67)
         Me.today_entry.Name = "today_entry"
         Me.today_entry.ReadOnly = True
         Me.today_entry.Size = New System.Drawing.Size(173, 22)
@@ -908,9 +1058,11 @@ Partial Class reservationfrm
         'RadioButton4
         '
         Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Location = New System.Drawing.Point(1157, 149)
+        Me.RadioButton4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton4.ForeColor = System.Drawing.Color.SteelBlue
+        Me.RadioButton4.Location = New System.Drawing.Point(1405, 157)
         Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(91, 21)
+        Me.RadioButton4.Size = New System.Drawing.Size(100, 21)
         Me.RadioButton4.TabIndex = 330
         Me.RadioButton4.TabStop = True
         Me.RadioButton4.Text = "Cancelled"
@@ -919,9 +1071,11 @@ Partial Class reservationfrm
         'RadioButton3
         '
         Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(1021, 149)
+        Me.RadioButton3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton3.ForeColor = System.Drawing.Color.SteelBlue
+        Me.RadioButton3.Location = New System.Drawing.Point(1269, 157)
         Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(77, 21)
+        Me.RadioButton3.Size = New System.Drawing.Size(84, 21)
         Me.RadioButton3.TabIndex = 329
         Me.RadioButton3.TabStop = True
         Me.RadioButton3.Text = "Serving"
@@ -930,9 +1084,11 @@ Partial Class reservationfrm
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(906, 149)
+        Me.RadioButton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton2.ForeColor = System.Drawing.Color.SteelBlue
+        Me.RadioButton2.Location = New System.Drawing.Point(1154, 157)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(74, 21)
+        Me.RadioButton2.Size = New System.Drawing.Size(80, 21)
         Me.RadioButton2.TabIndex = 328
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "Served"
@@ -941,9 +1097,11 @@ Partial Class reservationfrm
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(774, 149)
+        Me.RadioButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton1.ForeColor = System.Drawing.Color.SteelBlue
+        Me.RadioButton1.Location = New System.Drawing.Point(1022, 157)
         Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(81, 21)
+        Me.RadioButton1.Size = New System.Drawing.Size(88, 21)
         Me.RadioButton1.TabIndex = 327
         Me.RadioButton1.TabStop = True
         Me.RadioButton1.Text = "Pending"
@@ -951,25 +1109,29 @@ Partial Class reservationfrm
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(1132, 21)
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Button3.Location = New System.Drawing.Point(1380, 29)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(116, 23)
+        Me.Button3.Size = New System.Drawing.Size(116, 28)
         Me.Button3.TabIndex = 326
-        Me.Button3.Text = "Status Refresh"
+        Me.Button3.Text = "Update"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Label25
         '
         Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(855, 189)
+        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label25.Location = New System.Drawing.Point(1103, 197)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(119, 17)
+        Me.Label25.Size = New System.Drawing.Size(137, 17)
         Me.Label25.TabIndex = 325
         Me.Label25.Text = "Filter Client Name"
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(1008, 186)
+        Me.TextBox3.Location = New System.Drawing.Point(1256, 194)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(240, 22)
         Me.TextBox3.TabIndex = 324
@@ -977,15 +1139,19 @@ Partial Class reservationfrm
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(48, 181)
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label24.Location = New System.Drawing.Point(42, 184)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(122, 17)
+        Me.Label24.Size = New System.Drawing.Size(138, 17)
         Me.Label24.TabIndex = 323
         Me.Label24.Text = "Serving Employee"
         '
         'today_employeeadd_txt
         '
-        Me.today_employeeadd_txt.Location = New System.Drawing.Point(176, 181)
+        Me.today_employeeadd_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.today_employeeadd_txt.ForeColor = System.Drawing.Color.SteelBlue
+        Me.today_employeeadd_txt.Location = New System.Drawing.Point(205, 189)
         Me.today_employeeadd_txt.Name = "today_employeeadd_txt"
         Me.today_employeeadd_txt.Size = New System.Drawing.Size(173, 22)
         Me.today_employeeadd_txt.TabIndex = 322
@@ -1046,65 +1212,15 @@ Partial Class reservationfrm
         DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White
         Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle10
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(1246, 350)
+        Me.DataGridView1.Size = New System.Drawing.Size(1518, 663)
         Me.DataGridView1.TabIndex = 321
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label9.Location = New System.Drawing.Point(518, 32)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(223, 44)
-        Me.Label9.TabIndex = 266
-        Me.Label9.Text = "Reservation"
-        '
-        'Button12
-        '
-        Me.Button12.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button12.BackColor = System.Drawing.Color.SteelBlue
-        Me.Button12.BackgroundImage = CType(resources.GetObject("Button12.BackgroundImage"), System.Drawing.Image)
-        Me.Button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button12.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Button12.Location = New System.Drawing.Point(1307, 22)
-        Me.Button12.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(31, 30)
-        Me.Button12.TabIndex = 303
-        Me.Button12.UseVisualStyleBackColor = False
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(1017, 22)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(38, 17)
-        Me.Label11.TabIndex = 338
-        Me.Label11.Text = "Date"
-        Me.Label11.Visible = False
-        '
-        'Label31
-        '
-        Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(1132, 22)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(39, 17)
-        Me.Label31.TabIndex = 339
-        Me.Label31.Text = "Time"
-        Me.Label31.Visible = False
         '
         'reservationfrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.RoyalBlue
-        Me.ClientSize = New System.Drawing.Size(1351, 820)
-        Me.Controls.Add(Me.Label31)
-        Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.Button12)
-        Me.Controls.Add(Me.Label9)
+        Me.ClientSize = New System.Drawing.Size(1534, 931)
         Me.Controls.Add(Me.TabControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "reservationfrm"
@@ -1113,15 +1229,13 @@ Partial Class reservationfrm
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
         CType(Me.get_reservationdata, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
@@ -1163,7 +1277,6 @@ Partial Class reservationfrm
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents rid_txt As System.Windows.Forms.ComboBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents Label23 As System.Windows.Forms.Label
     Friend WithEvents mid_txt As System.Windows.Forms.ComboBox
     Friend WithEvents re_gendrtxt As System.Windows.Forms.Label
     Friend WithEvents re_serdescriptiontxt As System.Windows.Forms.Label
@@ -1204,4 +1317,10 @@ Partial Class reservationfrm
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents pending_txt As System.Windows.Forms.Label
     Friend WithEvents welcomemsg As System.Windows.Forms.Label
+    Friend WithEvents RadioButton5 As System.Windows.Forms.RadioButton
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents DateTimePicker3 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Label23 As System.Windows.Forms.Label
+    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
 End Class
