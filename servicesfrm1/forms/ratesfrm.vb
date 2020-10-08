@@ -28,14 +28,26 @@ Public Class ratesfrm
     Dim str As String
     Dim dt As New DataTable
     Dim cs As String = "Data Source=GEO;Initial Catalog=mainclinicdb;Integrated Security=True"
+    'Database Connection
     Private Sub dbaccessconnection()
-
         Try
             con.ConnectionString = cs
             cmd.Connection = con
-
         Catch ex As Exception
             MsgBox("DataBase not connected due to the reason because " & ex.Message)
+            Me.Dispose()
+        End Try
+    End Sub
+    ' Transaction insert function
+    Private Sub p_insert()
+        Try
+            dbaccessconnection()
+            con.Open()
+            cmd.CommandText = "insert into tbl_productsales(Transaction_ID,Member_Name,Memebr_ID,Product_Details,Product_Total_Items,ProPrice_without_Discount,ProPrice_with_Discount,Product_Remarks,Service_Details,SerPrice_without_Discount,SerPrice_with_Discount,Service_Remarks,Transaction_Date)values('" & transactionid_txt.Text & "','" & mname_txt.Text & "','" & mbid_txt.Text & "','" & RichTextBox1.Text & "','" & Label5.Text & "','" & uinttotalprice_txt.Text & "','" & pro_single_totalbill.Text & "','" & RichTextBox4.Text & "','" & RichTextBox2.Text & "','" & servictotal_txt.Text & "','" & sertotal_bill.Text & "','" & RichTextBox5.Text & "','" & transactiondte_txt.Value & "')"
+            cmd.ExecuteNonQuery()
+            con.Close()
+        Catch ex As Exception
+            MsgBox("Data Inserted Failed because " & ex.Message)
             Me.Dispose()
         End Try
     End Sub
@@ -54,16 +66,7 @@ Public Class ratesfrm
         ' Me.WindowState = FormWindowState.Maximized
     End Sub
 
-    ' for payment tab
-
-    ' pament insert function
-    Private Sub p_insert()
-        dbaccessconnection()
-        con.Open()
-        cmd.CommandText = "insert into tbl_productsales(Transaction_ID,Member_Name,Memebr_ID,Product_Details,Product_Total_Items,ProPrice_without_Discount,ProPrice_with_Discount,Product_Remarks,Service_Details,SerPrice_without_Discount,SerPrice_with_Discount,Service_Remarks,Transaction_Date)values('" & transactionid_txt.Text & "','" & mname_txt.Text & "','" & mbid_txt.Text & "','" & RichTextBox1.Text & "','" & Label5.Text & "','" & uinttotalprice_txt.Text & "','" & pro_single_totalbill.Text & "','" & RichTextBox4.Text & "','" & RichTextBox2.Text & "','" & servictotal_txt.Text & "','" & sertotal_bill.Text & "','" & RichTextBox5.Text & "','" & transactiondte_txt.Value & "')"
-        cmd.ExecuteNonQuery()
-        con.Close()
-    End Sub
+   
    
     Private Sub pay_txtboxid()
         Try

@@ -36,6 +36,7 @@ Partial Class reservationfrm
         Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.welcomemsg = New System.Windows.Forms.Label()
         Me.pending_txt = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.rese_time = New System.Windows.Forms.DateTimePicker()
@@ -43,7 +44,6 @@ Partial Class reservationfrm
         Me.reservedon_txt = New System.Windows.Forms.DateTimePicker()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.rese_sertxtt = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.rese_sertxt = New System.Windows.Forms.RichTextBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
@@ -55,7 +55,6 @@ Partial Class reservationfrm
         Me.Label8 = New System.Windows.Forms.Label()
         Me.rid_txt = New System.Windows.Forms.ComboBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.mid_txt = New System.Windows.Forms.ComboBox()
         Me.re_gendrtxt = New System.Windows.Forms.Label()
@@ -137,6 +136,7 @@ Partial Class reservationfrm
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.welcomemsg)
         Me.TabPage1.Controls.Add(Me.pending_txt)
         Me.TabPage1.Controls.Add(Me.TextBox1)
         Me.TabPage1.Controls.Add(Me.rese_time)
@@ -144,7 +144,6 @@ Partial Class reservationfrm
         Me.TabPage1.Controls.Add(Me.reservedon_txt)
         Me.TabPage1.Controls.Add(Me.Label21)
         Me.TabPage1.Controls.Add(Me.rese_sertxtt)
-        Me.TabPage1.Controls.Add(Me.Button1)
         Me.TabPage1.Controls.Add(Me.rese_sertxt)
         Me.TabPage1.Controls.Add(Me.Label18)
         Me.TabPage1.Controls.Add(Me.Label20)
@@ -187,6 +186,20 @@ Partial Class reservationfrm
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Reservation"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'welcomemsg
+        '
+        Me.welcomemsg.AutoSize = True
+        Me.welcomemsg.BackColor = System.Drawing.Color.White
+        Me.welcomemsg.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.welcomemsg.ForeColor = System.Drawing.Color.White
+        Me.welcomemsg.Location = New System.Drawing.Point(133, 488)
+        Me.welcomemsg.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.welcomemsg.Name = "welcomemsg"
+        Me.welcomemsg.Size = New System.Drawing.Size(73, 17)
+        Me.welcomemsg.TabIndex = 385
+        Me.welcomemsg.Text = "Welcome"
+        Me.welcomemsg.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'pending_txt
         '
@@ -253,18 +266,9 @@ Partial Class reservationfrm
         Me.rese_sertxtt.Size = New System.Drawing.Size(200, 24)
         Me.rese_sertxtt.TabIndex = 378
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(385, 205)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(86, 27)
-        Me.Button1.TabIndex = 377
-        Me.Button1.Text = "Add More"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'rese_sertxt
         '
-        Me.rese_sertxt.Location = New System.Drawing.Point(477, 186)
+        Me.rese_sertxt.Location = New System.Drawing.Point(404, 183)
         Me.rese_sertxt.Name = "rese_sertxt"
         Me.rese_sertxt.Size = New System.Drawing.Size(164, 118)
         Me.rese_sertxt.TabIndex = 376
@@ -368,7 +372,6 @@ Partial Class reservationfrm
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.LightCoral
-        Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label23)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel1.ForeColor = System.Drawing.Color.Snow
@@ -376,20 +379,6 @@ Partial Class reservationfrm
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1248, 19)
         Me.Panel1.TabIndex = 363
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.LightCoral
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(256, 3)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(73, 17)
-        Me.Label4.TabIndex = 269
-        Me.Label4.Text = "Welcome"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Label23
         '
@@ -1163,7 +1152,6 @@ Partial Class reservationfrm
     Friend WithEvents reservedon_txt As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label21 As System.Windows.Forms.Label
     Friend WithEvents rese_sertxtt As System.Windows.Forms.ComboBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents rese_sertxt As System.Windows.Forms.RichTextBox
     Friend WithEvents Label18 As System.Windows.Forms.Label
     Friend WithEvents Label20 As System.Windows.Forms.Label
@@ -1175,7 +1163,6 @@ Partial Class reservationfrm
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents rid_txt As System.Windows.Forms.ComboBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label23 As System.Windows.Forms.Label
     Friend WithEvents mid_txt As System.Windows.Forms.ComboBox
     Friend WithEvents re_gendrtxt As System.Windows.Forms.Label
@@ -1216,4 +1203,5 @@ Partial Class reservationfrm
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents pending_txt As System.Windows.Forms.Label
+    Friend WithEvents welcomemsg As System.Windows.Forms.Label
 End Class

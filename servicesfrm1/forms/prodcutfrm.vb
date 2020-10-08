@@ -14,63 +14,37 @@ Imports System.Text
 Public Class prodcutfrm
     Private bitmap As Bitmap 'for print grid
     Dim rdr As SqlDataReader
-    Dim colColors As Collection = New Collection 'for color of listbox
-    Dim provider As String  'for access and sql same
-    Dim dataFile As String  'for access and sql same
-    Dim connString As String   'for access and sql same
-    ' Dim myConnection As OleDbConnection = New OleDbConnection   'for access replace it  Dim myConnection As SqlConnection = New SqlConnection
+    Dim provider As String
+    Dim dataFile As String
+    Dim connString As String
     Dim myConnection As SqlConnection = New SqlConnection
-    Dim ds As DataSet = New DataSet            'for access and sql same
-    ' Dim da As OleDbDataAdapter                'for access replace it with Dim da As SqlDataAdapter
+    Dim ds As DataSet = New DataSet
     Dim da As SqlDataAdapter
-    Dim tables As DataTableCollection = ds.Tables  'for access and sql same
-    Dim source1 As New BindingSource()                    'for access and sql same
+    Dim tables As DataTableCollection = ds.Tables
+    Dim source1 As New BindingSource()
     Dim source2 As New BindingSource()
-    Dim con As New SqlClient.SqlConnection                      'for sql
-    Dim cmd As New SqlClient.SqlCommand                        'for sql
-
+    Dim con As New SqlClient.SqlConnection
+    Dim cmd As New SqlClient.SqlCommand
     Dim dt As New DataTable
     Dim cs As String = "Data Source=GEO;Initial Catalog=mainclinicdb;Integrated Security=True"
+    'Database Connection
     Private Sub dbaccessconnection()
-
         Try
             con.ConnectionString = cs
             cmd.Connection = con
-            ' MsgBox("DataBase connected ")
         Catch ex As Exception
             MsgBox("DataBase not connected due to the reason because " & ex.Message)
             Me.Dispose()
         End Try
     End Sub
+    '>>>>>>>>>>>>>>>>>>>>>>>>Product>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    'insert Function
     Private Sub insert()
-        dbaccessconnection()
-        con.Open()
-        cmd.CommandText = "insert into tbl_products(pro_id,P_id,P_name,p_price,p_dte,p_description,photo)values('" & pro_txt.Text & "','" & pid_txt.Text & "','" & name_txt.Text & "','" & price_txt.Text & "','" & p_dtetxt.Value & "','" & des_txt.Text & "',@photo)"
-        Dim ms As New MemoryStream()
-        Dim bmpImage As New Bitmap(photo.Image)
-        bmpImage.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg)
-        Dim data As Byte() = ms.GetBuffer()
-        Dim p As New SqlParameter("@photo", SqlDbType.Image)
-        p.Value = data
-        cmd.Parameters.Add(p)
-        cmd.ExecuteNonQuery()
-       
-        con.Close()
-    End Sub
-
-    Private Sub edit()
-
-
         Try
-
-        dbaccessconnection()
-        con.Open()
-        If pid_txt.Text = "" Then
-            MessageBox.Show("Empty Id")
-            TabControl1.SelectedTab = TabPage2
-        Else
-
-                cmd.CommandText = ("UPDATE tbl_products SET  pro_id= '" & pro_txt.Text & "', P_id= '" & pid_txt.Text & "',P_name= '" & name_txt.Text & "',p_price= '" & price_txt.Text & "',p_dte= '" & p_dtetxt.Value & "',p_description= '" & des_txt.Text & "',photo=@photo where pro_id=" & pro_txt.Text & "")
+            dbaccessconnection()
+            con.Open()
+            cmd.CommandText = "insert into tbl_products(pro_id,P_id,p_name,p_price,p_dte,p_description,photo)values('" & pro_txt.Text & "','" & pid_txt.Text & "','" & name_txt.Text & "','" & price_txt.Text & "','" & p_dtetxt.Value & "','" & des_txt.Text & "',@photo)"
             Dim ms As New MemoryStream()
             Dim bmpImage As New Bitmap(photo.Image)
             bmpImage.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg)
@@ -79,47 +53,61 @@ Public Class prodcutfrm
             p.Value = data
             cmd.Parameters.Add(p)
             cmd.ExecuteNonQuery()
-            MessageBox.Show("Data Updated")
-            Label25.Text = "Product details updated successfully!"
             con.Close()
-
-        End If
-         Catch ex As Exception
-            MessageBox.Show("Data Not Updated")
+        Catch ex As Exception
+            MsgBox("Data Inserted Failed because " & ex.Message)
+            Me.Dispose()
         End Try
     End Sub
+    'edit Funtion
+    Private Sub edit()
+        Try
+        
+            cmd.CommandText = ("UPDATE tbl_products SET  pro_id= '" & pro_txt.Text & "', P_id= '" & pid_txt.Text & "',p_name= '" & name_txt.Text & "',p_price= '" & price_txt.Text & "',p_dte= '" & p_dtetxt.Value & "',p_description= '" & des_txt.Text & "',photo=@photo where pro_id=" & pro_txt.Text & "")
+            Dim ms As New MemoryStream()
+            Dim bmpImage As New Bitmap(photo.Image)
+            bmpImage.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg)
+            Dim data As Byte() = ms.GetBuffer()
+            Dim p As New SqlParameter("@photo", SqlDbType.Image)
+            p.Value = data
+            cmd.Parameters.Add(p)
+            cmd.ExecuteNonQuery()
+            welcomemsg.Text = "Product details updated successfully!"
+            con.Close()
 
-    Private Sub autogenerated()
-
-        Dim curValue As Integer
-        Dim result As String
-        Using con As SqlConnection = New SqlConnection(cs)
-            con.Open()
-            Dim cmd = New SqlCommand("select Max(P_id) from tbl_products", con)
-            result = cmd.ExecuteScalar().ToString()
-            If String.IsNullOrEmpty(result) Then
-                result = "PRO-0000"
+        Catch ex As Exception
+            MessageBox.Show("Data Not Updated")
+            welcomemsg.ForeColor = System.Drawing.Color.Red
+            Me.Dispose()
+        End Try
+    End Sub
+    'delete function
+    Private Sub DeleteSelecedRows()
+        Try
+            Dim ObjConnection As New SqlConnection()
+            Dim i As Integer
+            Dim mResult
+            mResult = MsgBox("Want you really delete the selected records?", _
+            vbYesNo + vbQuestion, "Removal confirmation")
+            If mResult = vbNo Then
+                Exit Sub
             End If
-
-            result = result.Substring(3)
-            Int32.TryParse(result, curValue)
-            curValue = curValue + 1
-            result = "PRO" + curValue.ToString("D4")
-            pid_txt.Text = result
-        End Using
+            ObjConnection.ConnectionString = cs
+            Dim ObjCommand As New SqlCommand()
+            ObjCommand.Connection = ObjConnection
+            For i = Me.get_productdata.SelectedRows.Count - 1 To 0 Step -1
+                ObjCommand.CommandText = "delete from tbl_products where pro_id='" & get_productdata.SelectedRows(i).Cells("pro_id").Value & "'"
+                ObjConnection.Open()
+                ObjCommand.ExecuteNonQuery()
+                ObjConnection.Close()
+                Me.get_productdata.Rows.Remove(Me.get_productdata.SelectedRows(i))
+            Next
+        Catch ex As Exception
+            MessageBox.Show("Failed:Deleting Selected Values" & ex.Message)
+            Me.Dispose()
+        End Try
     End Sub
-    Private Sub getdata()
-
-        Dim con As New SqlConnection(cs)
-        con.Open()
-        Dim da As New SqlDataAdapter("Select * from tbl_products ", con)
-        Dim dt As New DataTable
-        da.Fill(dt)
-        source2.DataSource = dt
-        get_productdata.DataSource = dt
-        get_productdata.Refresh()
-    End Sub
-
+    'auto increment the entry id
     Private Sub txtboxid()
         Try
             dbaccessconnection()
@@ -136,13 +124,80 @@ Public Class prodcutfrm
             End If
             con.Close()
         Catch ex As Exception
-            MsgBox("Error" & ex.Message)
+            MsgBox("Failed:Autoincrement of Product Entry" & ex.Message)
+            Me.Dispose()
+        End Try
+
+    End Sub
+    'auto increment alphanumeric id
+    Private Sub autogenerated()
+        Try
+            Dim curValue As Integer
+            Dim result As String
+            Using con As SqlConnection = New SqlConnection(cs)
+                con.Open()
+                Dim cmd = New SqlCommand("select Max(P_id) from tbl_products", con)
+                result = cmd.ExecuteScalar().ToString()
+                If String.IsNullOrEmpty(result) Then
+                    result = "PRO-0000"
+                End If
+
+                result = result.Substring(3)
+                Int32.TryParse(result, curValue)
+                curValue = curValue + 1
+                result = "PRO" + curValue.ToString("D4")
+                pid_txt.Text = result
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Failed:AutoIncrement of ProductID" & ex.Message)
             Me.Dispose()
         End Try
     End Sub
+    'Show data of products in grid
+    Private Sub getdata()
+        Try
+            Dim con As New SqlConnection(cs)
+            con.Open()
+            Dim da As New SqlDataAdapter("Select * from tbl_products ", con)
+            Dim dt As New DataTable
+            da.Fill(dt)
+            source2.DataSource = dt
+            get_productdata.DataSource = dt
+            get_productdata.Refresh()
+        Catch ex As Exception
+            MessageBox.Show("Failed:Retrieving Data" & ex.Message)
+            Me.Dispose()
+        End Try
+    End Sub
+    'get recent names of products in dropdown
+    Private Sub product_FillCombo()
+        Try
+            Dim myConnToAccess As SqlConnection
+            Dim ds As DataSet
+            Dim da As SqlDataAdapter
+            Dim tables As DataTableCollection
+            myConnToAccess = New SqlConnection(cs)
+            myConnToAccess.Open()
+            ds = New DataSet
+            tables = ds.Tables
+            da = New SqlDataAdapter("SELECT p_name from tbl_products", myConnToAccess)
+            da.Fill(ds, "tbl_products")
+            Dim view1 As New DataView(tables(0))
+            With name_txt
+                .DataSource = ds.Tables("tbl_products")
+                .DisplayMember = "p_name"
+                .ValueMember = "p_name"
+                .SelectedIndex = -1
+                .AutoCompleteMode = AutoCompleteMode.SuggestAppend
+                .AutoCompleteSource = AutoCompleteSource.ListItems
+            End With
+        Catch ex As Exception
+            MessageBox.Show(" Failed:Retrieving RecentNames " & ex.Message)
+            Me.Dispose()
+        End Try
+    End Sub
+    'Functions on form load
     Private Sub prodcutfrm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
-
         autogenerated()
         dbaccessconnection()
         getdata()
@@ -150,66 +205,68 @@ Public Class prodcutfrm
         ser_txtboxid()
         ser_getdata()
         ser_autogenerated()
-
+        Call CenterToScreen()
     End Sub
-    Private Sub product_FillCombo()
+    'Empty the textboxes
+    Private Sub clear()
         Try
-            'Dim myConnToAccess As OleDbConnection
-            Dim myConnToAccess As SqlConnection
-            Dim ds As DataSet
-            ' Dim da As OleDbDataAdapter
-            Dim da As SqlDataAdapter
-            Dim tables As DataTableCollection
-            ' myConnToAccess = New OleDbConnection("provider=Microsoft.ACE.Oledb.12.0;Data Source=airline.accdb")
-            myConnToAccess = New SqlConnection(cs)
-            myConnToAccess.Open()
-            ds = New DataSet
-            tables = ds.Tables
-            da = New SqlDataAdapter("SELECT P_name from tbl_products", myConnToAccess)
-            da.Fill(ds, "tbl_products")
-            Dim view1 As New DataView(tables(0))
-            With name_txt
-                .DataSource = ds.Tables("tbl_products")
-                .DisplayMember = "P_name"
-                .ValueMember = "P_name"
-                .SelectedIndex = -1
-                .AutoCompleteMode = AutoCompleteMode.SuggestAppend
-                .AutoCompleteSource = AutoCompleteSource.ListItems
-            End With
+            name_txt.Text = ""
+            price_txt.Text = ""
+            des_txt.Text = ""
         Catch ex As Exception
-            MessageBox.Show("At least one entry", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            MsgBox("Failed:Clear " & ex.Message)
+            Me.Dispose()
         End Try
     End Sub
+    '>>>>>>>>>>>>>>>>>>>>>Buttons<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    'Save Button
     Private Sub svemem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles svemem.Click
 
-        If Len(Trim(pro_txt.Text)) = 0 Then
-            MessageBox.Show("Please select Product ID", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        If Len(Trim(name_txt.Text)) = 0 Then
+            MessageBox.Show("Please select Product Name", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             pro_txt.Focus()
             Exit Sub
         End If
-
-
-
-
         Try
             MessageBox.Show("Are you sure to add data", "Data Adding", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-
             insert()
             getdata()
-            Label25.Text = "'" & pid_txt.Text & "' products details saved successfully!"
-            Label25.ForeColor = System.Drawing.Color.DarkGreen
-
+            welcomemsg.Text = "'" & pid_txt.Text & "' products details saved successfully!"
+            welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
         Catch ex As Exception
-            Label25.Text = "Error while saving '" & pid_txt.Text & "' products details"
-            Label25.ForeColor = System.Drawing.Color.Red
+            welcomemsg.Text = "Failed:Saving '" & pid_txt.Text & "' products details"
+            welcomemsg.ForeColor = System.Drawing.Color.Red
             MsgBox("DataBase not connected due to the reason because " & ex.Message)
-            'MessageBox.Show("Data already exist, you again select Ticket Details and Try other entry", "Data Invalid, Application is closing", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Me.Dispose()
         End Try
-
-
     End Sub
+    'edit Button
+    Private Sub btnupdte_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnupdte.Click
+        edit()
+        getdata()
+        btnupdte.Enabled = False
+    End Sub
+    'close button
+    Private Sub Button12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click
+        Me.Dispose()
+    End Sub
+    ' delete Button
+    Private Sub Btndel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btndel.Click
+        TabControl1.SelectedTab = TabPage2
+    End Sub
+    'grid delete Button 
+    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
+        DeleteSelecedRows()
+    End Sub
+    'Add Button
 
+    Private Sub Btnadd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btnadd.Click
+        clear()
+        txtboxid()
+        autogenerated()
+        svemem.Enabled = True
+    End Sub
+    'picture upload button
     Private Sub uploadbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles uploadbtn.Click
         Try
             With OpenFileDialog1
@@ -225,77 +282,15 @@ Public Class prodcutfrm
             MsgBox(ex.ToString())
         End Try
     End Sub
-
-    Private Sub Label9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label9.Click
-        productreporfrm.Show()
-    End Sub
-
-    Private Sub btnupdte_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnupdte.Click
-        edit()
-        getdata()
-    End Sub
-
-    Private Sub Btndel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btndel.Click
-        TabControl1.SelectedTab = TabPage2
-    End Sub
-
-    Private Sub DeleteSelecedRows()
-        Dim ObjConnection As New SqlConnection()
-        Dim i As Integer
-        Dim mResult
-        mResult = MsgBox("Want you really delete the selected records?", _
-        vbYesNo + vbQuestion, "Removal confirmation")
-        If mResult = vbNo Then
-            Exit Sub
-        End If
-        ObjConnection.ConnectionString = cs
-        Dim ObjCommand As New SqlCommand()
-        ObjCommand.Connection = ObjConnection
-        For i = Me.get_productdata.SelectedRows.Count - 1 To 0 Step -1
-            ObjCommand.CommandText = "delete from tbl_products where pro_id='" & get_productdata.SelectedRows(i).Cells("pro_id").Value & "'"
-            ObjConnection.Open()
-            ObjCommand.ExecuteNonQuery()
-            ObjConnection.Close()
-            Me.get_productdata.Rows.Remove(Me.get_productdata.SelectedRows(i))
-        Next
-
-    End Sub
-    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
-        DeleteSelecedRows()
-    End Sub
-
-    Private Sub Button12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click
-        Me.Dispose()
-    End Sub
-    
-    Private Sub clear()
-        Try
-
-            name_txt.Text = ""
-            price_txt.Text = ""
-            des_txt.Text = ""
-
-            ' p_dtetxt.Value = ""
-            'photo.Dispose()
-
-        Catch ex As Exception
-            MsgBox("Error:Some thing is going wrong,Close application and try again")
-        End Try
-    End Sub
-    Private Sub Btnadd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btnadd.Click
-        clear()
-        txtboxid()
-        autogenerated()
-        svemem.Enabled = True
-    End Sub
-
-
+    'Recent names button
     Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
         product_FillCombo()
     End Sub
-  
-
-
+    'report button
+    Private Sub Label9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label9.Click
+        productreporfrm.Show()
+    End Sub
+    'grid mouseclick
     Private Sub get_productdata_CellMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles get_productdata.CellMouseClick
         Try
 
@@ -305,8 +300,6 @@ Public Class prodcutfrm
             Me.price_txt.Text = get_productdata.CurrentRow.Cells(3).Value.ToString
             Me.p_dtetxt.Value = get_productdata.CurrentRow.Cells(4).Value.ToString
             Me.des_txt.Text = get_productdata.CurrentRow.Cells(5).Value.ToString
-
-
             ' Image()
             Dim i As Integer
             i = get_productdata.CurrentRow.Index
@@ -314,87 +307,80 @@ Public Class prodcutfrm
             Dim ms As New MemoryStream(bytes)
             photo.Image = Image.FromStream(ms)
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MsgBox("Failed:GridCick " & ex.Message)
+            Me.Dispose()
         End Try
     End Sub
-
+    'grid contentclick
     Private Sub get_productdata_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles get_productdata.CellContentClick
         TabControl1.SelectedTab = TabPage1
         svemem.Enabled = False
         Btndel.Enabled = True
         btnupdte.Enabled = True
     End Sub
-    'service form
+
+    '>>>>>>>>>>>>>>>>>>>>>>Service Form>>>>>>>>>>>>>>>>>>>>>>
+
+    'Service insert function
     Private Sub s_insert()
-        dbaccessconnection()
-        con.Open()
-        cmd.CommandText = "insert into tbl_services(Sentry_no,Rate_ID,Service_Name,Gender,Service_Price,Service_Date,Service_Description)values('" & eservice_txt.Text & "','" & rateid_txt.Text & "','" & servicename_txt.Text & "','" & gnder_txt.Text & "','" & serprice_txt.Text & "','" & s_dte_txt.Value & "','" & sevicedes_txt.Text & "')"
-        cmd.ExecuteNonQuery()
-
-        con.Close()
-    End Sub
-
-   
-    Private Sub ser_svbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ser_svbtn.Click
-   
-
         Try
-            MessageBox.Show("Are you sure to add data", "Data Adding", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-            'TextBox1.Text = pid_txt.Text
-            ' FillCombo()
-
-            s_insert()
-            ser_getdata()
-            Label21.Text = "'" & rateid_txt.Text & "' services details saved successfully!"
-            Label21.ForeColor = System.Drawing.Color.DarkGreen
-
+            dbaccessconnection()
+            con.Open()
+            cmd.CommandText = "insert into tbl_services(Sentry_no,Rate_ID,Service_Name,Gender,Service_Price,Service_Date,Service_Description)values('" & eservice_txt.Text & "','" & rateid_txt.Text & "','" & servicename_txt.Text & "','" & gnder_txt.Text & "','" & serprice_txt.Text & "','" & s_dte_txt.Value & "','" & sevicedes_txt.Text & "')"
+            cmd.ExecuteNonQuery()
+            con.Close()
+            con.Close()
         Catch ex As Exception
-            Label21.Text = "Error while saving '" & rateid_txt.Text & "' inventry details"
-            Label21.ForeColor = System.Drawing.Color.Red
-            MsgBox("DataBase not connected due to the reason because " & ex.Message)
-            'MessageBox.Show("Data already exist, you again select Ticket Details and Try other entry", "Data Invalid, Application is closing", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MsgBox("Data Inserted in Services Failed because " & ex.Message)
             Me.Dispose()
         End Try
-
-
     End Sub
-
-    Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button9.Click
-        menu_picturebox.Visible = True
-    End Sub
-
-  
-    Private Sub ser_autogenerated()
-
-        Dim curValue As Integer
-        Dim result As String
-        Using con As SqlConnection = New SqlConnection(cs)
+    'edit function of services
+    Private Sub ser_edit()
+        con.Close()
+        Try
+            dbaccessconnection()
             con.Open()
-            Dim cmd = New SqlCommand("select Max(Rate_ID) from tbl_services", con)
-            result = cmd.ExecuteScalar().ToString()
-            If String.IsNullOrEmpty(result) Then
-                result = "RID-0000"
+            TabControl1.SelectedTab = TabPage4
+            cmd.CommandText = ("UPDATE tbl_services SET Sentry_no= '" & eservice_txt.Text & "', Rate_ID= '" & rateid_txt.Text & "',Service_Name= '" & servicename_txt.Text & "',Gender= '" & gnder_txt.Text & "',Service_Price= '" & serprice_txt.Text & "',Service_Date= '" & s_dte_txt.Value & "',Service_Description= '" & sevicedes_txt.Text & "' where Sentry_no=" & eservice_txt.Text & "")
+            cmd.ExecuteNonQuery()
+            welcomemsg.Text = "Services details updated successfully!"
+            welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
+            sergetdata.Refresh()
+            con.Close()
+        Catch ex As Exception
+            MessageBox.Show("Services Data Not Updated" & ex.Message)
+            welcomemsg.ForeColor = System.Drawing.Color.Red
+            Me.Dispose()
+        End Try
+    End Sub
+    'Delete function
+    Private Sub ser_DeleteSelecedRows()
+        Try
+            Dim ObjConnection As New SqlConnection()
+            Dim i As Integer
+            Dim mResult
+            mResult = MsgBox("Want you really delete the selected records?", _
+            vbYesNo + vbQuestion, "Removal confirmation")
+            If mResult = vbNo Then
+                Exit Sub
             End If
-
-            result = result.Substring(3)
-            Int32.TryParse(result, curValue)
-            curValue = curValue + 1
-            result = "RID" + curValue.ToString("D4")
-            rateid_txt.Text = result
-        End Using
+            ObjConnection.ConnectionString = cs
+            Dim ObjCommand As New SqlCommand()
+            ObjCommand.Connection = ObjConnection
+            For i = Me.sergetdata.SelectedRows.Count - 1 To 0 Step -1
+                ObjCommand.CommandText = "delete from tbl_services where Sentry_no='" & sergetdata.SelectedRows(i).Cells("Sentry_no").Value & "'"
+                ObjConnection.Open()
+                ObjCommand.ExecuteNonQuery()
+                ObjConnection.Close()
+                Me.sergetdata.Rows.Remove(Me.sergetdata.SelectedRows(i))
+            Next
+        Catch ex As Exception
+            MessageBox.Show("Failed:Deleting Selected Values" & ex.Message)
+            Me.Dispose()
+        End Try
     End Sub
-    Private Sub ser_getdata()
-
-        Dim con As New SqlConnection(cs)
-        con.Open()
-        Dim da As New SqlDataAdapter("Select * from tbl_services ", con)
-        Dim dt As New DataTable
-        da.Fill(dt)
-        source2.DataSource = dt
-        sergetdata.DataSource = dt
-        sergetdata.Refresh()
-    End Sub
-
+    'auto increment the entry id
     Private Sub ser_txtboxid()
         Try
             dbaccessconnection()
@@ -411,65 +397,108 @@ Public Class prodcutfrm
             End If
             con.Close()
         Catch ex As Exception
-            MsgBox("Error" & ex.Message)
+            MsgBox("Failed:Autoincrement of Services Entry" & ex.Message)
             Me.Dispose()
         End Try
     End Sub
-    Private Sub ser_edit()
-        con.Close()
+    'auto increment alphanumeric id
+    Private Sub ser_autogenerated()
         Try
+            Dim curValue As Integer
+            Dim result As String
+            Using con As SqlConnection = New SqlConnection(cs)
+                con.Open()
+                Dim cmd = New SqlCommand("select Max(Rate_ID) from tbl_services", con)
+                result = cmd.ExecuteScalar().ToString()
+                If String.IsNullOrEmpty(result) Then
+                    result = "RID-0000"
+                End If
 
-            dbaccessconnection()
-            con.Open()
-
-                TabControl1.SelectedTab = TabPage4
-                cmd.CommandText = ("UPDATE tbl_services SET Sentry_no= '" & eservice_txt.Text & "', Rate_ID= '" & rateid_txt.Text & "',Service_Name= '" & servicename_txt.Text & "',Gender= '" & gnder_txt.Text & "',Service_Price= '" & serprice_txt.Text & "',Service_Date= '" & s_dte_txt.Value & "',Service_Description= '" & sevicedes_txt.Text & "' where Sentry_no=" & eservice_txt.Text & "")
-                cmd.ExecuteNonQuery()
-            'MessageBox.Show("Data Updated")
-                Label25.Text = "Product details updated successfully!"
-                con.Close()
-
-
+                result = result.Substring(3)
+                Int32.TryParse(result, curValue)
+                curValue = curValue + 1
+                result = "RID" + curValue.ToString("D4")
+                rateid_txt.Text = result
+            End Using
         Catch ex As Exception
-            MessageBox.Show("Data Not Updated" & ex.Message)
+            MessageBox.Show("Failed:AutoIncrement of ServicesID" & ex.Message)
+            Me.Dispose()
+        End Try
+    End Sub
+    'services get data
+    Private Sub ser_getdata()
+        Try
+            Dim con As New SqlConnection(cs)
+            con.Open()
+            Dim da As New SqlDataAdapter("Select * from tbl_services ", con)
+            Dim dt As New DataTable
+            da.Fill(dt)
+            source2.DataSource = dt
+            sergetdata.DataSource = dt
+            sergetdata.Refresh()
+        Catch ex As Exception
+            MessageBox.Show("Failed:Retrieving Services Data" & ex.Message)
+            Me.Dispose()
+        End Try
+    End Sub
+    'Empty the textboxes
+    Private Sub s_clear()
+        Try
+            rateid_txt.Text = ""
+            servicename_txt.Text = ""
+            gnder_txt.Text = ""
+            serprice_txt.Text = ""
+        Catch ex As Exception
+            MsgBox("Failed:Clear " & ex.Message)
+            Me.Dispose()
         End Try
     End Sub
 
-    Private Sub ser_DeleteSelecedRows()
-        Dim ObjConnection As New SqlConnection()
-        Dim i As Integer
-        Dim mResult
-        mResult = MsgBox("Want you really delete the selected records?", _
-        vbYesNo + vbQuestion, "Removal confirmation")
-        If mResult = vbNo Then
-            Exit Sub
-        End If
-        ObjConnection.ConnectionString = cs
-        Dim ObjCommand As New SqlCommand()
-        ObjCommand.Connection = ObjConnection
-        For i = Me.sergetdata.SelectedRows.Count - 1 To 0 Step -1
-            ObjCommand.CommandText = "delete from tbl_services where Sentry_no='" & sergetdata.SelectedRows(i).Cells("Sentry_no").Value & "'"
-            ObjConnection.Open()
-            ObjCommand.ExecuteNonQuery()
-            ObjConnection.Close()
-            Me.sergetdata.Rows.Remove(Me.sergetdata.SelectedRows(i))
-        Next
+    'service save button
+    Private Sub ser_svbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ser_svbtn.Click
+        Try
+            MessageBox.Show("Are you sure to add data", "Data Adding", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            'TextBox1.Text = pid_txt.Text
+            ' FillCombo()
+            s_insert()
+            ser_getdata()
+            Label21.Text = "'" & rateid_txt.Text & "' services details saved successfully!"
+            Label21.ForeColor = System.Drawing.Color.DarkGreen
 
+        Catch ex As Exception
+            Label21.Text = "Error while saving '" & rateid_txt.Text & "' services details"
+            Label21.ForeColor = System.Drawing.Color.Red
+            MsgBox("DataBase not connected due to the reason because " & ex.Message)
+            Me.Dispose()
+        End Try
     End Sub
+    ' service delete buttton
+    Private Sub ser_delbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ser_delbtn.Click
+        TabControl1.SelectedTab = TabPage4
+    End Sub
+
+    'service grid delete button
+    Private Sub select_delet_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles select_delet.Click
+        ser_DeleteSelecedRows()
+    End Sub
+    'service addbutton
     Private Sub ser_addbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ser_addbtn.Click
-        clear()
+        s_clear()
         ser_txtboxid()
         ser_autogenerated()
         ser_svbtn.Enabled = True
     End Sub
-
-  
+    'service edit button 
     Private Sub ser_editbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ser_editbtn.Click
         ser_edit()
         getdata()
         ser_getdata()
     End Sub
-
+    'button of 'see menu' of services
+    Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button9.Click
+        menu_picturebox.Visible = True
+    End Sub
+    'click on content
     Private Sub sergetdata_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles sergetdata.CellContentClick
         TabControl1.SelectedTab = TabPage3
         svemem.Enabled = False
@@ -477,11 +506,7 @@ Public Class prodcutfrm
         btnupdte.Enabled = True
     End Sub
 
-  
-    Private Sub select_delet_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles select_delet.Click
-        ser_DeleteSelecedRows()
-    End Sub
-
+    'service grid mouse click
     Private Sub sergetdata_CellMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles sergetdata.CellMouseClick
         Try
 
@@ -492,22 +517,21 @@ Public Class prodcutfrm
             Me.serprice_txt.Text = sergetdata.CurrentRow.Cells(4).Value.ToString
             Me.s_dte_txt.Value = sergetdata.CurrentRow.Cells(5).Value.ToString
             Me.sevicedes_txt.Text = sergetdata.CurrentRow.Cells(6).Value.ToString
-            
-
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
-
-    Private Sub ser_delbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ser_delbtn.Click
-        TabControl1.SelectedTab = TabPage4
+    'the price textbox only accept numbers
+    Private Sub price_txt_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles price_txt.KeyPress
+        If (e.KeyChar < Chr(48) Or e.KeyChar > Chr(57)) And e.KeyChar <> Chr(8) Then
+            e.Handled = True
+        End If
     End Sub
-
-    Private Sub pquatity_txt_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
-
+    'the servceprice textbox only accept numbers
+    Private Sub serprice_txt_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles serprice_txt.KeyPress
+        If (e.KeyChar < Chr(48) Or e.KeyChar > Chr(57)) And e.KeyChar <> Chr(8) Then
+            e.Handled = True
+        End If
     End Sub
-
-  
-
 End Class
