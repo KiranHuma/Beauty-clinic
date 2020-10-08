@@ -37,6 +37,7 @@ Partial Class prodctreportview
         Me.CrystalReportViewer1.ReportSource = Me.productreport1
         Me.CrystalReportViewer1.Size = New System.Drawing.Size(1120, 485)
         Me.CrystalReportViewer1.TabIndex = 0
+        Me.CrystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
         '
         'prodctreportview
         '

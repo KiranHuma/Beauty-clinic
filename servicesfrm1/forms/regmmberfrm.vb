@@ -236,7 +236,7 @@ Public Class regmmberfrm
     End Sub
     'report button
     Private Sub Label12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label12.Click
-        getmembrdata.Show()
+
     End Sub
     'click on text of grid
     Private Sub memberdata_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles memberdata.CellContentClick
@@ -343,5 +343,9 @@ Public Class regmmberfrm
     
     Private Sub TabPage1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabPage1.Click
 
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        getmembrdata.Show()
     End Sub
 End Class
