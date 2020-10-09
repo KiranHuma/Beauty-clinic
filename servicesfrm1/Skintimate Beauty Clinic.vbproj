@@ -129,11 +129,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>mainclinicdbDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="mainclinicdbDataSet1.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>mainclinicdbDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -203,6 +198,24 @@
     <Compile Include="Reports\TransactionReport\ProductsSaleExports.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reports\TransactionReport\ServiceSale\ServicesSaleExport.Designer.vb">
+      <DependentUpon>ServicesSaleExport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\TransactionReport\ServiceSale\ServicesSaleExport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\TransactionReport\ServiceSale\ServicesSaleReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServicesSaleReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\TransactionReport\ServiceSale\ServicesSaleReportFrm.Designer.vb">
+      <DependentUpon>ServicesSaleReportFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\TransactionReport\ServiceSale\ServicesSaleReportFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="forms\MainFrom1.resx">
@@ -262,9 +275,20 @@
     <EmbeddedResource Include="Reports\TransactionReport\ProductsSaleExports.resx">
       <DependentUpon>ProductsSaleExports.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TransactionReport\ServiceSale\ServicesSaleExport.resx">
+      <DependentUpon>ServicesSaleExport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TransactionReport\ServiceSale\ServicesSaleReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ServicesSaleReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TransactionReport\ServiceSale\ServicesSaleReportFrm.resx">
+      <DependentUpon>ServicesSaleReportFrm.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="mainclinicdbDataSet.xsc">
       <DependentUpon>mainclinicdbDataSet.xsd</DependentUpon>
     </None>
@@ -275,17 +299,6 @@
     </None>
     <None Include="mainclinicdbDataSet.xss">
       <DependentUpon>mainclinicdbDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="mainclinicdbDataSet1.xsc">
-      <DependentUpon>mainclinicdbDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="mainclinicdbDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>mainclinicdbDataSet1.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="mainclinicdbDataSet1.xss">
-      <DependentUpon>mainclinicdbDataSet1.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
