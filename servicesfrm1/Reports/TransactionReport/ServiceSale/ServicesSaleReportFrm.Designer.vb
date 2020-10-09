@@ -23,7 +23,7 @@ Partial Class ServicesSaleReportFrm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
-        Me.ServicesSaleReport1 = New servicesfrm1.ServicesSaleReport()
+        Me.ServicesSaleReport1 = New servicesfrm1.ServicesSaleReportt()
         Me.SuspendLayout()
         '
         'CrystalReportViewer1
@@ -52,5 +52,5 @@ Partial Class ServicesSaleReportFrm
 
     End Sub
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
-    Friend WithEvents ServicesSaleReport1 As servicesfrm1.ServicesSaleReport
+    Friend WithEvents ServicesSaleReport1 As servicesfrm1.ServicesSaleReportt
 End Class

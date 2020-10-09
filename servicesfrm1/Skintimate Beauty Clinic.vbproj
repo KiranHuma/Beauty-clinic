@@ -204,10 +204,10 @@
     <Compile Include="Reports\TransactionReport\ServiceSale\ServicesSaleExport.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reports\TransactionReport\ServiceSale\ServicesSaleReport.vb">
+    <Compile Include="Reports\TransactionReport\ServiceSale\ServicesSaleReportt.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ServicesSaleReport.rpt</DependentUpon>
+      <DependentUpon>ServicesSaleReportt.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\TransactionReport\ServiceSale\ServicesSaleReportFrm.Designer.vb">
@@ -278,9 +278,9 @@
     <EmbeddedResource Include="Reports\TransactionReport\ServiceSale\ServicesSaleExport.resx">
       <DependentUpon>ServicesSaleExport.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\TransactionReport\ServiceSale\ServicesSaleReport.rpt">
+    <EmbeddedResource Include="Reports\TransactionReport\ServiceSale\ServicesSaleReportt.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ServicesSaleReport.vb</LastGenOutput>
+      <LastGenOutput>ServicesSaleReportt.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\TransactionReport\ServiceSale\ServicesSaleReportFrm.resx">
       <DependentUpon>ServicesSaleReportFrm.vb</DependentUpon>

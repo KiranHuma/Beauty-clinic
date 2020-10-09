@@ -141,7 +141,7 @@ Public Class ProductsSaleExports
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
         'This Code is used to Convert to word document
         Dim reportWord As New ProductSaleReport() ' Report Name 
-        Dim strExportFile As String = "e:\ProducSaleReport.doc"
+        Dim strExportFile As String = "e:\ProductSaleReport.doc"
         reportWord.ExportOptions.ExportDestinationType = ExportDestinationType.DiskFile
         reportWord.ExportOptions.ExportFormatType = ExportFormatType.WordForWindows
         Dim objOptions As DiskFileDestinationOptions = New DiskFileDestinationOptions()
@@ -151,7 +151,7 @@ Public Class ProductsSaleExports
         reportWord.Export()
         objOptions = Nothing
         reportWord = Nothing
-        MsgBox("Please Check your E Drive.There will be a File with the Name of ProducSaleReport.Please Copy and Paste it in other folder for record otherwise it will replace when you print new one")
+        MsgBox("Please Check your E Drive.There will be a File with the Name of ProductSaleReport.Please Copy and Paste it in other folder for record otherwise it will replace when you print new one")
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
