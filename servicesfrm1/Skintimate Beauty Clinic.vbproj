@@ -112,10 +112,10 @@
     <Compile Include="forms\reservationfrm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\splashscreen.Designer.vb">
-      <DependentUpon>splashscreen.vb</DependentUpon>
+    <Compile Include="forms\ReportsAndExportFrm.Designer.vb">
+      <DependentUpon>ReportsAndExportFrm.vb</DependentUpon>
     </Compile>
-    <Compile Include="forms\splashscreen.vb">
+    <Compile Include="forms\ReportsAndExportFrm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\inventryfrm.Designer.vb">
@@ -233,8 +233,8 @@
     <EmbeddedResource Include="forms\reservationfrm.resx">
       <DependentUpon>reservationfrm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\splashscreen.resx">
-      <DependentUpon>splashscreen.vb</DependentUpon>
+    <EmbeddedResource Include="forms\ReportsAndExportFrm.resx">
+      <DependentUpon>ReportsAndExportFrm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\inventryfrm.resx">
       <DependentUpon>inventryfrm.vb</DependentUpon>

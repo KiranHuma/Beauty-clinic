@@ -235,7 +235,7 @@ Public Class regmmberfrm
         btnupdte.Enabled = False
     End Sub
     'report button
-    Private Sub Label12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label12.Click
+    Private Sub Label12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
     'click on text of grid
@@ -345,7 +345,7 @@ Public Class regmmberfrm
 
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         getmembrdata.Show()
     End Sub
 End Class

@@ -288,7 +288,7 @@ Public Class prodcutfrm
         product_FillCombo()
     End Sub
     'report button
-    Private Sub Label9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label9.Click
+    Private Sub Label9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
     'grid mouseclick
@@ -676,7 +676,7 @@ Public Class prodcutfrm
         ToolTip1.SetToolTip(select_delet, "Select the one field or more from Grid to Remove")
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        productreporfrm.Show()
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
     End Sub
 End Class

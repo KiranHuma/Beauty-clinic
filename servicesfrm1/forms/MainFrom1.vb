@@ -43,7 +43,7 @@ Public Class MainFrom1
         dbaccessconnection()
         Call CenterToScreen()
         Me.FormBorderStyle = Windows.Forms.FormBorderStyle.None
-        Me.WindowState = FormWindowState.Maximized
+        Me.WindowState = FormWindowState.Normal
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -64,7 +64,8 @@ Public Class MainFrom1
     End Sub
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
-        ratesfrm.Show()
+        ReportsAndExportFrm.Show()
+
     End Sub
 
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click

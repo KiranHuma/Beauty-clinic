@@ -1163,15 +1163,6 @@ Public Class ratesfrm
     End Sub
 
 
-    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
-
-        ProductsSaleExports.Show()
-        Call CenterToScreen()
-    End Sub
-
-    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
-        ServicesSaleExport.Show()
-        Call CenterToScreen()
-    End Sub
+   
 End Class
 '

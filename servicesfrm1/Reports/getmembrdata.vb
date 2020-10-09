@@ -154,7 +154,7 @@ Public Class getmembrdata
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
         'This Code is used to Convert to word document
         Dim reportWord As New membrReport() ' Report Name 
-        Dim strExportFile As String = "e:\TestWord.doc"
+        Dim strExportFile As String = "e:\Members.doc"
         reportWord.ExportOptions.ExportDestinationType = ExportDestinationType.DiskFile
         reportWord.ExportOptions.ExportFormatType = ExportFormatType.WordForWindows
         Dim objOptions As DiskFileDestinationOptions = New DiskFileDestinationOptions()
@@ -164,6 +164,7 @@ Public Class getmembrdata
         reportWord.Export()
         objOptions = Nothing
         reportWord = Nothing
+        MsgBox("Please Check your E Drive.There will be a File with the Name of Members.Please Copy and Paste it in other folder for record otherwise it will replace when you print new one")
     End Sub
 
 End Class

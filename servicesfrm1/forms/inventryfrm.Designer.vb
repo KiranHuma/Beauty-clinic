@@ -99,6 +99,7 @@ Partial Class inventryfrm
         Me.RadioButton4 = New System.Windows.Forms.RadioButton()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Label22 = New System.Windows.Forms.Label()
         Me.TabPage2.SuspendLayout()
         CType(Me.get_stockdata, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage1.SuspendLayout()
@@ -236,6 +237,7 @@ Partial Class inventryfrm
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.White
+        Me.TabPage1.Controls.Add(Me.Label22)
         Me.TabPage1.Controls.Add(Me.Button12)
         Me.TabPage1.Controls.Add(Me.Label5)
         Me.TabPage1.Controls.Add(Me.welcomemsg)
@@ -938,6 +940,14 @@ Partial Class inventryfrm
         Me.Button1.Text = "&Select Rows to Remove"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(615, 475)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(0, 17)
+        Me.Label22.TabIndex = 378
+        '
         'inventryfrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -1028,4 +1038,5 @@ Partial Class inventryfrm
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
+    Friend WithEvents Label22 As System.Windows.Forms.Label
 End Class

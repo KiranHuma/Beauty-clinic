@@ -33,7 +33,7 @@ Partial Class MainFrom1
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.Highlight
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
@@ -46,7 +46,7 @@ Partial Class MainFrom1
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.SystemColors.Highlight
+        Me.Button2.BackColor = System.Drawing.Color.Transparent
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
@@ -59,7 +59,7 @@ Partial Class MainFrom1
         '
         'Button3
         '
-        Me.Button3.BackColor = System.Drawing.SystemColors.Highlight
+        Me.Button3.BackColor = System.Drawing.Color.Transparent
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.SystemColors.ControlLightLight
@@ -72,21 +72,20 @@ Partial Class MainFrom1
         '
         'Button4
         '
-        Me.Button4.BackColor = System.Drawing.SystemColors.Highlight
+        Me.Button4.BackColor = System.Drawing.Color.Transparent
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button4.Location = New System.Drawing.Point(71, 314)
+        Me.Button4.Location = New System.Drawing.Point(54, 190)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(170, 56)
+        Me.Button4.Size = New System.Drawing.Size(522, 56)
         Me.Button4.TabIndex = 3
-        Me.Button4.Text = "Register Promos"
+        Me.Button4.Text = "Reports And Export"
         Me.Button4.UseVisualStyleBackColor = False
-        Me.Button4.Visible = False
         '
         'Button5
         '
-        Me.Button5.BackColor = System.Drawing.SystemColors.Highlight
+        Me.Button5.BackColor = System.Drawing.Color.Transparent
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.ForeColor = System.Drawing.SystemColors.ControlLightLight
@@ -99,7 +98,7 @@ Partial Class MainFrom1
         '
         'Button6
         '
-        Me.Button6.BackColor = System.Drawing.SystemColors.Highlight
+        Me.Button6.BackColor = System.Drawing.Color.Transparent
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.ForeColor = System.Drawing.SystemColors.ControlLightLight
@@ -112,7 +111,8 @@ Partial Class MainFrom1
         '
         'Button7
         '
-        Me.Button7.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Button7.BackColor = System.Drawing.Color.Transparent
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button7.ForeColor = System.Drawing.Color.Crimson
         Me.Button7.Location = New System.Drawing.Point(406, 129)

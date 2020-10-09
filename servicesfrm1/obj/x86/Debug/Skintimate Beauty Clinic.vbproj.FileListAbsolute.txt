@@ -7,7 +7,6 @@ F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\obj\x86\Debug\servicesfrm1.pr
 F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\obj\x86\Debug\servicesfrm1.ratesfrm.resources
 F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\obj\x86\Debug\servicesfrm1.regmmberfrm.resources
 F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\obj\x86\Debug\servicesfrm1.reservationfrm.resources
-F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\obj\x86\Debug\servicesfrm1.splashscreen.resources
 F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\obj\x86\Debug\servicesfrm1.inventryfrm.resources
 F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\obj\x86\Debug\servicesfrm1.Resources.resources
 F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\obj\x86\Debug\servicesfrm1.getmembrdata.resources
@@ -24,3 +23,4 @@ F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\obj\x86\Debug\servicesfrm1.Pr
 F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\obj\x86\Debug\servicesfrm1.ProductsSaleExports.resources
 F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\obj\x86\Debug\servicesfrm1.ServicesSaleExport.resources
 F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\obj\x86\Debug\servicesfrm1.ServicesSaleReportFrm.resources
+F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\obj\x86\Debug\servicesfrm1.ReportsAndExportFrm.resources
