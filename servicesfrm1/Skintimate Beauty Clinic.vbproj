@@ -81,6 +81,18 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="forms\changepaswordFrm.Designer.vb">
+      <DependentUpon>changepaswordFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\changepaswordFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\loginfrm.Designer.vb">
+      <DependentUpon>loginfrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\loginfrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\MainFrom1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -218,6 +230,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="forms\changepaswordFrm.resx">
+      <DependentUpon>changepaswordFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\loginfrm.resx">
+      <DependentUpon>loginfrm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\MainFrom1.resx">
       <DependentUpon>MainFrom1.vb</DependentUpon>
     </EmbeddedResource>
