@@ -14,20 +14,20 @@ Public Class productreporfrm
     Dim provider As String
     Dim dataFile As String
     Dim connString As String
-    ' Dim myConnection As OleDbConnection = New OleDbConnection
+
     Dim myConnection As SqlConnection = New SqlConnection
     Dim ds As DataSet = New DataSet
-    'Dim da As OleDbDataAdapter
+
     Dim da As SqlDataAdapter
     Dim tables As DataTableCollection = ds.Tables
     Dim source1 As New BindingSource()
     Dim cs As String = "Data Source=GEO;Initial Catalog=mainclinicdb;Integrated Security=True"
     Private Sub dbaccessconnection()
-        'Acces DataBase Connectivity and for MS Access 2003 PROVIDER=Microsoft.Jet.OLEDB.4.0
+
         Try
             con.ConnectionString = cs
             cmd.Connection = con
-            'MessageBox.Show(con.State.ToString())
+
         Catch ex As Exception
             MsgBox("DataBase not connected due to the reason because " & ex.Message)
         End Try
@@ -156,7 +156,7 @@ Public Class productreporfrm
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
         'This Code is used to Convert to word document
         Dim reportWord As New productreports() ' Report Name 
-        Dim strExportFile As String = "e:\TestWord.doc"
+        Dim strExportFile As String = "e:\ProducRegistraionReport.doc"
         reportWord.ExportOptions.ExportDestinationType = ExportDestinationType.DiskFile
         reportWord.ExportOptions.ExportFormatType = ExportFormatType.WordForWindows
         Dim objOptions As DiskFileDestinationOptions = New DiskFileDestinationOptions()
@@ -166,6 +166,7 @@ Public Class productreporfrm
         reportWord.Export()
         objOptions = Nothing
         reportWord = Nothing
+        MsgBox("Please Check your E Drive.There will be a File with the Name of ProducRegistrationReport.Please Copy and Paste it in other folder for record otherwise it will replace when you print new one")
     End Sub
 
 

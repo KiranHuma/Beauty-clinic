@@ -3,9 +3,11 @@ Imports System.Data.OleDb
 Imports System.Data.Odbc
 Imports System.Data.DataTable
 Imports System.Data.SqlClient
-
 Imports System.Configuration
-
+Imports CrystalDecisions.CrystalReports.Engine
+Imports CrystalDecisions.Shared
+Imports System.Linq
+Imports Microsoft.Office.Interop
 Public Class ratesfrm
 
 
@@ -52,10 +54,12 @@ Public Class ratesfrm
         End Try
     End Sub
     Private Sub ratesfrm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        payment_getdata()
-        pay_txtboxid()
         Membr_FillCombo()
         product_FillCombo()
+        pay_txtboxid()
+        payment_getdata()
+
+
         pro2_getdata()
         ser2_getdata()
         transaction_servicesgetdata()
@@ -451,12 +455,7 @@ Public Class ratesfrm
 
   
 
-    Private Sub Button5_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        source1.Filter = "[Service_Name] = '" & TextBox6.Text & "'"
-        ser2_grid.Refresh()
-        TextBox6.Text = ""
-    End Sub
-
+ 
     Private Sub mbid_txt_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mbid_txt.TextChanged
 
     End Sub
@@ -527,13 +526,7 @@ Public Class ratesfrm
     End Sub
 
   
-    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        'p_pricetotal()
-        services_sale()
-        'quantitystockout_in()
-        ' prosingle_discount()
-        'p_nameadd()
-    End Sub
+  
     Private Sub services_sale()
         If TextBox2.Text = "" And TextBox2.Text.Length = 0 Then
             pro2_gird.Visible = False
@@ -633,7 +626,11 @@ Public Class ratesfrm
             payment_getdata()
             message_txt.Text = "'" & pid_txt.Text & "' payment details saved successfully!"
             message_txt.ForeColor = System.Drawing.Color.DarkGreen
-
+            payment_getdata()
+            pro2_getdata()
+            ser2_getdata()
+            transaction_servicesgetdata()
+            transaction_productgetdata()
         Catch ex As Exception
             message_txt.Text = "Error while saving '" & pid_txt.Text & "' payment details"
             message_txt.ForeColor = System.Drawing.Color.Red
@@ -874,6 +871,10 @@ Public Class ratesfrm
         transaction_servicesgetdata()
         transaction_productgetdata()
         payment_getdata()
+
+        pro2_getdata()
+        ser2_getdata()
+
         p_editbtn.Enabled = False
     End Sub
 
@@ -896,6 +897,12 @@ Public Class ratesfrm
     Private Sub p_addbtn_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles p_addbtn.Click
         p_savebtn.Enabled = True
         p_editbtn.Enabled = False
+        payment_getdata()
+
+        pro2_getdata()
+        ser2_getdata()
+        transaction_servicesgetdata()
+        transaction_productgetdata()
     End Sub
 
     Private Sub payment_grid_CellMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles payment_grid.CellMouseClick
@@ -1048,17 +1055,39 @@ Public Class ratesfrm
             prodcut_getdata.DataSource = dt
             myConnection.Close()
             prodcut_getdata.Refresh()
-            Button5.Enabled = True
-            Button3.Enabled = True
-            Button4.Enabled = True
+          
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Failed:Date Search", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Me.Dispose()
         End Try
     End Sub
+    Private myDS As New mainclinicdbDataSet() ' Dataset you created.
+    Private Sub wordconvert()
+        Dim rpt As New ProductSaleReport() 'The report you created.
+        Dim myConnection As SqlConnection
+        Dim MyCommand As New SqlCommand()
+        Dim myDA As New SqlDataAdapter()
+        Try
+            myConnection = New SqlConnection(cs)
+            MyCommand.Connection = myConnection
+            MyCommand.CommandText = "SELECT Transaction_ID,Member_Name,Memebr_ID,Product_Details,Product_Total_Items,ProPrice_without_Discount,ProPrice_with_Discount,Product_Remarks,Transaction_Date from tbl_productsales "
+            MyCommand.CommandType = CommandType.Text
+            myDA.SelectCommand = MyCommand
+
+            myDA.Fill(myDS, "tbl_productsales")
+            rpt.SetDataSource(myDS)
+            ProductSaleReportFrm.ProductSaleViewer1.ReportSource = rpt
+
+        Catch Excep As Exception
+            MessageBox.Show(Excep.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
+    End Sub
     Private Sub RadioButton4_CheckedChanged_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioButton4.CheckedChanged
         product_searchdate()
         RadioButton4.Checked = False
+
+
     End Sub
     'searchservices by date
     Private Sub services_searchdate()
@@ -1107,6 +1136,7 @@ Public Class ratesfrm
     End Sub
 
     Private Sub TextBox3_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox3.TextChanged
+       
         product_search_txtbox()
     End Sub
     'search member name in servicesgrid
@@ -1130,6 +1160,11 @@ Public Class ratesfrm
     End Sub
     Private Sub TextBox4_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox4.TextChanged
         services_search_txtbox()
+    End Sub
+
+
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        ProductsSaleExports.Show()
     End Sub
 End Class
 '

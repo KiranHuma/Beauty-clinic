@@ -20,3 +20,5 @@ F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\obj\x86\Debug\servicesfrm1.pr
 F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\obj\x86\Debug\servicesfrm1.prodctreportview.resources
 F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\obj\x86\Debug\Skintimate Beauty Clinic.vbproj.ResolveComReference.cache
 F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\obj\x86\Debug\Skintimate Beauty Clinic.vbprojResolveAssemblyReference.cache
+F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\obj\x86\Debug\servicesfrm1.ProductSaleReportFrm.resources
+F:\Erozgar\Beauty clinic\servicesfrm1\servicesfrm1\obj\x86\Debug\servicesfrm1.ProductsSaleExports.resources

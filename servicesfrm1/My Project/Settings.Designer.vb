@@ -64,6 +64,16 @@ Namespace My
                 Return CType(Me("mainclinicdbConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=Geo;Initial Catalog=mainclinicdb;Integrated Security=True")>  _
+        Public ReadOnly Property mainclinicdbConnectionString1() As String
+            Get
+                Return CType(Me("mainclinicdbConnectionString1"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

@@ -101,12 +101,8 @@ Partial Class ratesfrm
         Me.message_txt = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.p_addbtn = New System.Windows.Forms.Button()
-        Me.p_delbtn = New System.Windows.Forms.Button()
-        Me.p_savebtn = New System.Windows.Forms.Button()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
-        Me.p_editbtn = New System.Windows.Forms.Button()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Button7 = New System.Windows.Forms.Button()
@@ -141,6 +137,10 @@ Partial Class ratesfrm
         Me.Label20 = New System.Windows.Forms.Label()
         Me.sprice_txt = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.p_addbtn = New System.Windows.Forms.Button()
+        Me.p_delbtn = New System.Windows.Forms.Button()
+        Me.p_savebtn = New System.Windows.Forms.Button()
+        Me.p_editbtn = New System.Windows.Forms.Button()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.trandteto_txt = New System.Windows.Forms.DateTimePicker()
@@ -156,6 +156,7 @@ Partial Class ratesfrm
         Me.p_removebtn = New System.Windows.Forms.Button()
         Me.payment_grid = New System.Windows.Forms.DataGridView()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.RadioButton4 = New System.Windows.Forms.RadioButton()
         Me.Label37 = New System.Windows.Forms.Label()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
@@ -172,9 +173,6 @@ Partial Class ratesfrm
         Me.Label41 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -731,12 +729,8 @@ Partial Class ratesfrm
         Me.TabPage1.Controls.Add(Me.message_txt)
         Me.TabPage1.Controls.Add(Me.Panel3)
         Me.TabPage1.Controls.Add(Me.Label10)
-        Me.TabPage1.Controls.Add(Me.p_addbtn)
-        Me.TabPage1.Controls.Add(Me.p_delbtn)
-        Me.TabPage1.Controls.Add(Me.p_savebtn)
         Me.TabPage1.Controls.Add(Me.Label30)
         Me.TabPage1.Controls.Add(Me.Label28)
-        Me.TabPage1.Controls.Add(Me.p_editbtn)
         Me.TabPage1.Controls.Add(Me.Label29)
         Me.TabPage1.Controls.Add(Me.Label27)
         Me.TabPage1.Controls.Add(Me.Button7)
@@ -746,6 +740,10 @@ Partial Class ratesfrm
         Me.TabPage1.Controls.Add(Me.total_ser_pro_withdis)
         Me.TabPage1.Controls.Add(Me.GroupBox3)
         Me.TabPage1.Controls.Add(Me.Panel1)
+        Me.TabPage1.Controls.Add(Me.p_addbtn)
+        Me.TabPage1.Controls.Add(Me.p_delbtn)
+        Me.TabPage1.Controls.Add(Me.p_savebtn)
+        Me.TabPage1.Controls.Add(Me.p_editbtn)
         Me.TabPage1.Location = New System.Drawing.Point(4, 28)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
@@ -792,48 +790,6 @@ Partial Class ratesfrm
         Me.Label10.Size = New System.Drawing.Size(0, 17)
         Me.Label10.TabIndex = 410
         '
-        'p_addbtn
-        '
-        Me.p_addbtn.BackColor = System.Drawing.Color.Transparent
-        Me.p_addbtn.BackgroundImage = CType(resources.GetObject("p_addbtn.BackgroundImage"), System.Drawing.Image)
-        Me.p_addbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.p_addbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.p_addbtn.ForeColor = System.Drawing.Color.White
-        Me.p_addbtn.Location = New System.Drawing.Point(1202, 738)
-        Me.p_addbtn.Margin = New System.Windows.Forms.Padding(4)
-        Me.p_addbtn.Name = "p_addbtn"
-        Me.p_addbtn.Size = New System.Drawing.Size(45, 35)
-        Me.p_addbtn.TabIndex = 408
-        Me.p_addbtn.UseVisualStyleBackColor = False
-        '
-        'p_delbtn
-        '
-        Me.p_delbtn.BackColor = System.Drawing.Color.White
-        Me.p_delbtn.BackgroundImage = CType(resources.GetObject("p_delbtn.BackgroundImage"), System.Drawing.Image)
-        Me.p_delbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.p_delbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.p_delbtn.ForeColor = System.Drawing.Color.White
-        Me.p_delbtn.Location = New System.Drawing.Point(1428, 739)
-        Me.p_delbtn.Margin = New System.Windows.Forms.Padding(4)
-        Me.p_delbtn.Name = "p_delbtn"
-        Me.p_delbtn.Size = New System.Drawing.Size(52, 34)
-        Me.p_delbtn.TabIndex = 405
-        Me.p_delbtn.UseVisualStyleBackColor = False
-        '
-        'p_savebtn
-        '
-        Me.p_savebtn.BackColor = System.Drawing.SystemColors.Control
-        Me.p_savebtn.BackgroundImage = CType(resources.GetObject("p_savebtn.BackgroundImage"), System.Drawing.Image)
-        Me.p_savebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.p_savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.p_savebtn.ForeColor = System.Drawing.SystemColors.Control
-        Me.p_savebtn.Location = New System.Drawing.Point(1291, 740)
-        Me.p_savebtn.Margin = New System.Windows.Forms.Padding(4)
-        Me.p_savebtn.Name = "p_savebtn"
-        Me.p_savebtn.Size = New System.Drawing.Size(36, 33)
-        Me.p_savebtn.TabIndex = 402
-        Me.p_savebtn.UseVisualStyleBackColor = False
-        '
         'Label30
         '
         Me.Label30.AutoSize = True
@@ -859,21 +815,6 @@ Partial Class ratesfrm
         Me.Label28.Size = New System.Drawing.Size(55, 17)
         Me.Label28.TabIndex = 407
         Me.Label28.Text = "Delete"
-        '
-        'p_editbtn
-        '
-        Me.p_editbtn.BackColor = System.Drawing.Color.White
-        Me.p_editbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.p_editbtn.Enabled = False
-        Me.p_editbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.p_editbtn.ForeColor = System.Drawing.Color.White
-        Me.p_editbtn.Image = CType(resources.GetObject("p_editbtn.Image"), System.Drawing.Image)
-        Me.p_editbtn.Location = New System.Drawing.Point(1366, 749)
-        Me.p_editbtn.Margin = New System.Windows.Forms.Padding(4)
-        Me.p_editbtn.Name = "p_editbtn"
-        Me.p_editbtn.Size = New System.Drawing.Size(42, 34)
-        Me.p_editbtn.TabIndex = 404
-        Me.p_editbtn.UseVisualStyleBackColor = False
         '
         'Label29
         '
@@ -1263,6 +1204,63 @@ Partial Class ratesfrm
         Me.Panel1.Size = New System.Drawing.Size(52, 60)
         Me.Panel1.TabIndex = 411
         '
+        'p_addbtn
+        '
+        Me.p_addbtn.BackColor = System.Drawing.Color.Transparent
+        Me.p_addbtn.BackgroundImage = CType(resources.GetObject("p_addbtn.BackgroundImage"), System.Drawing.Image)
+        Me.p_addbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.p_addbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.p_addbtn.ForeColor = System.Drawing.Color.White
+        Me.p_addbtn.Location = New System.Drawing.Point(1202, 738)
+        Me.p_addbtn.Margin = New System.Windows.Forms.Padding(4)
+        Me.p_addbtn.Name = "p_addbtn"
+        Me.p_addbtn.Size = New System.Drawing.Size(45, 35)
+        Me.p_addbtn.TabIndex = 408
+        Me.p_addbtn.UseVisualStyleBackColor = False
+        '
+        'p_delbtn
+        '
+        Me.p_delbtn.BackColor = System.Drawing.Color.White
+        Me.p_delbtn.BackgroundImage = CType(resources.GetObject("p_delbtn.BackgroundImage"), System.Drawing.Image)
+        Me.p_delbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.p_delbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.p_delbtn.ForeColor = System.Drawing.Color.White
+        Me.p_delbtn.Location = New System.Drawing.Point(1428, 739)
+        Me.p_delbtn.Margin = New System.Windows.Forms.Padding(4)
+        Me.p_delbtn.Name = "p_delbtn"
+        Me.p_delbtn.Size = New System.Drawing.Size(52, 34)
+        Me.p_delbtn.TabIndex = 405
+        Me.p_delbtn.UseVisualStyleBackColor = False
+        '
+        'p_savebtn
+        '
+        Me.p_savebtn.BackColor = System.Drawing.SystemColors.Control
+        Me.p_savebtn.BackgroundImage = CType(resources.GetObject("p_savebtn.BackgroundImage"), System.Drawing.Image)
+        Me.p_savebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.p_savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.p_savebtn.ForeColor = System.Drawing.SystemColors.Control
+        Me.p_savebtn.Location = New System.Drawing.Point(1291, 740)
+        Me.p_savebtn.Margin = New System.Windows.Forms.Padding(4)
+        Me.p_savebtn.Name = "p_savebtn"
+        Me.p_savebtn.Size = New System.Drawing.Size(36, 33)
+        Me.p_savebtn.TabIndex = 402
+        Me.p_savebtn.UseVisualStyleBackColor = False
+        '
+        'p_editbtn
+        '
+        Me.p_editbtn.BackColor = System.Drawing.Color.White
+        Me.p_editbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.p_editbtn.Enabled = False
+        Me.p_editbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.p_editbtn.ForeColor = System.Drawing.Color.White
+        Me.p_editbtn.Image = CType(resources.GetObject("p_editbtn.Image"), System.Drawing.Image)
+        Me.p_editbtn.Location = New System.Drawing.Point(1366, 749)
+        Me.p_editbtn.Margin = New System.Windows.Forms.Padding(4)
+        Me.p_editbtn.Name = "p_editbtn"
+        Me.p_editbtn.Size = New System.Drawing.Size(42, 34)
+        Me.p_editbtn.TabIndex = 404
+        Me.p_editbtn.UseVisualStyleBackColor = False
+        '
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.Color.White
@@ -1469,8 +1467,6 @@ Partial Class ratesfrm
         '
         Me.TabPage4.BackColor = System.Drawing.Color.White
         Me.TabPage4.Controls.Add(Me.Button4)
-        Me.TabPage4.Controls.Add(Me.Button3)
-        Me.TabPage4.Controls.Add(Me.Button5)
         Me.TabPage4.Controls.Add(Me.RadioButton4)
         Me.TabPage4.Controls.Add(Me.Label37)
         Me.TabPage4.Controls.Add(Me.DateTimePicker2)
@@ -1484,6 +1480,18 @@ Partial Class ratesfrm
         Me.TabPage4.Size = New System.Drawing.Size(1526, 1070)
         Me.TabPage4.TabIndex = 6
         Me.TabPage4.Text = "Products Sale Record"
+        '
+        'Button4
+        '
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Button4.Location = New System.Drawing.Point(1245, 25)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(241, 28)
+        Me.Button4.TabIndex = 346
+        Me.Button4.Text = "Reports And Exports"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'RadioButton4
         '
@@ -1732,45 +1740,6 @@ Partial Class ratesfrm
         Me.TextBox4.Size = New System.Drawing.Size(244, 22)
         Me.TextBox4.TabIndex = 347
         '
-        'Button4
-        '
-        Me.Button4.Enabled = False
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Button4.Location = New System.Drawing.Point(1287, 39)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(160, 28)
-        Me.Button4.TabIndex = 348
-        Me.Button4.Text = "Export to Excel"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Enabled = False
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Button3.Location = New System.Drawing.Point(1287, 111)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(160, 28)
-        Me.Button3.TabIndex = 346
-        Me.Button3.Text = "View Report"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.Enabled = False
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Button5.Location = New System.Drawing.Point(1287, 75)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(160, 28)
-        Me.Button5.TabIndex = 347
-        Me.Button5.Text = "Export to Word"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
         'ratesfrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -1938,6 +1907,4 @@ Partial Class ratesfrm
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
     Friend WithEvents prodcut_getdata As System.Windows.Forms.DataGridView
     Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button5 As System.Windows.Forms.Button
 End Class
