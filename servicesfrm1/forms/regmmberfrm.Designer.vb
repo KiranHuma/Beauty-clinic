@@ -82,7 +82,7 @@ Partial Class regmmberfrm
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1534, 931)
+        Me.TabControl1.Size = New System.Drawing.Size(1412, 882)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
@@ -117,8 +117,8 @@ Partial Class regmmberfrm
         Me.TabPage1.ForeColor = System.Drawing.Color.LightCoral
         Me.TabPage1.Location = New System.Drawing.Point(4, 28)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1526, 899)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage1.Size = New System.Drawing.Size(1404, 850)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Members Registration"
         '
@@ -131,7 +131,7 @@ Partial Class regmmberfrm
         Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button12.ForeColor = System.Drawing.Color.White
         Me.Button12.Location = New System.Drawing.Point(1486, 73)
-        Me.Button12.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button12.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(31, 30)
         Me.Button12.TabIndex = 303
@@ -158,8 +158,8 @@ Partial Class regmmberfrm
         Me.Btnadd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Btnadd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btnadd.ForeColor = System.Drawing.Color.White
-        Me.Btnadd.Location = New System.Drawing.Point(1233, 735)
-        Me.Btnadd.Margin = New System.Windows.Forms.Padding(4)
+        Me.Btnadd.Location = New System.Drawing.Point(1101, 667)
+        Me.Btnadd.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Btnadd.Name = "Btnadd"
         Me.Btnadd.Size = New System.Drawing.Size(45, 35)
         Me.Btnadd.TabIndex = 330
@@ -171,7 +171,7 @@ Partial Class regmmberfrm
         Me.Label19.BackColor = System.Drawing.Color.Transparent
         Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label19.Location = New System.Drawing.Point(1207, 774)
+        Me.Label19.Location = New System.Drawing.Point(1075, 706)
         Me.Label19.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(71, 17)
@@ -183,9 +183,9 @@ Partial Class regmmberfrm
         Me.Panel1.BackColor = System.Drawing.Color.LightCoral
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel1.ForeColor = System.Drawing.Color.Snow
-        Me.Panel1.Location = New System.Drawing.Point(3, 877)
+        Me.Panel1.Location = New System.Drawing.Point(3, 828)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1520, 19)
+        Me.Panel1.Size = New System.Drawing.Size(1398, 19)
         Me.Panel1.TabIndex = 328
         '
         'Label13
@@ -202,7 +202,7 @@ Partial Class regmmberfrm
         'mid_txt
         '
         Me.mid_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.mid_txt.ForeColor = System.Drawing.Color.SteelBlue
+        Me.mid_txt.ForeColor = System.Drawing.Color.Black
         Me.mid_txt.Location = New System.Drawing.Point(462, 265)
         Me.mid_txt.Name = "mid_txt"
         Me.mid_txt.ReadOnly = True
@@ -230,7 +230,7 @@ Partial Class regmmberfrm
         'midtxt
         '
         Me.midtxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.midtxt.ForeColor = System.Drawing.Color.SteelBlue
+        Me.midtxt.ForeColor = System.Drawing.Color.Black
         Me.midtxt.Location = New System.Drawing.Point(462, 319)
         Me.midtxt.Name = "midtxt"
         Me.midtxt.ReadOnly = True
@@ -251,7 +251,7 @@ Partial Class regmmberfrm
         'addresstxt
         '
         Me.addresstxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.addresstxt.ForeColor = System.Drawing.Color.SteelBlue
+        Me.addresstxt.ForeColor = System.Drawing.Color.Black
         Me.addresstxt.Location = New System.Drawing.Point(952, 267)
         Me.addresstxt.Name = "addresstxt"
         Me.addresstxt.Size = New System.Drawing.Size(294, 102)
@@ -261,7 +261,7 @@ Partial Class regmmberfrm
         'agetxt
         '
         Me.agetxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.agetxt.ForeColor = System.Drawing.Color.SteelBlue
+        Me.agetxt.ForeColor = System.Drawing.Color.Black
         Me.agetxt.Location = New System.Drawing.Point(462, 484)
         Me.agetxt.Name = "agetxt"
         Me.agetxt.Size = New System.Drawing.Size(183, 22)
@@ -306,7 +306,7 @@ Partial Class regmmberfrm
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label3.Location = New System.Drawing.Point(1290, 776)
+        Me.Label3.Location = New System.Drawing.Point(1158, 708)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(44, 17)
@@ -319,7 +319,7 @@ Partial Class regmmberfrm
         Me.Label15.BackColor = System.Drawing.Color.Transparent
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label15.Location = New System.Drawing.Point(1398, 776)
+        Me.Label15.Location = New System.Drawing.Point(1266, 708)
         Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(55, 17)
@@ -332,7 +332,7 @@ Partial Class regmmberfrm
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label7.Location = New System.Drawing.Point(1352, 776)
+        Me.Label7.Location = New System.Drawing.Point(1220, 708)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(36, 17)
@@ -346,8 +346,8 @@ Partial Class regmmberfrm
         Me.btnupdte.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnupdte.ForeColor = System.Drawing.Color.White
         Me.btnupdte.Image = CType(resources.GetObject("btnupdte.Image"), System.Drawing.Image)
-        Me.btnupdte.Location = New System.Drawing.Point(1349, 739)
-        Me.btnupdte.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnupdte.Location = New System.Drawing.Point(1217, 671)
+        Me.btnupdte.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnupdte.Name = "btnupdte"
         Me.btnupdte.Size = New System.Drawing.Size(45, 33)
         Me.btnupdte.TabIndex = 252
@@ -360,8 +360,8 @@ Partial Class regmmberfrm
         Me.Btndel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Btndel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btndel.ForeColor = System.Drawing.Color.White
-        Me.Btndel.Location = New System.Drawing.Point(1402, 739)
-        Me.Btndel.Margin = New System.Windows.Forms.Padding(4)
+        Me.Btndel.Location = New System.Drawing.Point(1270, 671)
+        Me.Btndel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Btndel.Name = "Btndel"
         Me.Btndel.Size = New System.Drawing.Size(44, 33)
         Me.Btndel.TabIndex = 253
@@ -374,8 +374,8 @@ Partial Class regmmberfrm
         Me.svemem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.svemem.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.svemem.ForeColor = System.Drawing.Color.White
-        Me.svemem.Location = New System.Drawing.Point(1296, 739)
-        Me.svemem.Margin = New System.Windows.Forms.Padding(4)
+        Me.svemem.Location = New System.Drawing.Point(1164, 671)
+        Me.svemem.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.svemem.Name = "svemem"
         Me.svemem.Size = New System.Drawing.Size(36, 33)
         Me.svemem.TabIndex = 248
@@ -384,7 +384,7 @@ Partial Class regmmberfrm
         'cntcttxt
         '
         Me.cntcttxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cntcttxt.ForeColor = System.Drawing.Color.SteelBlue
+        Me.cntcttxt.ForeColor = System.Drawing.Color.Black
         Me.cntcttxt.Location = New System.Drawing.Point(462, 429)
         Me.cntcttxt.Name = "cntcttxt"
         Me.cntcttxt.Size = New System.Drawing.Size(183, 22)
@@ -393,7 +393,7 @@ Partial Class regmmberfrm
         'nametxt
         '
         Me.nametxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nametxt.ForeColor = System.Drawing.Color.SteelBlue
+        Me.nametxt.ForeColor = System.Drawing.Color.Black
         Me.nametxt.Location = New System.Drawing.Point(462, 370)
         Me.nametxt.Name = "nametxt"
         Me.nametxt.Size = New System.Drawing.Size(183, 22)
@@ -434,8 +434,8 @@ Partial Class regmmberfrm
         Me.TabPage2.Controls.Add(Me.memberdata)
         Me.TabPage2.Location = New System.Drawing.Point(4, 28)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1526, 899)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage2.Size = New System.Drawing.Size(1404, 850)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Members Record"
         '
@@ -490,6 +490,7 @@ Partial Class regmmberfrm
         '
         'TextBox3
         '
+        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox3.Location = New System.Drawing.Point(39, 142)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(244, 22)
@@ -500,8 +501,8 @@ Partial Class regmmberfrm
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Button6.Location = New System.Drawing.Point(1275, 190)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button6.Location = New System.Drawing.Point(1166, 174)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(214, 31)
         Me.Button6.TabIndex = 317
@@ -546,12 +547,12 @@ Partial Class regmmberfrm
         Me.memberdata.EnableHeadersVisualStyles = False
         Me.memberdata.GridColor = System.Drawing.Color.LightCoral
         Me.memberdata.Location = New System.Drawing.Point(7, 252)
-        Me.memberdata.Margin = New System.Windows.Forms.Padding(4)
+        Me.memberdata.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.memberdata.Name = "memberdata"
         Me.memberdata.ReadOnly = True
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle4.ForeColor = System.Drawing.Color.LightCoral
         DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightCoral
         DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White
@@ -564,7 +565,7 @@ Partial Class regmmberfrm
         DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White
         Me.memberdata.RowsDefaultCellStyle = DataGridViewCellStyle5
         Me.memberdata.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.memberdata.Size = New System.Drawing.Size(1512, 640)
+        Me.memberdata.Size = New System.Drawing.Size(1390, 595)
         Me.memberdata.TabIndex = 150
         '
         'regmmberfrm
@@ -572,7 +573,7 @@ Partial Class regmmberfrm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
-        Me.ClientSize = New System.Drawing.Size(1534, 931)
+        Me.ClientSize = New System.Drawing.Size(1412, 882)
         Me.Controls.Add(Me.TabControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "regmmberfrm"

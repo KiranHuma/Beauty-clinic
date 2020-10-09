@@ -42,6 +42,7 @@ Partial Class inventryfrm
         Me.get_stockdata = New System.Windows.Forms.DataGridView()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label22 = New System.Windows.Forms.Label()
         Me.welcomemsg = New System.Windows.Forms.Label()
         Me.inventrydtetxt = New System.Windows.Forms.Label()
         Me.inquatity_txt = New System.Windows.Forms.TextBox()
@@ -99,7 +100,6 @@ Partial Class inventryfrm
         Me.RadioButton4 = New System.Windows.Forms.RadioButton()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Label22 = New System.Windows.Forms.Label()
         Me.TabPage2.SuspendLayout()
         CType(Me.get_stockdata, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage1.SuspendLayout()
@@ -287,6 +287,14 @@ Partial Class inventryfrm
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Inventory"
         '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(615, 475)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(0, 17)
+        Me.Label22.TabIndex = 378
+        '
         'welcomemsg
         '
         Me.welcomemsg.AutoSize = True
@@ -313,7 +321,7 @@ Partial Class inventryfrm
         '
         'inquatity_txt
         '
-        Me.inquatity_txt.ForeColor = System.Drawing.Color.SteelBlue
+        Me.inquatity_txt.ForeColor = System.Drawing.Color.Black
         Me.inquatity_txt.Location = New System.Drawing.Point(347, 472)
         Me.inquatity_txt.Name = "inquatity_txt"
         Me.inquatity_txt.Size = New System.Drawing.Size(216, 22)
@@ -360,7 +368,7 @@ Partial Class inventryfrm
         '
         'stock_txt
         '
-        Me.stock_txt.ForeColor = System.Drawing.Color.SteelBlue
+        Me.stock_txt.ForeColor = System.Drawing.Color.Black
         Me.stock_txt.Location = New System.Drawing.Point(347, 510)
         Me.stock_txt.Name = "stock_txt"
         Me.stock_txt.ReadOnly = True
@@ -369,7 +377,7 @@ Partial Class inventryfrm
         '
         'inname_txt
         '
-        Me.inname_txt.ForeColor = System.Drawing.Color.SteelBlue
+        Me.inname_txt.ForeColor = System.Drawing.Color.Black
         Me.inname_txt.Location = New System.Drawing.Point(347, 338)
         Me.inname_txt.Name = "inname_txt"
         Me.inname_txt.Size = New System.Drawing.Size(216, 22)
@@ -378,7 +386,7 @@ Partial Class inventryfrm
         '
         'quantity_txt
         '
-        Me.quantity_txt.ForeColor = System.Drawing.Color.SteelBlue
+        Me.quantity_txt.ForeColor = System.Drawing.Color.Black
         Me.quantity_txt.Location = New System.Drawing.Point(347, 380)
         Me.quantity_txt.Name = "quantity_txt"
         Me.quantity_txt.Size = New System.Drawing.Size(216, 22)
@@ -479,7 +487,7 @@ Partial Class inventryfrm
         '
         'in_id_txt
         '
-        Me.in_id_txt.ForeColor = System.Drawing.Color.SteelBlue
+        Me.in_id_txt.ForeColor = System.Drawing.Color.Black
         Me.in_id_txt.Location = New System.Drawing.Point(347, 254)
         Me.in_id_txt.Name = "in_id_txt"
         Me.in_id_txt.Size = New System.Drawing.Size(216, 22)
@@ -539,7 +547,7 @@ Partial Class inventryfrm
         'inventid_txt
         '
         Me.inventid_txt.Enabled = False
-        Me.inventid_txt.ForeColor = System.Drawing.Color.SteelBlue
+        Me.inventid_txt.ForeColor = System.Drawing.Color.Black
         Me.inventid_txt.Location = New System.Drawing.Point(347, 203)
         Me.inventid_txt.Name = "inventid_txt"
         Me.inventid_txt.ReadOnly = True
@@ -640,7 +648,7 @@ Partial Class inventryfrm
         'pid_txt
         '
         Me.pid_txt.BackColor = System.Drawing.Color.White
-        Me.pid_txt.ForeColor = System.Drawing.Color.SteelBlue
+        Me.pid_txt.ForeColor = System.Drawing.Color.Black
         Me.pid_txt.FormattingEnabled = True
         Me.pid_txt.Location = New System.Drawing.Point(347, 297)
         Me.pid_txt.Name = "pid_txt"
@@ -939,14 +947,6 @@ Partial Class inventryfrm
         Me.Button1.TabIndex = 318
         Me.Button1.Text = "&Select Rows to Remove"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(615, 475)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(0, 17)
-        Me.Label22.TabIndex = 378
         '
         'inventryfrm
         '
