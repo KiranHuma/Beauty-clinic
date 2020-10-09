@@ -50,26 +50,20 @@ Public Class loginfrm
             Beep()
             MainFrom1.ShowDialog()         
             Me.Hide()
-            '  Else
-            '     Label6.Visible = True
-            '    Label6.Text = " Not succsessfully login "
-            '    If Label6.Text = " Not succsessfully login " Then
-            'dbaccessconnection()
-            '  con.Open()
-            '  cmd.CommandText = ("SELECT * FROM auth where login = '" & TextBox1.Text & "' And password = '" & TextBox2.Text & "'")
-            '  cmd.ExecuteNonQuery()
-            '  Label6.Visible = True
-            '  Label6.Text = "Succsessfully login "
-            '  MainFrom1.ShowDialog()
-            '  con.Close()
         Else
-            Label6.Visible = True
-            Label6.Text = " Not succsessfully login "
+            Label4.Visible = True
+            Label4.Text = " Not succsessfully login "
         End If
-        ' End If
+        'End If
     End Sub
 
-    Private Sub Label4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label4.Click
-        changepaswordFrm.Show()
+
+    Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox1.CheckedChanged
+        If CheckBox1.Checked Then
+            TextBox2.PasswordChar = ControlChars.NullChar
+            ' TextBox2.PasswordChar = ""
+        Else
+            TextBox2.PasswordChar = "*"
+        End If
     End Sub
 End Class

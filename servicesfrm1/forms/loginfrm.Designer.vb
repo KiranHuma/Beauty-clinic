@@ -23,7 +23,6 @@ Partial Class loginfrm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(loginfrm))
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -31,26 +30,12 @@ Partial Class loginfrm
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("Arial", 7.8!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label6.Location = New System.Drawing.Point(97, 584)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(127, 16)
-        Me.Label6.TabIndex = 27
-        Me.Label6.Text = "&Change Password "
-        Me.Label6.Visible = False
         '
         'Label3
         '
@@ -142,6 +127,23 @@ Partial Class loginfrm
         Me.Panel1.Size = New System.Drawing.Size(797, 375)
         Me.Panel1.TabIndex = 22
         '
+        'Button1
+        '
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.LightCoral
+        Me.Button1.Location = New System.Drawing.Point(520, 611)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(149, 41)
+        Me.Button1.TabIndex = 20
+        Me.Button1.Text = "&Login"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Button12
         '
         Me.Button12.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -168,35 +170,16 @@ Partial Class loginfrm
         Me.Panel2.Size = New System.Drawing.Size(596, 262)
         Me.Panel2.TabIndex = 16
         '
-        'Button1
-        '
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.LightCoral
-        Me.Button1.Location = New System.Drawing.Point(520, 611)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(149, 41)
-        Me.Button1.TabIndex = 20
-        Me.Button1.Text = "&Login"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label4.Location = New System.Drawing.Point(93, 612)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(147, 611)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(257, 40)
+        Me.Label4.Size = New System.Drawing.Size(51, 17)
         Me.Label4.TabIndex = 29
-        Me.Label4.Text = "&Change Password "
+        Me.Label4.Text = "Label4"
+        Me.Label4.Visible = False
         '
         'loginfrm
         '
@@ -205,7 +188,6 @@ Partial Class loginfrm
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(797, 692)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -215,6 +197,7 @@ Partial Class loginfrm
         Me.Controls.Add(Me.Button1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "loginfrm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "loginfrm"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -222,7 +205,6 @@ Partial Class loginfrm
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
