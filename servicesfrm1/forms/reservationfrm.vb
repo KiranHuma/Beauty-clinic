@@ -723,4 +723,22 @@ Public Class reservationfrm
     Private Sub Label10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label10.Click
 
     End Sub
+
+    Private Sub TabPage1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabPage1.Click
+
+    End Sub
+
+    Private Sub Label10_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Label10.MouseHover
+        If btnupdte.Enabled = False Then
+            ToolTip1.IsBalloon = True
+            ToolTip1.UseAnimation = True
+            ToolTip1.ToolTipTitle = ""
+            ToolTip1.SetToolTip(Label10, "Select the field from Grid to Edit")
+        Else
+            ToolTip1.IsBalloon = True
+            ToolTip1.UseAnimation = True
+            ToolTip1.ToolTipTitle = ""
+            ToolTip1.SetToolTip(Label10, "Click to Edit")
+        End If
+    End Sub
 End Class

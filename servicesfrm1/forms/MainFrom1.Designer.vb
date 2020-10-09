@@ -93,7 +93,7 @@ Partial Class MainFrom1
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(170, 56)
         Me.Button5.TabIndex = 4
-        Me.Button5.Text = "Register Products"
+        Me.Button5.Text = "Register Products And Services"
         Me.Button5.UseVisualStyleBackColor = False
         '
         'Button6

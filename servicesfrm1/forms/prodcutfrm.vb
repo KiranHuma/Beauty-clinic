@@ -676,7 +676,5 @@ Public Class prodcutfrm
         ToolTip1.SetToolTip(select_delet, "Select the one field or more from Grid to Remove")
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-    End Sub
+   
 End Class
