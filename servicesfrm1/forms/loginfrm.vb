@@ -49,7 +49,7 @@ Public Class loginfrm
             Beep()
             Beep()
             MainFrom1.ShowDialog()         
-            Me.Hide()
+            Me.Dispose()
         Else
             Label4.Visible = True
             Label4.Text = " Not succsessfully login "
