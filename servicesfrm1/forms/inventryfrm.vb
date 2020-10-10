@@ -183,7 +183,9 @@ Public Class inventryfrm
                 .DataSource = ds.Tables("tbl_products")
                 .DisplayMember = "P_id"
                 .ValueMember = "P_id"
-                .SelectedIndex = 0
+                .SelectedIndex = -1
+                .AutoCompleteMode = AutoCompleteMode.SuggestAppend
+                .AutoCompleteSource = AutoCompleteSource.ListItems
             End With
 
 
