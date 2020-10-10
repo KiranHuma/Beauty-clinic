@@ -36,6 +36,8 @@ Partial Class reservationfrm
         Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.welcomemsg = New System.Windows.Forms.Label()
@@ -54,7 +56,7 @@ Partial Class reservationfrm
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.reentry_txt = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.rid_txt = New System.Windows.Forms.ComboBox()
@@ -78,7 +80,7 @@ Partial Class reservationfrm
         Me.resid_txt = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.svemem = New System.Windows.Forms.Button()
         Me.dte_txt = New System.Windows.Forms.DateTimePicker()
@@ -143,6 +145,8 @@ Partial Class reservationfrm
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.White
+        Me.TabPage1.Controls.Add(Me.Button7)
+        Me.TabPage1.Controls.Add(Me.Button1)
         Me.TabPage1.Controls.Add(Me.Button12)
         Me.TabPage1.Controls.Add(Me.Label31)
         Me.TabPage1.Controls.Add(Me.welcomemsg)
@@ -161,7 +165,7 @@ Partial Class reservationfrm
         Me.TabPage1.Controls.Add(Me.Label12)
         Me.TabPage1.Controls.Add(Me.Label14)
         Me.TabPage1.Controls.Add(Me.Label16)
-        Me.TabPage1.Controls.Add(Me.Label17)
+        Me.TabPage1.Controls.Add(Me.Label5)
         Me.TabPage1.Controls.Add(Me.reentry_txt)
         Me.TabPage1.Controls.Add(Me.Label8)
         Me.TabPage1.Controls.Add(Me.rid_txt)
@@ -185,7 +189,7 @@ Partial Class reservationfrm
         Me.TabPage1.Controls.Add(Me.resid_txt)
         Me.TabPage1.Controls.Add(Me.Label6)
         Me.TabPage1.Controls.Add(Me.Label3)
-        Me.TabPage1.Controls.Add(Me.Label5)
+        Me.TabPage1.Controls.Add(Me.Label17)
         Me.TabPage1.Controls.Add(Me.Label1)
         Me.TabPage1.Controls.Add(Me.svemem)
         Me.TabPage1.Controls.Add(Me.dte_txt)
@@ -196,6 +200,28 @@ Partial Class reservationfrm
         Me.TabPage1.Size = New System.Drawing.Size(1526, 899)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Reservation"
+        '
+        'Button7
+        '
+        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold)
+        Me.Button7.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Button7.Location = New System.Drawing.Point(517, 283)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(179, 28)
+        Me.Button7.TabIndex = 387
+        Me.Button7.Text = "Registered Services"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold)
+        Me.Button1.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Button1.Location = New System.Drawing.Point(702, 283)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(72, 28)
+        Me.Button1.TabIndex = 386
+        Me.Button1.Text = "Add"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Button12
         '
@@ -239,7 +265,7 @@ Partial Class reservationfrm
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(1099, 183)
+        Me.Label11.Location = New System.Drawing.Point(1099, 188)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(38, 17)
         Me.Label11.TabIndex = 338
@@ -323,7 +349,7 @@ Partial Class reservationfrm
         Me.rese_sertxtt.ForeColor = System.Drawing.Color.Black
         Me.rese_sertxtt.FormattingEnabled = True
         Me.rese_sertxtt.Items.AddRange(New Object() {"Facial Waxing", "Underarm Waxing", "Half legs Waxing", "Full legs Waxing", "Bikini Waxing", "Brazillian Waxing", "Full Body Waxing", "Eyebrow Threading", "Upper Lip", "Korean Natural Lash", "Korean Mascara Look", "Barbie Natural Look", "Barbie Volume Set", "Rusian Volume Set", "Sidney Volume Set", "Eyelash Perm with Keratin", "Manicure", "Pedicure", "Gel Polish", "Foot Spa", "Ear Candling", "Warts Removal", "Facial RF", "Facial Whitening", "Glutathione IV Push/Drip", "Mesolipo Slimming Inject", "Diamond Peel", "Lipo Cavitation and Lipo Laser", "Lipo Cavitation and Lipo Laser(Arms)", "Lipo Cavitation and Lipo Laser(Tummy)", "Lipo Cavitation and Lipo Laser(Legs)"})
-        Me.rese_sertxtt.Location = New System.Drawing.Point(311, 323)
+        Me.rese_sertxtt.Location = New System.Drawing.Point(311, 286)
         Me.rese_sertxtt.Name = "rese_sertxtt"
         Me.rese_sertxtt.Size = New System.Drawing.Size(200, 24)
         Me.rese_sertxtt.TabIndex = 378
@@ -332,9 +358,9 @@ Partial Class reservationfrm
         '
         Me.rese_sertxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rese_sertxt.ForeColor = System.Drawing.Color.Black
-        Me.rese_sertxt.Location = New System.Drawing.Point(548, 307)
+        Me.rese_sertxt.Location = New System.Drawing.Point(548, 327)
         Me.rese_sertxt.Name = "rese_sertxt"
-        Me.rese_sertxt.Size = New System.Drawing.Size(226, 118)
+        Me.rese_sertxt.Size = New System.Drawing.Size(226, 108)
         Me.rese_sertxt.TabIndex = 376
         Me.rese_sertxt.Text = ""
         '
@@ -396,17 +422,16 @@ Partial Class reservationfrm
         Me.Label16.Text = "Contact"
         Me.Label16.Visible = False
         '
-        'Label17
+        'Label5
         '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label17.Location = New System.Drawing.Point(1081, 248)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(45, 17)
-        Me.Label17.TabIndex = 368
-        Me.Label17.Text = "Name"
-        Me.Label17.Visible = False
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.Label5.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label5.Location = New System.Drawing.Point(133, 373)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(130, 20)
+        Me.Label5.TabIndex = 368
+        Me.Label5.Text = "Member Name"
         '
         'reentry_txt
         '
@@ -434,7 +459,7 @@ Partial Class reservationfrm
         Me.rid_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rid_txt.ForeColor = System.Drawing.Color.Black
         Me.rid_txt.FormattingEnabled = True
-        Me.rid_txt.Location = New System.Drawing.Point(311, 278)
+        Me.rid_txt.Location = New System.Drawing.Point(311, 327)
         Me.rid_txt.Name = "rid_txt"
         Me.rid_txt.Size = New System.Drawing.Size(200, 24)
         Me.rid_txt.TabIndex = 364
@@ -482,7 +507,7 @@ Partial Class reservationfrm
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
         Me.Label13.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label13.Location = New System.Drawing.Point(132, 323)
+        Me.Label13.Location = New System.Drawing.Point(132, 286)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(126, 20)
         Me.Label13.TabIndex = 356
@@ -663,22 +688,23 @@ Partial Class reservationfrm
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label3.Location = New System.Drawing.Point(132, 278)
+        Me.Label3.Location = New System.Drawing.Point(132, 329)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(67, 20)
         Me.Label3.TabIndex = 268
         Me.Label3.Text = "RateID"
         '
-        'Label5
+        'Label17
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold)
-        Me.Label5.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label5.Location = New System.Drawing.Point(132, 377)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(95, 20)
-        Me.Label5.TabIndex = 270
-        Me.Label5.Text = "MemberID"
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
+        Me.Label17.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label17.Location = New System.Drawing.Point(1063, 248)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(72, 17)
+        Me.Label17.TabIndex = 270
+        Me.Label17.Text = "MemberID"
+        Me.Label17.Visible = False
         '
         'Label1
         '
@@ -1279,7 +1305,7 @@ Partial Class reservationfrm
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents Label16 As System.Windows.Forms.Label
-    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents reentry_txt As System.Windows.Forms.TextBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents rid_txt As System.Windows.Forms.ComboBox
@@ -1303,7 +1329,7 @@ Partial Class reservationfrm
     Friend WithEvents resid_txt As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents svemem As System.Windows.Forms.Button
     Friend WithEvents dte_txt As System.Windows.Forms.DateTimePicker
@@ -1330,4 +1356,6 @@ Partial Class reservationfrm
     Friend WithEvents DateTimePicker3 As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label23 As System.Windows.Forms.Label
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button7 As System.Windows.Forms.Button
 End Class
