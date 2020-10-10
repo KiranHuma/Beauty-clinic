@@ -741,4 +741,11 @@ Public Class reservationfrm
             ToolTip1.SetToolTip(Label10, "Click to Edit")
         End If
     End Sub
+
+    Private Sub Button6_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button6.MouseHover
+        ToolTip1.IsBalloon = True
+        ToolTip1.UseAnimation = True
+        ToolTip1.ToolTipTitle = ""
+        ToolTip1.SetToolTip(Button6, "Select the one field or more from Grid to Remove")
+    End Sub
 End Class

@@ -1154,7 +1154,7 @@ Partial Class prodcutfrm
         Me.select_delet.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.select_delet.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold)
         Me.select_delet.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.select_delet.Location = New System.Drawing.Point(1277, 133)
+        Me.select_delet.Location = New System.Drawing.Point(1276, 89)
         Me.select_delet.Margin = New System.Windows.Forms.Padding(4)
         Me.select_delet.Name = "select_delet"
         Me.select_delet.Size = New System.Drawing.Size(206, 31)

@@ -634,6 +634,10 @@ Public Class prodcutfrm
 
     End Sub
 
+    Private Sub Label10_MarginChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles Label10.MarginChanged
+
+    End Sub
+
     Private Sub Label10_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Label10.MouseHover
         If btnupdte.Enabled = False Then
             ToolTip1.IsBalloon = True
@@ -677,4 +681,15 @@ Public Class prodcutfrm
     End Sub
 
    
+    Private Sub price_txt_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles price_txt.TextChanged
+
+    End Sub
+
+    Private Sub TabPage4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabPage4.Click
+
+    End Sub
+
+    Private Sub Label20_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label20.Click
+
+    End Sub
 End Class

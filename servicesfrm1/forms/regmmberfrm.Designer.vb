@@ -23,12 +23,12 @@ Partial Class regmmberfrm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(regmmberfrm))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(regmmberfrm))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Button12 = New System.Windows.Forms.Button()
@@ -67,6 +67,7 @@ Partial Class regmmberfrm
         Me.Button6 = New System.Windows.Forms.Button()
         Me.memberdata = New System.Windows.Forms.DataGridView()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -88,6 +89,7 @@ Partial Class regmmberfrm
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.White
+        Me.TabPage1.Controls.Add(Me.Button1)
         Me.TabPage1.Controls.Add(Me.Button12)
         Me.TabPage1.Controls.Add(Me.welcomemsg)
         Me.TabPage1.Controls.Add(Me.Btnadd)
@@ -117,7 +119,7 @@ Partial Class regmmberfrm
         Me.TabPage1.ForeColor = System.Drawing.Color.LightCoral
         Me.TabPage1.Location = New System.Drawing.Point(4, 28)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(1404, 850)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Members Registration"
@@ -131,7 +133,7 @@ Partial Class regmmberfrm
         Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button12.ForeColor = System.Drawing.Color.White
         Me.Button12.Location = New System.Drawing.Point(1486, 73)
-        Me.Button12.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button12.Margin = New System.Windows.Forms.Padding(4)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(31, 30)
         Me.Button12.TabIndex = 303
@@ -159,7 +161,7 @@ Partial Class regmmberfrm
         Me.Btnadd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btnadd.ForeColor = System.Drawing.Color.White
         Me.Btnadd.Location = New System.Drawing.Point(1101, 667)
-        Me.Btnadd.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Btnadd.Margin = New System.Windows.Forms.Padding(4)
         Me.Btnadd.Name = "Btnadd"
         Me.Btnadd.Size = New System.Drawing.Size(45, 35)
         Me.Btnadd.TabIndex = 330
@@ -343,11 +345,12 @@ Partial Class regmmberfrm
         '
         Me.btnupdte.BackColor = System.Drawing.Color.White
         Me.btnupdte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnupdte.Enabled = False
         Me.btnupdte.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnupdte.ForeColor = System.Drawing.Color.White
         Me.btnupdte.Image = CType(resources.GetObject("btnupdte.Image"), System.Drawing.Image)
         Me.btnupdte.Location = New System.Drawing.Point(1217, 671)
-        Me.btnupdte.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnupdte.Margin = New System.Windows.Forms.Padding(4)
         Me.btnupdte.Name = "btnupdte"
         Me.btnupdte.Size = New System.Drawing.Size(45, 33)
         Me.btnupdte.TabIndex = 252
@@ -361,7 +364,7 @@ Partial Class regmmberfrm
         Me.Btndel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btndel.ForeColor = System.Drawing.Color.White
         Me.Btndel.Location = New System.Drawing.Point(1270, 671)
-        Me.Btndel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Btndel.Margin = New System.Windows.Forms.Padding(4)
         Me.Btndel.Name = "Btndel"
         Me.Btndel.Size = New System.Drawing.Size(44, 33)
         Me.Btndel.TabIndex = 253
@@ -375,7 +378,7 @@ Partial Class regmmberfrm
         Me.svemem.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.svemem.ForeColor = System.Drawing.Color.White
         Me.svemem.Location = New System.Drawing.Point(1164, 671)
-        Me.svemem.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.svemem.Margin = New System.Windows.Forms.Padding(4)
         Me.svemem.Name = "svemem"
         Me.svemem.Size = New System.Drawing.Size(36, 33)
         Me.svemem.TabIndex = 248
@@ -434,7 +437,7 @@ Partial Class regmmberfrm
         Me.TabPage2.Controls.Add(Me.memberdata)
         Me.TabPage2.Location = New System.Drawing.Point(4, 28)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(1404, 850)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Members Record"
@@ -502,7 +505,7 @@ Partial Class regmmberfrm
         Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.ForeColor = System.Drawing.Color.SteelBlue
         Me.Button6.Location = New System.Drawing.Point(1166, 174)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(4)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(214, 31)
         Me.Button6.TabIndex = 317
@@ -547,7 +550,7 @@ Partial Class regmmberfrm
         Me.memberdata.EnableHeadersVisualStyles = False
         Me.memberdata.GridColor = System.Drawing.Color.LightCoral
         Me.memberdata.Location = New System.Drawing.Point(7, 252)
-        Me.memberdata.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.memberdata.Margin = New System.Windows.Forms.Padding(4)
         Me.memberdata.Name = "memberdata"
         Me.memberdata.ReadOnly = True
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -567,6 +570,21 @@ Partial Class regmmberfrm
         Me.memberdata.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.memberdata.Size = New System.Drawing.Size(1390, 595)
         Me.memberdata.TabIndex = 150
+        '
+        'Button1
+        '
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button1.BackColor = System.Drawing.Color.White
+        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(1350, 42)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(31, 30)
+        Me.Button1.TabIndex = 333
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'regmmberfrm
         '
@@ -625,4 +643,5 @@ Partial Class regmmberfrm
     Friend WithEvents Label21 As System.Windows.Forms.Label
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

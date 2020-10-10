@@ -136,10 +136,10 @@ Partial Class ratesfrm
         Me.Label34 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.sprice_txt = New System.Windows.Forms.TextBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.p_addbtn = New System.Windows.Forms.Button()
         Me.p_delbtn = New System.Windows.Forms.Button()
         Me.p_savebtn = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.p_editbtn = New System.Windows.Forms.Button()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
@@ -182,6 +182,7 @@ Partial Class ratesfrm
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         CType(Me.ser2_grid, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         CType(Me.payment_grid, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -738,11 +739,10 @@ Partial Class ratesfrm
         Me.TabPage1.Controls.Add(Me.totalofser_pro_outdis)
         Me.TabPage1.Controls.Add(Me.total_ser_pro_withdis)
         Me.TabPage1.Controls.Add(Me.GroupBox3)
-        Me.TabPage1.Controls.Add(Me.Panel1)
         Me.TabPage1.Controls.Add(Me.p_addbtn)
         Me.TabPage1.Controls.Add(Me.p_delbtn)
         Me.TabPage1.Controls.Add(Me.p_savebtn)
-        Me.TabPage1.Controls.Add(Me.p_editbtn)
+        Me.TabPage1.Controls.Add(Me.Panel1)
         Me.TabPage1.Location = New System.Drawing.Point(4, 28)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
@@ -1196,13 +1196,6 @@ Partial Class ratesfrm
         Me.sprice_txt.TabIndex = 292
         Me.sprice_txt.Text = "0"
         '
-        'Panel1
-        '
-        Me.Panel1.Location = New System.Drawing.Point(1359, 744)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(52, 60)
-        Me.Panel1.TabIndex = 411
-        '
         'p_addbtn
         '
         Me.p_addbtn.BackColor = System.Drawing.Color.Transparent
@@ -1245,6 +1238,14 @@ Partial Class ratesfrm
         Me.p_savebtn.TabIndex = 402
         Me.p_savebtn.UseVisualStyleBackColor = False
         '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.p_editbtn)
+        Me.Panel1.Location = New System.Drawing.Point(1356, 730)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(52, 60)
+        Me.Panel1.TabIndex = 411
+        '
         'p_editbtn
         '
         Me.p_editbtn.BackColor = System.Drawing.Color.White
@@ -1253,7 +1254,7 @@ Partial Class ratesfrm
         Me.p_editbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.p_editbtn.ForeColor = System.Drawing.Color.White
         Me.p_editbtn.Image = CType(resources.GetObject("p_editbtn.Image"), System.Drawing.Image)
-        Me.p_editbtn.Location = New System.Drawing.Point(1366, 749)
+        Me.p_editbtn.Location = New System.Drawing.Point(7, 13)
         Me.p_editbtn.Margin = New System.Windows.Forms.Padding(4)
         Me.p_editbtn.Name = "p_editbtn"
         Me.p_editbtn.Size = New System.Drawing.Size(42, 34)
@@ -1755,6 +1756,7 @@ Partial Class ratesfrm
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         CType(Me.ser2_grid, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         Me.GroupBox6.ResumeLayout(False)

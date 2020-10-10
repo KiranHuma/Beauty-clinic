@@ -355,9 +355,7 @@ Public Class ratesfrm
         totalofser_pro_outdis.Text = Convert.ToString(addd)
     End Sub
     Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        Try
-           
-           
+        Try         
             If Label24.Text <= 0 Then
                 Button1.Enabled = False
                 Label14.Text = "NO Stock avaliable"
@@ -374,6 +372,8 @@ Public Class ratesfrm
                     quantitystockout_in()
                     p_nameadd()
                     pro_quantitytotal()
+                    pro2_getdata()
+                    ser2_getdata()
 
                 End If
             End If
@@ -1162,7 +1162,38 @@ Public Class ratesfrm
         services_search_txtbox()
     End Sub
 
+    Private Sub pr_single_dis_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles pr_single_dis.KeyPress
+        If (e.KeyChar < Chr(48) Or e.KeyChar > Chr(57)) And e.KeyChar <> Chr(8) Then
+            e.Handled = True
+        End If
+    End Sub
 
-   
+    Private Sub ser_dis_txt_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles ser_dis_txt.KeyPress
+        If (e.KeyChar < Chr(48) Or e.KeyChar > Chr(57)) And e.KeyChar <> Chr(8) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub ser_dis_txt_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ser_dis_txt.TextChanged
+
+    End Sub
+
+    Private Sub p_removebtn_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles p_removebtn.DragDrop
+
+    End Sub
+
+    Private Sub p_removebtn_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles p_removebtn.MouseHover
+        ToolTip1.IsBalloon = True
+        ToolTip1.UseAnimation = True
+        ToolTip1.ToolTipTitle = ""
+        ToolTip1.SetToolTip(p_removebtn, "Select the one field or more from Grid to Remove")
+    End Sub
+
+    Private Sub Label29_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Label29.MouseHover
+        ToolTip1.IsBalloon = True
+        ToolTip1.UseAnimation = True
+        ToolTip1.ToolTipTitle = ""
+        ToolTip1.SetToolTip(Label29, "Select the field from Grid to Edit")
+    End Sub
 End Class
 '
