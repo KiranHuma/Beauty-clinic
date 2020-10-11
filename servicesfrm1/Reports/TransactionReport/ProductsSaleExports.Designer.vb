@@ -65,7 +65,7 @@ Partial Class ProductsSaleExports
         Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.SteelBlue
@@ -102,7 +102,7 @@ Partial Class ProductsSaleExports
         DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White
         Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(1490, 490)
+        Me.DataGridView1.Size = New System.Drawing.Size(1499, 438)
         Me.DataGridView1.TabIndex = 394
         '
         'Panel2
@@ -110,9 +110,9 @@ Partial Class ProductsSaleExports
         Me.Panel2.BackColor = System.Drawing.Color.LightCoral
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel2.ForeColor = System.Drawing.Color.Snow
-        Me.Panel2.Location = New System.Drawing.Point(0, 919)
+        Me.Panel2.Location = New System.Drawing.Point(0, 911)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1515, 20)
+        Me.Panel2.Size = New System.Drawing.Size(1534, 20)
         Me.Panel2.TabIndex = 329
         '
         'Label4
@@ -144,7 +144,7 @@ Partial Class ProductsSaleExports
         Me.Panel1.ForeColor = System.Drawing.Color.SteelBlue
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1515, 939)
+        Me.Panel1.Size = New System.Drawing.Size(1534, 931)
         Me.Panel1.TabIndex = 48
         '
         'Button12
@@ -155,7 +155,7 @@ Partial Class ProductsSaleExports
         Me.Button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button12.ForeColor = System.Drawing.Color.White
-        Me.Button12.Location = New System.Drawing.Point(1462, 6)
+        Me.Button12.Location = New System.Drawing.Point(1436, 74)
         Me.Button12.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(31, 32)
@@ -235,7 +235,7 @@ Partial Class ProductsSaleExports
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1515, 939)
+        Me.ClientSize = New System.Drawing.Size(1534, 931)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None

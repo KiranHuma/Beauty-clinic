@@ -528,15 +528,15 @@ Public Class prodcutfrm
     End Sub
     'the price textbox only accept numbers
     Private Sub price_txt_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles price_txt.KeyPress
-        If (e.KeyChar < Chr(48) Or e.KeyChar > Chr(57)) And e.KeyChar <> Chr(8) Then
-            e.Handled = True
-        End If
+        'If (e.KeyChar < Chr(48) Or e.KeyChar > Chr(57)) And e.KeyChar <> Chr(8) Then
+        'e.Handled = True
+        ' End If
     End Sub
     'the servceprice textbox only accept numbers
     Private Sub serprice_txt_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles serprice_txt.KeyPress
-        If (e.KeyChar < Chr(48) Or e.KeyChar > Chr(57)) And e.KeyChar <> Chr(8) Then
-            e.Handled = True
-        End If
+        ' If (e.KeyChar < Chr(48) Or e.KeyChar > Chr(57)) And e.KeyChar <> Chr(8) Then
+        'e.Handled = True
+        ' End If
     End Sub
 
     Private Sub RadioButton1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioButton1.CheckedChanged
@@ -701,6 +701,10 @@ Public Class prodcutfrm
 
 
     Private Sub name_txt_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles name_txt.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub serprice_txt_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles serprice_txt.TextChanged
 
     End Sub
 End Class

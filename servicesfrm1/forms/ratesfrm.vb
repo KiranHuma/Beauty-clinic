@@ -306,11 +306,11 @@ Public Class ratesfrm
   
     Private Sub p_pricetotal()
 
-        Dim mul As Int64
-        Dim addd As Int64
-        mul = Convert.ToInt64(pquantity_txt.Text) * Convert.ToInt64(unitprce_txt.Text)
-        pprice_txt.Text = Convert.ToString(mul)
-        addd = Convert.ToInt64(pprice_txt.Text) + Convert.ToInt64(uinttotalprice_txt.Text)
+        Dim mul As Double
+        Dim addd As Double
+        mul = Double.Parse(pquantity_txt.Text) * Double.Parse(unitprce_txt.Text)
+        pprice_txt.Text = Double.Parse(mul)
+        addd = Double.Parse(pprice_txt.Text) + Double.Parse(uinttotalprice_txt.Text)
         uinttotalprice_txt.Text = Convert.ToString(addd)
 
     End Sub
@@ -438,8 +438,8 @@ Public Class ratesfrm
         ser_peritm_txt.Text = subtractdiscount
     End Sub
     Private Sub s_pricetotal()
-        Dim addd As Int64
-        addd = Convert.ToInt64(sprice_txt.Text) + Convert.ToInt64(servictotal_txt.Text)
+        Dim addd As Double
+        addd = Double.Parse(sprice_txt.Text) + Double.Parse(servictotal_txt.Text)
         servictotal_txt.Text = Convert.ToString(addd)
     End Sub
     Private Sub s_pricewithdiscounttotal()
@@ -503,12 +503,13 @@ Public Class ratesfrm
         Try          
             If ser_dis_txt.Text = "" Then
                 ser_dis_txt.Text = "0"
-                s_pricetotal()
-                s_nameadd()
-                ' s_pricetotal()
-                services_single_discount()
-                s_pricewithdiscounttotal()
             End If
+            s_pricetotal()
+            s_nameadd()
+            ' s_pricetotal()
+            services_single_discount()
+            s_pricewithdiscounttotal()
+
         Catch ex As Exception
             MsgBox("Error " & ex.Message)
 
@@ -1272,6 +1273,14 @@ Public Class ratesfrm
 
     Private Sub Button12_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click
         Me.Dispose()
+    End Sub
+
+    Private Sub unitprce_txt_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles unitprce_txt.TextChanged
+
+    End Sub
+
+    Private Sub sprice_txt_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles sprice_txt.TextChanged
+
     End Sub
 End Class
 '
