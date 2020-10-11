@@ -696,4 +696,11 @@ Public Class prodcutfrm
     Private Sub TabPage1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabPage1.Click
 
     End Sub
+
+
+
+
+    Private Sub name_txt_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles name_txt.SelectedIndexChanged
+
+    End Sub
 End Class

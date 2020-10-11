@@ -175,14 +175,14 @@ Public Class inventryfrm
     Private Sub FillCombo()
         Try
             Dim conn As New System.Data.SqlClient.SqlConnection(cs)
-            Dim strSQL As String = "SELECT P_id FROM tbl_products"
+            Dim strSQL As String = "SELECT p_name FROM tbl_products"
             Dim da As New System.Data.SqlClient.SqlDataAdapter(strSQL, conn)
             Dim ds As New DataSet
             da.Fill(ds, "tbl_products")
-            With Me.pid_txt
+            With Me.inname_txt
                 .DataSource = ds.Tables("tbl_products")
-                .DisplayMember = "P_id"
-                .ValueMember = "P_id"
+                .DisplayMember = "p_name"
+                .ValueMember = "p_name"
                 .SelectedIndex = -1
                 .AutoCompleteMode = AutoCompleteMode.SuggestAppend
                 .AutoCompleteSource = AutoCompleteSource.ListItems
@@ -282,7 +282,7 @@ Public Class inventryfrm
         Label22.Text = ""
     End Sub
     'it is used to call the data in other box by writing in specific field data in one textbox.
-    Private Sub pid_txt_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pid_txt.SelectedIndexChanged
+    Private Sub pid_txt_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
         Dim str As String = cs
         Dim con As SqlConnection = New SqlConnection(str)
@@ -293,7 +293,7 @@ Public Class inventryfrm
             con.Open()
             dbr = cmd.ExecuteReader()
             If dbr.Read() Then
-               
+
                 inname_txt.Text = dbr.GetValue(2)
                 inprice_txt.Text = dbr.GetValue(3)
                 intxt_des.Text = dbr.GetValue(5)
@@ -412,7 +412,7 @@ Public Class inventryfrm
         
     End Sub
     'populate by textboxes
-    Private Sub inname_txt_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles inname_txt.TextChanged
+    Private Sub inname_txt_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             Dim strsql As String = "select Product_name,Totalquantity,Recent_Purchase_Quantity from tbl_inventrry where Product_name like('" + inname_txt.Text + "%')"
             Dim strcon As String = cs
@@ -562,4 +562,28 @@ Public Class inventryfrm
     Private Sub TabPage1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabPage1.Click
 
     End Sub
+
+    Private Sub inname_txt_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles inname_txt.SelectedIndexChanged
+
+        Dim str As String = cs
+        Dim con As SqlConnection = New SqlConnection(str)
+        Dim query As String = "select * from tbl_products where p_name = '" & inname_txt.Text & "' "
+        Dim cmd As SqlCommand = New SqlCommand(query, con)
+        Dim dbr As SqlDataReader
+        Try
+            con.Open()
+            dbr = cmd.ExecuteReader()
+            If dbr.Read() Then
+
+                pid_txt.Text = dbr.GetValue(1)
+                inprice_txt.Text = dbr.GetValue(3)
+                intxt_des.Text = dbr.GetValue(5)
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Failed:ProductID from Products ", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            Me.Dispose()
+        End Try
+    End Sub
+
+    
 End Class

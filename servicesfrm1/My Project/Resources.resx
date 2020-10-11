@@ -121,13 +121,16 @@
   <data name="image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mainimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mainimage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="mainimagee" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mainimagee.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="skintimate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\skintimate.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mainimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mainimage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skintimatenotihng" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skintimatenotihng.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
