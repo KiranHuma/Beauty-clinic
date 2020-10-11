@@ -36,8 +36,8 @@ Partial Class MainFrom1
         Me.Button1.BackColor = System.Drawing.Color.Transparent
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(67, 125)
+        Me.Button1.ForeColor = System.Drawing.Color.LightCoral
+        Me.Button1.Location = New System.Drawing.Point(311, 421)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(328, 55)
         Me.Button1.TabIndex = 0
@@ -49,8 +49,8 @@ Partial Class MainFrom1
         Me.Button2.BackColor = System.Drawing.Color.Transparent
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(301, 186)
+        Me.Button2.ForeColor = System.Drawing.Color.LightCoral
+        Me.Button2.Location = New System.Drawing.Point(545, 482)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(290, 56)
         Me.Button2.TabIndex = 1
@@ -62,8 +62,8 @@ Partial Class MainFrom1
         Me.Button3.BackColor = System.Drawing.Color.Transparent
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(67, 186)
+        Me.Button3.ForeColor = System.Drawing.Color.LightCoral
+        Me.Button3.Location = New System.Drawing.Point(311, 482)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(228, 56)
         Me.Button3.TabIndex = 2
@@ -76,7 +76,7 @@ Partial Class MainFrom1
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.Color.White
-        Me.Button4.Location = New System.Drawing.Point(67, 248)
+        Me.Button4.Location = New System.Drawing.Point(311, 544)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(524, 56)
         Me.Button4.TabIndex = 3
@@ -88,8 +88,8 @@ Partial Class MainFrom1
         Me.Button5.BackColor = System.Drawing.Color.Transparent
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.ForeColor = System.Drawing.Color.White
-        Me.Button5.Location = New System.Drawing.Point(67, 63)
+        Me.Button5.ForeColor = System.Drawing.Color.LightCoral
+        Me.Button5.Location = New System.Drawing.Point(311, 359)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(524, 56)
         Me.Button5.TabIndex = 4
@@ -101,8 +101,8 @@ Partial Class MainFrom1
         Me.Button6.BackColor = System.Drawing.Color.Transparent
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.ForeColor = System.Drawing.Color.White
-        Me.Button6.Location = New System.Drawing.Point(399, 125)
+        Me.Button6.ForeColor = System.Drawing.Color.LightCoral
+        Me.Button6.Location = New System.Drawing.Point(643, 421)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(192, 56)
         Me.Button6.TabIndex = 5
@@ -115,7 +115,7 @@ Partial Class MainFrom1
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button7.ForeColor = System.Drawing.Color.White
-        Me.Button7.Location = New System.Drawing.Point(67, 310)
+        Me.Button7.Location = New System.Drawing.Point(311, 606)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(524, 56)
         Me.Button7.TabIndex = 6
@@ -126,9 +126,9 @@ Partial Class MainFrom1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.servicesfrm1.My.Resources.Resources.mainimage
+        Me.BackgroundImage = Global.servicesfrm1.My.Resources.Resources.mainimagee
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1430, 970)
+        Me.ClientSize = New System.Drawing.Size(1196, 970)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)

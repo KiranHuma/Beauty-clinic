@@ -102,7 +102,7 @@ Partial Class loginfrm
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.SteelBlue
-        Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
+        Me.Panel1.BackgroundImage = Global.servicesfrm1.My.Resources.Resources.skintimate
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel1.Controls.Add(Me.Button12)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
