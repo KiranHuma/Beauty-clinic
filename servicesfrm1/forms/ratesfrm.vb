@@ -1271,8 +1271,8 @@ Public Class ratesfrm
         End Try
     End Sub
 
-    Private Sub Button12_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click
-        Me.Dispose()
+    Private Sub Button12_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
     End Sub
 
     Private Sub unitprce_txt_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles unitprce_txt.TextChanged
@@ -1281,6 +1281,10 @@ Public Class ratesfrm
 
     Private Sub sprice_txt_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles sprice_txt.TextChanged
 
+    End Sub
+
+    Private Sub Button12_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click
+        Me.Dispose()
     End Sub
 End Class
 '
