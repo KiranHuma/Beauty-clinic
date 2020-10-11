@@ -54,6 +54,7 @@ Partial Class ratesfrm
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -142,17 +143,13 @@ Partial Class ratesfrm
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.p_editbtn = New System.Windows.Forms.Button()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Label42 = New System.Windows.Forms.Label()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.trandteto_txt = New System.Windows.Forms.DateTimePicker()
         Me.trandtefrom_txt = New System.Windows.Forms.DateTimePicker()
-        Me.servcheck = New System.Windows.Forms.RadioButton()
         Me.transactioncheck = New System.Windows.Forms.RadioButton()
-        Me.prodcutcheckbox = New System.Windows.Forms.RadioButton()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button8 = New System.Windows.Forms.Button()
         Me.p_removebtn = New System.Windows.Forms.Button()
         Me.payment_grid = New System.Windows.Forms.DataGridView()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
@@ -248,6 +245,7 @@ Partial Class ratesfrm
         Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.BackColor = System.Drawing.Color.White
+        Me.GroupBox1.Controls.Add(Me.Button3)
         Me.GroupBox1.Controls.Add(Me.TextBox5)
         Me.GroupBox1.Controls.Add(Me.Label13)
         Me.GroupBox1.Controls.Add(Me.Label15)
@@ -285,6 +283,15 @@ Partial Class ratesfrm
         Me.GroupBox1.TabIndex = 381
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Product Sale"
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(359, 221)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(173, 32)
+        Me.Button3.TabIndex = 403
+        Me.Button3.Text = "Proceed to Payment"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'TextBox5
         '
@@ -507,9 +514,9 @@ Partial Class ratesfrm
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(359, 178)
+        Me.Button1.Location = New System.Drawing.Point(359, 173)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(103, 32)
+        Me.Button1.Size = New System.Drawing.Size(112, 32)
         Me.Button1.TabIndex = 351
         Me.Button1.Text = "Calculate "
         Me.Button1.UseVisualStyleBackColor = True
@@ -1264,9 +1271,9 @@ Partial Class ratesfrm
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.Color.White
+        Me.TabPage2.Controls.Add(Me.Label42)
         Me.TabPage2.Controls.Add(Me.GroupBox6)
         Me.TabPage2.Controls.Add(Me.TextBox1)
-        Me.TabPage2.Controls.Add(Me.Button8)
         Me.TabPage2.Controls.Add(Me.p_removebtn)
         Me.TabPage2.Controls.Add(Me.payment_grid)
         Me.TabPage2.Location = New System.Drawing.Point(4, 28)
@@ -1276,16 +1283,23 @@ Partial Class ratesfrm
         Me.TabPage2.TabIndex = 5
         Me.TabPage2.Text = "Transaction Record"
         '
+        'Label42
+        '
+        Me.Label42.AutoSize = True
+        Me.Label42.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label42.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label42.Location = New System.Drawing.Point(1281, 117)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(189, 17)
+        Me.Label42.TabIndex = 340
+        Me.Label42.Text = "Search by Member Name"
+        '
         'GroupBox6
         '
         Me.GroupBox6.Controls.Add(Me.trandteto_txt)
         Me.GroupBox6.Controls.Add(Me.trandtefrom_txt)
-        Me.GroupBox6.Controls.Add(Me.servcheck)
         Me.GroupBox6.Controls.Add(Me.transactioncheck)
-        Me.GroupBox6.Controls.Add(Me.prodcutcheckbox)
         Me.GroupBox6.Controls.Add(Me.RadioButton3)
-        Me.GroupBox6.Controls.Add(Me.RadioButton1)
-        Me.GroupBox6.Controls.Add(Me.RadioButton2)
         Me.GroupBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox6.ForeColor = System.Drawing.Color.SteelBlue
         Me.GroupBox6.Location = New System.Drawing.Point(7, 13)
@@ -1309,17 +1323,6 @@ Partial Class ratesfrm
         Me.trandtefrom_txt.Size = New System.Drawing.Size(200, 22)
         Me.trandtefrom_txt.TabIndex = 327
         '
-        'servcheck
-        '
-        Me.servcheck.AutoSize = True
-        Me.servcheck.Location = New System.Drawing.Point(442, 146)
-        Me.servcheck.Name = "servcheck"
-        Me.servcheck.Size = New System.Drawing.Size(141, 21)
-        Me.servcheck.TabIndex = 336
-        Me.servcheck.Text = "Search by Date"
-        Me.servcheck.UseVisualStyleBackColor = True
-        Me.servcheck.Visible = False
-        '
         'transactioncheck
         '
         Me.transactioncheck.AutoSize = True
@@ -1331,17 +1334,6 @@ Partial Class ratesfrm
         Me.transactioncheck.UseVisualStyleBackColor = True
         Me.transactioncheck.Visible = False
         '
-        'prodcutcheckbox
-        '
-        Me.prodcutcheckbox.AutoSize = True
-        Me.prodcutcheckbox.Location = New System.Drawing.Point(442, 92)
-        Me.prodcutcheckbox.Name = "prodcutcheckbox"
-        Me.prodcutcheckbox.Size = New System.Drawing.Size(141, 21)
-        Me.prodcutcheckbox.TabIndex = 335
-        Me.prodcutcheckbox.Text = "Search by Date"
-        Me.prodcutcheckbox.UseVisualStyleBackColor = True
-        Me.prodcutcheckbox.Visible = False
-        '
         'RadioButton3
         '
         Me.RadioButton3.AutoSize = True
@@ -1352,26 +1344,6 @@ Partial Class ratesfrm
         Me.RadioButton3.Text = "Transaction Products and Services"
         Me.RadioButton3.UseVisualStyleBackColor = True
         '
-        'RadioButton1
-        '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(458, 65)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(93, 21)
-        Me.RadioButton1.TabIndex = 322
-        Me.RadioButton1.Text = "Products"
-        Me.RadioButton1.UseVisualStyleBackColor = True
-        '
-        'RadioButton2
-        '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(458, 119)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(91, 21)
-        Me.RadioButton2.TabIndex = 323
-        Me.RadioButton2.Text = "Services"
-        Me.RadioButton2.UseVisualStyleBackColor = True
-        '
         'TextBox1
         '
         Me.TextBox1.ForeColor = System.Drawing.Color.SteelBlue
@@ -1379,17 +1351,6 @@ Partial Class ratesfrm
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(288, 22)
         Me.TextBox1.TabIndex = 338
-        '
-        'Button8
-        '
-        Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Button8.Location = New System.Drawing.Point(1381, 174)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(98, 28)
-        Me.Button8.TabIndex = 333
-        Me.Button8.Text = "Search"
-        Me.Button8.UseVisualStyleBackColor = True
         '
         'p_removebtn
         '
@@ -1855,14 +1816,9 @@ Partial Class ratesfrm
     Friend WithEvents Label29 As System.Windows.Forms.Label
     Friend WithEvents Label27 As System.Windows.Forms.Label
     Friend WithEvents RadioButton3 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
     Friend WithEvents trandteto_txt As System.Windows.Forms.DateTimePicker
     Friend WithEvents trandtefrom_txt As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Button8 As System.Windows.Forms.Button
     Friend WithEvents transactioncheck As System.Windows.Forms.RadioButton
-    Friend WithEvents servcheck As System.Windows.Forms.RadioButton
-    Friend WithEvents prodcutcheckbox As System.Windows.Forms.RadioButton
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
@@ -1894,4 +1850,6 @@ Partial Class ratesfrm
     Friend WithEvents Label41 As System.Windows.Forms.Label
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
     Friend WithEvents prodcut_getdata As System.Windows.Forms.DataGridView
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Label42 As System.Windows.Forms.Label
 End Class

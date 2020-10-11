@@ -361,15 +361,19 @@ Public Class ratesfrm
                 Label14.Text = "NO Stock avaliable"
             Else
                 If pquantity_txt.Text = "" Then
+
                     MsgBox("Enter quantity ")
 
-                Else
 
+                Else
+                    If pr_single_dis.Text = "" Then
+                        pr_single_dis.Text = "0"
+                    End If
                     subtruct_stock()
                     p_pricetotal()
                     prosingle_discount()
                     prosingle_pricetotal()
-                    quantitystockout_in()
+                    ' quantitystockout_in()
                     p_nameadd()
                     pro_quantitytotal()
                     pro2_getdata()
@@ -623,6 +627,7 @@ Public Class ratesfrm
             MessageBox.Show("Are you sure to add data", "Data Adding", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
             p_insert()
+            quantitystockout_in()
             payment_getdata()
             message_txt.Text = "'" & pid_txt.Text & "' payment details saved successfully!"
             message_txt.ForeColor = System.Drawing.Color.DarkGreen
@@ -631,6 +636,7 @@ Public Class ratesfrm
             ser2_getdata()
             transaction_servicesgetdata()
             transaction_productgetdata()
+            p_savebtn.Enabled = True
         Catch ex As Exception
             message_txt.Text = "Error while saving '" & pid_txt.Text & "' payment details"
             message_txt.ForeColor = System.Drawing.Color.Red
@@ -640,19 +646,16 @@ Public Class ratesfrm
         End Try
     End Sub
    
-    Private Sub RadioButton1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioButton1.CheckedChanged
+    Private Sub RadioButton1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
         ' TextBox1.Visible = True
 
-            prodcutcheckbox.Visible = True
-            prodcutcheckbox.Enabled = True
-            servcheck.Visible = False
-            servcheck.Enabled = False
-            transactioncheck.Visible = False
-            transactioncheck.Enabled = False
-            payment_getProductdata()
+       
+        transactioncheck.Visible = False
+        transactioncheck.Enabled = False
+        payment_getProductdata()
 
-        
+
     End Sub
     Private Sub payment_getProductdata()
 
@@ -678,16 +681,14 @@ Public Class ratesfrm
     End Sub
     ',Service_Details,SerPrice_without_Discount,SerPrice_with_Discount,Service_Remarks,Transaction_Date
 
-    Private Sub RadioButton2_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioButton2.CheckedChanged
+    Private Sub RadioButton2_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         con.Close()
         payment_getServicedata()
+
        
-        servcheck.Visible = True
-        servcheck.Enabled = True
         transactioncheck.Visible = False
         transactioncheck.Enabled = False
-        prodcutcheckbox.Visible = False
-        prodcutcheckbox.Enabled = False
+       
     End Sub
 
     Private Sub RadioButton3_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioButton3.CheckedChanged
@@ -696,10 +697,7 @@ Public Class ratesfrm
             payment_getdata()
             transactioncheck.Visible = True
             transactioncheck.Enabled = True
-            servcheck.Visible = False
-            servcheck.Enabled = False
-            prodcutcheckbox.Visible = False
-            prodcutcheckbox.Enabled = False
+          
 
        
     End Sub
@@ -716,7 +714,7 @@ Public Class ratesfrm
         Dim dto As DateTime = trandteto_txt.Value
         myConnection.ConnectionString = cs
         myConnection.Open()
-        Dim str As String = "Select Transaction_ID,Member_Name,Memebr_ID,Product_Details,Product_Total_Items,ProPrice_without_Discount,ProPrice_with_Discount,Product_Remarks,Transaction_Date from tbl_productsales where Transaction_Date >= '" & Format(dfrom, "MM-dd-yyyy") & "' and Transaction_Date <='" & Format(dto, "MM-dd-yyyy") & "'"
+        Dim str As String = "Select * from tbl_productsales where Transaction_Date >= '" & Format(dfrom, "MM-dd-yyyy") & "' and Transaction_Date <='" & Format(dto, "MM-dd-yyyy") & "'"
         Dim da As SqlDataAdapter = New SqlDataAdapter(str, myConnection)
         da.Fill(dt)
         payment_grid.DataSource = dt
@@ -755,24 +753,22 @@ Public Class ratesfrm
     End Sub
  
     Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        servcheck.Checked = False
+
         transactioncheck.Checked = False
-        prodcutcheckbox.Checked = True
+
         payment_productsearchdate()
     End Sub
 
  
 
     Private Sub servcheck_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        servcheck.Checked = True
-        prodcutcheckbox.Checked = False
+      
         transactioncheck.Checked = False
         payment_servicessearchdate()
     End Sub
 
     Private Sub transactioncheck_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        servcheck.Checked = True
-        prodcutcheckbox.Checked = False
+       
         transactioncheck.Checked = True
         payment_pro_servicessearchdate()
     End Sub
@@ -790,26 +786,16 @@ Public Class ratesfrm
         ' End If
 
     End Sub
-    Private Sub searchdatebox_function()
-        If RadioButton1.Checked = True Then
+  
 
-        ElseIf RadioButton2.Checked = True Then
-
-        ElseIf RadioButton3.Checked = True Then
-            payment_pro_servicessearchdate()
-        Else
-            payment_getdata()
-        End If
-    End Sub
-
-    Private Sub prodcutcheckbox_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles prodcutcheckbox.CheckedChanged
+    Private Sub prodcutcheckbox_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         con.Close()
         payment_productsearchdate()
     End Sub
 
-    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
+    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         search_highlight()
-       
+
     End Sub
     Private Sub search_highlight()
         Dim someText As String = TextBox1.Text
@@ -833,7 +819,7 @@ Public Class ratesfrm
         payment_productsearchdate()
     End Sub
 
-    Private Sub servcheck_CheckedChanged_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles servcheck.CheckedChanged
+    Private Sub servcheck_CheckedChanged_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
         con.Close()
         payment_servicessearchdate()
     End Sub
@@ -921,7 +907,7 @@ Public Class ratesfrm
             Me.servictotal_txt.Text = payment_grid.CurrentRow.Cells(9).Value.ToString
             Me.sertotal_bill.Text = payment_grid.CurrentRow.Cells(10).Value.ToString
             Me.RichTextBox5.Text = payment_grid.CurrentRow.Cells(11).Value.ToString
-            ' Me.uinttotalprice_txt.Text = payment_grid.CurrentRow.Cells(12).Value.ToString
+
             Me.transactiondte_txt.Value = payment_grid.CurrentRow.Cells(12).Value.ToString
 
 
@@ -1017,7 +1003,7 @@ Public Class ratesfrm
         
         Dim con As New SqlConnection(cs)
         con.Open()
-        Dim da As New SqlDataAdapter("Select Transaction_ID,Member_Name,Memebr_ID,Service_Details,SerPrice_without_Discount,SerPrice_with_Discount,Service_Remarks,Transaction_Date,Transaction_Date from tbl_productsales", con)
+        Dim da As New SqlDataAdapter("Select Transaction_ID,Member_Name,Memebr_ID,Service_Details,SerPrice_without_Discount,SerPrice_with_Discount,Service_Remarks,Transaction_Date from tbl_productsales", con)
         Dim dt As New DataTable
         da.Fill(dt)
         source1.DataSource = dt
@@ -1096,11 +1082,11 @@ Public Class ratesfrm
             ' Dim cn As New SqlConnection
             Dim ds As New DataSet
             Dim dt As New DataTable
-            Dim dfrom As DateTime = DateTimePicker1.Value
-            Dim dto As DateTime = DateTimePicker2.Value
+            Dim dfrom As DateTime = DateTimePicker4.Value
+            Dim dto As DateTime = DateTimePicker3.Value
             myConnection.ConnectionString = cs
             myConnection.Open()
-            Dim str As String = "Select  Transaction_ID,Member_Name,Memebr_ID,Service_Details,SerPrice_without_Discount,SerPrice_with_Discount,Service_Remarks,Transaction_Date,Transaction_Date from tbl_productsales where Transaction_Date >= '" & Format(dfrom, "MM-dd-yyyy") & "' and Transaction_Date <='" & Format(dto, "MM-dd-yyyy") & "'"
+            Dim str As String = "Select  Transaction_ID,Member_Name,Memebr_ID,Service_Details,SerPrice_without_Discount,SerPrice_with_Discount,Service_Remarks,Transaction_Date from tbl_productsales where Transaction_Date >= '" & Format(dfrom, "MM-dd-yyyy") & "' and Transaction_Date <='" & Format(dto, "MM-dd-yyyy") & "'"
             Dim da As SqlDataAdapter = New SqlDataAdapter(str, myConnection)
             da.Fill(dt)
             serv_getdata.DataSource = dt
@@ -1144,7 +1130,7 @@ Public Class ratesfrm
         Dim str As String
         Try
             con.Open()
-            str = "Select  Transaction_ID,Member_Name,Memebr_ID,Service_Details,SerPrice_without_Discount,SerPrice_with_Discount,Service_Remarks,Transaction_Date,Transaction_Date from tbl_productsales  where Member_Name like '" & TextBox4.Text & "%'"
+            str = "Select  Transaction_ID,Member_Name,Memebr_ID,Service_Details,SerPrice_without_Discount,SerPrice_with_Discount,Service_Remarks,Transaction_Date from tbl_productsales  where Member_Name like '" & TextBox4.Text & "%'"
             cmd = New SqlCommand(str, con)
             da = New SqlDataAdapter(cmd)
             ds = New DataSet
@@ -1194,6 +1180,94 @@ Public Class ratesfrm
         ToolTip1.UseAnimation = True
         ToolTip1.ToolTipTitle = ""
         ToolTip1.SetToolTip(Label29, "Select the field from Grid to Edit")
+    End Sub
+
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        If pr_single_dis.Text = " " Then
+            pr_single_dis.Text = "0"
+        End If
+        TabControl1.SelectedTab = TabPage1
+
+    End Sub
+
+    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
+
+        Dim str As String
+        Try
+            con.Open()
+            str = "Select * from tbl_productsales where Member_Name like '" & TextBox1.Text & "%'"
+            cmd = New SqlCommand(str, con)
+            da = New SqlDataAdapter(cmd)
+            ds = New DataSet
+            da.Fill(ds, "tbl_productsales")
+            con.Close()
+            payment_grid.DataSource = ds
+            payment_grid.DataMember = "tbl_productsales"
+            payment_grid.Visible = True
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Failed:Product Name Search", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Me.Dispose()
+        End Try
+    End Sub
+
+   
+
+    Private Sub prodcut_getdata_CellMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles prodcut_getdata.CellMouseClick
+        Try
+            'insert into tbl_productsales(Transaction_ID,Member_Name,Memebr_ID,Product_Details,Product_Total_Items,ProPrice_without_Discount,ProPrice_with_Discount,Product_Remarks,Service_Details,SerPrice_without_Discount,SerPrice_with_Discount,Service_Remarks,Transaction_Date)
+            'values('" & transactionid_txt.Text & "','" & mname_txt.Text & "','" & mbid_txt.Text & "','" & RichTextBox1.Text & "','" & Label5.Text & "','" & uinttotalprice_txt.Text & "','" & pro_single_totalbill.Text & "','" & RichTextBox4.Text & "','" & RichTextBox2.Text & "','" & servictotal_txt.Text & "','" & sertotal_bill.Text & "','" & RichTextBox5.Text & "','" & transactiondte_txt.Value & "')"
+            Me.transactionid_txt.Text = prodcut_getdata.CurrentRow.Cells(0).Value.ToString
+            Me.mname_txt.Text = prodcut_getdata.CurrentRow.Cells(1).Value.ToString
+            Me.mbid_txt.Text = prodcut_getdata.CurrentRow.Cells(2).Value.ToString
+            Me.RichTextBox1.Text = prodcut_getdata.CurrentRow.Cells(3).Value.ToString
+            Me.Label5.Text = prodcut_getdata.CurrentRow.Cells(4).Value.ToString
+            Me.uinttotalprice_txt.Text = prodcut_getdata.CurrentRow.Cells(5).Value.ToString
+            Me.pro_single_totalbill.Text = prodcut_getdata.CurrentRow.Cells(6).Value.ToString
+            Me.RichTextBox4.Text = prodcut_getdata.CurrentRow.Cells(7).Value.ToString
+
+            Me.transactiondte_txt.Value = prodcut_getdata.CurrentRow.Cells(8).Value.ToString
+
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error")
+        End Try
+    End Sub
+
+    Private Sub prodcut_getdata_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles prodcut_getdata.CellContentClick
+      
+        TabControl1.SelectedTab = TabPage3
+
+        p_savebtn.Enabled = False
+        p_editbtn.Enabled = True
+    End Sub
+
+    Private Sub serv_getdata_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles serv_getdata.CellContentClick
+        TabControl1.SelectedTab = TabPage1
+
+        p_savebtn.Enabled = False
+        p_editbtn.Enabled = True
+    End Sub
+
+ 
+    Private Sub serv_getdata_CellMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles serv_getdata.CellMouseClick
+        Try
+            'insert into tbl_productsales(Transaction_ID,Member_Name,Memebr_ID,Product_Details,Product_Total_Items,ProPrice_without_Discount,ProPrice_with_Discount,Product_Remarks,Service_Details,SerPrice_without_Discount,SerPrice_with_Discount,Service_Remarks,Transaction_Date)
+            'values('" & transactionid_txt.Text & "','" & mname_txt.Text & "','" & mbid_txt.Text & "','" & RichTextBox1.Text & "','" & Label5.Text & "','" & uinttotalprice_txt.Text & "','" & pro_single_totalbill.Text & "','" & RichTextBox4.Text & "','" & RichTextBox2.Text & "','" & servictotal_txt.Text & "','" & sertotal_bill.Text & "','" & RichTextBox5.Text & "','" & transactiondte_txt.Value & "')"
+            Me.transactionid_txt.Text = serv_getdata.CurrentRow.Cells(0).Value.ToString
+            Me.mname_txt.Text = serv_getdata.CurrentRow.Cells(1).Value.ToString
+            Me.mbid_txt.Text = serv_getdata.CurrentRow.Cells(2).Value.ToString
+           
+            Me.RichTextBox2.Text = serv_getdata.CurrentRow.Cells(3).Value.ToString
+            Me.servictotal_txt.Text = serv_getdata.CurrentRow.Cells(4).Value.ToString
+            Me.sertotal_bill.Text = serv_getdata.CurrentRow.Cells(5).Value.ToString
+            Me.RichTextBox5.Text = serv_getdata.CurrentRow.Cells(6).Value.ToString
+
+            Me.transactiondte_txt.Value = serv_getdata.CurrentRow.Cells(7).Value.ToString
+
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 End Class
 '
