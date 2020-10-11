@@ -39,11 +39,11 @@ Partial Class loginfrm
         '
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.ForeColor = System.Drawing.Color.LightCoral
-        Me.TextBox1.Location = New System.Drawing.Point(320, 422)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox1.Location = New System.Drawing.Point(320, 448)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(352, 33)
+        Me.TextBox1.Size = New System.Drawing.Size(265, 35)
         Me.TextBox1.TabIndex = 18
         Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -51,12 +51,12 @@ Partial Class loginfrm
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label2.Location = New System.Drawing.Point(108, 491)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(107, 522)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(180, 31)
+        Me.Label2.Size = New System.Drawing.Size(121, 18)
         Me.Label2.TabIndex = 25
         Me.Label2.Text = "&Enter Password :"
         '
@@ -64,24 +64,24 @@ Partial Class loginfrm
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label1.Location = New System.Drawing.Point(108, 420)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(107, 446)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(188, 31)
+        Me.Label1.Size = New System.Drawing.Size(129, 18)
         Me.Label1.TabIndex = 24
         Me.Label1.Text = "&Enter UserName :"
         '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox1.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox1.ForeColor = System.Drawing.Color.LightCoral
-        Me.CheckBox1.Location = New System.Drawing.Point(317, 546)
-        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.CheckBox1.Location = New System.Drawing.Point(317, 580)
+        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(142, 21)
+        Me.CheckBox1.Size = New System.Drawing.Size(131, 22)
         Me.CheckBox1.TabIndex = 28
         Me.CheckBox1.Text = "Show Password"
         Me.CheckBox1.UseVisualStyleBackColor = True
@@ -90,12 +90,12 @@ Partial Class loginfrm
         '
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox2.ForeColor = System.Drawing.Color.LightCoral
-        Me.TextBox2.Location = New System.Drawing.Point(316, 488)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox2.Location = New System.Drawing.Point(315, 518)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox2.Size = New System.Drawing.Size(356, 34)
+        Me.TextBox2.Size = New System.Drawing.Size(270, 36)
         Me.TextBox2.TabIndex = 19
         Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -107,9 +107,9 @@ Partial Class loginfrm
         Me.Panel1.Controls.Add(Me.Button12)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(797, 375)
+        Me.Panel1.Size = New System.Drawing.Size(680, 398)
         Me.Panel1.TabIndex = 22
         '
         'Button12
@@ -120,10 +120,10 @@ Partial Class loginfrm
         Me.Button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button12.ForeColor = System.Drawing.Color.Transparent
-        Me.Button12.Location = New System.Drawing.Point(753, 13)
-        Me.Button12.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button12.Location = New System.Drawing.Point(623, 13)
+        Me.Button12.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(31, 30)
+        Me.Button12.Size = New System.Drawing.Size(31, 32)
         Me.Button12.TabIndex = 302
         Me.Button12.UseVisualStyleBackColor = False
         '
@@ -136,10 +136,10 @@ Partial Class loginfrm
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.LightCoral
-        Me.Button1.Location = New System.Drawing.Point(520, 611)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button1.Location = New System.Drawing.Point(436, 632)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(149, 41)
+        Me.Button1.Size = New System.Drawing.Size(149, 44)
         Me.Button1.TabIndex = 20
         Me.Button1.Text = "&Login"
         Me.Button1.UseVisualStyleBackColor = True
@@ -148,19 +148,19 @@ Partial Class loginfrm
         '
         Me.Label4.AutoSize = True
         Me.Label4.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label4.Location = New System.Drawing.Point(147, 611)
+        Me.Label4.Location = New System.Drawing.Point(147, 649)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(51, 17)
+        Me.Label4.Size = New System.Drawing.Size(52, 18)
         Me.Label4.TabIndex = 29
         Me.Label4.Text = "Label4"
         Me.Label4.Visible = False
         '
         'loginfrm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(797, 692)
+        Me.ClientSize = New System.Drawing.Size(680, 721)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label2)
@@ -169,6 +169,7 @@ Partial Class loginfrm
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Button1)
+        Me.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "loginfrm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

@@ -361,7 +361,6 @@ Public Class ratesfrm
                 Label14.Text = "NO Stock avaliable"
             Else
                 If pquantity_txt.Text = "" Then
-
                     MsgBox("Enter quantity ")
 
 
@@ -425,7 +424,7 @@ Public Class ratesfrm
         End Try
     End Sub
 
-    Private Sub Button12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click
+    Private Sub Button12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Dispose()
     End Sub
     'services sale
@@ -501,14 +500,15 @@ Public Class ratesfrm
 
     
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-        Try
-
-
-            s_pricetotal()
-            s_nameadd()
-            ' s_pricetotal()
-            services_single_discount()
-            s_pricewithdiscounttotal()
+        Try          
+            If ser_dis_txt.Text = "" Then
+                ser_dis_txt.Text = "0"
+                s_pricetotal()
+                s_nameadd()
+                ' s_pricetotal()
+                services_single_discount()
+                s_pricewithdiscounttotal()
+            End If
         Catch ex As Exception
             MsgBox("Error " & ex.Message)
 
@@ -1268,6 +1268,10 @@ Public Class ratesfrm
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub Button12_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click
+        Me.Dispose()
     End Sub
 End Class
 '
