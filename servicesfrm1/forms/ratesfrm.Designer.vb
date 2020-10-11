@@ -448,7 +448,6 @@ Partial Class ratesfrm
         '
         Me.unitprce_txt.Location = New System.Drawing.Point(137, 103)
         Me.unitprce_txt.Name = "unitprce_txt"
-        Me.unitprce_txt.ReadOnly = True
         Me.unitprce_txt.Size = New System.Drawing.Size(216, 22)
         Me.unitprce_txt.TabIndex = 397
         '
@@ -594,7 +593,6 @@ Partial Class ratesfrm
         '
         Me.pid_txt.Location = New System.Drawing.Point(137, 69)
         Me.pid_txt.Name = "pid_txt"
-        Me.pid_txt.ReadOnly = True
         Me.pid_txt.Size = New System.Drawing.Size(216, 22)
         Me.pid_txt.TabIndex = 287
         '
