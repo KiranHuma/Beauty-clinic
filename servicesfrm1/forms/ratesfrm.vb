@@ -362,11 +362,14 @@ Public Class ratesfrm
             Else
                 If pquantity_txt.Text = "" Then
                     MsgBox("Enter quantity ")
-
+                   
 
                 Else
                     If pr_single_dis.Text = "" Then
                         pr_single_dis.Text = "0"
+                    End If
+                    If unitprce_txt.Text = "" Then
+                        unitprce_txt.Text = "0"
                     End If
                     subtruct_stock()
                     p_pricetotal()
@@ -968,7 +971,6 @@ Public Class ratesfrm
     End Sub
 
     Private Sub pid_txt_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pid_txt.TextChanged
-
         Dim strsql As String = "select p_price from tbl_products where p_name like('" + pname_txt.Text + "%')"
         Dim strcon As String = cs
         Dim odapre As New SqlDataAdapter(strsql, strcon)
@@ -981,6 +983,7 @@ Public Class ratesfrm
             ' EmailaddressTextBox.Text = datTable.Rows(incount)("Emailaddress").ToString
             ' PicturesPictureBox1. = datTable.Rows(incount)("Pictures")
         Next
+      
     End Sub
 
     Private Sub sname_txt_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles sname_txt.SelectedIndexChanged
@@ -1274,6 +1277,23 @@ Public Class ratesfrm
 
     Private Sub Button12_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
+    End Sub
+
+    Private Sub unitprce_txt_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles unitprce_txt.DoubleClick
+
+      
+        Dim strsql As String = "select p_price from tbl_products where p_name like('" + pname_txt.Text + "%')"
+        Dim strcon As String = cs
+        Dim odapre As New SqlDataAdapter(strsql, strcon)
+        Dim datTable As New DataTable
+        Dim incount As Integer
+        odapre.Fill(datTable)
+        For incount = 0 To datTable.Rows.Count - 1
+            unitprce_txt.Text = datTable.Rows(incount)("p_price").ToString
+            ' DateofBirthDateTimePicker.Text = datTable.Rows(incount)("DateofBirth").ToString
+            ' EmailaddressTextBox.Text = datTable.Rows(incount)("Emailaddress").ToString
+            ' PicturesPictureBox1. = datTable.Rows(incount)("Pictures")
+        Next
     End Sub
 
     Private Sub unitprce_txt_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles unitprce_txt.TextChanged

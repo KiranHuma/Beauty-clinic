@@ -228,7 +228,7 @@ Public Class prodcutfrm
             name_txt.Text = ""
             price_txt.Text = ""
             des_txt.Text = ""
-
+            photo.Image = Nothing
         Catch ex As Exception
             MsgBox("Failed:Clear " & ex.Message)
             Me.Dispose()
@@ -468,6 +468,7 @@ Public Class prodcutfrm
             servicename_txt.Text = ""
             gnder_txt.Text = ""
             serprice_txt.Text = ""
+
         Catch ex As Exception
             MsgBox("Failed:Clear " & ex.Message)
             Me.Dispose()

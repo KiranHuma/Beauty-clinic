@@ -711,6 +711,7 @@ Public Class reservationfrm
     End Sub
 
     Private Sub employee_search_txt()
+
         Dim str As String
         Try
             con.Open()
@@ -723,7 +724,7 @@ Public Class reservationfrm
             DataGridView1.DataSource = ds
             DataGridView1.DataMember = "tbl_reservation"
             DataGridView1.Visible = True
-           
+
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Failed:Emplyee NameSearch", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Me.Dispose()
@@ -740,12 +741,15 @@ Public Class reservationfrm
             Me.Label33.Text = "Available"
             Button3.Enabled = True
         Else
+
             Label33.ForeColor = System.Drawing.Color.Red
-            Me.Label33.Text = "Not Available"
+            Me.Label33.Text = "NO"
             Button3.Enabled = False
-
-
         End If
+            
+
+
+
     End Sub
 
     Private Sub Label10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label10.Click
