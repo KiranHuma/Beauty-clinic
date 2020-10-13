@@ -845,7 +845,8 @@ Public Class ratesfrm
             cmd.CommandText = ("UPDATE tbl_productsales SET Transaction_ID= '" & transactionid_txt.Text & "', Member_Name= '" & mname_txt.Text & "',Memebr_ID= '" & mbid_txt.Text & "',Product_Details= '" & RichTextBox1.Text & "',Product_Total_Items= '" & Label5.Text & "',ProPrice_without_Discount= '" & uinttotalprice_txt.Text & "',ProPrice_with_Discount= '" & pro_single_totalbill.Text & "',Product_Remarks= '" & RichTextBox4.Text & "', Service_Details= '" & RichTextBox2.Text & "',SerPrice_without_Discount= '" & servictotal_txt.Text & "',SerPrice_with_Discount= '" & sertotal_bill.Text & "', Service_Remarks= '" & RichTextBox5.Text & "',Transaction_Date= '" & transactiondte_txt.Value & "' where Transaction_ID=" & transactionid_txt.Text & "")
             cmd.ExecuteNonQuery()
             'MessageBox.Show("Data Updated")
-            Label10.Text = "Transaction details updated successfully!"
+            message_txt.ForeColor = System.Drawing.Color.DarkGreen
+            message_txt.Text = "Transaction details updated successfully!"
             con.Close()
 
 

@@ -174,7 +174,7 @@ Public Class productreporfrm
 
     End Sub
 
-    Private Sub Button12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click
+    Private Sub Button12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Dispose()
     End Sub
 
@@ -190,5 +190,9 @@ Public Class productreporfrm
         ToolTip1.SetToolTip(Button4, "Get Data By Clicking on Get data Button")
 
 
+    End Sub
+
+    Private Sub Button5_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+        Me.Dispose()
     End Sub
 End Class

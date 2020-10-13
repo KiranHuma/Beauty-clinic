@@ -41,6 +41,8 @@ Public Class inventryfrm
             cmd.CommandText = "insert into tbl_inventrry(Entryno,I_Id,Pro_id,Product_name,Recent_Purchase_Quantity,Totalquantity,Stock_Status,Stockin_date)values('" & inventid_txt.Text & "','" & in_id_txt.Text & "','" & pid_txt.Text & "','" & inname_txt.Text & "','" & quantity_txt.Text & "','" & inquatity_txt.Text & "','" & stock_txt.Text & "','" & inpudte_txt.Value & "')"
             cmd.ExecuteNonQuery()
 
+            welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
+            welcomemsg.Text = "Inventory details inserted successfully!"
                 con.Close()
         Catch ex As Exception
             MsgBox("Data Inserted Failed because " & ex.Message)
@@ -586,4 +588,7 @@ Public Class inventryfrm
     End Sub
 
     
+    Private Sub welcomemsg_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles welcomemsg.Click
+
+    End Sub
 End Class

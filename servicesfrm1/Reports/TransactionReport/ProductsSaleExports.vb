@@ -179,7 +179,9 @@ Public Class ProductsSaleExports
         End Try
     End Sub
 
-    Private Sub Button12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click
+
+
+    Private Sub Button12_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click
         Me.Dispose()
     End Sub
 End Class

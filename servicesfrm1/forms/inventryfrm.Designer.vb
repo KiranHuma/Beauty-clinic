@@ -24,19 +24,20 @@ Partial Class inventryfrm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(inventryfrm))
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Button12 = New System.Windows.Forms.Button()
         Me.RectangleShape4 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.ShapeContainer2 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.RectangleShape2 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.get_stockdata = New System.Windows.Forms.DataGridView()
@@ -84,11 +85,9 @@ Partial Class inventryfrm
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.OvalShape1 = New Microsoft.VisualBasic.PowerPacks.OvalShape()
         Me.RectangleShape3 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
-        Me.RectangleShape2 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.RectangleShape1 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.get_indata = New System.Windows.Forms.DataGridView()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.Label24 = New System.Windows.Forms.Label()
@@ -105,7 +104,6 @@ Partial Class inventryfrm
         Me.TabPage1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage3.SuspendLayout()
-        Me.Panel3.SuspendLayout()
         CType(Me.get_indata, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -117,7 +115,7 @@ Partial Class inventryfrm
         Me.Button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button12.ForeColor = System.Drawing.Color.White
-        Me.Button12.Location = New System.Drawing.Point(1476, 37)
+        Me.Button12.Location = New System.Drawing.Point(984, 7)
         Me.Button12.Margin = New System.Windows.Forms.Padding(4)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(31, 30)
@@ -138,17 +136,27 @@ Partial Class inventryfrm
         Me.ShapeContainer2.Location = New System.Drawing.Point(0, 0)
         Me.ShapeContainer2.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer2.Name = "ShapeContainer2"
-        Me.ShapeContainer2.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape4})
-        Me.ShapeContainer2.Size = New System.Drawing.Size(1534, 931)
+        Me.ShapeContainer2.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape2, Me.RectangleShape4})
+        Me.ShapeContainer2.Size = New System.Drawing.Size(1032, 831)
         Me.ShapeContainer2.TabIndex = 303
         Me.ShapeContainer2.TabStop = False
+        '
+        'RectangleShape2
+        '
+        Me.RectangleShape2.BackColor = System.Drawing.Color.LightCoral
+        Me.RectangleShape2.BorderColor = System.Drawing.Color.LightCoral
+        Me.RectangleShape2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
+        Me.RectangleShape2.Location = New System.Drawing.Point(1008, 437)
+        Me.RectangleShape2.Name = "RectangleShape2"
+        Me.RectangleShape2.Size = New System.Drawing.Size(220, 26)
+        Me.RectangleShape2.Visible = False
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Vivaldi", 36.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label5.Location = New System.Drawing.Point(663, 41)
+        Me.Label5.Location = New System.Drawing.Point(379, 41)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(247, 71)
         Me.Label5.TabIndex = 304
@@ -163,7 +171,7 @@ Partial Class inventryfrm
         Me.TabPage2.Location = New System.Drawing.Point(4, 34)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1526, 893)
+        Me.TabPage2.Size = New System.Drawing.Size(1024, 793)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Inventory Data"
         '
@@ -171,34 +179,34 @@ Partial Class inventryfrm
         '
         Me.get_stockdata.AllowUserToAddRows = False
         Me.get_stockdata.AllowUserToDeleteRows = False
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle11.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White
-        Me.get_stockdata.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle21.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle21.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle21.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.White
+        Me.get_stockdata.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle21
         Me.get_stockdata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.get_stockdata.BackgroundColor = System.Drawing.Color.LightCoral
         Me.get_stockdata.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.get_stockdata.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle12.BackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Tempus Sans ITC", 10.2!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.get_stockdata.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle22.BackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle22.Font = New System.Drawing.Font("Tempus Sans ITC", 10.2!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle22.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.get_stockdata.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle22
         Me.get_stockdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle13.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Tempus Sans ITC", 10.2!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.LightBlue
-        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.get_stockdata.DefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle23.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle23.Font = New System.Drawing.Font("Tempus Sans ITC", 10.2!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle23.ForeColor = System.Drawing.Color.LightBlue
+        DataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.get_stockdata.DefaultCellStyle = DataGridViewCellStyle23
         Me.get_stockdata.Dock = System.Windows.Forms.DockStyle.Fill
         Me.get_stockdata.EnableHeadersVisualStyles = False
         Me.get_stockdata.GridColor = System.Drawing.Color.LightCoral
@@ -206,23 +214,23 @@ Partial Class inventryfrm
         Me.get_stockdata.Margin = New System.Windows.Forms.Padding(4)
         Me.get_stockdata.Name = "get_stockdata"
         Me.get_stockdata.ReadOnly = True
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle14.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Tempus Sans ITC", 10.2!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.get_stockdata.RowHeadersDefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle24.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle24.Font = New System.Drawing.Font("Tempus Sans ITC", 10.2!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle24.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.get_stockdata.RowHeadersDefaultCellStyle = DataGridViewCellStyle24
         Me.get_stockdata.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        DataGridViewCellStyle15.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
-        DataGridViewCellStyle15.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White
-        Me.get_stockdata.RowsDefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle25.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle25.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
+        DataGridViewCellStyle25.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.White
+        Me.get_stockdata.RowsDefaultCellStyle = DataGridViewCellStyle25
         Me.get_stockdata.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.get_stockdata.Size = New System.Drawing.Size(1520, 868)
+        Me.get_stockdata.Size = New System.Drawing.Size(1018, 768)
         Me.get_stockdata.TabIndex = 322
         '
         'Panel2
@@ -230,9 +238,9 @@ Partial Class inventryfrm
         Me.Panel2.BackColor = System.Drawing.Color.LightCoral
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel2.ForeColor = System.Drawing.Color.Snow
-        Me.Panel2.Location = New System.Drawing.Point(3, 871)
+        Me.Panel2.Location = New System.Drawing.Point(3, 771)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1520, 19)
+        Me.Panel2.Size = New System.Drawing.Size(1018, 19)
         Me.Panel2.TabIndex = 311
         '
         'TabPage1
@@ -285,14 +293,14 @@ Partial Class inventryfrm
         Me.TabPage1.Location = New System.Drawing.Point(4, 34)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1526, 893)
+        Me.TabPage1.Size = New System.Drawing.Size(1024, 793)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Inventory"
         '
         'pid_txt
         '
         Me.pid_txt.ForeColor = System.Drawing.Color.Black
-        Me.pid_txt.Location = New System.Drawing.Point(347, 335)
+        Me.pid_txt.Location = New System.Drawing.Point(257, 348)
         Me.pid_txt.Name = "pid_txt"
         Me.pid_txt.Size = New System.Drawing.Size(216, 30)
         Me.pid_txt.TabIndex = 380
@@ -302,7 +310,7 @@ Partial Class inventryfrm
         Me.inname_txt.BackColor = System.Drawing.Color.White
         Me.inname_txt.ForeColor = System.Drawing.Color.Black
         Me.inname_txt.FormattingEnabled = True
-        Me.inname_txt.Location = New System.Drawing.Point(347, 291)
+        Me.inname_txt.Location = New System.Drawing.Point(257, 304)
         Me.inname_txt.Name = "inname_txt"
         Me.inname_txt.Size = New System.Drawing.Size(216, 30)
         Me.inname_txt.TabIndex = 379
@@ -311,9 +319,10 @@ Partial Class inventryfrm
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(615, 475)
+        Me.Label22.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Location = New System.Drawing.Point(491, 488)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(0, 22)
+        Me.Label22.Size = New System.Drawing.Size(0, 18)
         Me.Label22.TabIndex = 378
         '
         'welcomemsg
@@ -322,7 +331,7 @@ Partial Class inventryfrm
         Me.welcomemsg.BackColor = System.Drawing.Color.White
         Me.welcomemsg.Font = New System.Drawing.Font("Tempus Sans ITC", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.welcomemsg.ForeColor = System.Drawing.Color.White
-        Me.welcomemsg.Location = New System.Drawing.Point(202, 656)
+        Me.welcomemsg.Location = New System.Drawing.Point(62, 629)
         Me.welcomemsg.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.welcomemsg.Name = "welcomemsg"
         Me.welcomemsg.Size = New System.Drawing.Size(86, 22)
@@ -334,7 +343,7 @@ Partial Class inventryfrm
         '
         Me.inventrydtetxt.AutoSize = True
         Me.inventrydtetxt.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.inventrydtetxt.Location = New System.Drawing.Point(1354, 363)
+        Me.inventrydtetxt.Location = New System.Drawing.Point(826, 356)
         Me.inventrydtetxt.Name = "inventrydtetxt"
         Me.inventrydtetxt.Size = New System.Drawing.Size(58, 18)
         Me.inventrydtetxt.TabIndex = 377
@@ -344,7 +353,7 @@ Partial Class inventryfrm
         'inquatity_txt
         '
         Me.inquatity_txt.ForeColor = System.Drawing.Color.Black
-        Me.inquatity_txt.Location = New System.Drawing.Point(347, 472)
+        Me.inquatity_txt.Location = New System.Drawing.Point(257, 485)
         Me.inquatity_txt.Name = "inquatity_txt"
         Me.inquatity_txt.Size = New System.Drawing.Size(216, 30)
         Me.inquatity_txt.TabIndex = 376
@@ -354,7 +363,7 @@ Partial Class inventryfrm
         '
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(1194, 235)
+        Me.Label20.Location = New System.Drawing.Point(666, 228)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(119, 18)
         Me.Label20.TabIndex = 375
@@ -365,7 +374,7 @@ Partial Class inventryfrm
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(1343, 235)
+        Me.Label18.Location = New System.Drawing.Point(815, 228)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(106, 18)
         Me.Label18.TabIndex = 374
@@ -376,7 +385,7 @@ Partial Class inventryfrm
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(1354, 400)
+        Me.Label17.Location = New System.Drawing.Point(826, 393)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(57, 18)
         Me.Label17.TabIndex = 373
@@ -387,7 +396,7 @@ Partial Class inventryfrm
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(1198, 400)
+        Me.Label13.Location = New System.Drawing.Point(670, 393)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(85, 18)
         Me.Label13.TabIndex = 372
@@ -397,7 +406,7 @@ Partial Class inventryfrm
         'stock_txt
         '
         Me.stock_txt.ForeColor = System.Drawing.Color.Black
-        Me.stock_txt.Location = New System.Drawing.Point(347, 510)
+        Me.stock_txt.Location = New System.Drawing.Point(257, 523)
         Me.stock_txt.Name = "stock_txt"
         Me.stock_txt.ReadOnly = True
         Me.stock_txt.Size = New System.Drawing.Size(216, 30)
@@ -406,7 +415,7 @@ Partial Class inventryfrm
         'quantity_txt
         '
         Me.quantity_txt.ForeColor = System.Drawing.Color.Black
-        Me.quantity_txt.Location = New System.Drawing.Point(347, 380)
+        Me.quantity_txt.Location = New System.Drawing.Point(257, 393)
         Me.quantity_txt.Name = "quantity_txt"
         Me.quantity_txt.Size = New System.Drawing.Size(216, 30)
         Me.quantity_txt.TabIndex = 368
@@ -414,7 +423,7 @@ Partial Class inventryfrm
         '
         'inpudte_txt
         '
-        Me.inpudte_txt.Location = New System.Drawing.Point(347, 425)
+        Me.inpudte_txt.Location = New System.Drawing.Point(257, 438)
         Me.inpudte_txt.Name = "inpudte_txt"
         Me.inpudte_txt.Size = New System.Drawing.Size(216, 30)
         Me.inpudte_txt.TabIndex = 367
@@ -424,7 +433,7 @@ Partial Class inventryfrm
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Tempus Sans ITC", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label12.Location = New System.Drawing.Point(124, 291)
+        Me.Label12.Location = New System.Drawing.Point(34, 304)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(127, 22)
         Me.Label12.TabIndex = 363
@@ -434,7 +443,7 @@ Partial Class inventryfrm
         '
         Me.inprice_txt.AutoSize = True
         Me.inprice_txt.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.inprice_txt.Location = New System.Drawing.Point(1343, 278)
+        Me.inprice_txt.Location = New System.Drawing.Point(815, 271)
         Me.inprice_txt.Name = "inprice_txt"
         Me.inprice_txt.Size = New System.Drawing.Size(94, 18)
         Me.inprice_txt.TabIndex = 362
@@ -444,7 +453,7 @@ Partial Class inventryfrm
         '
         Me.intxt_des.AutoSize = True
         Me.intxt_des.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.intxt_des.Location = New System.Drawing.Point(1343, 320)
+        Me.intxt_des.Location = New System.Drawing.Point(815, 313)
         Me.intxt_des.Name = "intxt_des"
         Me.intxt_des.Size = New System.Drawing.Size(96, 18)
         Me.intxt_des.TabIndex = 361
@@ -454,7 +463,7 @@ Partial Class inventryfrm
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(1198, 278)
+        Me.Label9.Location = New System.Drawing.Point(670, 271)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(42, 18)
         Me.Label9.TabIndex = 356
@@ -464,7 +473,7 @@ Partial Class inventryfrm
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(1198, 319)
+        Me.Label11.Location = New System.Drawing.Point(670, 312)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(86, 18)
         Me.Label11.TabIndex = 355
@@ -474,7 +483,7 @@ Partial Class inventryfrm
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(1198, 361)
+        Me.Label14.Location = New System.Drawing.Point(670, 354)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(112, 18)
         Me.Label14.TabIndex = 352
@@ -486,7 +495,7 @@ Partial Class inventryfrm
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Tempus Sans ITC", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label16.Location = New System.Drawing.Point(124, 469)
+        Me.Label16.Location = New System.Drawing.Point(34, 482)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(161, 22)
         Me.Label16.TabIndex = 351
@@ -512,7 +521,7 @@ Partial Class inventryfrm
         'in_id_txt
         '
         Me.in_id_txt.ForeColor = System.Drawing.Color.Black
-        Me.in_id_txt.Location = New System.Drawing.Point(347, 254)
+        Me.in_id_txt.Location = New System.Drawing.Point(257, 267)
         Me.in_id_txt.Name = "in_id_txt"
         Me.in_id_txt.Size = New System.Drawing.Size(216, 30)
         Me.in_id_txt.TabIndex = 348
@@ -522,7 +531,7 @@ Partial Class inventryfrm
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Tempus Sans ITC", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label10.Location = New System.Drawing.Point(124, 246)
+        Me.Label10.Location = New System.Drawing.Point(34, 259)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(114, 22)
         Me.Label10.TabIndex = 344
@@ -533,7 +542,7 @@ Partial Class inventryfrm
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Tempus Sans ITC", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label8.Location = New System.Drawing.Point(122, 507)
+        Me.Label8.Location = New System.Drawing.Point(32, 520)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(114, 22)
         Me.Label8.TabIndex = 325
@@ -547,7 +556,7 @@ Partial Class inventryfrm
         Me.Btnadd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Btnadd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btnadd.ForeColor = System.Drawing.Color.White
-        Me.Btnadd.Location = New System.Drawing.Point(1218, 743)
+        Me.Btnadd.Location = New System.Drawing.Point(716, 643)
         Me.Btnadd.Margin = New System.Windows.Forms.Padding(4)
         Me.Btnadd.Name = "Btnadd"
         Me.Btnadd.Size = New System.Drawing.Size(45, 35)
@@ -561,7 +570,7 @@ Partial Class inventryfrm
         Me.Label19.BackColor = System.Drawing.Color.Transparent
         Me.Label19.Font = New System.Drawing.Font("Tempus Sans ITC", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label19.Location = New System.Drawing.Point(1192, 789)
+        Me.Label19.Location = New System.Drawing.Point(690, 689)
         Me.Label19.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(97, 26)
@@ -572,7 +581,7 @@ Partial Class inventryfrm
         '
         Me.inventid_txt.Enabled = False
         Me.inventid_txt.ForeColor = System.Drawing.Color.Black
-        Me.inventid_txt.Location = New System.Drawing.Point(347, 203)
+        Me.inventid_txt.Location = New System.Drawing.Point(257, 216)
         Me.inventid_txt.Name = "inventid_txt"
         Me.inventid_txt.ReadOnly = True
         Me.inventid_txt.Size = New System.Drawing.Size(216, 30)
@@ -583,7 +592,7 @@ Partial Class inventryfrm
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Tempus Sans ITC", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label6.Location = New System.Drawing.Point(124, 203)
+        Me.Label6.Location = New System.Drawing.Point(34, 216)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(67, 22)
         Me.Label6.TabIndex = 320
@@ -596,7 +605,7 @@ Partial Class inventryfrm
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Tempus Sans ITC", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label7.Location = New System.Drawing.Point(1374, 789)
+        Me.Label7.Location = New System.Drawing.Point(872, 689)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(49, 26)
@@ -612,7 +621,7 @@ Partial Class inventryfrm
         Me.btnupdte.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnupdte.ForeColor = System.Drawing.Color.White
         Me.btnupdte.Image = CType(resources.GetObject("btnupdte.Image"), System.Drawing.Image)
-        Me.btnupdte.Location = New System.Drawing.Point(1368, 744)
+        Me.btnupdte.Location = New System.Drawing.Point(866, 644)
         Me.btnupdte.Margin = New System.Windows.Forms.Padding(4)
         Me.btnupdte.Name = "btnupdte"
         Me.btnupdte.Size = New System.Drawing.Size(42, 34)
@@ -626,7 +635,7 @@ Partial Class inventryfrm
         Me.Label15.BackColor = System.Drawing.Color.Transparent
         Me.Label15.Font = New System.Drawing.Font("Tempus Sans ITC", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label15.Location = New System.Drawing.Point(1437, 789)
+        Me.Label15.Location = New System.Drawing.Point(935, 689)
         Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(70, 26)
@@ -641,7 +650,7 @@ Partial Class inventryfrm
         Me.Btndel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Btndel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btndel.ForeColor = System.Drawing.Color.White
-        Me.Btndel.Location = New System.Drawing.Point(1440, 745)
+        Me.Btndel.Location = New System.Drawing.Point(938, 645)
         Me.Btndel.Margin = New System.Windows.Forms.Padding(4)
         Me.Btndel.Name = "Btndel"
         Me.Btndel.Size = New System.Drawing.Size(52, 34)
@@ -653,9 +662,9 @@ Partial Class inventryfrm
         Me.Panel1.BackColor = System.Drawing.Color.LightCoral
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel1.ForeColor = System.Drawing.Color.Snow
-        Me.Panel1.Location = New System.Drawing.Point(3, 871)
+        Me.Panel1.Location = New System.Drawing.Point(3, 771)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1520, 19)
+        Me.Panel1.Size = New System.Drawing.Size(1018, 19)
         Me.Panel1.TabIndex = 310
         '
         'Label3
@@ -663,7 +672,7 @@ Partial Class inventryfrm
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Tempus Sans ITC", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label3.Location = New System.Drawing.Point(122, 422)
+        Me.Label3.Location = New System.Drawing.Point(32, 435)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(122, 22)
         Me.Label3.TabIndex = 309
@@ -675,7 +684,7 @@ Partial Class inventryfrm
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Tempus Sans ITC", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label2.Location = New System.Drawing.Point(1304, 790)
+        Me.Label2.Location = New System.Drawing.Point(802, 690)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(51, 26)
         Me.Label2.TabIndex = 306
@@ -689,7 +698,7 @@ Partial Class inventryfrm
         Me.svemem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.svemem.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.svemem.ForeColor = System.Drawing.SystemColors.Control
-        Me.svemem.Location = New System.Drawing.Point(1307, 746)
+        Me.svemem.Location = New System.Drawing.Point(805, 646)
         Me.svemem.Margin = New System.Windows.Forms.Padding(4)
         Me.svemem.Name = "svemem"
         Me.svemem.Size = New System.Drawing.Size(36, 33)
@@ -701,7 +710,7 @@ Partial Class inventryfrm
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Tempus Sans ITC", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label4.Location = New System.Drawing.Point(122, 382)
+        Me.Label4.Location = New System.Drawing.Point(32, 395)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(168, 22)
         Me.Label4.TabIndex = 301
@@ -712,7 +721,7 @@ Partial Class inventryfrm
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Tempus Sans ITC", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label1.Location = New System.Drawing.Point(124, 335)
+        Me.Label1.Location = New System.Drawing.Point(34, 348)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(97, 22)
         Me.Label1.TabIndex = 300
@@ -723,8 +732,8 @@ Partial Class inventryfrm
         Me.ShapeContainer1.Location = New System.Drawing.Point(3, 3)
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
-        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.OvalShape1, Me.RectangleShape3, Me.RectangleShape2, Me.RectangleShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(1520, 887)
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.OvalShape1, Me.RectangleShape3, Me.RectangleShape1})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(1018, 787)
         Me.ShapeContainer1.TabIndex = 311
         Me.ShapeContainer1.TabStop = False
         '
@@ -746,16 +755,6 @@ Partial Class inventryfrm
         Me.RectangleShape3.Size = New System.Drawing.Size(217, 23)
         Me.RectangleShape3.Visible = False
         '
-        'RectangleShape2
-        '
-        Me.RectangleShape2.BackColor = System.Drawing.Color.LightCoral
-        Me.RectangleShape2.BorderColor = System.Drawing.Color.LightCoral
-        Me.RectangleShape2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
-        Me.RectangleShape2.Location = New System.Drawing.Point(708, 232)
-        Me.RectangleShape2.Name = "RectangleShape2"
-        Me.RectangleShape2.Size = New System.Drawing.Size(220, 26)
-        Me.RectangleShape2.Visible = False
-        '
         'RectangleShape1
         '
         Me.RectangleShape1.BackColor = System.Drawing.Color.LightCoral
@@ -772,18 +771,17 @@ Partial Class inventryfrm
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
-        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Font = New System.Drawing.Font("Tempus Sans ITC", 10.2!, System.Drawing.FontStyle.Bold)
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1534, 931)
+        Me.TabControl1.Size = New System.Drawing.Size(1032, 831)
         Me.TabControl1.TabIndex = 300
         '
         'TabPage3
         '
         Me.TabPage3.BackColor = System.Drawing.Color.White
-        Me.TabPage3.Controls.Add(Me.Panel3)
+        Me.TabPage3.Controls.Add(Me.get_indata)
         Me.TabPage3.Controls.Add(Me.RadioButton1)
         Me.TabPage3.Controls.Add(Me.Label24)
         Me.TabPage3.Controls.Add(Me.DateTimePicker2)
@@ -797,75 +795,65 @@ Partial Class inventryfrm
         Me.TabPage3.Location = New System.Drawing.Point(4, 34)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(1526, 893)
+        Me.TabPage3.Size = New System.Drawing.Size(1024, 793)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Inventroy Records"
-        '
-        'Panel3
-        '
-        Me.Panel3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel3.Controls.Add(Me.get_indata)
-        Me.Panel3.Location = New System.Drawing.Point(3, 211)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1520, 679)
-        Me.Panel3.TabIndex = 334
         '
         'get_indata
         '
         Me.get_indata.AllowUserToAddRows = False
         Me.get_indata.AllowUserToDeleteRows = False
-        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle16.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle16.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle16.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.White
-        Me.get_indata.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle26.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle26.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle26.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.White
+        Me.get_indata.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle26
         Me.get_indata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.get_indata.BackgroundColor = System.Drawing.Color.LightCoral
         Me.get_indata.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.get_indata.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle17.BackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle17.Font = New System.Drawing.Font("Tempus Sans ITC", 10.2!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle17.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.get_indata.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle27.BackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle27.Font = New System.Drawing.Font("Tempus Sans ITC", 10.2!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle27.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.get_indata.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle27
         Me.get_indata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle18.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle18.Font = New System.Drawing.Font("Tempus Sans ITC", 10.2!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle18.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.get_indata.DefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle28.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle28.Font = New System.Drawing.Font("Tempus Sans ITC", 10.2!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle28.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.get_indata.DefaultCellStyle = DataGridViewCellStyle28
         Me.get_indata.EnableHeadersVisualStyles = False
         Me.get_indata.GridColor = System.Drawing.Color.LightCoral
-        Me.get_indata.Location = New System.Drawing.Point(0, 0)
+        Me.get_indata.Location = New System.Drawing.Point(21, 169)
         Me.get_indata.Margin = New System.Windows.Forms.Padding(4)
         Me.get_indata.Name = "get_indata"
         Me.get_indata.ReadOnly = True
-        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle19.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle19.Font = New System.Drawing.Font("Tempus Sans ITC", 10.2!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle19.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.get_indata.RowHeadersDefaultCellStyle = DataGridViewCellStyle19
+        DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle29.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle29.Font = New System.Drawing.Font("Tempus Sans ITC", 10.2!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle29.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.get_indata.RowHeadersDefaultCellStyle = DataGridViewCellStyle29
         Me.get_indata.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        DataGridViewCellStyle20.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle20.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
-        DataGridViewCellStyle20.ForeColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.White
-        Me.get_indata.RowsDefaultCellStyle = DataGridViewCellStyle20
+        DataGridViewCellStyle30.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle30.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
+        DataGridViewCellStyle30.ForeColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.White
+        Me.get_indata.RowsDefaultCellStyle = DataGridViewCellStyle30
         Me.get_indata.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.get_indata.Size = New System.Drawing.Size(1520, 679)
+        Me.get_indata.Size = New System.Drawing.Size(967, 593)
         Me.get_indata.TabIndex = 321
         '
         'RadioButton1
@@ -929,7 +917,7 @@ Partial Class inventryfrm
         Me.RadioButton3.AutoSize = True
         Me.RadioButton3.Font = New System.Drawing.Font("Tempus Sans ITC", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadioButton3.ForeColor = System.Drawing.Color.SteelBlue
-        Me.RadioButton3.Location = New System.Drawing.Point(1295, 24)
+        Me.RadioButton3.Location = New System.Drawing.Point(883, 59)
         Me.RadioButton3.Name = "RadioButton3"
         Me.RadioButton3.Size = New System.Drawing.Size(126, 30)
         Me.RadioButton3.TabIndex = 326
@@ -942,7 +930,7 @@ Partial Class inventryfrm
         Me.RadioButton4.AutoSize = True
         Me.RadioButton4.Font = New System.Drawing.Font("Tempus Sans ITC", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadioButton4.ForeColor = System.Drawing.Color.SteelBlue
-        Me.RadioButton4.Location = New System.Drawing.Point(1121, 24)
+        Me.RadioButton4.Location = New System.Drawing.Point(709, 59)
         Me.RadioButton4.Name = "RadioButton4"
         Me.RadioButton4.Size = New System.Drawing.Size(108, 30)
         Me.RadioButton4.TabIndex = 325
@@ -955,7 +943,7 @@ Partial Class inventryfrm
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Tempus Sans ITC", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Button1.Location = New System.Drawing.Point(1121, 64)
+        Me.Button1.Location = New System.Drawing.Point(709, 99)
         Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(263, 48)
@@ -968,7 +956,7 @@ Partial Class inventryfrm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.RoyalBlue
-        Me.ClientSize = New System.Drawing.Size(1534, 931)
+        Me.ClientSize = New System.Drawing.Size(1032, 831)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.ShapeContainer2)
         Me.ForeColor = System.Drawing.Color.LightCoral
@@ -983,7 +971,6 @@ Partial Class inventryfrm
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
-        Me.Panel3.ResumeLayout(False)
         CType(Me.get_indata, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -1050,7 +1037,6 @@ Partial Class inventryfrm
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents Label22 As System.Windows.Forms.Label
     Friend WithEvents inname_txt As System.Windows.Forms.ComboBox
     Friend WithEvents pid_txt As System.Windows.Forms.TextBox

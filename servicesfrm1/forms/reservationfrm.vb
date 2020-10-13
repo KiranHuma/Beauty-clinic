@@ -36,7 +36,7 @@ Public Class reservationfrm
         Try
             dbaccessconnection()
             con.Open()
-            cmd.CommandText = "insert into tbl_reservation(R_Entryno,Re_id,Rate_ID,Service_Name,Gender,Service_Description,Member_ID,Memebr_name,m_contactinfo,m_age,m_address,Reservation_Date,Reservation_Time,R_Date,Reservation_Status)values('" & reentry_txt.Text & "','" & resid_txt.Text & "','" & rid_txt.Text & "','" & rese_sertxt.Text & "','" & re_gendrtxt.Text & "','" & re_serdescriptiontxt.Text & "','" & mid_txt.Text & "','" & re_mname_txt.Text & "','" & re_membercntct_txt.Text & "','" & re_memberage_txt.Text & "','" & re_memberadress_txt.Text & "','" & dte_txt.Value & "','" & rese_time.Value & "','" & reservedon_txt.Value & "','" & pending_txt.Text & "')"
+            cmd.CommandText = "insert into tbl_reservation(R_Entryno,Re_id,Rate_ID,Service_Name,Gender,Service_Description,Member_ID,Memebr_name,m_contactinfo,m_age,m_address,Reservation_Date,Reservation_Time,R_Date,Reservation_Status)values('" & reentry_txt.Text & "','" & resid_txt.Text & "','" & rid_txt.Text & "','" & rese_sertxt.Text & "','" & re_gendrtxt.Text & "','" & re_serdescriptiontxt.Text & "','" & re_mname_txt.Text & "','" & mid_txt.Text & "','" & re_membercntct_txt.Text & "','" & re_memberage_txt.Text & "','" & re_memberadress_txt.Text & "','" & dte_txt.Value & "','" & rese_time.Value & "','" & reservedon_txt.Value & "','" & pending_txt.Text & "')"
             cmd.ExecuteNonQuery()
             con.Close()
         Catch ex As Exception
@@ -51,12 +51,13 @@ Public Class reservationfrm
             dbaccessconnection()
             con.Open()
             'TabControl1.SelectedTab = TabPage2
-            cmd.CommandText = ("UPDATE tbl_reservation SET  R_Entryno= '" & reentry_txt.Text & "', Re_id= '" & resid_txt.Text & "',Rate_ID= '" & rid_txt.Text & "',Service_Name= '" & rese_sertxt.Text & "',Gender= '" & re_gendrtxt.Text & "',Service_Description= '" & re_serdescriptiontxt.Text & "',Member_ID= '" & mid_txt.Text & "',Memebr_name= '" & re_mname_txt.Text & "',m_contactinfo= '" & re_membercntct_txt.Text & "',m_age= '" & re_memberage_txt.Text & "',m_address= '" & re_memberadress_txt.Text & "',Reservation_Date= '" & dte_txt.Value & "',Reservation_Time= '" & rese_time.Value & "',R_Date= '" & reservedon_txt.Value & "' where R_Entryno=" & reentry_txt.Text & "")
+            cmd.CommandText = ("UPDATE tbl_reservation SET  R_Entryno= '" & reentry_txt.Text & "', Re_id= '" & resid_txt.Text & "',Rate_ID= '" & rid_txt.Text & "',Service_Name= '" & rese_sertxt.Text & "',Gender= '" & re_gendrtxt.Text & "',Service_Description= '" & re_serdescriptiontxt.Text & "',Member_ID= '" & re_mname_txt.Text & "',Memebr_name= '" & mid_txt.Text & "',m_contactinfo= '" & re_membercntct_txt.Text & "',m_age= '" & re_memberage_txt.Text & "',m_address= '" & re_memberadress_txt.Text & "',Reservation_Date= '" & dte_txt.Value & "',Reservation_Time= '" & rese_time.Value & "',R_Date= '" & reservedon_txt.Value & "' where R_Entryno=" & reentry_txt.Text & "")
             cmd.ExecuteNonQuery()
+            welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
             welcomemsg.Text = "Reservation details updated successfully!"
             con.Close()
         Catch ex As Exception
-            MessageBox.Show("Data Not Updated")
+            MessageBox.Show("Data Not Updated" & ex.Message)
             welcomemsg.ForeColor = System.Drawing.Color.Red
             Me.Dispose()
         End Try
@@ -258,7 +259,7 @@ Public Class reservationfrm
         btnupdte.Enabled = False
     End Sub
     'close Button
-    Private Sub Button12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click
+    Private Sub Button12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Dispose()
     End Sub
     ' delete Button
@@ -365,8 +366,8 @@ Public Class reservationfrm
             Me.rese_sertxtt.Text = get_reservationdata.CurrentRow.Cells(3).Value.ToString
             Me.re_gendrtxt.Text = get_reservationdata.CurrentRow.Cells(4).Value.ToString
             Me.re_serdescriptiontxt.Text = get_reservationdata.CurrentRow.Cells(5).Value.ToString
-            Me.mid_txt.Text = get_reservationdata.CurrentRow.Cells(6).Value.ToString
-            Me.re_mname_txt.Text = get_reservationdata.CurrentRow.Cells(7).Value.ToString
+            Me.re_mname_txt.Text = get_reservationdata.CurrentRow.Cells(6).Value.ToString
+            Me.mid_txt.Text = get_reservationdata.CurrentRow.Cells(7).Value.ToString
             Me.re_membercntct_txt.Text = get_reservationdata.CurrentRow.Cells(8).Value.ToString
             Me.re_memberage_txt.Text = get_reservationdata.CurrentRow.Cells(9).Value.ToString
             Me.re_memberadress_txt.Text = get_reservationdata.CurrentRow.Cells(10).Value.ToString
@@ -733,10 +734,11 @@ Public Class reservationfrm
     Private Sub today_employeeadd_txt_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles today_employeeadd_txt.TextChanged
         employee_search_txt()
         If (DataGridView1.Rows.Count = 0 Or Nothing) Then
+            Label33.ForeColor = System.Drawing.Color.DarkGreen
             Me.Label33.Text = "Available"
             Button3.Enabled = True
         Else
-           
+            Label33.ForeColor = System.Drawing.Color.Red
             Me.Label33.Text = "Not Available"
             Button3.Enabled = False
 
@@ -782,25 +784,10 @@ Public Class reservationfrm
     End Sub
 
   
-    Private Sub DateTimePicker2_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DateTimePicker2.ValueChanged
-
-    End Sub
-    Private Sub DateTimePicker3_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DateTimePicker3.ValueChanged
-
-    End Sub
-    Private Sub TabControl1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabControl1.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub Label9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label9.Click
-
-    End Sub
-
-    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
-
-    End Sub
+   
 
     Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
         Me.Dispose()
     End Sub
+
 End Class

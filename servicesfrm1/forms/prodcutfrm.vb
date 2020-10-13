@@ -53,6 +53,8 @@ Public Class prodcutfrm
             p.Value = data
             cmd.Parameters.Add(p)
             cmd.ExecuteNonQuery()
+            welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
+            welcomemsg.Text = "Product details inserted successfully!"
             con.Close()
         Catch ex As Exception
             MsgBox("Data Inserted Failed because " & ex.Message)
@@ -62,7 +64,7 @@ Public Class prodcutfrm
     'edit Funtion
     Private Sub edit()
         Try
-        
+            con.Open()
             cmd.CommandText = ("UPDATE tbl_products SET  pro_id= '" & pro_txt.Text & "', P_id= '" & pid_txt.Text & "',p_name= '" & name_txt.Text & "',p_price= '" & price_txt.Text & "',p_dte= '" & p_dtetxt.Value & "',p_description= '" & des_txt.Text & "',photo=@photo where pro_id=" & pro_txt.Text & "")
             Dim ms As New MemoryStream()
             Dim bmpImage As New Bitmap(photo.Image)
@@ -72,11 +74,12 @@ Public Class prodcutfrm
             p.Value = data
             cmd.Parameters.Add(p)
             cmd.ExecuteNonQuery()
+            welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
             welcomemsg.Text = "Product details updated successfully!"
             con.Close()
 
         Catch ex As Exception
-            MessageBox.Show("Data Not Updated")
+            MessageBox.Show("Data Not Updated" & ex.Message)
             welcomemsg.ForeColor = System.Drawing.Color.Red
             Me.Dispose()
         End Try
@@ -330,8 +333,10 @@ Public Class prodcutfrm
             con.Open()
             cmd.CommandText = "insert into tbl_services(Sentry_no,Rate_ID,Service_Name,Gender,Service_Price,Service_Date,Service_Description)values('" & eservice_txt.Text & "','" & rateid_txt.Text & "','" & servicename_txt.Text & "','" & gnder_txt.Text & "','" & serprice_txt.Text & "','" & s_dte_txt.Value & "','" & sevicedes_txt.Text & "')"
             cmd.ExecuteNonQuery()
+            Label21.Text = "Services details inserted successfully!"
+            Label21.ForeColor = System.Drawing.Color.DarkGreen
             con.Close()
-            con.Close()
+
         Catch ex As Exception
             MsgBox("Data Inserted in Services Failed because " & ex.Message)
             Me.Dispose()
@@ -343,11 +348,11 @@ Public Class prodcutfrm
         Try
             dbaccessconnection()
             con.Open()
-            TabControl1.SelectedTab = TabPage4
+
             cmd.CommandText = ("UPDATE tbl_services SET Sentry_no= '" & eservice_txt.Text & "', Rate_ID= '" & rateid_txt.Text & "',Service_Name= '" & servicename_txt.Text & "',Gender= '" & gnder_txt.Text & "',Service_Price= '" & serprice_txt.Text & "',Service_Date= '" & s_dte_txt.Value & "',Service_Description= '" & sevicedes_txt.Text & "' where Sentry_no=" & eservice_txt.Text & "")
             cmd.ExecuteNonQuery()
-            welcomemsg.Text = "Services details updated successfully!"
-            welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
+            Label21.Text = "Services details updated successfully!"
+            Label21.ForeColor = System.Drawing.Color.DarkGreen
             sergetdata.Refresh()
             con.Close()
         Catch ex As Exception

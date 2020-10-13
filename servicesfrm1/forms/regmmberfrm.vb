@@ -40,6 +40,8 @@ Public Class regmmberfrm
             con.Open()
             cmd.CommandText = "insert into tbl_memberreg(mid,M_ID,m_name,m_contactinfo,m_age,m_address,m_dte)values('" & mid_txt.Text & "','" & midtxt.Text & "','" & nametxt.Text & "','" & cntcttxt.Text & "','" & agetxt.Text & "','" & addresstxt.Text & "','" & m_dtetxt.Value & "')"
             cmd.ExecuteNonQuery()
+            welcomemsg.Text = "Members details inserted successfully!"
+            welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
             con.Close()
          Catch ex As Exception
             MsgBox("Data Inserted Failed because " & ex.Message)
@@ -57,7 +59,8 @@ Public Class regmmberfrm
             Else
                 cmd.CommandText = ("UPDATE tbl_memberreg SET  mid= '" & mid_txt.Text & "', M_ID= '" & midtxt.Text & "',m_name= '" & nametxt.Text & "',m_contactinfo= '" & cntcttxt.Text & "',m_age= '" & agetxt.Text & "',m_address= '" & addresstxt.Text & "',m_dte= '" & m_dtetxt.Value & "' where mid=" & mid_txt.Text & "")
                 cmd.ExecuteNonQuery()
-                MessageBox.Show("Data Updated")
+
+                welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
                 welcomemsg.Text = "Members details updated successfully!"
                 memberdata.Refresh()
                 con.Close()
@@ -214,7 +217,7 @@ Public Class regmmberfrm
         btnupdte.Enabled = False
     End Sub
     'Close Button
-    Private Sub Button12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click
+    Private Sub Button12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Dispose()
     End Sub
     ' delete Button
@@ -359,11 +362,9 @@ Public Class regmmberfrm
 
     End Sub
 
-    Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    
+
+    Private Sub Button12_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click
         Me.Dispose()
-    End Sub
-
-    Private Sub TabPage1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabPage1.Click
-
     End Sub
 End Class

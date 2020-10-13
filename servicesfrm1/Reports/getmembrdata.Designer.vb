@@ -36,8 +36,8 @@ Partial Class getmembrdata
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Button12 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button12 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -64,7 +64,7 @@ Partial Class getmembrdata
         Me.Button4.Enabled = False
         Me.Button4.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Button4.Location = New System.Drawing.Point(1286, 173)
+        Me.Button4.Location = New System.Drawing.Point(760, 181)
         Me.Button4.Margin = New System.Windows.Forms.Padding(4)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(160, 28)
@@ -77,7 +77,7 @@ Partial Class getmembrdata
         Me.Button2.Enabled = False
         Me.Button2.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Button2.Location = New System.Drawing.Point(1286, 245)
+        Me.Button2.Location = New System.Drawing.Point(760, 253)
         Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(160, 28)
@@ -90,7 +90,7 @@ Partial Class getmembrdata
         Me.Button5.Enabled = False
         Me.Button5.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Button5.Location = New System.Drawing.Point(1286, 209)
+        Me.Button5.Location = New System.Drawing.Point(760, 217)
         Me.Button5.Margin = New System.Windows.Forms.Padding(4)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(160, 28)
@@ -135,7 +135,7 @@ Partial Class getmembrdata
         Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView1.EnableHeadersVisualStyles = False
         Me.DataGridView1.GridColor = System.Drawing.Color.SteelBlue
-        Me.DataGridView1.Location = New System.Drawing.Point(4, 318)
+        Me.DataGridView1.Location = New System.Drawing.Point(13, 380)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
@@ -155,7 +155,7 @@ Partial Class getmembrdata
         DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White
         Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(1508, 524)
+        Me.DataGridView1.Size = New System.Drawing.Size(918, 325)
         Me.DataGridView1.TabIndex = 395
         '
         'Panel2
@@ -163,9 +163,9 @@ Partial Class getmembrdata
         Me.Panel2.BackColor = System.Drawing.Color.LightCoral
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel2.ForeColor = System.Drawing.Color.Snow
-        Me.Panel2.Location = New System.Drawing.Point(0, 865)
+        Me.Panel2.Location = New System.Drawing.Point(0, 712)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1516, 19)
+        Me.Panel2.Size = New System.Drawing.Size(944, 19)
         Me.Panel2.TabIndex = 396
         '
         'Label4
@@ -173,26 +173,11 @@ Partial Class getmembrdata
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Vivaldi", 36.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.Label4.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label4.Location = New System.Drawing.Point(400, 41)
+        Me.Label4.Location = New System.Drawing.Point(132, 58)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(709, 71)
         Me.Label4.TabIndex = 399
         Me.Label4.Text = "&Members Reports and Exports"
-        '
-        'Button12
-        '
-        Me.Button12.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button12.BackColor = System.Drawing.Color.White
-        Me.Button12.BackgroundImage = CType(resources.GetObject("Button12.BackgroundImage"), System.Drawing.Image)
-        Me.Button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button12.ForeColor = System.Drawing.Color.White
-        Me.Button12.Location = New System.Drawing.Point(1448, 28)
-        Me.Button12.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(31, 30)
-        Me.Button12.TabIndex = 398
-        Me.Button12.UseVisualStyleBackColor = False
         '
         'Button1
         '
@@ -206,14 +191,29 @@ Partial Class getmembrdata
         Me.Button1.Text = "Get Data"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Button12
+        '
+        Me.Button12.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button12.BackColor = System.Drawing.Color.White
+        Me.Button12.BackgroundImage = CType(resources.GetObject("Button12.BackgroundImage"), System.Drawing.Image)
+        Me.Button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button12.ForeColor = System.Drawing.Color.White
+        Me.Button12.Location = New System.Drawing.Point(900, 13)
+        Me.Button12.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(31, 30)
+        Me.Button12.TabIndex = 400
+        Me.Button12.UseVisualStyleBackColor = False
+        '
         'getmembrdata
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1516, 884)
-        Me.Controls.Add(Me.Label4)
+        Me.ClientSize = New System.Drawing.Size(944, 731)
         Me.Controls.Add(Me.Button12)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.DataGridView1)
@@ -224,6 +224,7 @@ Partial Class getmembrdata
         Me.Controls.Add(Me.DateTimePicker1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "getmembrdata"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "getmembrdata"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -238,6 +239,6 @@ Partial Class getmembrdata
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Button12 As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button12 As System.Windows.Forms.Button
 End Class

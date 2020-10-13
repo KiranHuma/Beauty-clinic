@@ -103,7 +103,7 @@ Public Class getmembrdata
     End Sub
 
   
-    Private Sub Button12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click
+    Private Sub Button12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Dispose()
     End Sub
 
@@ -167,4 +167,7 @@ Public Class getmembrdata
         MsgBox("Please Check your E Drive.There will be a File with the Name of Members.Please Copy and Paste it in other folder for record otherwise it will replace when you print new one")
     End Sub
 
+    Private Sub Button12_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click
+        Me.Dispose()
+    End Sub
 End Class

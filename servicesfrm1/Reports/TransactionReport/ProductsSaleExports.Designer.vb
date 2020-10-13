@@ -33,7 +33,6 @@ Partial Class ProductsSaleExports
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button12 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -41,6 +40,7 @@ Partial Class ProductsSaleExports
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Button12 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -102,7 +102,7 @@ Partial Class ProductsSaleExports
         DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White
         Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(1499, 438)
+        Me.DataGridView1.Size = New System.Drawing.Size(909, 294)
         Me.DataGridView1.TabIndex = 394
         '
         'Panel2
@@ -110,9 +110,9 @@ Partial Class ProductsSaleExports
         Me.Panel2.BackColor = System.Drawing.Color.LightCoral
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel2.ForeColor = System.Drawing.Color.Snow
-        Me.Panel2.Location = New System.Drawing.Point(0, 911)
+        Me.Panel2.Location = New System.Drawing.Point(0, 711)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1534, 20)
+        Me.Panel2.Size = New System.Drawing.Size(944, 20)
         Me.Panel2.TabIndex = 329
         '
         'Label4
@@ -120,7 +120,7 @@ Partial Class ProductsSaleExports
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Vivaldi", 36.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.Label4.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label4.Location = New System.Drawing.Point(362, 51)
+        Me.Label4.Location = New System.Drawing.Point(43, 46)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(848, 71)
         Me.Label4.TabIndex = 305
@@ -129,10 +129,10 @@ Partial Class ProductsSaleExports
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.Button12)
         Me.Panel1.Controls.Add(Me.DataGridView1)
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.Button12)
         Me.Panel1.Controls.Add(Me.Button4)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Button3)
@@ -144,30 +144,15 @@ Partial Class ProductsSaleExports
         Me.Panel1.ForeColor = System.Drawing.Color.SteelBlue
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1534, 931)
+        Me.Panel1.Size = New System.Drawing.Size(944, 731)
         Me.Panel1.TabIndex = 48
-        '
-        'Button12
-        '
-        Me.Button12.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button12.BackColor = System.Drawing.Color.White
-        Me.Button12.BackgroundImage = CType(resources.GetObject("Button12.BackgroundImage"), System.Drawing.Image)
-        Me.Button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button12.ForeColor = System.Drawing.Color.White
-        Me.Button12.Location = New System.Drawing.Point(1436, 74)
-        Me.Button12.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(31, 32)
-        Me.Button12.TabIndex = 304
-        Me.Button12.UseVisualStyleBackColor = False
         '
         'Button4
         '
         Me.Button4.Enabled = False
         Me.Button4.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Button4.Location = New System.Drawing.Point(1297, 214)
+        Me.Button4.Location = New System.Drawing.Point(747, 224)
         Me.Button4.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(160, 30)
@@ -180,7 +165,7 @@ Partial Class ProductsSaleExports
         Me.Button2.Enabled = False
         Me.Button2.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Button2.Location = New System.Drawing.Point(1297, 290)
+        Me.Button2.Location = New System.Drawing.Point(747, 300)
         Me.Button2.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(160, 30)
@@ -193,7 +178,7 @@ Partial Class ProductsSaleExports
         Me.Button3.Enabled = False
         Me.Button3.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Button3.Location = New System.Drawing.Point(1297, 252)
+        Me.Button3.Location = New System.Drawing.Point(747, 262)
         Me.Button3.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(160, 30)
@@ -231,15 +216,31 @@ Partial Class ProductsSaleExports
         Me.DateTimePicker2.Size = New System.Drawing.Size(265, 24)
         Me.DateTimePicker2.TabIndex = 42
         '
+        'Button12
+        '
+        Me.Button12.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button12.BackColor = System.Drawing.Color.White
+        Me.Button12.BackgroundImage = CType(resources.GetObject("Button12.BackgroundImage"), System.Drawing.Image)
+        Me.Button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button12.ForeColor = System.Drawing.Color.White
+        Me.Button12.Location = New System.Drawing.Point(908, 4)
+        Me.Button12.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(31, 32)
+        Me.Button12.TabIndex = 395
+        Me.Button12.UseVisualStyleBackColor = False
+        '
         'ProductsSaleExports
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1534, 931)
+        Me.ClientSize = New System.Drawing.Size(944, 731)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "ProductsSaleExports"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "ProductsSaleExports"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
@@ -250,7 +251,6 @@ Partial Class ProductsSaleExports
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Button12 As System.Windows.Forms.Button
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
@@ -259,4 +259,5 @@ Partial Class ProductsSaleExports
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
+    Friend WithEvents Button12 As System.Windows.Forms.Button
 End Class
