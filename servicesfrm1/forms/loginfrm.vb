@@ -52,6 +52,7 @@ Public Class loginfrm
             Me.Dispose()
         Else
             Label4.Visible = True
+            Label4.ForeColor = System.Drawing.Color.Red
             Label4.Text = " Not succsessfully login "
         End If
         'End If
