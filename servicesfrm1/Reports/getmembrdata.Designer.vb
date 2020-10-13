@@ -43,26 +43,26 @@ Partial Class getmembrdata
         '
         'DateTimePicker2
         '
-        Me.DateTimePicker2.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker2.Location = New System.Drawing.Point(372, 251)
         Me.DateTimePicker2.Margin = New System.Windows.Forms.Padding(4)
         Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(265, 24)
+        Me.DateTimePicker2.Size = New System.Drawing.Size(265, 22)
         Me.DateTimePicker2.TabIndex = 37
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker1.Location = New System.Drawing.Point(39, 251)
         Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(265, 24)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(265, 22)
         Me.DateTimePicker1.TabIndex = 36
         '
         'Button4
         '
         Me.Button4.Enabled = False
-        Me.Button4.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.Color.SteelBlue
         Me.Button4.Location = New System.Drawing.Point(760, 181)
         Me.Button4.Margin = New System.Windows.Forms.Padding(4)
@@ -75,7 +75,7 @@ Partial Class getmembrdata
         'Button2
         '
         Me.Button2.Enabled = False
-        Me.Button2.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.SteelBlue
         Me.Button2.Location = New System.Drawing.Point(760, 253)
         Me.Button2.Margin = New System.Windows.Forms.Padding(4)
@@ -88,7 +88,7 @@ Partial Class getmembrdata
         'Button5
         '
         Me.Button5.Enabled = False
-        Me.Button5.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.ForeColor = System.Drawing.Color.SteelBlue
         Me.Button5.Location = New System.Drawing.Point(760, 217)
         Me.Button5.Margin = New System.Windows.Forms.Padding(4)
@@ -118,7 +118,7 @@ Partial Class getmembrdata
         Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.SteelBlue
@@ -127,7 +127,7 @@ Partial Class getmembrdata
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
         DataGridViewCellStyle3.ForeColor = System.Drawing.Color.SteelBlue
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
@@ -141,7 +141,7 @@ Partial Class getmembrdata
         Me.DataGridView1.ReadOnly = True
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
         DataGridViewCellStyle4.ForeColor = System.Drawing.Color.SteelBlue
         DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue
         DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White
@@ -181,7 +181,7 @@ Partial Class getmembrdata
         '
         'Button1
         '
-        Me.Button1.Font = New System.Drawing.Font("Tempus Sans ITC", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.SteelBlue
         Me.Button1.Location = New System.Drawing.Point(39, 209)
         Me.Button1.Margin = New System.Windows.Forms.Padding(4)

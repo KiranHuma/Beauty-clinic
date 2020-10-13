@@ -52,7 +52,17 @@ Public Class prodcutfrm
             Dim p As New SqlParameter("@photo", SqlDbType.Image)
             p.Value = data
             cmd.Parameters.Add(p)
+
+            ms.Close()
+            ms.Dispose()
+
             cmd.ExecuteNonQuery()
+            cmd.Parameters.Clear()
+
+
+            If bmpImage IsNot Nothing Then
+                bmpImage.Dispose()
+            End If
             welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
             welcomemsg.Text = "Product details inserted successfully!"
             con.Close()
@@ -74,6 +84,7 @@ Public Class prodcutfrm
             p.Value = data
             cmd.Parameters.Add(p)
             cmd.ExecuteNonQuery()
+            cmd.Parameters.Clear()
             welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
             welcomemsg.Text = "Product details updated successfully!"
             con.Close()
@@ -213,9 +224,11 @@ Public Class prodcutfrm
     'Empty the textboxes
     Private Sub clear()
         Try
+            con.Close()
             name_txt.Text = ""
             price_txt.Text = ""
             des_txt.Text = ""
+
         Catch ex As Exception
             MsgBox("Failed:Clear " & ex.Message)
             Me.Dispose()

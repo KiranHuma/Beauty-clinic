@@ -331,11 +331,13 @@ Public Class reservationfrm
             re_membercntct_txt.Visible = True
             re_memberage_txt.Visible = True
             re_memberadress_txt.Visible = True
+            re_gendrtxt.Visible = True
             Label5.Visible = True
             Label16.Visible = True
             Label14.Visible = True
             Label12.Visible = True
             Label17.Visible = True
+            Label18.Visible = True
 
         Catch ex As Exception
             MessageBox.Show("Failed:Selected Value of members", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)

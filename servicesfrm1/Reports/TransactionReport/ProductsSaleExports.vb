@@ -90,7 +90,7 @@ Public Class ProductsSaleExports
         End Try
     End Sub
 
-    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
+    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs)
 
     End Sub
 
@@ -181,7 +181,9 @@ Public Class ProductsSaleExports
 
 
 
-    Private Sub Button12_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click
+   
+
+    Private Sub Button12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click
         Me.Dispose()
     End Sub
 End Class
