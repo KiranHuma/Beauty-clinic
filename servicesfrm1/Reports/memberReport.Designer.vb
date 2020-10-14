@@ -22,6 +22,7 @@ Partial Class memberReport
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(memberReport))
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.membrReport1 = New servicesfrm1.membrReport()
         Me.SuspendLayout()
@@ -46,6 +47,7 @@ Partial Class memberReport
         Me.ClientSize = New System.Drawing.Size(1528, 896)
         Me.Controls.Add(Me.CrystalReportViewer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "memberReport"
         Me.Text = "Member Report"
         Me.ResumeLayout(False)

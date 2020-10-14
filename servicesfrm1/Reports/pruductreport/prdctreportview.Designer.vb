@@ -22,6 +22,7 @@ Partial Class prodctreportview
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(prodctreportview))
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.productreport1 = New servicesfrm1.productreports()
         Me.SuspendLayout()
@@ -46,6 +47,7 @@ Partial Class prodctreportview
         Me.ClientSize = New System.Drawing.Size(1528, 896)
         Me.Controls.Add(Me.CrystalReportViewer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "prodctreportview"
         Me.Text = "Product Report"
         Me.ResumeLayout(False)

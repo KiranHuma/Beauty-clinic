@@ -64,7 +64,7 @@ Public Class prodcutfrm
                 bmpImage.Dispose()
             End If
             welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
-            welcomemsg.Text = "Product details inserted successfully!"
+            welcomemsg.Text = "'" & name_txt.Text & "'  details saved successfully!"
             con.Close()
         Catch ex As Exception
             MsgBox("Data Inserted Failed because " & ex.Message)
@@ -86,7 +86,8 @@ Public Class prodcutfrm
             cmd.ExecuteNonQuery()
             cmd.Parameters.Clear()
             welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
-            welcomemsg.Text = "Product details updated successfully!"
+            welcomemsg.Text = "'" & name_txt.Text & "'  details update successfully!"
+
             con.Close()
 
         Catch ex As Exception
@@ -346,7 +347,7 @@ Public Class prodcutfrm
             con.Open()
             cmd.CommandText = "insert into tbl_services(Sentry_no,Rate_ID,Service_Name,Gender,Service_Price,Service_Date,Service_Description)values('" & eservice_txt.Text & "','" & rateid_txt.Text & "','" & servicename_txt.Text & "','" & gnder_txt.Text & "','" & serprice_txt.Text & "','" & s_dte_txt.Value & "','" & sevicedes_txt.Text & "')"
             cmd.ExecuteNonQuery()
-            Label21.Text = "Services details inserted successfully!"
+            Label21.Text = "'" & rateid_txt.Text & "'  details saved successfully!"
             Label21.ForeColor = System.Drawing.Color.DarkGreen
             con.Close()
 
@@ -364,7 +365,8 @@ Public Class prodcutfrm
 
             cmd.CommandText = ("UPDATE tbl_services SET Sentry_no= '" & eservice_txt.Text & "', Rate_ID= '" & rateid_txt.Text & "',Service_Name= '" & servicename_txt.Text & "',Gender= '" & gnder_txt.Text & "',Service_Price= '" & serprice_txt.Text & "',Service_Date= '" & s_dte_txt.Value & "',Service_Description= '" & sevicedes_txt.Text & "' where Sentry_no=" & eservice_txt.Text & "")
             cmd.ExecuteNonQuery()
-            Label21.Text = "Services details updated successfully!"
+
+            Label21.Text = "'" & rateid_txt.Text & "'  details update successfully!"
             Label21.ForeColor = System.Drawing.Color.DarkGreen
             sergetdata.Refresh()
             con.Close()
@@ -483,7 +485,7 @@ Public Class prodcutfrm
             ' FillCombo()
             s_insert()
             ser_getdata()
-            Label21.Text = "'" & rateid_txt.Text & "' services details saved successfully!"
+            Label21.Text = "'" & rateid_txt.Text & "' details saved successfully!"
             Label21.ForeColor = System.Drawing.Color.DarkGreen
 
         Catch ex As Exception
@@ -724,6 +726,14 @@ Public Class prodcutfrm
     End Sub
 
     Private Sub serprice_txt_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles serprice_txt.TextChanged
+
+    End Sub
+
+    Private Sub TabPage2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabPage2.Click
+
+    End Sub
+
+    Private Sub TabPage3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabPage3.Click
 
     End Sub
 End Class

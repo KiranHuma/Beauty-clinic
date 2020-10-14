@@ -54,7 +54,8 @@ Public Class reservationfrm
             cmd.CommandText = ("UPDATE tbl_reservation SET  R_Entryno= '" & reentry_txt.Text & "', Re_id= '" & resid_txt.Text & "',Rate_ID= '" & rid_txt.Text & "',Service_Name= '" & rese_sertxt.Text & "',Gender= '" & re_gendrtxt.Text & "',Service_Description= '" & re_serdescriptiontxt.Text & "',Member_ID= '" & re_mname_txt.Text & "',Memebr_name= '" & mid_txt.Text & "',m_contactinfo= '" & re_membercntct_txt.Text & "',m_age= '" & re_memberage_txt.Text & "',m_address= '" & re_memberadress_txt.Text & "',Reservation_Date= '" & dte_txt.Value & "',Reservation_Time= '" & rese_time.Value & "',R_Date= '" & reservedon_txt.Value & "' where R_Entryno=" & reentry_txt.Text & "")
             cmd.ExecuteNonQuery()
             welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
-            welcomemsg.Text = "Reservation details updated successfully!"
+            welcomemsg.Text = "'" & rid_txt.Text & "' details update successfully!"
+
             con.Close()
         Catch ex As Exception
             MessageBox.Show("Data Not Updated" & ex.Message)
@@ -240,7 +241,7 @@ Public Class reservationfrm
             getdata_reservation()
             ' M_ID_FillCombo()
             get_reservationdata.Refresh()
-            welcomemsg.Text = "'" & rid_txt.Text & "' reservation details saved successfully!"
+            welcomemsg.Text = "'" & rid_txt.Text & "' details saved successfully!"
             welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
 
         Catch ex As Exception
@@ -792,8 +793,10 @@ Public Class reservationfrm
   
    
 
-    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
+    
+
+  
+    Private Sub close_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles close.Click
         Me.Dispose()
     End Sub
-
 End Class

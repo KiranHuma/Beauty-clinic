@@ -42,7 +42,7 @@ Public Class inventryfrm
             cmd.ExecuteNonQuery()
 
             welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
-            welcomemsg.Text = "Inventory details inserted successfully!"
+            welcomemsg.Text = "'" & pid_txt.Text & "' details saved successfully!"
                 con.Close()
         Catch ex As Exception
             MsgBox("Data Inserted Failed because " & ex.Message)
@@ -57,7 +57,7 @@ Public Class inventryfrm
             con.Open()
             cmd.CommandText = ("UPDATE tbl_inventrry SET  Entryno= '" & inventid_txt.Text & "', I_Id= '" & in_id_txt.Text & "',Pro_id= '" & pid_txt.Text & "',Product_name= '" & inname_txt.Text & "',Recent_Purchase_Quantity= '" & quantity_txt.Text & "',Totalquantity= '" & inquatity_txt.Text & "',Stock_Status= '" & stock_txt.Text & "',Stockin_date= '" & inpudte_txt.Value & "' where Entryno=" & inventid_txt.Text & "")
                 cmd.ExecuteNonQuery()
-            welcomemsg.Text = "Inventory details updated successfully!"
+            welcomemsg.Text = "'" & pid_txt.Text & "' details update successfully!"
             welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
             get_indata.Refresh()
             con.Close()
@@ -249,11 +249,11 @@ Public Class inventryfrm
             insert()
             getdata()
             in_getdata()
-            welcomemsg.Text = "'" & pid_txt.Text & "' Inventry details saved successfully!"
+            welcomemsg.Text = "'" & pid_txt.Text & "' details saved successfully!"
             welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
 
         Catch ex As Exception
-            welcomemsg.Text = "Error while Saving '" & pid_txt.Text & "' Inventry details"
+            welcomemsg.Text = "Error while Saving '" & pid_txt.Text & "' Inventory details"
             welcomemsg.ForeColor = System.Drawing.Color.Red
             MsgBox("DataBase not connected due to the reason because " & ex.Message)
             Me.Dispose()
@@ -335,7 +335,7 @@ Public Class inventryfrm
     'by clicking on ingrid content of inventory tab grid
     Private Sub get_indata_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles get_indata.CellContentClick
         TabControl1.SelectedTab = TabPage1
-        Label22.Text = "Dont't forget to Update inventroy if you edit the purchased quantity"
+        Label22.Text = "Dont't forget to Update inventory if you edit the purchased quantity"
         svemem.Enabled = False
         Btndel.Enabled = True
         btnupdte.Enabled = True
@@ -590,5 +590,9 @@ Public Class inventryfrm
     
     Private Sub welcomemsg_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles welcomemsg.Click
 
+    End Sub
+
+    Private Sub Button12_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Me.Dispose()
     End Sub
 End Class

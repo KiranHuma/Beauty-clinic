@@ -78,7 +78,7 @@ Partial Class loginfrm
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox1.ForeColor = System.Drawing.Color.LightCoral
-        Me.CheckBox1.Location = New System.Drawing.Point(317, 580)
+        Me.CheckBox1.Location = New System.Drawing.Point(320, 580)
         Me.CheckBox1.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(188, 29)
@@ -90,12 +90,12 @@ Partial Class loginfrm
         '
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox2.ForeColor = System.Drawing.Color.LightCoral
-        Me.TextBox2.Location = New System.Drawing.Point(315, 518)
+        Me.TextBox2.Location = New System.Drawing.Point(320, 519)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox2.Size = New System.Drawing.Size(270, 36)
+        Me.TextBox2.Size = New System.Drawing.Size(265, 36)
         Me.TextBox2.TabIndex = 19
         Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '

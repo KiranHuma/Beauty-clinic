@@ -40,7 +40,7 @@ Public Class regmmberfrm
             con.Open()
             cmd.CommandText = "insert into tbl_memberreg(mid,M_ID,m_name,m_contactinfo,m_age,m_address,m_dte)values('" & mid_txt.Text & "','" & midtxt.Text & "','" & nametxt.Text & "','" & cntcttxt.Text & "','" & agetxt.Text & "','" & addresstxt.Text & "','" & m_dtetxt.Value & "')"
             cmd.ExecuteNonQuery()
-            welcomemsg.Text = "Members details inserted successfully!"
+            welcomemsg.Text = "'" & nametxt.Text & "' saved successfully!"
             welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
             con.Close()
          Catch ex As Exception
@@ -61,7 +61,7 @@ Public Class regmmberfrm
                 cmd.ExecuteNonQuery()
 
                 welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
-                welcomemsg.Text = "Members details updated successfully!"
+                welcomemsg.Text = "'" & nametxt.Text & "' update successfully!"
                 memberdata.Refresh()
                 con.Close()
             End If
@@ -198,11 +198,11 @@ Public Class regmmberfrm
             insert()
             getdata()
             memberdata.Refresh()
-            welcomemsg.Text = "'" & nametxt.Text & "' members details saved successfully!"
+            welcomemsg.Text = "'" & nametxt.Text & "' saved successfully!"
             welcomemsg.ForeColor = System.Drawing.Color.DarkGreen
 
         Catch ex As Exception
-            welcomemsg.Text = "Error while saving '" & nametxt.Text & "' members details"
+            welcomemsg.Text = "Error while saving '" & nametxt.Text & "' details"
             welcomemsg.ForeColor = System.Drawing.Color.Red
             MsgBox("DataBase not connected due to the reason because " & ex.Message)
             Me.Dispose()
@@ -366,5 +366,9 @@ Public Class regmmberfrm
 
     Private Sub Button12_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click
         Me.Dispose()
+    End Sub
+
+    Private Sub TabPage1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabPage1.Click
+
     End Sub
 End Class

@@ -661,7 +661,7 @@ Public Class ratesfrm
             p_insert()
             quantitystockout_in()
             payment_getdata()
-            message_txt.Text = "'" & pid_txt.Text & "' payment details saved successfully!"
+            message_txt.Text = "'" & pid_txt.Text & "' details saved successfully!"
             message_txt.ForeColor = System.Drawing.Color.DarkGreen
             payment_getdata()
             pro2_getdata()
@@ -877,7 +877,8 @@ Public Class ratesfrm
             cmd.ExecuteNonQuery()
             'MessageBox.Show("Data Updated")
             message_txt.ForeColor = System.Drawing.Color.DarkGreen
-            message_txt.Text = "Transaction details updated successfully!"
+            message_txt.Text = "'" & pid_txt.Text & "' details update successfully!"
+
             con.Close()
 
 
@@ -971,22 +972,12 @@ Public Class ratesfrm
    
     End Sub
 
-    Private Sub Panel1_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Panel1.MouseHover
-        If p_editbtn.Enabled = False Then
-            ToolTip1.IsBalloon = True
-            ToolTip1.UseAnimation = True
-            ToolTip1.ToolTipTitle = ""
-            ToolTip1.SetToolTip(Panel1, "Select the field from Grid to Edit")
-        Else
-            ToolTip1.IsBalloon = True
-            ToolTip1.UseAnimation = True
-            ToolTip1.ToolTipTitle = ""
-            ToolTip1.SetToolTip(Panel1, "Click to Edit")
-        End If
+    Private Sub Panel1_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs)
+
     End Sub
 
-    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
-   
+    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs)
+
     End Sub
 
     Private Sub pid_txt_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pid_txt.TextChanged
@@ -1199,12 +1190,7 @@ Public Class ratesfrm
         ToolTip1.SetToolTip(p_removebtn, "Select the one field or more from Grid to Remove")
     End Sub
 
-    Private Sub Label29_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Label29.MouseHover
-        ToolTip1.IsBalloon = True
-        ToolTip1.UseAnimation = True
-        ToolTip1.ToolTipTitle = ""
-        ToolTip1.SetToolTip(Label29, "Select the field from Grid to Edit")
-    End Sub
+  
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
         If pr_single_dis.Text = " " Then
@@ -1337,6 +1323,18 @@ Public Class ratesfrm
         ser2_getdata()
         transaction_servicesgetdata()
         transaction_productgetdata()
+    End Sub
+
+    Private Sub Label29_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label29.Click
+
+    End Sub
+
+    Private Sub GroupBox1_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GroupBox1.Enter
+
+    End Sub
+
+    Private Sub Label6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label6.Click
+
     End Sub
 End Class
 '

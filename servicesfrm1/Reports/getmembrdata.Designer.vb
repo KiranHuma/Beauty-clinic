@@ -223,6 +223,7 @@ Partial Class getmembrdata
         Me.Controls.Add(Me.DateTimePicker2)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "getmembrdata"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "getmembrdata"

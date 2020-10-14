@@ -22,6 +22,7 @@ Partial Class ProductSaleReportFrm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ProductSaleReportFrm))
         Me.ProductSaleViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.ProductSaleReport1 = New servicesfrm1.ProductSaleReport()
         Me.ProductSaleReport2 = New servicesfrm1.ProductSaleReport()
@@ -47,6 +48,7 @@ Partial Class ProductSaleReportFrm
         Me.ClientSize = New System.Drawing.Size(1528, 896)
         Me.Controls.Add(Me.ProductSaleViewer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "ProductSaleReportFrm"
         Me.Text = "Product Sale Report"
         Me.ResumeLayout(False)
