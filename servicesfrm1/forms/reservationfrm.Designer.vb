@@ -37,7 +37,7 @@ Partial Class reservationfrm
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.welcomemsg = New System.Windows.Forms.Label()
-        Me.close = New System.Windows.Forms.Button()
+        Me.closee = New System.Windows.Forms.Button()
         Me.re_memberadress_txt = New System.Windows.Forms.RichTextBox()
         Me.re_serdescriptiontxt = New System.Windows.Forms.RichTextBox()
         Me.Button7 = New System.Windows.Forms.Button()
@@ -145,7 +145,7 @@ Partial Class reservationfrm
         '
         Me.TabPage1.BackColor = System.Drawing.Color.White
         Me.TabPage1.Controls.Add(Me.welcomemsg)
-        Me.TabPage1.Controls.Add(Me.close)
+        Me.TabPage1.Controls.Add(Me.closee)
         Me.TabPage1.Controls.Add(Me.re_memberadress_txt)
         Me.TabPage1.Controls.Add(Me.re_serdescriptiontxt)
         Me.TabPage1.Controls.Add(Me.Button7)
@@ -213,19 +213,19 @@ Partial Class reservationfrm
         Me.welcomemsg.Text = "Welcome"
         Me.welcomemsg.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'close
+        'closee
         '
-        Me.close.BackColor = System.Drawing.Color.White
-        Me.close.BackgroundImage = CType(resources.GetObject("close.BackgroundImage"), System.Drawing.Image)
-        Me.close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.close.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.close.ForeColor = System.Drawing.Color.White
-        Me.close.Location = New System.Drawing.Point(806, 7)
-        Me.close.Margin = New System.Windows.Forms.Padding(4)
-        Me.close.Name = "close"
-        Me.close.Size = New System.Drawing.Size(23, 23)
-        Me.close.TabIndex = 391
-        Me.close.UseVisualStyleBackColor = False
+        Me.closee.BackColor = System.Drawing.Color.White
+        Me.closee.BackgroundImage = CType(resources.GetObject("closee.BackgroundImage"), System.Drawing.Image)
+        Me.closee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.closee.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.closee.ForeColor = System.Drawing.Color.White
+        Me.closee.Location = New System.Drawing.Point(806, 7)
+        Me.closee.Margin = New System.Windows.Forms.Padding(4)
+        Me.closee.Name = "closee"
+        Me.closee.Size = New System.Drawing.Size(23, 23)
+        Me.closee.TabIndex = 391
+        Me.closee.UseVisualStyleBackColor = False
         '
         're_memberadress_txt
         '
@@ -1345,6 +1345,6 @@ Partial Class reservationfrm
     Friend WithEvents svemem As System.Windows.Forms.Button
     Friend WithEvents dte_txt As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents close As System.Windows.Forms.Button
+    Friend WithEvents closee As System.Windows.Forms.Button
     Friend WithEvents welcomemsg As System.Windows.Forms.Label
 End Class

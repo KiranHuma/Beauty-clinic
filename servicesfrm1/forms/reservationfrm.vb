@@ -796,7 +796,8 @@ Public Class reservationfrm
     
 
   
-    Private Sub close_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles close.Click
+    
+    Private Sub closee_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles closee.Click
         Me.Dispose()
     End Sub
 End Class

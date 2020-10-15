@@ -15,6 +15,18 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_0A5AA085935944D0AD790FC94175F8E2"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_230A26E22E1743BBAE41080444D803A1"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_332556299EF13162BBECAC494DDCA13A"
         "OwnerKey" = "8:_88E007F7A8214903B491FE69E9C8EA2A"
         "MsmSig" = "8:_UNDEFINED"
@@ -94,25 +106,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_88E007F7A8214903B491FE69E9C8EA2A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D0876C97F8F620D7AEDF9F416C355E35"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6222E603CF3AA6A52A888E6C864637BD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3704624C4A2BFA6BED4DB26B95728D66"
+        "OwnerKey" = "8:_56FC69364BCBD8FAE7E696000E5263E9"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -124,7 +118,25 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_56FC69364BCBD8FAE7E696000E5263E9"
+        "OwnerKey" = "8:_3704624C4A2BFA6BED4DB26B95728D66"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_6222E603CF3AA6A52A888E6C864637BD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_D0876C97F8F620D7AEDF9F416C355E35"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_88E007F7A8214903B491FE69E9C8EA2A"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -152,6 +164,19 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
             }
         }
         "Release"
@@ -176,6 +201,19 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
             }
         }
     }
@@ -206,6 +244,46 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0A5AA085935944D0AD790FC94175F8E2"
+            {
+            "SourcePath" = "8:C:\\Users\\Aimal\\Desktop\\skintimatee.ico"
+            "TargetName" = "8:skintimatee.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_06B115BA25E94251B85D3F1C4D0897DC"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:TRUE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_230A26E22E1743BBAE41080444D803A1"
+            {
+            "SourcePath" = "8:C:\\Users\\Aimal\\Desktop\\skintimatee.ico"
+            "TargetName" = "8:skintimatee.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_33653EB979C34A679AC6678DDF81DB5F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:TRUE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_332556299EF13162BBECAC494DDCA13A"
             {
             "AssemblyRegister" = "3:1"
@@ -244,11 +322,6 @@
             "AssemblyAsmDisplayName" = "8:CrystalDecisions.ReportAppServer.Prompting, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_3704624C4A2BFA6BED4DB26B95728D66"
-                    {
-                    "Name" = "8:CrystalDecisions.ReportAppServer.Prompting.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:CrystalDecisions.ReportAppServer.Prompting.dll"
             "TargetName" = "8:"
@@ -295,11 +368,6 @@
             "AssemblyAsmDisplayName" = "8:stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_56FC69364BCBD8FAE7E696000E5263E9"
-                    {
-                    "Name" = "8:stdole.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:stdole.dll"
             "TargetName" = "8:"
@@ -326,11 +394,6 @@
             "AssemblyAsmDisplayName" = "8:ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304"
                 "ScatterAssemblies"
                 {
-                    "_6222E603CF3AA6A52A888E6C864637BD"
-                    {
-                    "Name" = "8:ShockwaveFlashObjects.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:ShockwaveFlashObjects.dll"
             "TargetName" = "8:"
@@ -377,11 +440,6 @@
             "AssemblyAsmDisplayName" = "8:FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304"
                 "ScatterAssemblies"
                 {
-                    "_D0876C97F8F620D7AEDF9F416C355E35"
-                    {
-                    "Name" = "8:FlashControlV71.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:FlashControlV71.dll"
             "TargetName" = "8:"
@@ -408,11 +466,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_EADC06880DDF7FE43D280A26AA49BC31"
-                    {
-                    "Name" = "8:Microsoft.VisualBasic.PowerPacks.Vs.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.VisualBasic.PowerPacks.Vs.dll"
             "TargetName" = "8:"
@@ -651,7 +704,7 @@
             "Target" = "8:_88E007F7A8214903B491FE69E9C8EA2A"
             "Folder" = "8:_33653EB979C34A679AC6678DDF81DB5F"
             "WorkingFolder" = "8:_CB368F9EDCF848EB9225CD180AB0DE55"
-            "Icon" = "8:_4CE9B16AEC5A479BA9FDF61C6F5D4D6C"
+            "Icon" = "8:_230A26E22E1743BBAE41080444D803A1"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_8D3A97DF7C71447CAC1A2B5C8731387C"
@@ -665,7 +718,7 @@
             "Target" = "8:_88E007F7A8214903B491FE69E9C8EA2A"
             "Folder" = "8:_06B115BA25E94251B85D3F1C4D0897DC"
             "WorkingFolder" = "8:_CB368F9EDCF848EB9225CD180AB0DE55"
-            "Icon" = "8:_AE2D46F4B6BD45D0A7F701C5AA8906BD"
+            "Icon" = "8:_0A5AA085935944D0AD790FC94175F8E2"
             "Feature" = "8:"
             }
         }
