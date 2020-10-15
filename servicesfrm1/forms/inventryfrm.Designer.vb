@@ -288,7 +288,7 @@ Partial Class inventryfrm
         Me.intxt_des.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.intxt_des.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.intxt_des.ForeColor = System.Drawing.Color.SteelBlue
-        Me.intxt_des.Location = New System.Drawing.Point(763, 326)
+        Me.intxt_des.Location = New System.Drawing.Point(757, 281)
         Me.intxt_des.Name = "intxt_des"
         Me.intxt_des.ReadOnly = True
         Me.intxt_des.Size = New System.Drawing.Size(155, 56)
@@ -358,7 +358,7 @@ Partial Class inventryfrm
         '
         Me.inventrydtetxt.AutoSize = True
         Me.inventrydtetxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.inventrydtetxt.Location = New System.Drawing.Point(760, 419)
+        Me.inventrydtetxt.Location = New System.Drawing.Point(754, 374)
         Me.inventrydtetxt.Name = "inventrydtetxt"
         Me.inventrydtetxt.Size = New System.Drawing.Size(59, 17)
         Me.inventrydtetxt.TabIndex = 377
@@ -378,10 +378,10 @@ Partial Class inventryfrm
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(591, 240)
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(586, 438)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(153, 20)
+        Me.Label20.Size = New System.Drawing.Size(132, 17)
         Me.Label20.TabIndex = 375
         Me.Label20.Text = "Recent Purchase"
         Me.Label20.Visible = False
@@ -390,7 +390,7 @@ Partial Class inventryfrm
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(759, 240)
+        Me.Label18.Location = New System.Drawing.Point(754, 438)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(98, 17)
         Me.Label18.TabIndex = 374
@@ -401,7 +401,7 @@ Partial Class inventryfrm
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(760, 456)
+        Me.Label17.Location = New System.Drawing.Point(754, 411)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(59, 17)
         Me.Label17.TabIndex = 373
@@ -411,10 +411,10 @@ Partial Class inventryfrm
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(595, 453)
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(589, 408)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(111, 20)
+        Me.Label13.Size = New System.Drawing.Size(96, 17)
         Me.Label13.TabIndex = 372
         Me.Label13.Text = "Recent Sale"
         Me.Label13.Visible = False
@@ -450,11 +450,11 @@ Partial Class inventryfrm
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label12.Location = New System.Drawing.Point(100, 308)
+        Me.Label12.Location = New System.Drawing.Point(51, 308)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(128, 20)
+        Me.Label12.Size = New System.Drawing.Size(110, 17)
         Me.Label12.TabIndex = 363
         Me.Label12.Text = "Product Name"
         '
@@ -462,7 +462,7 @@ Partial Class inventryfrm
         '
         Me.inprice_txt.AutoSize = True
         Me.inprice_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.inprice_txt.Location = New System.Drawing.Point(759, 283)
+        Me.inprice_txt.Location = New System.Drawing.Point(753, 238)
         Me.inprice_txt.Name = "inprice_txt"
         Me.inprice_txt.Size = New System.Drawing.Size(83, 17)
         Me.inprice_txt.TabIndex = 362
@@ -471,30 +471,30 @@ Partial Class inventryfrm
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(595, 283)
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(589, 238)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(53, 20)
+        Me.Label9.Size = New System.Drawing.Size(45, 17)
         Me.Label9.TabIndex = 356
         Me.Label9.Text = "Price"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(595, 326)
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(589, 281)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(106, 20)
+        Me.Label11.Size = New System.Drawing.Size(90, 17)
         Me.Label11.TabIndex = 355
         Me.Label11.Text = "Description"
         '
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(595, 416)
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(589, 371)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(138, 20)
+        Me.Label14.Size = New System.Drawing.Size(118, 17)
         Me.Label14.TabIndex = 352
         Me.Label14.Text = "Stock Out Date"
         Me.Label14.Visible = False
@@ -502,11 +502,11 @@ Partial Class inventryfrm
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label16.Location = New System.Drawing.Point(69, 444)
+        Me.Label16.Location = New System.Drawing.Point(51, 444)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(159, 20)
+        Me.Label16.Size = New System.Drawing.Size(138, 17)
         Me.Label16.TabIndex = 351
         Me.Label16.Text = "Stock in Inventory"
         '
@@ -539,22 +539,22 @@ Partial Class inventryfrm
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label10.Location = New System.Drawing.Point(118, 274)
+        Me.Label10.Location = New System.Drawing.Point(51, 274)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(110, 20)
+        Me.Label10.Size = New System.Drawing.Size(95, 17)
         Me.Label10.TabIndex = 344
         Me.Label10.Text = "Inventory ID"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label8.Location = New System.Drawing.Point(119, 478)
+        Me.Label8.Location = New System.Drawing.Point(51, 478)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(109, 20)
+        Me.Label8.Size = New System.Drawing.Size(94, 17)
         Me.Label8.TabIndex = 325
         Me.Label8.Text = "Stock In/out"
         '
@@ -599,11 +599,11 @@ Partial Class inventryfrm
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label6.Location = New System.Drawing.Point(133, 240)
+        Me.Label6.Location = New System.Drawing.Point(51, 240)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(95, 20)
+        Me.Label6.Size = New System.Drawing.Size(84, 17)
         Me.Label6.TabIndex = 320
         Me.Label6.Text = "Inventory#"
         '
@@ -675,11 +675,11 @@ Partial Class inventryfrm
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label3.Location = New System.Drawing.Point(101, 410)
+        Me.Label3.Location = New System.Drawing.Point(51, 410)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(127, 20)
+        Me.Label3.Size = New System.Drawing.Size(109, 17)
         Me.Label3.TabIndex = 309
         Me.Label3.Text = "Stock_In Date"
         '
@@ -711,22 +711,22 @@ Partial Class inventryfrm
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label4.Location = New System.Drawing.Point(54, 376)
+        Me.Label4.Location = New System.Drawing.Point(51, 376)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(174, 20)
+        Me.Label4.Size = New System.Drawing.Size(151, 17)
         Me.Label4.TabIndex = 301
         Me.Label4.Text = "Purchased Quantity"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label1.Location = New System.Drawing.Point(129, 342)
+        Me.Label1.Location = New System.Drawing.Point(51, 342)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(99, 20)
+        Me.Label1.Size = New System.Drawing.Size(84, 17)
         Me.Label1.TabIndex = 300
         Me.Label1.Text = "Product ID"
         '
@@ -850,7 +850,7 @@ Partial Class inventryfrm
         Me.get_indata.RowHeadersDefaultCellStyle = DataGridViewCellStyle19
         Me.get_indata.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
         DataGridViewCellStyle20.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle20.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle20.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle20.ForeColor = System.Drawing.Color.LightCoral
         DataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.LightCoral
         DataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.White
@@ -888,7 +888,7 @@ Partial Class inventryfrm
         Me.DateTimePicker2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker2.Location = New System.Drawing.Point(290, 44)
         Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(200, 22)
+        Me.DateTimePicker2.Size = New System.Drawing.Size(216, 22)
         Me.DateTimePicker2.TabIndex = 331
         '
         'DateTimePicker1
@@ -896,7 +896,7 @@ Partial Class inventryfrm
         Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker1.Location = New System.Drawing.Point(21, 44)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 22)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(216, 22)
         Me.DateTimePicker1.TabIndex = 330
         '
         'Label21
@@ -915,7 +915,7 @@ Partial Class inventryfrm
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox3.Location = New System.Drawing.Point(21, 116)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(244, 22)
+        Me.TextBox3.Size = New System.Drawing.Size(216, 22)
         Me.TextBox3.TabIndex = 327
         '
         'RadioButton3
@@ -952,7 +952,7 @@ Partial Class inventryfrm
         Me.Button1.Location = New System.Drawing.Point(775, 116)
         Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(197, 31)
+        Me.Button1.Size = New System.Drawing.Size(225, 31)
         Me.Button1.TabIndex = 318
         Me.Button1.Text = "&Select Rows to Remove"
         Me.Button1.UseVisualStyleBackColor = True
