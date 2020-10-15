@@ -51,7 +51,7 @@ Partial Class MainFrom1
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Tempus Sans ITC", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.LightCoral
-        Me.Button2.Location = New System.Drawing.Point(538, 457)
+        Me.Button2.Location = New System.Drawing.Point(304, 457)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(290, 56)
         Me.Button2.TabIndex = 1
@@ -64,7 +64,7 @@ Partial Class MainFrom1
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Tempus Sans ITC", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.LightCoral
-        Me.Button3.Location = New System.Drawing.Point(304, 457)
+        Me.Button3.Location = New System.Drawing.Point(600, 458)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(228, 56)
         Me.Button3.TabIndex = 2

@@ -612,7 +612,7 @@ Partial Class prodcutfrm
         'DateTimePicker2
         '
         Me.DateTimePicker2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker2.Location = New System.Drawing.Point(291, 77)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(269, 78)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(216, 22)
         Me.DateTimePicker2.TabIndex = 336
